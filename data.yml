@@ -19,6 +19,28 @@ environments:
         locationName: STG
         schema: PUBLIC
     name: DEV
+    oauthEnabled: true
+    status: Waiting
+  test1:
+    createdAt:
+      nanoseconds: 351000000
+      seconds: 1637361961
+    createdBy: hHrCFCzY0FOX0LepFEmqw5SDjhY2
+    description: test1
+    devEnv: false
+    id: 2
+    mappings:
+      "1":
+        database: SNOWFLAKE_SAMPLE_DATA
+        id: 1
+        locationName: SRC
+        schema: TPCH_SF1
+      "2":
+        database: DEMO_DB
+        id: 2
+        locationName: STG
+        schema: PUBLIC
+    name: test1
     oauthEnabled: false
     status: Waiting
 jobs: {}
