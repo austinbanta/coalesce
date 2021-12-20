@@ -1,58 +1,27 @@
 environments:
   DEV:
     createdAt:
-      nanoseconds: 878000000
-      seconds: 1637258673
-    createdBy: GgCrti7Zwp6qSCYZEmW0
-    description: trial sf instance
+      nanoseconds: 518000000
+      seconds: 1639689212
+    createdBy: iMeAfovxHz9mJLva2FFB
+    description: ""
     devEnv: true
-    id: 1
-    mappings:
-      "1":
-        database: SNOWFLAKE_SAMPLE_DATA
-        id: 1
-        locationName: SRC
-        schema: TPCH_SF1
-      "2":
-        database: DEMO_DB
-        id: 2
-        locationName: STG
-        schema: PUBLIC
-    name: DEV
-    oauthEnabled: true
-    status: Waiting
-  test1:
-    createdAt:
-      nanoseconds: 351000000
-      seconds: 1637361961
-    createdBy: hHrCFCzY0FOX0LepFEmqw5SDjhY2
-    description: test1
-    devEnv: false
     id: 2
     mappings:
       "1":
-        database: SNOWFLAKE_SAMPLE_DATA
+        database: COALESCE_SAMPLE_DATABASE
         id: 1
-        locationName: SRC
-        schema: TPCH_SF1
-      "2":
-        database: DEMO_DB
-        id: 2
-        locationName: STG
-        schema: PUBLIC
-    name: test1
+        locationName: DEV
+        schema: TPCH_SF001
+    name: DEV
     oauthEnabled: false
     status: Waiting
 jobs: {}
 locations:
-  SRC:
-    default: false
+  DEV:
+    default: true
     id: 1
-    locationName: SRC
-  STG:
-    default: false
-    id: 2
-    locationName: STG
+    locationName: DEV
 macros: {}
 stepTypes:
   StepType-Dimension:
@@ -850,8 +819,16 @@ stepTypes:
 
             \tON
 
-            \t{% for col in columns if col.isHubHash or
-            col.isSystemRecordSource -%}
+            \t{% for col in sources[0].columns if
+            (col.sourceColumns[0]\ 
+
+            \                                        and
+            col.sourceColumns[0].column\ 
+
+            \                                        and
+            col.sourceColumns[0].column.isHubHash
+
+            \                                        ) -%}
 
             \t\t{% if not loop.first %}
 
@@ -1038,8 +1015,16 @@ stepTypes:
 
             \tON
 
-            \t{% for col in columns if col.isLinkHash or
-            col.isSystemRecordSource -%}
+            \t{% for col in sources[0].columns if
+            (col.sourceColumns[0]\ 
+
+            \                                        and
+            col.sourceColumns[0].column\ 
+
+            \                                        and
+            col.sourceColumns[0].column.isLinkHash
+
+            \                                        ) -%}
 
             \t\t{% if not loop.first %}
 
@@ -1222,8 +1207,16 @@ stepTypes:
 
             \t\tON
 
-            \t\t{% for col in columns if col.isChangeHash or
-            col.isSystemRecordSource -%}
+            \t\t{% for col in sources[0].columns if
+            (col.sourceColumns[0]\ 
+
+            \                                            and
+            col.sourceColumns[0].column\ 
+
+            \                                            and
+            col.sourceColumns[0].column.isChangeHash
+
+            \                                            ) -%}
 
             \t\t\t{% if not loop.first %}
 
@@ -1492,7 +1485,7 @@ stepTypes:
     version: 1
   StepType-View:
     id: View
-    isDisabled: true
+    isDisabled: false
     metadata:
       error: null
       nodeMetadataSpec: |
@@ -2013,9 +2006,4 @@ stepTypes:
             {% endif %}
     name: Persistent Stage
     version: 1
-subgraphs:
-  Subgraph-1:
-    id: 1
-    name: New Sub-Graph
-    steps:
-      - 1
+subgraphs: {}

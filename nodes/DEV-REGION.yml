@@ -4,7 +4,7 @@ steps:
       database: ""
       dataset: ""
       locationID: 1
-      locationName: SRC
+      locationName: DEV
       metadata:
         columns:
           - columnReference:
@@ -38,7 +38,7 @@ steps:
             primaryKey: false
             uniqueKey: false
         join:
-          joinCondition: FROM {{ ref('SRC', 'REGION') }}
+          joinCondition: FROM {{ ref('DEV', 'REGION') }}
       name: REGION
       schema: ""
       sqlType: Source

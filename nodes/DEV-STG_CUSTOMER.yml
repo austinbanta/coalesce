@@ -1,107 +1,97 @@
 steps:
-  ORDERS-4:
+  STG_CUSTOMER-8:
     operation:
       database: ""
       dataset: ""
       locationID: 1
-      locationName: SRC
+      locationName: DEV
       metadata:
         columns:
           - columnReference:
-              columnCounter: 29
-              stepCounter: 4
+              columnCounter: 55
+              stepCounter: 8
             dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
-            name: O_ORDERKEY
+            name: C_CUSTKEY
             nullable: false
             primaryKey: false
             uniqueKey: false
           - columnReference:
-              columnCounter: 30
-              stepCounter: 4
+              columnCounter: 56
+              stepCounter: 8
+            dataType: VARCHAR(25)
+            defaultValue: ""
+            description: ""
+            name: C_NAME
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - columnReference:
+              columnCounter: 57
+              stepCounter: 8
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: C_ADDRESS
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - columnReference:
+              columnCounter: 58
+              stepCounter: 8
             dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
-            name: O_CUSTKEY
+            name: C_NATIONKEY
             nullable: false
             primaryKey: false
             uniqueKey: false
           - columnReference:
-              columnCounter: 31
-              stepCounter: 4
-            dataType: VARCHAR(1)
+              columnCounter: 59
+              stepCounter: 8
+            dataType: VARCHAR(15)
             defaultValue: ""
             description: ""
-            name: O_ORDERSTATUS
+            name: C_PHONE
             nullable: false
             primaryKey: false
             uniqueKey: false
           - columnReference:
-              columnCounter: 32
-              stepCounter: 4
+              columnCounter: 60
+              stepCounter: 8
             dataType: NUMBER(12,2)
             defaultValue: ""
             description: ""
-            name: O_TOTALPRICE
+            name: C_ACCTBAL
             nullable: false
             primaryKey: false
             uniqueKey: false
           - columnReference:
-              columnCounter: 33
-              stepCounter: 4
-            dataType: DATE
+              columnCounter: 61
+              stepCounter: 8
+            dataType: VARCHAR(10)
             defaultValue: ""
             description: ""
-            name: O_ORDERDATE
-            nullable: false
+            name: C_MKTSEGMENT
+            nullable: true
             primaryKey: false
             uniqueKey: false
           - columnReference:
-              columnCounter: 34
-              stepCounter: 4
-            dataType: VARCHAR(15)
+              columnCounter: 62
+              stepCounter: 8
+            dataType: VARCHAR(117)
             defaultValue: ""
             description: ""
-            name: O_ORDERPRIORITY
-            nullable: false
-            primaryKey: false
-            uniqueKey: false
-          - columnReference:
-              columnCounter: 35
-              stepCounter: 4
-            dataType: VARCHAR(15)
-            defaultValue: ""
-            description: ""
-            name: O_CLERK
-            nullable: false
-            primaryKey: false
-            uniqueKey: false
-          - columnReference:
-              columnCounter: 36
-              stepCounter: 4
-            dataType: NUMBER(38,0)
-            defaultValue: ""
-            description: ""
-            name: O_SHIPPRIORITY
-            nullable: false
-            primaryKey: false
-            uniqueKey: false
-          - columnReference:
-              columnCounter: 37
-              stepCounter: 4
-            dataType: VARCHAR(79)
-            defaultValue: ""
-            description: ""
-            name: O_COMMENT
-            nullable: false
+            name: C_COMMENT
+            nullable: true
             primaryKey: false
             uniqueKey: false
         join:
-          joinCondition: FROM {{ ref('SRC', 'ORDERS') }}
-      name: ORDERS
+          joinCondition: FROM {{ ref('DEV', 'STG_CUSTOMER') }}
+      name: STG_CUSTOMER
       schema: ""
       sqlType: Source
-      table: ORDERS
+      table: STG_CUSTOMER
       type: sourceInput
-    stepCounter: 4
+    stepCounter: 8
