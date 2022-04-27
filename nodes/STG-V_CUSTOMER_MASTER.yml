@@ -1,0 +1,245 @@
+steps:
+  V_CUSTOMER_MASTER-182:
+    operation:
+      config:
+        insertStrategy: UNION
+        selectDistinct: false
+      database: ""
+      dependencies: []
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: 2
+      locationName: STG
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 2075
+              stepCounter: 182
+            dataType: NUMBER
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: DIM_CUSTOMER_KEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2060
+                    stepCounter: "181"
+                transform: ""
+          - columnReference:
+              columnCounter: 2076
+              stepCounter: 182
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: C_CUSTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2061
+                    stepCounter: "181"
+                transform: ""
+          - columnReference:
+              columnCounter: 2077
+              stepCounter: 182
+            dataType: VARCHAR(25)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: C_NAME
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2062
+                    stepCounter: "181"
+                transform: ""
+          - columnReference:
+              columnCounter: 2078
+              stepCounter: 182
+            dataType: VARCHAR(40)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: C_ADDRESS
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2063
+                    stepCounter: "181"
+                transform: ""
+          - columnReference:
+              columnCounter: 2079
+              stepCounter: 182
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: C_NATIONKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2064
+                    stepCounter: "181"
+                transform: ""
+          - columnReference:
+              columnCounter: 2080
+              stepCounter: 182
+            dataType: VARCHAR(15)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: C_PHONE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2065
+                    stepCounter: "181"
+                transform: ""
+          - columnReference:
+              columnCounter: 2081
+              stepCounter: 182
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: C_ACCTBAL
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2066
+                    stepCounter: "181"
+                transform: ""
+          - columnReference:
+              columnCounter: 2082
+              stepCounter: 182
+            dataType: VARCHAR(10)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: C_MKTSEGMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2067
+                    stepCounter: "181"
+                transform: ""
+          - columnReference:
+              columnCounter: 2083
+              stepCounter: 182
+            dataType: VARCHAR(117)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: C_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2068
+                    stepCounter: "181"
+                transform: ""
+          - columnReference:
+              columnCounter: 2084
+              stepCounter: 182
+            dataType: NUMBER
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_VERSION
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2069
+                    stepCounter: "181"
+                transform: ""
+          - columnReference:
+              columnCounter: 2085
+              stepCounter: 182
+            dataType: VARCHAR
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_CURRENT_FLAG
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2070
+                    stepCounter: "181"
+                transform: ""
+          - columnReference:
+              columnCounter: 2086
+              stepCounter: 182
+            dataType: TIMESTAMP
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_START_DATE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2071
+                    stepCounter: "181"
+                transform: ""
+          - columnReference:
+              columnCounter: 2087
+              stepCounter: 182
+            dataType: TIMESTAMP
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_END_DATE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2072
+                    stepCounter: "181"
+                transform: ""
+          - columnReference:
+              columnCounter: 2088
+              stepCounter: 182
+            dataType: TIMESTAMP
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_CREATE_DATE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2073
+                    stepCounter: "181"
+                transform: ""
+          - columnReference:
+              columnCounter: 2089
+              stepCounter: 182
+            dataType: TIMESTAMP
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_UPDATE_DATE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2074
+                    stepCounter: "181"
+                transform: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STG
+                nodeName: DIM_CUSTOMER_MASTER
+            join:
+              joinCondition: FROM {{ ref('STG', 'DIM_CUSTOMER_MASTER') }}
+                "DIM_CUSTOMER_MASTER"
+            name: V_CUSTOMER_MASTER
+            noLinkRefs: []
+      name: V_CUSTOMER_MASTER
+      overrideSQL: false
+      schema: ""
+      sqlType: View
+      type: sql
+    stepCounter: "182"

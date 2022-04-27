@@ -13,9 +13,12 @@ environments:
         id: 1
         locationName: DEV
         schema: TPCH_SF001
+      "2":
+        database: AUSTIN_TEST_DB
+        id: 2
+        locationName: STG
+        schema: DEV_STG
     name: DEV
-    oauthEnabled: false
-    status: Waiting
 jobs: {}
 locations:
   DEV:
@@ -33,18 +36,13 @@ stepTypes:
     isDisabled: false
     metadata:
       error: null
-      nodeMetadataSpec: >-
+      nodeMetadataSpec: |-
         capitalized: Dimension
-
         short: DIM
-
         tagColor: '#1E339A'
-
         plural: Dimensions
 
-
         config:
-
         - groupName: Options
           items:
           - type: materializationSelector
@@ -84,7 +82,6 @@ stepTypes:
             isRequired: false
 
         systemColumns:
-
         - displayName: '{{NODE_NAME}}_KEY'
           transform: ''
           dataType: NUMBER
@@ -128,7 +125,7 @@ stepTypes:
           attributeName: isSystemUpdateDate
       templates:
         create:
-          templateString: >
+          templateString: |
             {% if node.materializationType == 'table' %}
             	{{ stage('Create Dimension Table') }}
 
@@ -182,7 +179,7 @@ stepTypes:
 
             {% endif %}
         run:
-          templateString: >
+          templateString: |
             
             {% set is_type_2 = columns | selectattr("isChangeTracking") | list | length > 0 %}
 
@@ -462,7 +459,6 @@ stepTypes:
             		{{ config.postSQL }}
             	{% endif %}
             {% endif %}
-
 
             {% if config.testsEnabled %}
             	{% for test in node.tests %}
@@ -889,19 +885,14 @@ stepTypes:
     isDisabled: false
     metadata:
       error: null
-      nodeMetadataSpec: >-
+      nodeMetadataSpec: |-
         capitalized: Hub
-
         short: 'HUB'
-
         plural: 'Hubs'
-
 
         tagColor: '#92712E'
 
-
         config:
-
         - groupName: Options
           items:
           - type: materializationSelector
@@ -938,7 +929,6 @@ stepTypes:
             isRequired: false
 
         systemColumns:
-
         - displayName: "LOAD_DATE"
           transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
           dataType: TIMESTAMP
@@ -952,7 +942,7 @@ stepTypes:
           attributeName: isSystemRecordSource
       templates:
         create:
-          templateString: >-
+          templateString: |-
             {% if node.materializationType == 'table' %}
             				{{ stage('Create Hub Table') }}
             			
@@ -1140,18 +1130,13 @@ stepTypes:
     isDisabled: false
     metadata:
       error: null
-      nodeMetadataSpec: >-
+      nodeMetadataSpec: |-
         capitalized: Link
-
         short: 'LNK'
-
         plural: 'Links'
-
         tagColor: '#CA2287'
 
-
         config:
-
         - groupName: Options
           items:
           - type: materializationSelector
@@ -1188,7 +1173,6 @@ stepTypes:
             isRequired: false
 
         systemColumns:
-
         - displayName: "LOAD_DATE"
           transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
           dataType: TIMESTAMP
@@ -1202,7 +1186,7 @@ stepTypes:
           attributeName: isSystemRecordSource
       templates:
         create:
-          templateString: >-
+          templateString: |-
             {% if node.materializationType == 'table' %}
             				{{ stage('Create Link Table') }}
             			
@@ -1390,18 +1374,13 @@ stepTypes:
     isDisabled: false
     metadata:
       error: null
-      nodeMetadataSpec: >-
+      nodeMetadataSpec: |-
         capitalized: Satellite
-
         short: 'SAT'
-
         plural: 'Satellites'
-
         tagColor: '#627DE9'
 
-
         config:
-
         - groupName: Options
           items:
           - type: materializationSelector
@@ -1438,7 +1417,6 @@ stepTypes:
             isRequired: false
 
         systemColumns:
-
         - displayName: "LOAD_DATE"
           transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
           dataType: TIMESTAMP
@@ -1452,7 +1430,7 @@ stepTypes:
           attributeName: isSystemRecordSource
       templates:
         create:
-          templateString: >-
+          templateString: |-
             {% if node.materializationType == 'table' %}
             				{{ stage('Create Satellite Table') }}
             			
@@ -1663,18 +1641,13 @@ stepTypes:
     isDisabled: false
     metadata:
       error: null
-      nodeMetadataSpec: >
+      nodeMetadataSpec: |
         capitalized: Stage
-
         short: STG
-
         plural: Stages
-
         tagColor: '#2EB67D'
 
-
         config:
-
         - groupName: Options
           items:
           - type: materializationSelector
@@ -1683,8 +1656,6 @@ stepTypes:
             - table
             - view
             isRequired: true
-         
-          - type: dataVaultToggle
 
           - type: multisourceToggle
             enableIf: "{% if node.materializationType == 'table' %} true {% else %} false {% endif %}" 
@@ -1726,7 +1697,7 @@ stepTypes:
             isRequired: false
       templates:
         create:
-          templateString: >
+          templateString: |
             {% if node.override.create.enabled %}
             	
             	{{ node.override.create.script }}
@@ -1781,7 +1752,7 @@ stepTypes:
 
             {% endif %}
         run:
-          templateString: >2
+          templateString: |2
             
                 {% for test in node.tests if config.testsEnabled %}
                     {% if test.runOrder == 'Before' %}
@@ -1852,7 +1823,6 @@ stepTypes:
             	{% endif %}
             {% endif %}
 
-
             {% if config.testsEnabled %}
             	{% for test in node.tests %}
             		{% if test.runOrder == 'After' %}
@@ -1875,17 +1845,12 @@ stepTypes:
     isDisabled: false
     metadata:
       error: null
-      nodeMetadataSpec: >
+      nodeMetadataSpec: |
         capitalized: View
-
         short: V
-
         tagColor: '#C4C4C4'
-
         isDisabled: true
-
         plural: Views
-
 
         config:
           - groupName: Options
@@ -1915,7 +1880,7 @@ stepTypes:
               enableIf: "{% if node.isMultisource %} true {% else %} false {% endif %}"
       templates:
         create:
-          templateString: >
+          templateString: |
             {% if node.override.create.enabled %}
                 
                 {{ node.override.create.script }}
@@ -1959,17 +1924,13 @@ stepTypes:
     isDisabled: false
     metadata:
       error: null
-      nodeMetadataSpec: >
+      nodeMetadataSpec: |
         capitalized: Persistent Stage
-
         short: PSTG
-
         plural: Persistent Stages
-
         tagColor: '#29B2DB'
             
         config:
-
         - groupName: Options
           items:
           - type: materializationSelector
@@ -2006,7 +1967,6 @@ stepTypes:
             isRequired: false
 
         systemColumns:
-
 
         - displayName: '{{NODE_NAME}}_KEY'
           transform: ''
@@ -2051,7 +2011,7 @@ stepTypes:
           attributeName: isSystemUpdateDate
       templates:
         create:
-          templateString: >
+          templateString: |
             {% if node.materializationType == 'table' %}
                 {{ stage('Create Persistent Stage Table') }}
 
@@ -2103,10 +2063,9 @@ stepTypes:
 
             {% endif %}
         run:
-          templateString: >-
+          templateString: |-
             
             {% set has_business_key = columns | selectattr("isBusinessKey") | list | length > 0 %}
-
             {% set is_type_2 = columns | selectattr("isChangeTracking") | list | length > 0 %}
 
                 {% for test in node.tests if config.testsEnabled %}
@@ -2408,10 +2367,8 @@ stepTypes:
             		{{ stage('Post-SQL') }}
             		{{ config.postSQL }}
             	{% endif %}
-
             	
             {% endif %}
-
 
             {% if config.testsEnabled %}
             	{% for test in node.tests %}
