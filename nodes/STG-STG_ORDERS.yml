@@ -1,5 +1,5 @@
 steps:
-  STG_CUSTOMER-191:
+  STG_ORDERS-193:
     operation:
       config:
         insertStrategy: INSERT
@@ -19,116 +19,130 @@ steps:
         appliedNodeTests: []
         columns:
           - columnReference:
-              columnCounter: 2166
-              stepCounter: 191
+              columnCounter: 2178
+              stepCounter: 193
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
             hashDetails: null
-            name: C_CUSTKEY
-            nullable: false
+            name: O_ORDERKEY
+            nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 2133
-                    stepCounter: "186"
+                  - columnCounter: 2145
+                    stepCounter: "188"
                 transform: ""
           - columnReference:
-              columnCounter: 2167
-              stepCounter: 191
-            dataType: VARCHAR(25)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: C_NAME
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 2134
-                    stepCounter: "186"
-                transform: UPPER("CUSTOMER"."C_NAME")
-          - columnReference:
-              columnCounter: 2168
-              stepCounter: 191
-            dataType: VARCHAR(40)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: C_ADDRESS
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 2135
-                    stepCounter: "186"
-                transform: ""
-          - columnReference:
-              columnCounter: 2169
-              stepCounter: 191
+              columnCounter: 2179
+              stepCounter: 193
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
             hashDetails: null
-            name: C_NATIONKEY
-            nullable: false
+            name: O_CUSTKEY
+            nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 2136
-                    stepCounter: "186"
+                  - columnCounter: 2146
+                    stepCounter: "188"
                 transform: ""
           - columnReference:
-              columnCounter: 2170
-              stepCounter: 191
-            dataType: VARCHAR(15)
+              columnCounter: 2180
+              stepCounter: 193
+            dataType: VARCHAR(1)
             description: ""
             hashColumns: []
             hashDetails: null
-            name: C_PHONE
+            name: O_ORDERSTATUS
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 2137
-                    stepCounter: "186"
+                  - columnCounter: 2147
+                    stepCounter: "188"
                 transform: ""
           - columnReference:
-              columnCounter: 2171
-              stepCounter: 191
+              columnCounter: 2181
+              stepCounter: 193
             dataType: NUMBER(12,2)
             description: ""
             hashColumns: []
             hashDetails: null
-            name: C_ACCTBAL
+            name: O_TOTALPRICE
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 2138
-                    stepCounter: "186"
+                  - columnCounter: 2148
+                    stepCounter: "188"
                 transform: ""
           - columnReference:
-              columnCounter: 2172
-              stepCounter: 191
-            dataType: VARCHAR(10)
+              columnCounter: 2182
+              stepCounter: 193
+            dataType: DATE
             description: ""
             hashColumns: []
             hashDetails: null
-            name: C_MKTSEGMENT
-            nullable: true
+            name: O_ORDERDATE
+            nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 2139
-                    stepCounter: "186"
+                  - columnCounter: 2149
+                    stepCounter: "188"
                 transform: ""
           - columnReference:
-              columnCounter: 2173
-              stepCounter: 191
-            dataType: VARCHAR(117)
+              columnCounter: 2183
+              stepCounter: 193
+            dataType: VARCHAR(15)
             description: ""
             hashColumns: []
             hashDetails: null
-            name: C_COMMENT
-            nullable: true
+            name: O_ORDERPRIORITY
+            nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 2140
-                    stepCounter: "186"
+                  - columnCounter: 2150
+                    stepCounter: "188"
+                transform: ""
+          - columnReference:
+              columnCounter: 2184
+              stepCounter: 193
+            dataType: VARCHAR(15)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: O_CLERK
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2151
+                    stepCounter: "188"
+                transform: ""
+          - columnReference:
+              columnCounter: 2185
+              stepCounter: 193
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: O_SHIPPRIORITY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2152
+                    stepCounter: "188"
+                transform: ""
+          - columnReference:
+              columnCounter: 2186
+              stepCounter: 193
+            dataType: VARCHAR(79)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: O_COMMENT
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2153
+                    stepCounter: "188"
                 transform: ""
         cteString: ""
         enabledColumnTestIDs: []
@@ -137,14 +151,14 @@ steps:
               customSQL: ""
             dependencies:
               - locationName: DEV
-                nodeName: CUSTOMER
+                nodeName: ORDERS
             join:
-              joinCondition: FROM {{ ref('DEV', 'CUSTOMER') }} "CUSTOMER"
-            name: STG_CUSTOMER
+              joinCondition: FROM {{ ref('DEV', 'ORDERS') }} "ORDERS"
+            name: STG_ORDERS
             noLinkRefs: []
-      name: STG_CUSTOMER
+      name: STG_ORDERS
       overrideSQL: false
       schema: ""
       sqlType: Stage
       type: sql
-    stepCounter: "191"
+    stepCounter: "193"

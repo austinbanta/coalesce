@@ -1,5 +1,5 @@
 steps:
-  STG_SUPPLIER-203:
+  STG_NATION_REGION-208:
     operation:
       config:
         insertStrategy: INSERT
@@ -19,102 +19,102 @@ steps:
         appliedNodeTests: []
         columns:
           - columnReference:
-              columnCounter: 2278
-              stepCounter: 203
+              columnCounter: 2356
+              stepCounter: 208
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
             hashDetails: null
-            name: S_SUPPKEY
+            name: N_NATIONKEY
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 2241
-                    stepCounter: "199"
+                  - columnCounter: 2174
+                    stepCounter: "192"
                 transform: ""
           - columnReference:
-              columnCounter: 2279
-              stepCounter: 203
+              columnCounter: 2357
+              stepCounter: 208
             dataType: VARCHAR(25)
             description: ""
             hashColumns: []
             hashDetails: null
-            name: S_NAME
+            name: N_NAME
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 2242
-                    stepCounter: "199"
+                  - columnCounter: 2175
+                    stepCounter: "192"
                 transform: ""
           - columnReference:
-              columnCounter: 2280
-              stepCounter: 203
-            dataType: VARCHAR(40)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: S_ADDRESS
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 2243
-                    stepCounter: "199"
-                transform: ""
-          - columnReference:
-              columnCounter: 2281
-              stepCounter: 203
+              columnCounter: 2358
+              stepCounter: 208
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
             hashDetails: null
-            name: S_NATIONKEY
+            name: N_REGIONKEY
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 2244
-                    stepCounter: "199"
+                  - columnCounter: 2176
+                    stepCounter: "192"
                 transform: ""
           - columnReference:
-              columnCounter: 2282
-              stepCounter: 203
-            dataType: VARCHAR(15)
+              columnCounter: 2359
+              stepCounter: 208
+            dataType: VARCHAR(152)
             description: ""
             hashColumns: []
             hashDetails: null
-            name: S_PHONE
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 2245
-                    stepCounter: "199"
-                transform: ""
-          - columnReference:
-              columnCounter: 2283
-              stepCounter: 203
-            dataType: NUMBER(12,2)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: S_ACCTBAL
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 2246
-                    stepCounter: "199"
-                transform: ""
-          - columnReference:
-              columnCounter: 2284
-              stepCounter: 203
-            dataType: VARCHAR(101)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: S_COMMENT
+            name: N_COMMENT
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 2247
-                    stepCounter: "199"
+                  - columnCounter: 2177
+                    stepCounter: "192"
+                transform: ""
+          - columnReference:
+              columnCounter: 2360
+              stepCounter: 208
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: R_REGIONKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2187
+                    stepCounter: "194"
+                transform: ""
+          - columnReference:
+              columnCounter: 2361
+              stepCounter: 208
+            dataType: VARCHAR(25)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: R_NAME
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2188
+                    stepCounter: "194"
+                transform: ""
+          - columnReference:
+              columnCounter: 2362
+              stepCounter: 208
+            dataType: VARCHAR(152)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: R_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2189
+                    stepCounter: "194"
                 transform: ""
         cteString: ""
         enabledColumnTestIDs: []
@@ -122,15 +122,20 @@ steps:
           - customSQL:
               customSQL: ""
             dependencies:
-              - locationName: DEV
-                nodeName: SUPPLIER
+              - locationName: STG
+                nodeName: STG_NATION
+              - locationName: STG
+                nodeName: STG_REGION
             join:
-              joinCondition: FROM {{ ref('DEV', 'SUPPLIER') }} "SUPPLIER"
-            name: STG_SUPPLIER
+              joinCondition: |-
+                FROM {{ ref('STG', 'STG_NATION') }} "STG_NATION"
+                INNER JOIN {{ ref('STG', 'STG_REGION') }} "STG_REGION"
+                ON "STG_NATION"./*COLUMN*/ = "STG_REGION"./*COLUMN*/
+            name: STG_NATION_REGION
             noLinkRefs: []
-      name: STG_SUPPLIER
+      name: STG_NATION_REGION
       overrideSQL: false
       schema: ""
       sqlType: Stage
       type: sql
-    stepCounter: "203"
+    stepCounter: "208"

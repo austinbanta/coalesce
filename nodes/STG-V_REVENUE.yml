@@ -1,5 +1,5 @@
 steps:
-  V_CUSTOMER_MASTER-182:
+  V_REVENUE-215:
     operation:
       config:
         insertStrategy: UNION
@@ -16,36 +16,8 @@ steps:
         appliedNodeTests: []
         columns:
           - columnReference:
-              columnCounter: 2075
-              stepCounter: 182
-            dataType: NUMBER
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: DIM_CUSTOMER_KEY
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 2060
-                    stepCounter: "181"
-                transform: ""
-          - columnReference:
-              columnCounter: 2076
-              stepCounter: 182
-            dataType: NUMBER(38,0)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: C_CUSTKEY
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 2061
-                    stepCounter: "181"
-                transform: ""
-          - columnReference:
-              columnCounter: 2077
-              stepCounter: 182
+              columnCounter: 2490
+              stepCounter: 215
             dataType: VARCHAR(25)
             description: ""
             hashColumns: []
@@ -54,12 +26,12 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 2062
-                    stepCounter: "181"
+                  - columnCounter: 2207
+                    stepCounter: "196"
                 transform: ""
           - columnReference:
-              columnCounter: 2078
-              stepCounter: 182
+              columnCounter: 2491
+              stepCounter: 215
             dataType: VARCHAR(40)
             description: ""
             hashColumns: []
@@ -68,26 +40,12 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 2063
-                    stepCounter: "181"
+                  - columnCounter: 2208
+                    stepCounter: "196"
                 transform: ""
           - columnReference:
-              columnCounter: 2079
-              stepCounter: 182
-            dataType: NUMBER(38,0)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: C_NATIONKEY
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 2064
-                    stepCounter: "181"
-                transform: ""
-          - columnReference:
-              columnCounter: 2080
-              stepCounter: 182
+              columnCounter: 2493
+              stepCounter: 215
             dataType: VARCHAR(15)
             description: ""
             hashColumns: []
@@ -96,12 +54,12 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 2065
-                    stepCounter: "181"
+                  - columnCounter: 2210
+                    stepCounter: "196"
                 transform: ""
           - columnReference:
-              columnCounter: 2081
-              stepCounter: 182
+              columnCounter: 2494
+              stepCounter: 215
             dataType: NUMBER(12,2)
             description: ""
             hashColumns: []
@@ -110,12 +68,12 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 2066
-                    stepCounter: "181"
+                  - columnCounter: 2211
+                    stepCounter: "196"
                 transform: ""
           - columnReference:
-              columnCounter: 2082
-              stepCounter: 182
+              columnCounter: 2495
+              stepCounter: 215
             dataType: VARCHAR(10)
             description: ""
             hashColumns: []
@@ -124,122 +82,173 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 2067
-                    stepCounter: "181"
+                  - columnCounter: 2212
+                    stepCounter: "196"
                 transform: ""
           - columnReference:
-              columnCounter: 2083
-              stepCounter: 182
-            dataType: VARCHAR(117)
+              columnCounter: 2505
+              stepCounter: 215
+            dataType: VARCHAR(25)
             description: ""
             hashColumns: []
             hashDetails: null
-            name: C_COMMENT
+            name: N_NAME
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2365
+                    stepCounter: "209"
+                transform: ""
+          - columnReference:
+              columnCounter: 2509
+              stepCounter: 215
+            dataType: VARCHAR(25)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: R_NAME
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2369
+                    stepCounter: "209"
+                transform: ""
+          - columnReference:
+              columnCounter: 2517
+              stepCounter: 215
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: O_ORDERKEY
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 2068
-                    stepCounter: "181"
+                  - columnCounter: 2405
+                    stepCounter: "211"
                 transform: ""
           - columnReference:
-              columnCounter: 2084
-              stepCounter: 182
-            dataType: NUMBER
+              columnCounter: 2518
+              stepCounter: 215
+            dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
             hashDetails: null
-            name: SYSTEM_VERSION
-            nullable: false
+            name: O_CUSTKEY
+            nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 2069
-                    stepCounter: "181"
+                  - columnCounter: 2406
+                    stepCounter: "211"
                 transform: ""
           - columnReference:
-              columnCounter: 2085
-              stepCounter: 182
-            dataType: VARCHAR
+              columnCounter: 2519
+              stepCounter: 215
+            dataType: VARCHAR(1)
             description: ""
             hashColumns: []
             hashDetails: null
-            name: SYSTEM_CURRENT_FLAG
+            name: O_ORDERSTATUS
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 2070
-                    stepCounter: "181"
+                  - columnCounter: 2407
+                    stepCounter: "211"
                 transform: ""
           - columnReference:
-              columnCounter: 2086
-              stepCounter: 182
-            dataType: TIMESTAMP
+              columnCounter: 2529
+              stepCounter: 215
+            dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
             hashDetails: null
-            name: SYSTEM_START_DATE
+            name: L_LINENUMBER
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 2071
-                    stepCounter: "181"
+                  - columnCounter: 2417
+                    stepCounter: "211"
                 transform: ""
           - columnReference:
-              columnCounter: 2087
-              stepCounter: 182
-            dataType: TIMESTAMP
+              columnCounter: 2530
+              stepCounter: 215
+            dataType: NUMBER(12,2)
             description: ""
             hashColumns: []
             hashDetails: null
-            name: SYSTEM_END_DATE
+            name: L_QUANTITY
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 2072
-                    stepCounter: "181"
+                  - columnCounter: 2418
+                    stepCounter: "211"
                 transform: ""
           - columnReference:
-              columnCounter: 2088
-              stepCounter: 182
-            dataType: TIMESTAMP
+              columnCounter: 2531
+              stepCounter: 215
+            dataType: NUMBER(12,2)
             description: ""
             hashColumns: []
             hashDetails: null
-            name: SYSTEM_CREATE_DATE
+            name: L_EXTENDEDPRICE
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 2073
-                    stepCounter: "181"
+                  - columnCounter: 2419
+                    stepCounter: "211"
                 transform: ""
           - columnReference:
-              columnCounter: 2089
-              stepCounter: 182
-            dataType: TIMESTAMP
+              columnCounter: 2532
+              stepCounter: 215
+            dataType: NUMBER(12,2)
             description: ""
             hashColumns: []
             hashDetails: null
-            name: SYSTEM_UPDATE_DATE
+            name: L_DISCOUNT
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 2074
-                    stepCounter: "181"
+                  - columnCounter: 2420
+                    stepCounter: "211"
                 transform: ""
+          - columnReference:
+              columnCounter: 2533
+              stepCounter: 215
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: L_TAX
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2421
+                    stepCounter: "211"
+                transform: ""
+        cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:
           - customSQL:
               customSQL: ""
             dependencies:
               - locationName: STG
-                nodeName: DIM_CUSTOMER_MASTER
+                nodeName: DIM_CUST
+              - locationName: STG
+                nodeName: DIM_GEO
+              - locationName: STG
+                nodeName: FCT_SALES
             join:
-              joinCondition: FROM {{ ref('STG', 'DIM_CUSTOMER_MASTER') }}
-                "DIM_CUSTOMER_MASTER"
-            name: V_CUSTOMER_MASTER
+              joinCondition: |-
+                FROM {{ ref('STG', 'DIM_CUST') }} "DIM_CUST"
+                LEFT JOIN {{ ref('STG', 'DIM_GEO') }} "DIM_GEO"
+                ON "DIM_CUST"./*COLUMN*/ = "DIM_GEO"./*COLUMN*/
+                INNER JOIN {{ ref('STG', 'FCT_SALES') }} "FCT_SALES"
+                ON "DIM_CUST"./*COLUMN*/ = "FCT_SALES"./*COLUMN*/
+            name: V_REVENUE
             noLinkRefs: []
-      name: V_CUSTOMER_MASTER
+      name: V_REVENUE
       overrideSQL: false
       schema: ""
       sqlType: View
       type: sql
-    stepCounter: "182"
+    stepCounter: "215"

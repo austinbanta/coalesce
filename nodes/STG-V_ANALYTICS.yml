@@ -1,0 +1,1230 @@
+steps:
+  V_ANALYTICS-217:
+    operation:
+      config:
+        insertStrategy: UNION
+        selectDistinct: false
+      database: ""
+      dependencies: []
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: 2
+      locationName: STG
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 2628
+              stepCounter: 217
+            dataType: NUMBER
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: DIM_CUSTOMER_KEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2205
+                    stepCounter: "196"
+                transform: ""
+          - columnReference:
+              columnCounter: 2629
+              stepCounter: 217
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: C_CUSTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2206
+                    stepCounter: "196"
+                transform: ""
+          - columnReference:
+              columnCounter: 2630
+              stepCounter: 217
+            dataType: VARCHAR(25)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: C_NAME
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2207
+                    stepCounter: "196"
+                transform: ""
+          - columnReference:
+              columnCounter: 2631
+              stepCounter: 217
+            dataType: VARCHAR(40)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: C_ADDRESS
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2208
+                    stepCounter: "196"
+                transform: ""
+          - columnReference:
+              columnCounter: 2632
+              stepCounter: 217
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: C_NATIONKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2209
+                    stepCounter: "196"
+                transform: ""
+          - columnReference:
+              columnCounter: 2633
+              stepCounter: 217
+            dataType: VARCHAR(15)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: C_PHONE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2210
+                    stepCounter: "196"
+                transform: ""
+          - columnReference:
+              columnCounter: 2634
+              stepCounter: 217
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: C_ACCTBAL
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2211
+                    stepCounter: "196"
+                transform: ""
+          - columnReference:
+              columnCounter: 2635
+              stepCounter: 217
+            dataType: VARCHAR(10)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: C_MKTSEGMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2212
+                    stepCounter: "196"
+                transform: ""
+          - columnReference:
+              columnCounter: 2636
+              stepCounter: 217
+            dataType: VARCHAR(117)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: C_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2213
+                    stepCounter: "196"
+                transform: ""
+          - columnReference:
+              columnCounter: 2637
+              stepCounter: 217
+            dataType: NUMBER
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_VERSION
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2214
+                    stepCounter: "196"
+                transform: ""
+          - columnReference:
+              columnCounter: 2638
+              stepCounter: 217
+            dataType: VARCHAR
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_CURRENT_FLAG
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2215
+                    stepCounter: "196"
+                transform: ""
+          - columnReference:
+              columnCounter: 2639
+              stepCounter: 217
+            dataType: TIMESTAMP
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_START_DATE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2216
+                    stepCounter: "196"
+                transform: ""
+          - columnReference:
+              columnCounter: 2640
+              stepCounter: 217
+            dataType: TIMESTAMP
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_END_DATE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2217
+                    stepCounter: "196"
+                transform: ""
+          - columnReference:
+              columnCounter: 2641
+              stepCounter: 217
+            dataType: TIMESTAMP
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_CREATE_DATE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2218
+                    stepCounter: "196"
+                transform: ""
+          - columnReference:
+              columnCounter: 2642
+              stepCounter: 217
+            dataType: TIMESTAMP
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_UPDATE_DATE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2219
+                    stepCounter: "196"
+                transform: ""
+          - columnReference:
+              columnCounter: 2643
+              stepCounter: 217
+            dataType: NUMBER
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: DIM_NATION_REGION_KEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2363
+                    stepCounter: "209"
+                transform: ""
+          - columnReference:
+              columnCounter: 2644
+              stepCounter: 217
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: N_NATIONKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2364
+                    stepCounter: "209"
+                transform: ""
+          - columnReference:
+              columnCounter: 2645
+              stepCounter: 217
+            dataType: VARCHAR(25)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: N_NAME
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2365
+                    stepCounter: "209"
+                transform: ""
+          - columnReference:
+              columnCounter: 2646
+              stepCounter: 217
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: N_REGIONKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2366
+                    stepCounter: "209"
+                transform: ""
+          - columnReference:
+              columnCounter: 2647
+              stepCounter: 217
+            dataType: VARCHAR(152)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: N_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2367
+                    stepCounter: "209"
+                transform: ""
+          - columnReference:
+              columnCounter: 2648
+              stepCounter: 217
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: R_REGIONKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2368
+                    stepCounter: "209"
+                transform: ""
+          - columnReference:
+              columnCounter: 2649
+              stepCounter: 217
+            dataType: VARCHAR(25)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: R_NAME
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2369
+                    stepCounter: "209"
+                transform: ""
+          - columnReference:
+              columnCounter: 2650
+              stepCounter: 217
+            dataType: VARCHAR(152)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: R_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2370
+                    stepCounter: "209"
+                transform: ""
+          - columnReference:
+              columnCounter: 2651
+              stepCounter: 217
+            dataType: NUMBER
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_VERSION
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2371
+                    stepCounter: "209"
+                transform: ""
+          - columnReference:
+              columnCounter: 2652
+              stepCounter: 217
+            dataType: VARCHAR
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_CURRENT_FLAG
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2372
+                    stepCounter: "209"
+                transform: ""
+          - columnReference:
+              columnCounter: 2653
+              stepCounter: 217
+            dataType: TIMESTAMP
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_START_DATE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2373
+                    stepCounter: "209"
+                transform: ""
+          - columnReference:
+              columnCounter: 2654
+              stepCounter: 217
+            dataType: TIMESTAMP
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_END_DATE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2374
+                    stepCounter: "209"
+                transform: ""
+          - columnReference:
+              columnCounter: 2655
+              stepCounter: 217
+            dataType: TIMESTAMP
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_CREATE_DATE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2375
+                    stepCounter: "209"
+                transform: ""
+          - columnReference:
+              columnCounter: 2656
+              stepCounter: 217
+            dataType: TIMESTAMP
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_UPDATE_DATE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2376
+                    stepCounter: "209"
+                transform: ""
+          - columnReference:
+              columnCounter: 2657
+              stepCounter: 217
+            dataType: NUMBER
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: DIM_PART_PARTSUPP_SUPPLIER_KEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2377
+                    stepCounter: "210"
+                transform: ""
+          - columnReference:
+              columnCounter: 2658
+              stepCounter: 217
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: P_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2378
+                    stepCounter: "210"
+                transform: ""
+          - columnReference:
+              columnCounter: 2659
+              stepCounter: 217
+            dataType: VARCHAR(55)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: P_NAME
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2379
+                    stepCounter: "210"
+                transform: ""
+          - columnReference:
+              columnCounter: 2660
+              stepCounter: 217
+            dataType: VARCHAR(25)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: P_MFGR
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2380
+                    stepCounter: "210"
+                transform: ""
+          - columnReference:
+              columnCounter: 2661
+              stepCounter: 217
+            dataType: VARCHAR(10)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: P_BRAND
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2381
+                    stepCounter: "210"
+                transform: ""
+          - columnReference:
+              columnCounter: 2662
+              stepCounter: 217
+            dataType: VARCHAR(25)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: P_TYPE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2382
+                    stepCounter: "210"
+                transform: ""
+          - columnReference:
+              columnCounter: 2663
+              stepCounter: 217
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: P_SIZE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2383
+                    stepCounter: "210"
+                transform: ""
+          - columnReference:
+              columnCounter: 2664
+              stepCounter: 217
+            dataType: VARCHAR(10)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: P_CONTAINER
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2384
+                    stepCounter: "210"
+                transform: ""
+          - columnReference:
+              columnCounter: 2665
+              stepCounter: 217
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: P_RETAILPRICE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2385
+                    stepCounter: "210"
+                transform: ""
+          - columnReference:
+              columnCounter: 2666
+              stepCounter: 217
+            dataType: VARCHAR(23)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: P_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2386
+                    stepCounter: "210"
+                transform: ""
+          - columnReference:
+              columnCounter: 2667
+              stepCounter: 217
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2387
+                    stepCounter: "210"
+                transform: ""
+          - columnReference:
+              columnCounter: 2668
+              stepCounter: 217
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2388
+                    stepCounter: "210"
+                transform: ""
+          - columnReference:
+              columnCounter: 2669
+              stepCounter: 217
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2389
+                    stepCounter: "210"
+                transform: ""
+          - columnReference:
+              columnCounter: 2670
+              stepCounter: 217
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2390
+                    stepCounter: "210"
+                transform: ""
+          - columnReference:
+              columnCounter: 2671
+              stepCounter: 217
+            dataType: VARCHAR(199)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2391
+                    stepCounter: "210"
+                transform: ""
+          - columnReference:
+              columnCounter: 2672
+              stepCounter: 217
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: S_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2392
+                    stepCounter: "210"
+                transform: ""
+          - columnReference:
+              columnCounter: 2673
+              stepCounter: 217
+            dataType: VARCHAR(25)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: S_NAME
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2393
+                    stepCounter: "210"
+                transform: ""
+          - columnReference:
+              columnCounter: 2674
+              stepCounter: 217
+            dataType: VARCHAR(40)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: S_ADDRESS
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2394
+                    stepCounter: "210"
+                transform: ""
+          - columnReference:
+              columnCounter: 2675
+              stepCounter: 217
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: S_NATIONKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2395
+                    stepCounter: "210"
+                transform: ""
+          - columnReference:
+              columnCounter: 2676
+              stepCounter: 217
+            dataType: VARCHAR(15)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: S_PHONE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2396
+                    stepCounter: "210"
+                transform: ""
+          - columnReference:
+              columnCounter: 2677
+              stepCounter: 217
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: S_ACCTBAL
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2397
+                    stepCounter: "210"
+                transform: ""
+          - columnReference:
+              columnCounter: 2678
+              stepCounter: 217
+            dataType: VARCHAR(101)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: S_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2398
+                    stepCounter: "210"
+                transform: ""
+          - columnReference:
+              columnCounter: 2679
+              stepCounter: 217
+            dataType: NUMBER
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_VERSION
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2399
+                    stepCounter: "210"
+                transform: ""
+          - columnReference:
+              columnCounter: 2680
+              stepCounter: 217
+            dataType: VARCHAR
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_CURRENT_FLAG
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2400
+                    stepCounter: "210"
+                transform: ""
+          - columnReference:
+              columnCounter: 2681
+              stepCounter: 217
+            dataType: TIMESTAMP
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_START_DATE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2401
+                    stepCounter: "210"
+                transform: ""
+          - columnReference:
+              columnCounter: 2682
+              stepCounter: 217
+            dataType: TIMESTAMP
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_END_DATE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2402
+                    stepCounter: "210"
+                transform: ""
+          - columnReference:
+              columnCounter: 2683
+              stepCounter: 217
+            dataType: TIMESTAMP
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_CREATE_DATE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2403
+                    stepCounter: "210"
+                transform: ""
+          - columnReference:
+              columnCounter: 2684
+              stepCounter: 217
+            dataType: TIMESTAMP
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_UPDATE_DATE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2404
+                    stepCounter: "210"
+                transform: ""
+          - columnReference:
+              columnCounter: 2685
+              stepCounter: 217
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: O_ORDERKEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2405
+                    stepCounter: "211"
+                transform: ""
+          - columnReference:
+              columnCounter: 2686
+              stepCounter: 217
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: O_CUSTKEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2406
+                    stepCounter: "211"
+                transform: ""
+          - columnReference:
+              columnCounter: 2687
+              stepCounter: 217
+            dataType: VARCHAR(1)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: O_ORDERSTATUS
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2407
+                    stepCounter: "211"
+                transform: ""
+          - columnReference:
+              columnCounter: 2688
+              stepCounter: 217
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: O_TOTALPRICE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2408
+                    stepCounter: "211"
+                transform: ""
+          - columnReference:
+              columnCounter: 2689
+              stepCounter: 217
+            dataType: DATE
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: O_ORDERDATE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2409
+                    stepCounter: "211"
+                transform: ""
+          - columnReference:
+              columnCounter: 2690
+              stepCounter: 217
+            dataType: VARCHAR(15)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: O_ORDERPRIORITY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2410
+                    stepCounter: "211"
+                transform: ""
+          - columnReference:
+              columnCounter: 2691
+              stepCounter: 217
+            dataType: VARCHAR(15)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: O_CLERK
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2411
+                    stepCounter: "211"
+                transform: ""
+          - columnReference:
+              columnCounter: 2692
+              stepCounter: 217
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: O_SHIPPRIORITY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2412
+                    stepCounter: "211"
+                transform: ""
+          - columnReference:
+              columnCounter: 2693
+              stepCounter: 217
+            dataType: VARCHAR(79)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: O_COMMENT
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2413
+                    stepCounter: "211"
+                transform: ""
+          - columnReference:
+              columnCounter: 2694
+              stepCounter: 217
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: L_ORDERKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2414
+                    stepCounter: "211"
+                transform: ""
+          - columnReference:
+              columnCounter: 2695
+              stepCounter: 217
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: L_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2415
+                    stepCounter: "211"
+                transform: ""
+          - columnReference:
+              columnCounter: 2696
+              stepCounter: 217
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: L_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2416
+                    stepCounter: "211"
+                transform: ""
+          - columnReference:
+              columnCounter: 2697
+              stepCounter: 217
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: L_LINENUMBER
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2417
+                    stepCounter: "211"
+                transform: ""
+          - columnReference:
+              columnCounter: 2698
+              stepCounter: 217
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: L_QUANTITY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2418
+                    stepCounter: "211"
+                transform: ""
+          - columnReference:
+              columnCounter: 2699
+              stepCounter: 217
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: L_EXTENDEDPRICE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2419
+                    stepCounter: "211"
+                transform: ""
+          - columnReference:
+              columnCounter: 2700
+              stepCounter: 217
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: L_DISCOUNT
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2420
+                    stepCounter: "211"
+                transform: ""
+          - columnReference:
+              columnCounter: 2701
+              stepCounter: 217
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: L_TAX
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2421
+                    stepCounter: "211"
+                transform: ""
+          - columnReference:
+              columnCounter: 2702
+              stepCounter: 217
+            dataType: VARCHAR(1)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: L_RETURNFLAG
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2422
+                    stepCounter: "211"
+                transform: ""
+          - columnReference:
+              columnCounter: 2703
+              stepCounter: 217
+            dataType: VARCHAR(1)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: L_LINESTATUS
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2423
+                    stepCounter: "211"
+                transform: ""
+          - columnReference:
+              columnCounter: 2704
+              stepCounter: 217
+            dataType: DATE
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: L_SHIPDATE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2424
+                    stepCounter: "211"
+                transform: ""
+          - columnReference:
+              columnCounter: 2705
+              stepCounter: 217
+            dataType: DATE
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: L_COMMITDATE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2425
+                    stepCounter: "211"
+                transform: ""
+          - columnReference:
+              columnCounter: 2706
+              stepCounter: 217
+            dataType: DATE
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: L_RECEIPTDATE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2426
+                    stepCounter: "211"
+                transform: ""
+          - columnReference:
+              columnCounter: 2707
+              stepCounter: 217
+            dataType: VARCHAR(25)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: L_SHIPINSTRUCT
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2427
+                    stepCounter: "211"
+                transform: ""
+          - columnReference:
+              columnCounter: 2708
+              stepCounter: 217
+            dataType: VARCHAR(10)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: L_SHIPMODE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2428
+                    stepCounter: "211"
+                transform: ""
+          - columnReference:
+              columnCounter: 2709
+              stepCounter: 217
+            dataType: VARCHAR(44)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: L_COMMENT
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2429
+                    stepCounter: "211"
+                transform: ""
+          - columnReference:
+              columnCounter: 2710
+              stepCounter: 217
+            dataType: TIMESTAMP
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_CREATE_DATE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2430
+                    stepCounter: "211"
+                transform: ""
+          - columnReference:
+              columnCounter: 2711
+              stepCounter: 217
+            dataType: TIMESTAMP
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_UPDATE_DATE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2431
+                    stepCounter: "211"
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STG
+                nodeName: DIM_CUST
+              - locationName: STG
+                nodeName: DIM_GEO
+              - locationName: STG
+                nodeName: DIM_PARTS_SUPPLIERS
+              - locationName: STG
+                nodeName: FCT_SALES
+            join:
+              joinCondition: >-
+                FROM {{ ref('STG', 'DIM_CUST') }} "DIM_CUST"
+
+                LEFT JOIN {{ ref('STG', 'DIM_GEO') }} "DIM_GEO"
+
+                ON "DIM_CUST"./*COLUMN*/ = "DIM_GEO"./*COLUMN*/
+
+                LEFT JOIN {{ ref('STG', 'DIM_PARTS_SUPPLIERS') }} "DIM_PARTS_SUPPLIERS"
+
+                ON "DIM_CUST"./*COLUMN*/ = "DIM_PARTS_SUPPLIERS"./*COLUMN*/
+
+                INNER JOIN {{ ref('STG', 'FCT_SALES') }} "FCT_SALES"
+
+                ON "DIM_CUST"./*COLUMN*/ = "FCT_SALES"./*COLUMN*/
+            name: V_ANALYTICS
+            noLinkRefs: []
+      name: V_ANALYTICS
+      overrideSQL: false
+      schema: ""
+      sqlType: View
+      type: sql
+    stepCounter: "217"

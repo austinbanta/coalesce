@@ -1,5 +1,5 @@
 steps:
-  STG_LINEITEM_ORDERS-185:
+  STG_ORDERS_LINEITEM-207:
     operation:
       config:
         insertStrategy: INSERT
@@ -19,232 +19,8 @@ steps:
         appliedNodeTests: []
         columns:
           - columnReference:
-              columnCounter: 2108
-              stepCounter: 185
-            dataType: NUMBER(38,0)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: L_ORDERKEY
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 1984
-                    stepCounter: "172"
-                transform: ""
-          - columnReference:
-              columnCounter: 2109
-              stepCounter: 185
-            dataType: NUMBER(38,0)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: L_PARTKEY
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 1985
-                    stepCounter: "172"
-                transform: ""
-          - columnReference:
-              columnCounter: 2110
-              stepCounter: 185
-            dataType: NUMBER(38,0)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: L_SUPPKEY
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 1986
-                    stepCounter: "172"
-                transform: ""
-          - columnReference:
-              columnCounter: 2111
-              stepCounter: 185
-            dataType: NUMBER(38,0)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: L_LINENUMBER
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 1987
-                    stepCounter: "172"
-                transform: ""
-          - columnReference:
-              columnCounter: 2112
-              stepCounter: 185
-            dataType: NUMBER(12,2)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: L_QUANTITY
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 1988
-                    stepCounter: "172"
-                transform: ""
-          - columnReference:
-              columnCounter: 2113
-              stepCounter: 185
-            dataType: NUMBER(12,2)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: L_EXTENDEDPRICE
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 1989
-                    stepCounter: "172"
-                transform: ""
-          - columnReference:
-              columnCounter: 2114
-              stepCounter: 185
-            dataType: NUMBER(12,2)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: L_DISCOUNT
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 1990
-                    stepCounter: "172"
-                transform: ""
-          - columnReference:
-              columnCounter: 2115
-              stepCounter: 185
-            dataType: NUMBER(12,2)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: L_TAX
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 1991
-                    stepCounter: "172"
-                transform: ""
-          - columnReference:
-              columnCounter: 2116
-              stepCounter: 185
-            dataType: VARCHAR(1)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: L_RETURNFLAG
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 1992
-                    stepCounter: "172"
-                transform: ""
-          - columnReference:
-              columnCounter: 2117
-              stepCounter: 185
-            dataType: VARCHAR(1)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: L_LINESTATUS
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 1993
-                    stepCounter: "172"
-                transform: ""
-          - columnReference:
-              columnCounter: 2118
-              stepCounter: 185
-            dataType: DATE
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: L_SHIPDATE
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 1994
-                    stepCounter: "172"
-                transform: ""
-          - columnReference:
-              columnCounter: 2119
-              stepCounter: 185
-            dataType: DATE
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: L_COMMITDATE
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 1995
-                    stepCounter: "172"
-                transform: ""
-          - columnReference:
-              columnCounter: 2120
-              stepCounter: 185
-            dataType: DATE
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: L_RECEIPTDATE
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 1996
-                    stepCounter: "172"
-                transform: ""
-          - columnReference:
-              columnCounter: 2121
-              stepCounter: 185
-            dataType: VARCHAR(25)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: L_SHIPINSTRUCT
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 1997
-                    stepCounter: "172"
-                transform: ""
-          - columnReference:
-              columnCounter: 2122
-              stepCounter: 185
-            dataType: VARCHAR(10)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: L_SHIPMODE
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 1998
-                    stepCounter: "172"
-                transform: ""
-          - columnReference:
-              columnCounter: 2123
-              stepCounter: 185
-            dataType: VARCHAR(44)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: L_COMMENT
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 1999
-                    stepCounter: "172"
-                transform: ""
-          - columnReference:
-              columnCounter: 2124
-              stepCounter: 185
+              columnCounter: 2331
+              stepCounter: 207
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
@@ -253,12 +29,12 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 2004
-                    stepCounter: "174"
+                  - columnCounter: 2178
+                    stepCounter: "193"
                 transform: ""
           - columnReference:
-              columnCounter: 2125
-              stepCounter: 185
+              columnCounter: 2332
+              stepCounter: 207
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
@@ -267,12 +43,12 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 2005
-                    stepCounter: "174"
+                  - columnCounter: 2179
+                    stepCounter: "193"
                 transform: ""
           - columnReference:
-              columnCounter: 2126
-              stepCounter: 185
+              columnCounter: 2333
+              stepCounter: 207
             dataType: VARCHAR(1)
             description: ""
             hashColumns: []
@@ -281,12 +57,12 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 2006
-                    stepCounter: "174"
+                  - columnCounter: 2180
+                    stepCounter: "193"
                 transform: ""
           - columnReference:
-              columnCounter: 2127
-              stepCounter: 185
+              columnCounter: 2334
+              stepCounter: 207
             dataType: NUMBER(12,2)
             description: ""
             hashColumns: []
@@ -295,12 +71,12 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 2007
-                    stepCounter: "174"
+                  - columnCounter: 2181
+                    stepCounter: "193"
                 transform: ""
           - columnReference:
-              columnCounter: 2128
-              stepCounter: 185
+              columnCounter: 2335
+              stepCounter: 207
             dataType: DATE
             description: ""
             hashColumns: []
@@ -309,12 +85,12 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 2008
-                    stepCounter: "174"
+                  - columnCounter: 2182
+                    stepCounter: "193"
                 transform: ""
           - columnReference:
-              columnCounter: 2129
-              stepCounter: 185
+              columnCounter: 2336
+              stepCounter: 207
             dataType: VARCHAR(15)
             description: ""
             hashColumns: []
@@ -323,12 +99,12 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 2009
-                    stepCounter: "174"
+                  - columnCounter: 2183
+                    stepCounter: "193"
                 transform: ""
           - columnReference:
-              columnCounter: 2130
-              stepCounter: 185
+              columnCounter: 2337
+              stepCounter: 207
             dataType: VARCHAR(15)
             description: ""
             hashColumns: []
@@ -337,12 +113,12 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 2010
-                    stepCounter: "174"
+                  - columnCounter: 2184
+                    stepCounter: "193"
                 transform: ""
           - columnReference:
-              columnCounter: 2131
-              stepCounter: 185
+              columnCounter: 2338
+              stepCounter: 207
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
@@ -351,12 +127,12 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 2011
-                    stepCounter: "174"
+                  - columnCounter: 2185
+                    stepCounter: "193"
                 transform: ""
           - columnReference:
-              columnCounter: 2132
-              stepCounter: 185
+              columnCounter: 2339
+              stepCounter: 207
             dataType: VARCHAR(79)
             description: ""
             hashColumns: []
@@ -365,28 +141,253 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 2012
-                    stepCounter: "174"
+                  - columnCounter: 2186
+                    stepCounter: "193"
                 transform: ""
+          - columnReference:
+              columnCounter: 2340
+              stepCounter: 207
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: L_ORDERKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2257
+                    stepCounter: "201"
+                transform: ""
+          - columnReference:
+              columnCounter: 2341
+              stepCounter: 207
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: L_PARTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2258
+                    stepCounter: "201"
+                transform: ""
+          - columnReference:
+              columnCounter: 2342
+              stepCounter: 207
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: L_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2259
+                    stepCounter: "201"
+                transform: ""
+          - columnReference:
+              columnCounter: 2343
+              stepCounter: 207
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: L_LINENUMBER
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2260
+                    stepCounter: "201"
+                transform: ""
+          - columnReference:
+              columnCounter: 2344
+              stepCounter: 207
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: L_QUANTITY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2261
+                    stepCounter: "201"
+                transform: ""
+          - columnReference:
+              columnCounter: 2345
+              stepCounter: 207
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: L_EXTENDEDPRICE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2262
+                    stepCounter: "201"
+                transform: ""
+          - columnReference:
+              columnCounter: 2346
+              stepCounter: 207
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: L_DISCOUNT
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2263
+                    stepCounter: "201"
+                transform: ""
+          - columnReference:
+              columnCounter: 2347
+              stepCounter: 207
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: L_TAX
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2264
+                    stepCounter: "201"
+                transform: ""
+          - columnReference:
+              columnCounter: 2348
+              stepCounter: 207
+            dataType: VARCHAR(1)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: L_RETURNFLAG
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2265
+                    stepCounter: "201"
+                transform: ""
+          - columnReference:
+              columnCounter: 2349
+              stepCounter: 207
+            dataType: VARCHAR(1)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: L_LINESTATUS
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2266
+                    stepCounter: "201"
+                transform: ""
+          - columnReference:
+              columnCounter: 2350
+              stepCounter: 207
+            dataType: DATE
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: L_SHIPDATE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2267
+                    stepCounter: "201"
+                transform: ""
+          - columnReference:
+              columnCounter: 2351
+              stepCounter: 207
+            dataType: DATE
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: L_COMMITDATE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2268
+                    stepCounter: "201"
+                transform: ""
+          - columnReference:
+              columnCounter: 2352
+              stepCounter: 207
+            dataType: DATE
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: L_RECEIPTDATE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2269
+                    stepCounter: "201"
+                transform: ""
+          - columnReference:
+              columnCounter: 2353
+              stepCounter: 207
+            dataType: VARCHAR(25)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: L_SHIPINSTRUCT
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2270
+                    stepCounter: "201"
+                transform: ""
+          - columnReference:
+              columnCounter: 2354
+              stepCounter: 207
+            dataType: VARCHAR(10)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: L_SHIPMODE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2271
+                    stepCounter: "201"
+                transform: ""
+          - columnReference:
+              columnCounter: 2355
+              stepCounter: 207
+            dataType: VARCHAR(44)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: L_COMMENT
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2272
+                    stepCounter: "201"
+                transform: ""
+        cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:
           - customSQL:
               customSQL: ""
             dependencies:
-              - locationName: DEV
-                nodeName: LINEITEM
-              - locationName: DEV
-                nodeName: ORDERS
+              - locationName: STG
+                nodeName: STG_ORDERS
+              - locationName: STG
+                nodeName: STG_LINEITEM
             join:
               joinCondition: |-
-                FROM {{ ref('DEV', 'LINEITEM') }} "LINEITEM"
-                INNER JOIN {{ ref('DEV', 'ORDERS') }} "ORDERS"
-                ON "LINEITEM".L_ORDERKEY = "ORDERS".O_ORDERKEY
-            name: STG_LINEITEM_ORDERS
+                FROM {{ ref('STG', 'STG_ORDERS') }} "STG_ORDERS"
+                INNER JOIN {{ ref('STG', 'STG_LINEITEM') }} "STG_LINEITEM"
+                ON "STG_ORDERS"./*COLUMN*/ = "STG_LINEITEM"./*COLUMN*/
+            name: STG_ORDERS_LINEITEM
             noLinkRefs: []
-      name: STG_LINEITEM_ORDERS
+      name: STG_ORDERS_LINEITEM
       overrideSQL: false
       schema: ""
       sqlType: Stage
       type: sql
-    stepCounter: "185"
+    stepCounter: "207"

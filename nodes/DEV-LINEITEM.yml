@@ -1,5 +1,5 @@
 steps:
-  LINEITEM-172:
+  LINEITEM-197:
     operation:
       database: ""
       dataset: ""
@@ -12,8 +12,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 1984
-              stepCounter: 172
+              columnCounter: 2220
+              stepCounter: 197
             config: {}
             dataType: NUMBER(38,0)
             defaultValue: ""
@@ -27,8 +27,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 1985
-              stepCounter: 172
+              columnCounter: 2221
+              stepCounter: 197
             config: {}
             dataType: NUMBER(38,0)
             defaultValue: ""
@@ -42,8 +42,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 1986
-              stepCounter: 172
+              columnCounter: 2222
+              stepCounter: 197
             config: {}
             dataType: NUMBER(38,0)
             defaultValue: ""
@@ -57,8 +57,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 1987
-              stepCounter: 172
+              columnCounter: 2223
+              stepCounter: 197
             config: {}
             dataType: NUMBER(38,0)
             defaultValue: ""
@@ -72,8 +72,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 1988
-              stepCounter: 172
+              columnCounter: 2224
+              stepCounter: 197
             config: {}
             dataType: NUMBER(12,2)
             defaultValue: ""
@@ -87,8 +87,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 1989
-              stepCounter: 172
+              columnCounter: 2225
+              stepCounter: 197
             config: {}
             dataType: NUMBER(12,2)
             defaultValue: ""
@@ -102,8 +102,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 1990
-              stepCounter: 172
+              columnCounter: 2226
+              stepCounter: 197
             config: {}
             dataType: NUMBER(12,2)
             defaultValue: ""
@@ -117,8 +117,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 1991
-              stepCounter: 172
+              columnCounter: 2227
+              stepCounter: 197
             config: {}
             dataType: NUMBER(12,2)
             defaultValue: ""
@@ -132,8 +132,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 1992
-              stepCounter: 172
+              columnCounter: 2228
+              stepCounter: 197
             config: {}
             dataType: VARCHAR(1)
             defaultValue: ""
@@ -147,8 +147,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 1993
-              stepCounter: 172
+              columnCounter: 2229
+              stepCounter: 197
             config: {}
             dataType: VARCHAR(1)
             defaultValue: ""
@@ -162,8 +162,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 1994
-              stepCounter: 172
+              columnCounter: 2230
+              stepCounter: 197
             config: {}
             dataType: DATE
             defaultValue: ""
@@ -177,8 +177,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 1995
-              stepCounter: 172
+              columnCounter: 2231
+              stepCounter: 197
             config: {}
             dataType: DATE
             defaultValue: ""
@@ -192,8 +192,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 1996
-              stepCounter: 172
+              columnCounter: 2232
+              stepCounter: 197
             config: {}
             dataType: DATE
             defaultValue: ""
@@ -207,8 +207,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 1997
-              stepCounter: 172
+              columnCounter: 2233
+              stepCounter: 197
             config: {}
             dataType: VARCHAR(25)
             defaultValue: ""
@@ -222,8 +222,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 1998
-              stepCounter: 172
+              columnCounter: 2234
+              stepCounter: 197
             config: {}
             dataType: VARCHAR(10)
             defaultValue: ""
@@ -237,8 +237,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 1999
-              stepCounter: 172
+              columnCounter: 2235
+              stepCounter: 197
             config: {}
             dataType: VARCHAR(44)
             defaultValue: ""
@@ -254,4 +254,4 @@ steps:
       sqlType: Source
       table: LINEITEM
       type: sourceInput
-    stepCounter: "172"
+    stepCounter: "197"

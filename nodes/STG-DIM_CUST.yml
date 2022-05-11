@@ -1,5 +1,5 @@
 steps:
-  DIM_CUSTOMER_MASTER-181:
+  DIM_CUST-196:
     operation:
       config:
         postSQL: ""
@@ -21,8 +21,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 2060
-              stepCounter: 181
+              columnCounter: 2205
+              stepCounter: 196
             config: {}
             dataType: NUMBER
             defaultValue: ""
@@ -35,8 +35,8 @@ steps:
               - columnReferences: []
                 transform: ""
           - columnReference:
-              columnCounter: 2061
-              stepCounter: 181
+              columnCounter: 2206
+              stepCounter: 196
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
@@ -46,12 +46,12 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 2037
-                    stepCounter: "179"
+                  - columnCounter: 2166
+                    stepCounter: "191"
                 transform: ""
           - columnReference:
-              columnCounter: 2062
-              stepCounter: 181
+              columnCounter: 2207
+              stepCounter: 196
             dataType: VARCHAR(25)
             description: ""
             hashColumns: []
@@ -60,12 +60,12 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 2038
-                    stepCounter: "179"
+                  - columnCounter: 2167
+                    stepCounter: "191"
                 transform: ""
           - columnReference:
-              columnCounter: 2063
-              stepCounter: 181
+              columnCounter: 2208
+              stepCounter: 196
             dataType: VARCHAR(40)
             description: ""
             hashColumns: []
@@ -75,12 +75,12 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 2039
-                    stepCounter: "179"
+                  - columnCounter: 2168
+                    stepCounter: "191"
                 transform: ""
           - columnReference:
-              columnCounter: 2064
-              stepCounter: 181
+              columnCounter: 2209
+              stepCounter: 196
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
@@ -89,12 +89,12 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 2040
-                    stepCounter: "179"
+                  - columnCounter: 2169
+                    stepCounter: "191"
                 transform: ""
           - columnReference:
-              columnCounter: 2065
-              stepCounter: 181
+              columnCounter: 2210
+              stepCounter: 196
             dataType: VARCHAR(15)
             description: ""
             hashColumns: []
@@ -103,12 +103,12 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 2041
-                    stepCounter: "179"
+                  - columnCounter: 2170
+                    stepCounter: "191"
                 transform: ""
           - columnReference:
-              columnCounter: 2066
-              stepCounter: 181
+              columnCounter: 2211
+              stepCounter: 196
             dataType: NUMBER(12,2)
             description: ""
             hashColumns: []
@@ -117,12 +117,12 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 2042
-                    stepCounter: "179"
+                  - columnCounter: 2171
+                    stepCounter: "191"
                 transform: ""
           - columnReference:
-              columnCounter: 2067
-              stepCounter: 181
+              columnCounter: 2212
+              stepCounter: 196
             dataType: VARCHAR(10)
             description: ""
             hashColumns: []
@@ -131,12 +131,12 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 2043
-                    stepCounter: "179"
+                  - columnCounter: 2172
+                    stepCounter: "191"
                 transform: ""
           - columnReference:
-              columnCounter: 2068
-              stepCounter: 181
+              columnCounter: 2213
+              stepCounter: 196
             dataType: VARCHAR(117)
             description: ""
             hashColumns: []
@@ -145,16 +145,16 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 2044
-                    stepCounter: "179"
+                  - columnCounter: 2173
+                    stepCounter: "191"
                 transform: ""
           - acceptedValues:
               strictMatch: true
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 2069
-              stepCounter: 181
+              columnCounter: 2214
+              stepCounter: 196
             config: {}
             dataType: NUMBER
             defaultValue: ""
@@ -171,8 +171,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 2070
-              stepCounter: 181
+              columnCounter: 2215
+              stepCounter: 196
             config: {}
             dataType: VARCHAR
             defaultValue: ""
@@ -189,8 +189,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 2071
-              stepCounter: 181
+              columnCounter: 2216
+              stepCounter: 196
             config: {}
             dataType: TIMESTAMP
             defaultValue: ""
@@ -207,8 +207,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 2072
-              stepCounter: 181
+              columnCounter: 2217
+              stepCounter: 196
             config: {}
             dataType: TIMESTAMP
             defaultValue: ""
@@ -225,8 +225,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 2073
-              stepCounter: 181
+              columnCounter: 2218
+              stepCounter: 196
             config: {}
             dataType: TIMESTAMP
             defaultValue: ""
@@ -243,8 +243,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 2074
-              stepCounter: 181
+              columnCounter: 2219
+              stepCounter: 196
             config: {}
             dataType: TIMESTAMP
             defaultValue: ""
@@ -256,6 +256,7 @@ steps:
             sourceColumnReferences:
               - columnReferences: []
                 transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+        cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:
           - customSQL:
@@ -265,11 +266,11 @@ steps:
                 nodeName: STG_CUSTOMER
             join:
               joinCondition: FROM {{ ref('STG', 'STG_CUSTOMER') }} "STG_CUSTOMER"
-            name: DIM_CUSTOMER_MASTER
+            name: DIM_CUST
             noLinkRefs: []
-      name: DIM_CUSTOMER_MASTER
+      name: DIM_CUST
       overrideSQL: false
       schema: ""
       sqlType: Dimension
       type: sql
-    stepCounter: "181"
+    stepCounter: "196"
