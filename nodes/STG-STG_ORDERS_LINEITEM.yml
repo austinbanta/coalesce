@@ -368,6 +368,27 @@ steps:
                   - columnCounter: 2272
                     stepCounter: "201"
                 transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 2715
+              stepCounter: "207"
+            config: {}
+            dataType: INTEGER
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: newcolumn
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2714
+                    stepCounter: "193"
+                transform: ""
+            systemColumnType: None
+            transform: ""
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:
