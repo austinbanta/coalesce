@@ -1,5 +1,5 @@
 steps:
-  DIM_GEO-209:
+  DIM_PART-252:
     operation:
       config:
         postSQL: ""
@@ -21,124 +21,153 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 2363
-              stepCounter: 209
+              columnCounter: 3276
+              stepCounter: 252
             config: {}
             dataType: NUMBER
             defaultValue: ""
             description: ""
             hashColumns: []
             isSurrogateKey: true
-            name: DIM_NATION_REGION_KEY
+            name: DIM_PART_KEY
             nullable: false
             sourceColumnReferences:
               - columnReferences: []
                 transform: ""
           - columnReference:
-              columnCounter: 2364
-              stepCounter: 209
+              columnCounter: 3277
+              stepCounter: 252
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
             hashDetails: null
-            name: N_NATIONKEY
+            isBusinessKey: true
+            name: P_PARTKEY
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 2356
-                    stepCounter: "208"
+                  - columnCounter: 3173
+                    stepCounter: "243"
                 transform: ""
           - columnReference:
-              columnCounter: 2365
-              stepCounter: 209
+              columnCounter: 3278
+              stepCounter: 252
+            dataType: VARCHAR(55)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: P_NAME
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3174
+                    stepCounter: "243"
+                transform: ""
+          - columnReference:
+              columnCounter: 3279
+              stepCounter: 252
             dataType: VARCHAR(25)
             description: ""
             hashColumns: []
             hashDetails: null
-            name: N_NAME
+            name: P_MFGR
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 2357
-                    stepCounter: "208"
+                  - columnCounter: 3175
+                    stepCounter: "243"
                 transform: ""
           - columnReference:
-              columnCounter: 2366
-              stepCounter: 209
-            dataType: NUMBER(38,0)
+              columnCounter: 3280
+              stepCounter: 252
+            dataType: VARCHAR(10)
             description: ""
             hashColumns: []
             hashDetails: null
-            name: N_REGIONKEY
+            name: P_BRAND
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 2358
-                    stepCounter: "208"
+                  - columnCounter: 3176
+                    stepCounter: "243"
                 transform: ""
           - columnReference:
-              columnCounter: 2367
-              stepCounter: 209
-            dataType: VARCHAR(152)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: N_COMMENT
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 2359
-                    stepCounter: "208"
-                transform: ""
-          - columnReference:
-              columnCounter: 2368
-              stepCounter: 209
-            dataType: NUMBER(38,0)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: R_REGIONKEY
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 2360
-                    stepCounter: "208"
-                transform: ""
-          - columnReference:
-              columnCounter: 2369
-              stepCounter: 209
+              columnCounter: 3281
+              stepCounter: 252
             dataType: VARCHAR(25)
             description: ""
             hashColumns: []
             hashDetails: null
-            name: R_NAME
+            name: P_TYPE
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 2361
-                    stepCounter: "208"
+                  - columnCounter: 3177
+                    stepCounter: "243"
                 transform: ""
           - columnReference:
-              columnCounter: 2370
-              stepCounter: 209
-            dataType: VARCHAR(152)
+              columnCounter: 3282
+              stepCounter: 252
+            dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
             hashDetails: null
-            name: R_COMMENT
+            name: P_SIZE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3178
+                    stepCounter: "243"
+                transform: ""
+          - columnReference:
+              columnCounter: 3283
+              stepCounter: 252
+            dataType: VARCHAR(10)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: P_CONTAINER
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3179
+                    stepCounter: "243"
+                transform: ""
+          - columnReference:
+              columnCounter: 3284
+              stepCounter: 252
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: P_RETAILPRICE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3180
+                    stepCounter: "243"
+                transform: ""
+          - columnReference:
+              columnCounter: 3285
+              stepCounter: 252
+            dataType: VARCHAR(23)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: P_COMMENT
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 2362
-                    stepCounter: "208"
+                  - columnCounter: 3181
+                    stepCounter: "243"
                 transform: ""
           - acceptedValues:
               strictMatch: true
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 2371
-              stepCounter: 209
+              columnCounter: 3286
+              stepCounter: 252
             config: {}
             dataType: NUMBER
             defaultValue: ""
@@ -155,8 +184,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 2372
-              stepCounter: 209
+              columnCounter: 3287
+              stepCounter: 252
             config: {}
             dataType: VARCHAR
             defaultValue: ""
@@ -173,8 +202,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 2373
-              stepCounter: 209
+              columnCounter: 3288
+              stepCounter: 252
             config: {}
             dataType: TIMESTAMP
             defaultValue: ""
@@ -191,8 +220,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 2374
-              stepCounter: 209
+              columnCounter: 3289
+              stepCounter: 252
             config: {}
             dataType: TIMESTAMP
             defaultValue: ""
@@ -209,8 +238,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 2375
-              stepCounter: 209
+              columnCounter: 3290
+              stepCounter: 252
             config: {}
             dataType: TIMESTAMP
             defaultValue: ""
@@ -227,8 +256,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 2376
-              stepCounter: 209
+              columnCounter: 3291
+              stepCounter: 252
             config: {}
             dataType: TIMESTAMP
             defaultValue: ""
@@ -247,14 +276,14 @@ steps:
               customSQL: ""
             dependencies:
               - locationName: STG
-                nodeName: STG_NATION_REGION
+                nodeName: STG_PART
             join:
-              joinCondition: FROM {{ ref('STG', 'STG_NATION_REGION') }} "STG_NATION_REGION"
-            name: DIM_GEO
+              joinCondition: FROM {{ ref('STG', 'STG_PART') }} "STG_PART"
+            name: DIM_PART
             noLinkRefs: []
-      name: DIM_GEO
+      name: DIM_PART
       overrideSQL: false
       schema: ""
       sqlType: Dimension
       type: sql
-    stepCounter: "209"
+    stepCounter: "252"
