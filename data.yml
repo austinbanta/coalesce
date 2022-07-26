@@ -1,6 +1,26 @@
 environments:
   DEV:
     createdAt:
+      nanoseconds: 99000000
+      seconds: 1639689212
+    createdBy: iMeAfovxHz9mJLva2FFB
+    description: democonnection
+    devEnv: true
+    id: 1
+    mappings:
+      "1":
+        database: COALESCE_SAMPLE_DATABASE
+        id: 1
+        locationName: DEV
+        schema: TPCH_SF001
+      "2":
+        database: AUSTIN_TEST_DB
+        id: 2
+        locationName: STG
+        schema: DEV_STG
+    name: DEV
+  QA:
+    createdAt:
       nanoseconds: 518000000
       seconds: 1639689212
     createdBy: iMeAfovxHz9mJLva2FFB
@@ -18,7 +38,7 @@ environments:
         id: 2
         locationName: STG
         schema: DEV_STG
-    name: DEV
+    name: QA
 jobs:
   Job-2:
     id: 2
