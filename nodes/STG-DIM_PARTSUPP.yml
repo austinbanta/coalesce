@@ -1,5 +1,5 @@
 steps:
-  DIM_REGION-253:
+  DIM_PARTSUPP-282:
     operation:
       config:
         postSQL: ""
@@ -21,69 +21,98 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 3292
-              stepCounter: 253
+              columnCounter: 3797
+              stepCounter: 282
             config: {}
             dataType: NUMBER
             defaultValue: ""
             description: ""
             hashColumns: []
             isSurrogateKey: true
-            name: DIM_REGION_KEY
-            nullable: false
+            name: DIM_PARTSUPP_KEY
+            nullable: true
             sourceColumnReferences:
               - columnReferences: []
                 transform: ""
           - columnReference:
-              columnCounter: 3293
-              stepCounter: 253
+              columnCounter: 3798
+              stepCounter: 282
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
             hashDetails: null
             isBusinessKey: true
-            name: R_REGIONKEY
+            name: PS_PARTKEY
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 3182
-                    stepCounter: "244"
+                  - columnCounter: 3792
+                    stepCounter: "281"
                 transform: ""
           - columnReference:
-              columnCounter: 3294
-              stepCounter: 253
-            dataType: VARCHAR(25)
+              columnCounter: 3799
+              stepCounter: 282
+            dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
             hashDetails: null
-            name: R_NAMEeeeeeee
+            name: PS_SUPPKEY
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 3183
-                    stepCounter: "244"
+                  - columnCounter: 3793
+                    stepCounter: "281"
                 transform: ""
           - columnReference:
-              columnCounter: 3295
-              stepCounter: 253
-            dataType: VARCHAR(152)
+              columnCounter: 3800
+              stepCounter: 282
+            dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
             hashDetails: null
-            name: R_COMMENT
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3794
+                    stepCounter: "281"
+                transform: ""
+          - columnReference:
+              columnCounter: 3801
+              stepCounter: 282
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3795
+                    stepCounter: "281"
+                transform: ""
+          - columnReference:
+              columnCounter: 3802
+              stepCounter: 282
+            dataType: VARCHAR(199)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            isChangeTracking: true
+            name: PS_COMMENT
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 3184
-                    stepCounter: "244"
+                  - columnCounter: 3796
+                    stepCounter: "281"
                 transform: ""
           - acceptedValues:
               strictMatch: true
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 3296
-              stepCounter: 253
+              columnCounter: 3803
+              stepCounter: 282
             config: {}
             dataType: NUMBER
             defaultValue: ""
@@ -91,7 +120,7 @@ steps:
             hashColumns: []
             isSystemVersion: true
             name: SYSTEM_VERSION
-            nullable: false
+            nullable: true
             sourceColumnReferences:
               - columnReferences: []
                 transform: ""
@@ -100,8 +129,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 3297
-              stepCounter: 253
+              columnCounter: 3804
+              stepCounter: 282
             config: {}
             dataType: VARCHAR
             defaultValue: ""
@@ -109,7 +138,7 @@ steps:
             hashColumns: []
             isSystemCurrentFlag: true
             name: SYSTEM_CURRENT_FLAG
-            nullable: false
+            nullable: true
             sourceColumnReferences:
               - columnReferences: []
                 transform: ""
@@ -118,8 +147,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 3298
-              stepCounter: 253
+              columnCounter: 3805
+              stepCounter: 282
             config: {}
             dataType: TIMESTAMP
             defaultValue: ""
@@ -127,7 +156,7 @@ steps:
             hashColumns: []
             isSystemStartDate: true
             name: SYSTEM_START_DATE
-            nullable: false
+            nullable: true
             sourceColumnReferences:
               - columnReferences: []
                 transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
@@ -136,8 +165,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 3299
-              stepCounter: 253
+              columnCounter: 3806
+              stepCounter: 282
             config: {}
             dataType: TIMESTAMP
             defaultValue: ""
@@ -145,7 +174,7 @@ steps:
             hashColumns: []
             isSystemEndDate: true
             name: SYSTEM_END_DATE
-            nullable: false
+            nullable: true
             sourceColumnReferences:
               - columnReferences: []
                 transform: CAST('2999-12-31 00:00:00' AS TIMESTAMP)
@@ -154,8 +183,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 3300
-              stepCounter: 253
+              columnCounter: 3807
+              stepCounter: 282
             config: {}
             dataType: TIMESTAMP
             defaultValue: ""
@@ -163,7 +192,7 @@ steps:
             hashColumns: []
             isSystemCreateDate: true
             name: SYSTEM_CREATE_DATE
-            nullable: false
+            nullable: true
             sourceColumnReferences:
               - columnReferences: []
                 transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
@@ -172,8 +201,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 3301
-              stepCounter: 253
+              columnCounter: 3808
+              stepCounter: 282
             config: {}
             dataType: TIMESTAMP
             defaultValue: ""
@@ -181,7 +210,7 @@ steps:
             hashColumns: []
             isSystemUpdateDate: true
             name: SYSTEM_UPDATE_DATE
-            nullable: false
+            nullable: true
             sourceColumnReferences:
               - columnReferences: []
                 transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
@@ -192,14 +221,14 @@ steps:
               customSQL: ""
             dependencies:
               - locationName: STG
-                nodeName: STG_REGION
+                nodeName: STG_PARTSUPP
             join:
-              joinCondition: FROM {{ ref('STG', 'STG_REGION') }} "STG_REGION"
-            name: DIM_REGION
+              joinCondition: FROM {{ ref('STG', 'STG_PARTSUPP') }} "STG_PARTSUPP"
+            name: DIM_PARTSUPP
             noLinkRefs: []
-      name: DIM_REGION
+      name: DIM_PARTSUPP
       overrideSQL: false
       schema: ""
       sqlType: Dimension
       type: sql
-    stepCounter: "253"
+    stepCounter: "282"

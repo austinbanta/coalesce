@@ -1,5 +1,5 @@
 steps:
-  DIM_SUPPLIER-274:
+  DIM_SUPPLIER-292:
     operation:
       config:
         postSQL: ""
@@ -21,8 +21,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 3706
-              stepCounter: 274
+              columnCounter: 3939
+              stepCounter: 292
             config: {}
             dataType: NUMBER
             defaultValue: ""
@@ -35,8 +35,8 @@ steps:
               - columnReferences: []
                 transform: ""
           - columnReference:
-              columnCounter: 3707
-              stepCounter: 274
+              columnCounter: 3940
+              stepCounter: 292
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
@@ -46,27 +46,26 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 3699
-                    stepCounter: "273"
+                  - columnCounter: 3932
+                    stepCounter: "291"
                 transform: ""
           - columnReference:
-              columnCounter: 3708
-              stepCounter: 274
+              columnCounter: 3941
+              stepCounter: 292
             dataType: VARCHAR(25)
             description: ""
             hashColumns: []
             hashDetails: null
-            isChangeTracking: true
             name: S_NAME
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 3700
-                    stepCounter: "273"
+                  - columnCounter: 3933
+                    stepCounter: "291"
                 transform: ""
           - columnReference:
-              columnCounter: 3709
-              stepCounter: 274
+              columnCounter: 3942
+              stepCounter: 292
             dataType: VARCHAR(40)
             description: ""
             hashColumns: []
@@ -76,12 +75,12 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 3701
-                    stepCounter: "273"
+                  - columnCounter: 3934
+                    stepCounter: "291"
                 transform: ""
           - columnReference:
-              columnCounter: 3710
-              stepCounter: 274
+              columnCounter: 3943
+              stepCounter: 292
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
@@ -90,26 +89,27 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 3702
-                    stepCounter: "273"
+                  - columnCounter: 3935
+                    stepCounter: "291"
                 transform: ""
           - columnReference:
-              columnCounter: 3711
-              stepCounter: 274
+              columnCounter: 3944
+              stepCounter: 292
             dataType: VARCHAR(15)
             description: ""
             hashColumns: []
             hashDetails: null
+            isChangeTracking: true
             name: S_PHONE
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 3703
-                    stepCounter: "273"
+                  - columnCounter: 3936
+                    stepCounter: "291"
                 transform: ""
           - columnReference:
-              columnCounter: 3712
-              stepCounter: 274
+              columnCounter: 3945
+              stepCounter: 292
             dataType: NUMBER(12,2)
             description: ""
             hashColumns: []
@@ -118,12 +118,12 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 3704
-                    stepCounter: "273"
+                  - columnCounter: 3937
+                    stepCounter: "291"
                 transform: ""
           - columnReference:
-              columnCounter: 3713
-              stepCounter: 274
+              columnCounter: 3946
+              stepCounter: 292
             dataType: VARCHAR(101)
             description: ""
             hashColumns: []
@@ -132,16 +132,16 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 3705
-                    stepCounter: "273"
+                  - columnCounter: 3938
+                    stepCounter: "291"
                 transform: ""
           - acceptedValues:
               strictMatch: true
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 3714
-              stepCounter: 274
+              columnCounter: 3947
+              stepCounter: 292
             config: {}
             dataType: NUMBER
             defaultValue: ""
@@ -158,8 +158,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 3715
-              stepCounter: 274
+              columnCounter: 3948
+              stepCounter: 292
             config: {}
             dataType: VARCHAR
             defaultValue: ""
@@ -176,8 +176,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 3716
-              stepCounter: 274
+              columnCounter: 3949
+              stepCounter: 292
             config: {}
             dataType: TIMESTAMP
             defaultValue: ""
@@ -194,8 +194,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 3717
-              stepCounter: 274
+              columnCounter: 3950
+              stepCounter: 292
             config: {}
             dataType: TIMESTAMP
             defaultValue: ""
@@ -212,8 +212,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 3718
-              stepCounter: 274
+              columnCounter: 3951
+              stepCounter: 292
             config: {}
             dataType: TIMESTAMP
             defaultValue: ""
@@ -230,8 +230,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 3719
-              stepCounter: 274
+              columnCounter: 3952
+              stepCounter: 292
             config: {}
             dataType: TIMESTAMP
             defaultValue: ""
@@ -260,4 +260,4 @@ steps:
       schema: ""
       sqlType: Dimension
       type: sql
-    stepCounter: "274"
+    stepCounter: "292"
