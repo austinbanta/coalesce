@@ -407,31 +407,15 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 3723
+              columnCounter: 4143
               stepCounter: "254"
             dataType: number
             description: ""
-            name: newcolumn
+            name: newcol
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 3722
-                    stepCounter: "248"
-                transform: ""
-          - acceptedValues:
-              strictMatch: false
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 3863
-              stepCounter: "254"
-            dataType: number
-            description: ""
-            name: newcol2
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 3860
+                  - columnCounter: 4142
                     stepCounter: "248"
                 transform: ""
         cteString: ""

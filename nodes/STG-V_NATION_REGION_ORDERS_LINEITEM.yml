@@ -692,15 +692,15 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 3725
+              columnCounter: 4145
               stepCounter: "257"
             dataType: number
             description: ""
-            name: newcolumn
+            name: newcol
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 3723
+                  - columnCounter: 4143
                     stepCounter: "254"
                 transform: ""
         cteString: ""

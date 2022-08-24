@@ -114,22 +114,6 @@ steps:
                   - columnCounter: 3171
                     stepCounter: "242"
                 transform: ""
-          - acceptedValues:
-              strictMatch: false
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 3861
-              stepCounter: "279"
-            dataType: number
-            description: ""
-            name: newcol2
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 3859
-                    stepCounter: "242"
-                transform: ""
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:
