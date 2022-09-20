@@ -18,7 +18,10 @@ steps:
       metadata:
         appliedNodeTests: []
         columns:
-          - columnReference:
+          - appliedColumnTests:
+              hasNull: false
+              isDistinct: true
+            columnReference:
               columnCounter: 3152
               stepCounter: 240
             dataType: NUMBER(38,0)
@@ -32,7 +35,10 @@ steps:
                   - columnCounter: 2133
                     stepCounter: "186"
                 transform: ""
-          - columnReference:
+          - appliedColumnTests:
+              hasNull: false
+              isDistinct: false
+            columnReference:
               columnCounter: 3153
               stepCounter: 240
             dataType: VARCHAR(25)
@@ -46,7 +52,10 @@ steps:
                   - columnCounter: 2134
                     stepCounter: "186"
                 transform: ""
-          - columnReference:
+          - appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
               columnCounter: 3154
               stepCounter: 240
             dataType: VARCHAR(40)
@@ -60,7 +69,10 @@ steps:
                   - columnCounter: 2135
                     stepCounter: "186"
                 transform: ""
-          - columnReference:
+          - appliedColumnTests:
+              hasNull: false
+              isDistinct: false
+            columnReference:
               columnCounter: 3155
               stepCounter: 240
             dataType: NUMBER(38,0)
@@ -74,7 +86,10 @@ steps:
                   - columnCounter: 2136
                     stepCounter: "186"
                 transform: ""
-          - columnReference:
+          - appliedColumnTests:
+              hasNull: false
+              isDistinct: false
+            columnReference:
               columnCounter: 3156
               stepCounter: 240
             dataType: VARCHAR(15)
@@ -88,7 +103,10 @@ steps:
                   - columnCounter: 2137
                     stepCounter: "186"
                 transform: ""
-          - columnReference:
+          - appliedColumnTests:
+              hasNull: false
+              isDistinct: false
+            columnReference:
               columnCounter: 3157
               stepCounter: 240
             dataType: NUMBER(12,2)
@@ -102,7 +120,10 @@ steps:
                   - columnCounter: 2138
                     stepCounter: "186"
                 transform: ""
-          - columnReference:
+          - appliedColumnTests:
+              hasNull: false
+              isDistinct: false
+            columnReference:
               columnCounter: 3158
               stepCounter: 240
             dataType: VARCHAR(10)
@@ -116,7 +137,10 @@ steps:
                   - columnCounter: 2139
                     stepCounter: "186"
                 transform: ""
-          - columnReference:
+          - appliedColumnTests:
+              hasNull: false
+              isDistinct: false
+            columnReference:
               columnCounter: 3159
               stepCounter: 240
             dataType: VARCHAR(117)
@@ -130,8 +154,33 @@ steps:
                   - columnCounter: 2140
                     stepCounter: "186"
                 transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: false
+              isDistinct: false
+            columnReference:
+              columnCounter: 4153
+              stepCounter: "240"
+            config: {}
+            dataType: number
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: newcol
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0
+                    stepCounter: "0"
+                transform: ""
+            systemColumnType: None
+            transform: ""
         cteString: ""
-        enabledColumnTestIDs: []
+        enabledColumnTestIDs:
+          - hasNull
+          - isDistinct
         sourceMapping:
           - customSQL:
               customSQL: ""

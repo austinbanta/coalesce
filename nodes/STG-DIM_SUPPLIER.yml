@@ -1,5 +1,5 @@
 steps:
-  DIM_REGION-253:
+  DIM_SUPPLIER-335:
     operation:
       config:
         postSQL: ""
@@ -10,7 +10,7 @@ steps:
       description: ""
       isDataVault: false
       isMultisource: false
-      locationID: 2
+      locationID: ""
       locationName: STG
       materializationType: table
       metadata:
@@ -21,69 +21,127 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 3292
-              stepCounter: 253
+              columnCounter: 4474
+              stepCounter: "335"
             config: {}
             dataType: NUMBER
             defaultValue: ""
             description: ""
             hashColumns: []
             isSurrogateKey: true
-            name: DIM_REGION_KEY
-            nullable: false
+            name: DIM_SUPPLIER_KEY
+            nullable: true
             sourceColumnReferences:
               - columnReferences: []
                 transform: ""
           - columnReference:
-              columnCounter: 3293
-              stepCounter: 253
+              columnCounter: 4475
+              stepCounter: "335"
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
             hashDetails: null
             isBusinessKey: true
-            name: R_REGIONKEY
+            name: S_SUPPKEY
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 3182
-                    stepCounter: "244"
+                  - columnCounter: 4467
+                    stepCounter: "334"
                 transform: ""
           - columnReference:
-              columnCounter: 3294
-              stepCounter: 253
+              columnCounter: 4476
+              stepCounter: "335"
             dataType: VARCHAR(25)
             description: ""
             hashColumns: []
             hashDetails: null
-            name: R_NAME
+            name: S_NAME
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 3183
-                    stepCounter: "244"
+                  - columnCounter: 4468
+                    stepCounter: "334"
                 transform: ""
           - columnReference:
-              columnCounter: 3295
-              stepCounter: 253
-            dataType: VARCHAR(152)
+              columnCounter: 4477
+              stepCounter: "335"
+            dataType: VARCHAR(40)
             description: ""
             hashColumns: []
             hashDetails: null
-            name: R_COMMENT
+            isChangeTracking: true
+            name: S_ADDRESS
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4469
+                    stepCounter: "334"
+                transform: ""
+          - columnReference:
+              columnCounter: 4478
+              stepCounter: "335"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: S_NATIONKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4470
+                    stepCounter: "334"
+                transform: ""
+          - columnReference:
+              columnCounter: 4479
+              stepCounter: "335"
+            dataType: VARCHAR(15)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            isChangeTracking: true
+            name: S_PHONE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4471
+                    stepCounter: "334"
+                transform: ""
+          - columnReference:
+              columnCounter: 4480
+              stepCounter: "335"
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: S_ACCTBAL
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4472
+                    stepCounter: "334"
+                transform: ""
+          - columnReference:
+              columnCounter: 4481
+              stepCounter: "335"
+            dataType: VARCHAR(101)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: S_COMMENT
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 3184
-                    stepCounter: "244"
+                  - columnCounter: 4473
+                    stepCounter: "334"
                 transform: ""
           - acceptedValues:
               strictMatch: true
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 3296
-              stepCounter: 253
+              columnCounter: 4482
+              stepCounter: "335"
             config: {}
             dataType: NUMBER
             defaultValue: ""
@@ -91,7 +149,7 @@ steps:
             hashColumns: []
             isSystemVersion: true
             name: SYSTEM_VERSION
-            nullable: false
+            nullable: true
             sourceColumnReferences:
               - columnReferences: []
                 transform: ""
@@ -100,8 +158,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 3297
-              stepCounter: 253
+              columnCounter: 4483
+              stepCounter: "335"
             config: {}
             dataType: VARCHAR
             defaultValue: ""
@@ -109,7 +167,7 @@ steps:
             hashColumns: []
             isSystemCurrentFlag: true
             name: SYSTEM_CURRENT_FLAG
-            nullable: false
+            nullable: true
             sourceColumnReferences:
               - columnReferences: []
                 transform: ""
@@ -118,8 +176,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 3298
-              stepCounter: 253
+              columnCounter: 4484
+              stepCounter: "335"
             config: {}
             dataType: TIMESTAMP
             defaultValue: ""
@@ -127,7 +185,7 @@ steps:
             hashColumns: []
             isSystemStartDate: true
             name: SYSTEM_START_DATE
-            nullable: false
+            nullable: true
             sourceColumnReferences:
               - columnReferences: []
                 transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
@@ -136,8 +194,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 3299
-              stepCounter: 253
+              columnCounter: 4485
+              stepCounter: "335"
             config: {}
             dataType: TIMESTAMP
             defaultValue: ""
@@ -145,7 +203,7 @@ steps:
             hashColumns: []
             isSystemEndDate: true
             name: SYSTEM_END_DATE
-            nullable: false
+            nullable: true
             sourceColumnReferences:
               - columnReferences: []
                 transform: CAST('2999-12-31 00:00:00' AS TIMESTAMP)
@@ -154,8 +212,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 3300
-              stepCounter: 253
+              columnCounter: 4486
+              stepCounter: "335"
             config: {}
             dataType: TIMESTAMP
             defaultValue: ""
@@ -163,7 +221,7 @@ steps:
             hashColumns: []
             isSystemCreateDate: true
             name: SYSTEM_CREATE_DATE
-            nullable: false
+            nullable: true
             sourceColumnReferences:
               - columnReferences: []
                 transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
@@ -172,8 +230,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 3301
-              stepCounter: 253
+              columnCounter: 4487
+              stepCounter: "335"
             config: {}
             dataType: TIMESTAMP
             defaultValue: ""
@@ -181,7 +239,7 @@ steps:
             hashColumns: []
             isSystemUpdateDate: true
             name: SYSTEM_UPDATE_DATE
-            nullable: false
+            nullable: true
             sourceColumnReferences:
               - columnReferences: []
                 transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
@@ -192,14 +250,14 @@ steps:
               customSQL: ""
             dependencies:
               - locationName: STG
-                nodeName: STG_REGION
+                nodeName: STG_SUPPLIER
             join:
-              joinCondition: FROM {{ ref('STG', 'STG_REGION') }} "STG_REGION"
-            name: DIM_REGION
+              joinCondition: FROM {{ ref('STG', 'STG_SUPPLIER') }} "STG_SUPPLIER"
+            name: DIM_SUPPLIER
             noLinkRefs: []
-      name: DIM_REGION
+      name: DIM_SUPPLIER
       overrideSQL: false
       schema: ""
       sqlType: Dimension
       type: sql
-    stepCounter: "253"
+    stepCounter: "335"

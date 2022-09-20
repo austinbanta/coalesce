@@ -1,5 +1,5 @@
 steps:
-  V_ORDERS_LINEITEM-256:
+  V_LINEITEM-315:
     operation:
       config:
         insertStrategy: UNION
@@ -9,113 +9,29 @@ steps:
       description: ""
       isDataVault: false
       isMultisource: false
-      locationID: 2
+      locationID: ""
       locationName: STG
       materializationType: view
       metadata:
         appliedNodeTests: []
         columns:
           - columnReference:
-              columnCounter: 3408
-              stepCounter: 256
+              columnCounter: 4189
+              stepCounter: "315"
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
             hashDetails: null
-            name: O_ORDERKEY
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 3302
-                    stepCounter: "254"
-                transform: ""
-          - columnReference:
-              columnCounter: 3409
-              stepCounter: 256
-            dataType: NUMBER(38,0)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: O_CUSTKEY
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 3303
-                    stepCounter: "254"
-                transform: ""
-          - columnReference:
-              columnCounter: 3410
-              stepCounter: 256
-            dataType: VARCHAR(1)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: O_ORDERSTATUS
+            name: L_ORDERKEY
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 3304
-                    stepCounter: "254"
+                  - columnCounter: 3185
+                    stepCounter: "245"
                 transform: ""
           - columnReference:
-              columnCounter: 3411
-              stepCounter: 256
-            dataType: NUMBER(12,2)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: O_TOTALPRICE
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 3305
-                    stepCounter: "254"
-                transform: ""
-          - columnReference:
-              columnCounter: 3412
-              stepCounter: 256
-            dataType: DATE
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: O_ORDERDATE
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 3306
-                    stepCounter: "254"
-                transform: ""
-          - columnReference:
-              columnCounter: 3413
-              stepCounter: 256
-            dataType: VARCHAR(15)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: O_ORDERPRIORITY
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 3307
-                    stepCounter: "254"
-                transform: ""
-          - columnReference:
-              columnCounter: 3415
-              stepCounter: 256
-            dataType: NUMBER(38,0)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: O_SHIPPRIORITY
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 3309
-                    stepCounter: "254"
-                transform: ""
-          - columnReference:
-              columnCounter: 3418
-              stepCounter: 256
+              columnCounter: 4190
+              stepCounter: "315"
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
@@ -124,12 +40,26 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 3312
-                    stepCounter: "254"
+                  - columnCounter: 3186
+                    stepCounter: "245"
                 transform: ""
           - columnReference:
-              columnCounter: 3420
-              stepCounter: 256
+              columnCounter: 4191
+              stepCounter: "315"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: L_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3187
+                    stepCounter: "245"
+                transform: ""
+          - columnReference:
+              columnCounter: 4192
+              stepCounter: "315"
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
@@ -138,12 +68,12 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 3314
-                    stepCounter: "254"
+                  - columnCounter: 3188
+                    stepCounter: "245"
                 transform: ""
           - columnReference:
-              columnCounter: 3421
-              stepCounter: 256
+              columnCounter: 4193
+              stepCounter: "315"
             dataType: NUMBER(12,2)
             description: ""
             hashColumns: []
@@ -152,12 +82,12 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 3315
-                    stepCounter: "254"
+                  - columnCounter: 3189
+                    stepCounter: "245"
                 transform: ""
           - columnReference:
-              columnCounter: 3422
-              stepCounter: 256
+              columnCounter: 4194
+              stepCounter: "315"
             dataType: NUMBER(12,2)
             description: ""
             hashColumns: []
@@ -166,12 +96,12 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 3316
-                    stepCounter: "254"
+                  - columnCounter: 3190
+                    stepCounter: "245"
                 transform: ""
           - columnReference:
-              columnCounter: 3423
-              stepCounter: 256
+              columnCounter: 4195
+              stepCounter: "315"
             dataType: NUMBER(12,2)
             description: ""
             hashColumns: []
@@ -180,12 +110,12 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 3317
-                    stepCounter: "254"
+                  - columnCounter: 3191
+                    stepCounter: "245"
                 transform: ""
           - columnReference:
-              columnCounter: 3424
-              stepCounter: 256
+              columnCounter: 4196
+              stepCounter: "315"
             dataType: NUMBER(12,2)
             description: ""
             hashColumns: []
@@ -194,12 +124,12 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 3318
-                    stepCounter: "254"
+                  - columnCounter: 3192
+                    stepCounter: "245"
                 transform: ""
           - columnReference:
-              columnCounter: 3425
-              stepCounter: 256
+              columnCounter: 4197
+              stepCounter: "315"
             dataType: VARCHAR(1)
             description: ""
             hashColumns: []
@@ -208,12 +138,26 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 3319
-                    stepCounter: "254"
+                  - columnCounter: 3193
+                    stepCounter: "245"
                 transform: ""
           - columnReference:
-              columnCounter: 3427
-              stepCounter: 256
+              columnCounter: 4198
+              stepCounter: "315"
+            dataType: VARCHAR(1)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: L_LINESTATUS
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3194
+                    stepCounter: "245"
+                transform: ""
+          - columnReference:
+              columnCounter: 4199
+              stepCounter: "315"
             dataType: DATE
             description: ""
             hashColumns: []
@@ -222,12 +166,12 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 3321
-                    stepCounter: "254"
+                  - columnCounter: 3195
+                    stepCounter: "245"
                 transform: ""
           - columnReference:
-              columnCounter: 3428
-              stepCounter: 256
+              columnCounter: 4200
+              stepCounter: "315"
             dataType: DATE
             description: ""
             hashColumns: []
@@ -236,12 +180,12 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 3322
-                    stepCounter: "254"
+                  - columnCounter: 3196
+                    stepCounter: "245"
                 transform: ""
           - columnReference:
-              columnCounter: 3429
-              stepCounter: 256
+              columnCounter: 4201
+              stepCounter: "315"
             dataType: DATE
             description: ""
             hashColumns: []
@@ -250,12 +194,12 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 3323
-                    stepCounter: "254"
+                  - columnCounter: 3197
+                    stepCounter: "245"
                 transform: ""
           - columnReference:
-              columnCounter: 3430
-              stepCounter: 256
+              columnCounter: 4202
+              stepCounter: "315"
             dataType: VARCHAR(25)
             description: ""
             hashColumns: []
@@ -264,12 +208,12 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 3324
-                    stepCounter: "254"
+                  - columnCounter: 3198
+                    stepCounter: "245"
                 transform: ""
           - columnReference:
-              columnCounter: 3431
-              stepCounter: 256
+              columnCounter: 4203
+              stepCounter: "315"
             dataType: VARCHAR(10)
             description: ""
             hashColumns: []
@@ -278,25 +222,59 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 3325
-                    stepCounter: "254"
+                  - columnCounter: 3199
+                    stepCounter: "245"
+                transform: ""
+          - columnReference:
+              columnCounter: 4204
+              stepCounter: "315"
+            dataType: VARCHAR(44)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: L_COMMENT
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3200
+                    stepCounter: "245"
                 transform: ""
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:
           - customSQL:
-              customSQL: ""
+              customSQL: |-
+                {{ stage('Override Create SQL') }}
+                	CREATE OR REPLACE VIEW {{ ref('STG', 'V_LINEITEM')}} AS (
+                		SELECT 
+                 L_ORDERKEY AS L_ORDERKEY,
+                 L_PARTKEY AS L_PARTKEY,
+                 L_SUPPKEY AS L_SUPPKEY,
+                 L_LINENUMBER AS L_LINENUMBER,
+                 L_QUANTITY AS L_QUANTITY,
+                 L_EXTENDEDPRICE AS L_EXTENDEDPRICE,
+                 L_DISCOUNT AS L_DISCOUNT,
+                 L_TAX AS L_TAX,
+                 L_RETURNFLAG AS L_RETURNFLAG,
+                 L_LINESTATUS AS L_LINESTATUS,
+                 L_SHIPDATE AS L_SHIPDATE,
+                 L_COMMITDATE AS L_COMMITDATE,
+                 L_RECEIPTDATE AS L_RECEIPTDATE,
+                 L_SHIPINSTRUCT AS L_SHIPINSTRUCT,
+                 L_SHIPMODE AS L_SHIPMODE,
+                 L_COMMENT AS L_COMMENT
+                 FROM {{ ref('STG', 'STG_LINEITEM') }}
+                	)
             dependencies:
               - locationName: STG
-                nodeName: FCT_ORDERS_LINEITEM
+                nodeName: STG_LINEITEM
             join:
-              joinCondition: FROM {{ ref('STG', 'FCT_ORDERS_LINEITEM') }}
-                "FCT_ORDERS_LINEITEM"
-            name: V_ORDERS_LINEITEM
+              joinCondition: FROM {{ ref('STG', 'STG_LINEITEM') }} "STG_LINEITEM"
+            name: V_LINEITEM
             noLinkRefs: []
-      name: V_ORDERS_LINEITEM
-      overrideSQL: false
+      name: V_LINEITEM
+      overrideSQL: true
       schema: ""
       sqlType: View
       type: sql
-    stepCounter: "256"
+    stepCounter: "315"
