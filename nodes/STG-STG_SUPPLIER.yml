@@ -1,5 +1,5 @@
 steps:
-  STG_SUPPLIER-334:
+  STG_SUPPLIER-341:
     operation:
       config:
         insertStrategy: INSERT
@@ -9,6 +9,7 @@ steps:
         truncateBefore: true
       database: ""
       dependencies: []
+      deployEnabled: true
       description: ""
       isDataVault: false
       isMultisource: false
@@ -19,8 +20,8 @@ steps:
         appliedNodeTests: []
         columns:
           - columnReference:
-              columnCounter: 4467
-              stepCounter: "334"
+              columnCounter: 4570
+              stepCounter: "341"
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
@@ -33,8 +34,8 @@ steps:
                     stepCounter: "199"
                 transform: ""
           - columnReference:
-              columnCounter: 4468
-              stepCounter: "334"
+              columnCounter: 4571
+              stepCounter: "341"
             dataType: VARCHAR(25)
             description: ""
             hashColumns: []
@@ -47,8 +48,8 @@ steps:
                     stepCounter: "199"
                 transform: UPPER("SUPPLIER"."S_NAME")
           - columnReference:
-              columnCounter: 4469
-              stepCounter: "334"
+              columnCounter: 4572
+              stepCounter: "341"
             dataType: VARCHAR(40)
             description: ""
             hashColumns: []
@@ -61,8 +62,8 @@ steps:
                     stepCounter: "199"
                 transform: UPPER("SUPPLIER"."S_ADDRESS")
           - columnReference:
-              columnCounter: 4470
-              stepCounter: "334"
+              columnCounter: 4573
+              stepCounter: "341"
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
@@ -75,8 +76,8 @@ steps:
                     stepCounter: "199"
                 transform: ""
           - columnReference:
-              columnCounter: 4471
-              stepCounter: "334"
+              columnCounter: 4574
+              stepCounter: "341"
             dataType: VARCHAR(15)
             description: ""
             hashColumns: []
@@ -89,8 +90,8 @@ steps:
                     stepCounter: "199"
                 transform: ""
           - columnReference:
-              columnCounter: 4472
-              stepCounter: "334"
+              columnCounter: 4575
+              stepCounter: "341"
             dataType: NUMBER(12,2)
             description: ""
             hashColumns: []
@@ -103,8 +104,8 @@ steps:
                     stepCounter: "199"
                 transform: ""
           - columnReference:
-              columnCounter: 4473
-              stepCounter: "334"
+              columnCounter: 4576
+              stepCounter: "341"
             dataType: VARCHAR(101)
             description: ""
             hashColumns: []
@@ -116,6 +117,32 @@ steps:
                   - columnCounter: 2247
                     stepCounter: "199"
                 transform: UPPER("SUPPLIER"."S_COMMENT")
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4577
+              stepCounter: "341"
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 4571
+                stepCounter: "341"
+              - columnCounter: 4572
+                stepCounter: "341"
+              - columnCounter: 4573
+                stepCounter: "341"
+            name: GH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:
@@ -133,4 +160,4 @@ steps:
       schema: ""
       sqlType: Stage
       type: sql
-    stepCounter: "334"
+    stepCounter: "341"

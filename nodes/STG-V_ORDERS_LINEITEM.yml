@@ -6,6 +6,7 @@ steps:
         selectDistinct: false
       database: ""
       dependencies: []
+      deployEnabled: true
       description: ""
       isDataVault: false
       isMultisource: false
@@ -290,8 +291,7 @@ steps:
               - locationName: STG
                 nodeName: FCT_ORDERS_LINEITEM
             join:
-              joinCondition: FROM {{ ref('STG', 'FCT_ORDERS_LINEITEM') }}
-                "FCT_ORDERS_LINEITEM"
+              joinCondition: FROM {{ ref('STG', 'FCT_ORDERS_LINEITEM') }} "FCT_ORDERS_LINEITEM"
             name: V_ORDERS_LINEITEM
             noLinkRefs: []
       name: V_ORDERS_LINEITEM
