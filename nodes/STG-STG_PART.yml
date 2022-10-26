@@ -9,6 +9,7 @@ steps:
         truncateBefore: true
       database: ""
       dependencies: []
+      deployEnabled: true
       description: ""
       isDataVault: false
       isMultisource: false
@@ -78,7 +79,7 @@ steps:
               columnCounter: 3177
               stepCounter: 243
             dataType: VARCHAR(25)
-            description: ""
+            description: test
             hashColumns: []
             hashDetails: null
             name: P_TYPE

@@ -9,6 +9,7 @@ steps:
         truncateBefore: true
       database: ""
       dependencies: []
+      deployEnabled: true
       description: ""
       isDataVault: false
       isMultisource: false
@@ -16,7 +17,12 @@ steps:
       locationName: STG
       materializationType: table
       metadata:
-        appliedNodeTests: []
+        appliedNodeTests:
+          - continueOnFailure: true
+            description: ""
+            name: Test
+            runOrder: After
+            templateString: ""
         columns:
           - columnReference:
               columnCounter: 3185
