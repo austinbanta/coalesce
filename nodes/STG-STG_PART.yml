@@ -107,7 +107,7 @@ steps:
               columnCounter: 3179
               stepCounter: 243
             dataType: VARCHAR(10)
-            description: ""
+            description: test
             hashColumns: []
             hashDetails: null
             name: P_CONTAINER
@@ -121,7 +121,7 @@ steps:
               columnCounter: 3180
               stepCounter: 243
             dataType: NUMBER(12,2)
-            description: ""
+            description: test
             hashColumns: []
             hashDetails: null
             name: P_RETAILPRICE
@@ -135,7 +135,7 @@ steps:
               columnCounter: 3181
               stepCounter: 243
             dataType: VARCHAR(23)
-            description: ""
+            description: test
             hashColumns: []
             hashDetails: null
             name: P_COMMENT

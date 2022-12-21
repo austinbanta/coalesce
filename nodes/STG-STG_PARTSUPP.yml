@@ -1,5 +1,5 @@
 steps:
-  STG_NATION-241:
+  STG_PARTSUPP-361:
     operation:
       config:
         insertStrategy: INSERT
@@ -13,67 +13,81 @@ steps:
       description: ""
       isDataVault: false
       isMultisource: false
-      locationID: 2
+      locationID: ""
       locationName: STG
       materializationType: table
       metadata:
         appliedNodeTests: []
         columns:
           - columnReference:
-              columnCounter: 3160
-              stepCounter: 241
+              columnCounter: 4799
+              stepCounter: "361"
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
             hashDetails: null
-            name: N_NATIONKEY
+            name: PS_PARTKEY
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 2141
-                    stepCounter: "187"
+                  - columnCounter: 2236
+                    stepCounter: "198"
                 transform: ""
           - columnReference:
-              columnCounter: 3161
-              stepCounter: 241
-            dataType: VARCHAR(25)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: N_NAME
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 2142
-                    stepCounter: "187"
-                transform: ""
-          - columnReference:
-              columnCounter: 3162
-              stepCounter: 241
+              columnCounter: 4800
+              stepCounter: "361"
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
             hashDetails: null
-            name: N_REGIONKEY
+            name: PS_SUPPKEY
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 2143
-                    stepCounter: "187"
+                  - columnCounter: 2237
+                    stepCounter: "198"
                 transform: ""
           - columnReference:
-              columnCounter: 3163
-              stepCounter: 241
-            dataType: VARCHAR(152)
+              columnCounter: 4801
+              stepCounter: "361"
+            dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
             hashDetails: null
-            name: N_COMMENT
+            name: PS_AVAILQTY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2238
+                    stepCounter: "198"
+                transform: ""
+          - columnReference:
+              columnCounter: 4802
+              stepCounter: "361"
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_SUPPLYCOST
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2239
+                    stepCounter: "198"
+                transform: ""
+          - columnReference:
+              columnCounter: 4803
+              stepCounter: "361"
+            dataType: VARCHAR(199)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PS_COMMENT
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 2144
-                    stepCounter: "187"
+                  - columnCounter: 2240
+                    stepCounter: "198"
                 transform: ""
         cteString: ""
         enabledColumnTestIDs: []
@@ -82,14 +96,14 @@ steps:
               customSQL: ""
             dependencies:
               - locationName: DEV
-                nodeName: NATION
+                nodeName: PARTSUPP
             join:
-              joinCondition: FROM {{ ref('DEV', 'NATION') }} "NATION"
-            name: STG_NATION
+              joinCondition: FROM {{ ref('DEV', 'PARTSUPP') }} "PARTSUPP"
+            name: STG_PARTSUPP
             noLinkRefs: []
-      name: STG_NATION
+      name: STG_PARTSUPP
       overrideSQL: false
       schema: ""
       sqlType: Stage
       type: sql
-    stepCounter: "241"
+    stepCounter: "361"
