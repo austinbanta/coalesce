@@ -1,5 +1,5 @@
 steps:
-  STG_CUSTOMER-387:
+  STG_CUSTOMER-413:
     operation:
       config:
         insertStrategy: INSERT
@@ -19,9 +19,12 @@ steps:
       metadata:
         appliedNodeTests: []
         columns:
-          - columnReference:
-              columnCounter: 5114
-              stepCounter: "387"
+          - appliedColumnTests:
+              hasNull: false
+              isDistinct: true
+            columnReference:
+              columnCounter: 5379
+              stepCounter: "413"
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
@@ -33,9 +36,12 @@ steps:
                   - columnCounter: 2133
                     stepCounter: "186"
                 transform: ""
-          - columnReference:
-              columnCounter: 5115
-              stepCounter: "387"
+          - appliedColumnTests:
+              hasNull: true
+              isDistinct: true
+            columnReference:
+              columnCounter: 5380
+              stepCounter: "413"
             dataType: VARCHAR(25)
             description: ""
             hashColumns: []
@@ -46,10 +52,13 @@ steps:
               - columnReferences:
                   - columnCounter: 2134
                     stepCounter: "186"
-                transform: ""
-          - columnReference:
-              columnCounter: 5116
-              stepCounter: "387"
+                transform: UPPER("CUSTOMER"."C_NAME")
+          - appliedColumnTests:
+              hasNull: false
+              isDistinct: false
+            columnReference:
+              columnCounter: 5381
+              stepCounter: "413"
             dataType: VARCHAR(40)
             description: ""
             hashColumns: []
@@ -60,10 +69,13 @@ steps:
               - columnReferences:
                   - columnCounter: 2135
                     stepCounter: "186"
-                transform: ""
-          - columnReference:
-              columnCounter: 5117
-              stepCounter: "387"
+                transform: UPPER("CUSTOMER"."C_ADDRESS")
+          - appliedColumnTests:
+              hasNull: false
+              isDistinct: false
+            columnReference:
+              columnCounter: 5382
+              stepCounter: "413"
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
@@ -75,9 +87,12 @@ steps:
                   - columnCounter: 2136
                     stepCounter: "186"
                 transform: ""
-          - columnReference:
-              columnCounter: 5118
-              stepCounter: "387"
+          - appliedColumnTests:
+              hasNull: false
+              isDistinct: false
+            columnReference:
+              columnCounter: 5383
+              stepCounter: "413"
             dataType: VARCHAR(15)
             description: ""
             hashColumns: []
@@ -89,9 +104,12 @@ steps:
                   - columnCounter: 2137
                     stepCounter: "186"
                 transform: ""
-          - columnReference:
-              columnCounter: 5119
-              stepCounter: "387"
+          - appliedColumnTests:
+              hasNull: false
+              isDistinct: false
+            columnReference:
+              columnCounter: 5384
+              stepCounter: "413"
             dataType: NUMBER(12,2)
             description: ""
             hashColumns: []
@@ -103,9 +121,12 @@ steps:
                   - columnCounter: 2138
                     stepCounter: "186"
                 transform: ""
-          - columnReference:
-              columnCounter: 5120
-              stepCounter: "387"
+          - appliedColumnTests:
+              hasNull: false
+              isDistinct: false
+            columnReference:
+              columnCounter: 5385
+              stepCounter: "413"
             dataType: VARCHAR(10)
             description: ""
             hashColumns: []
@@ -117,9 +138,12 @@ steps:
                   - columnCounter: 2139
                     stepCounter: "186"
                 transform: ""
-          - columnReference:
-              columnCounter: 5121
-              stepCounter: "387"
+          - appliedColumnTests:
+              hasNull: false
+              isDistinct: false
+            columnReference:
+              columnCounter: 5386
+              stepCounter: "413"
             dataType: VARCHAR(117)
             description: ""
             hashColumns: []
@@ -130,9 +154,11 @@ steps:
               - columnReferences:
                   - columnCounter: 2140
                     stepCounter: "186"
-                transform: ""
+                transform: UPPER("CUSTOMER"."C_COMMENT")
         cteString: ""
-        enabledColumnTestIDs: []
+        enabledColumnTestIDs:
+          - hasNull
+          - isDistinct
         sourceMapping:
           - customSQL:
               customSQL: ""
@@ -148,4 +174,4 @@ steps:
       schema: ""
       sqlType: Stage
       type: sql
-    stepCounter: "387"
+    stepCounter: "413"
