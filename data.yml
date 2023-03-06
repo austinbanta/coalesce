@@ -3770,7 +3770,6 @@ subgraphs:
     name: pipeline
     steps:
       - "251"
-      - "362"
   Subgraph-4:
     id: 4
     name: Part Dimension Type 2

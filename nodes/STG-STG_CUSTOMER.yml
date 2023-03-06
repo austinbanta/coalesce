@@ -1,5 +1,5 @@
 steps:
-  STG_CUSTOMER-413:
+  STG_CUSTOMER-425:
     operation:
       config:
         insertStrategy: INSERT
@@ -20,11 +20,11 @@ steps:
         appliedNodeTests: []
         columns:
           - appliedColumnTests:
-              hasNull: false
+              hasNull: true
               isDistinct: true
             columnReference:
-              columnCounter: 5379
-              stepCounter: "413"
+              columnCounter: 5542
+              stepCounter: "425"
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
@@ -37,11 +37,11 @@ steps:
                     stepCounter: "186"
                 transform: ""
           - appliedColumnTests:
-              hasNull: true
-              isDistinct: true
+              hasNull: false
+              isDistinct: false
             columnReference:
-              columnCounter: 5380
-              stepCounter: "413"
+              columnCounter: 5543
+              stepCounter: "425"
             dataType: VARCHAR(25)
             description: ""
             hashColumns: []
@@ -57,8 +57,8 @@ steps:
               hasNull: false
               isDistinct: false
             columnReference:
-              columnCounter: 5381
-              stepCounter: "413"
+              columnCounter: 5544
+              stepCounter: "425"
             dataType: VARCHAR(40)
             description: ""
             hashColumns: []
@@ -74,8 +74,8 @@ steps:
               hasNull: false
               isDistinct: false
             columnReference:
-              columnCounter: 5382
-              stepCounter: "413"
+              columnCounter: 5545
+              stepCounter: "425"
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
@@ -91,8 +91,8 @@ steps:
               hasNull: false
               isDistinct: false
             columnReference:
-              columnCounter: 5383
-              stepCounter: "413"
+              columnCounter: 5546
+              stepCounter: "425"
             dataType: VARCHAR(15)
             description: ""
             hashColumns: []
@@ -108,8 +108,8 @@ steps:
               hasNull: false
               isDistinct: false
             columnReference:
-              columnCounter: 5384
-              stepCounter: "413"
+              columnCounter: 5547
+              stepCounter: "425"
             dataType: NUMBER(12,2)
             description: ""
             hashColumns: []
@@ -125,8 +125,8 @@ steps:
               hasNull: false
               isDistinct: false
             columnReference:
-              columnCounter: 5385
-              stepCounter: "413"
+              columnCounter: 5548
+              stepCounter: "425"
             dataType: VARCHAR(10)
             description: ""
             hashColumns: []
@@ -142,8 +142,8 @@ steps:
               hasNull: false
               isDistinct: false
             columnReference:
-              columnCounter: 5386
-              stepCounter: "413"
+              columnCounter: 5549
+              stepCounter: "425"
             dataType: VARCHAR(117)
             description: ""
             hashColumns: []
@@ -174,4 +174,4 @@ steps:
       schema: ""
       sqlType: Stage
       type: sql
-    stepCounter: "413"
+    stepCounter: "425"

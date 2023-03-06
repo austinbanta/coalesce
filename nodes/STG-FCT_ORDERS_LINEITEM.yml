@@ -408,7 +408,7 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 4824
+              columnCounter: 5528
               stepCounter: "254"
             dataType: varchar(100)
             description: ""
