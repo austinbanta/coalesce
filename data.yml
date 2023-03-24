@@ -1817,6 +1817,79 @@ stepTypes:
             {% endif %}
     name: Copy of Stage
     version: 1
+  StepType-44:
+    id: "44"
+    isDisabled: false
+    metadata:
+      defaultStorageLocation: null
+      error: null
+      nodeMetadataSpec: |-
+        capitalized: PII View
+        short: VPII
+        tagColor: 'red'
+        isDisabled: true
+        plural: Views
+
+        config:
+          - groupName: Documentation
+            items:
+            - displayName: Description
+              attributename: description
+              type: textBox
+              isRequired: false
+              default: "A PII View adds a masking policy to specific attributes marked using the PII Flag column.  Allowed values (PII or blank)."
+
+          - groupName: Options
+            items: 
+
+            - displayName: Masking policy name
+              attributeName: maskingPolicy
+              type: textBox
+              isRequired: true
+
+          - groupName: Hidden config
+            enableIf: "false"
+            items:
+            - displayName: Type
+              type: materializationSelector
+              default: view
+              options:
+              - view
+              isRequired: true
+
+        mappingColumns:                                  
+        - type: textBox                                  
+          headerName: 'PII Flag'                        
+          attributeName: piiFlag
+      templates:
+        create:
+          templateString: |+
+            {% set source = sources[0] %}
+            {{ stage('Create View') }}
+            CREATE OR REPLACE VIEW {{ ref_no_link(node.location.name, node.name) }}
+            (
+                {% for col in columns %}
+                    "{{ col.name }}"{%- if col.piiFlag | upper == "PII"%} MASKING POLICY "{{config.maskingPolicy}}" {% endif %}
+                    {%- if col.description | length > 0 %} COMMENT '{{ col.description }}'{% endif %}
+                    {%- if not loop.last -%}, {% endif %}
+                {% endfor %}
+            )
+            {%- if node.description | length > 0 %} COMMENT = '{{ node.description }}'{% endif %}
+            AS
+
+            SELECT {% if config.selectDistinct %} DISTINCT {% endif %}
+            {% for col in source.columns %}
+                {{ get_source_transform(col) }} AS "{{ col.name }}"
+                {%- if not loop.last -%}, {% endif %}
+            {% endfor %}
+
+            {{ source.join }}
+
+
+        run:
+          templateString: ""
+    name: PII View
+    version: 1
   StepType-Dimension:
     id: Dimension
     isDisabled: false
@@ -3783,6 +3856,10 @@ subgraphs:
     steps: []
   Subgraph-6:
     id: 6
+    name: New Subgraph
+    steps: []
+  Subgraph-7:
+    id: 7
     name: New Subgraph
     steps: []
 version: 1
