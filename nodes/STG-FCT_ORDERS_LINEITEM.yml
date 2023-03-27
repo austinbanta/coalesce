@@ -408,15 +408,47 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 5528
+              columnCounter: 5604
               stepCounter: "254"
-            dataType: varchar(100)
+            dataType: DATE
             description: ""
-            name: newcolumn
+            name: L_RECEIPTDATE1
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3234
+                    stepCounter: "248"
+                transform: ""
+          - acceptedValues:
+              strictMatch: false
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 5624
+              stepCounter: "254"
+            dataType: varachar(50)
+            description: ""
+            name: newcol
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 4822
+                  - columnCounter: 5623
+                    stepCounter: "248"
+                transform: ""
+          - acceptedValues:
+              strictMatch: false
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 5649
+              stepCounter: "254"
+            dataType: varachar(50)
+            description: ""
+            name: newcol1
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5623
                     stepCounter: "248"
                 transform: ""
         cteString: ""

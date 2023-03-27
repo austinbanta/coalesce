@@ -76,7 +76,21 @@ steps:
         enabledColumnTestIDs: []
         sourceMapping:
           - customSQL:
-              customSQL: ""
+              customSQL: |-
+                {{ stage('Override Create SQL') }}
+                	CREATE OR REPLACE VIEW {{ ref('STG', 'V_ORDERS')}} AS (
+                		SELECT 
+                 O_ORDERKEY AS O_ORDERKEY,
+                 O_CUSTKEY AS O_CUSTKEY,
+                 O_ORDERSTATUS AS O_ORDERSTATUS,
+                 O_TOTALPRICE AS O_TOTALPRICE,
+                 O_ORDERDATE AS O_ORDERDATE,
+                 O_ORDERPRIORITY AS O_ORDERPRIORITY,
+                 O_CLERK AS O_CLERK,
+                 O_SHIPPRIORITY AS O_SHIPPRIORITY,
+                 O_COMMENT AS O_COMMENT
+                 FROM {{ ref('STG', 'STG_ORDERS') }}
+                	)
             dependencies:
               - locationName: STG
                 nodeName: STG_ORDERS
@@ -85,7 +99,7 @@ steps:
             name: V_ORDERS
             noLinkRefs: []
       name: V_ORDERS
-      overrideSQL: false
+      overrideSQL: true
       schema: ""
       sqlType: View
       type: sql

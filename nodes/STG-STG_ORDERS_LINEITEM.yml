@@ -449,14 +449,14 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 4822
+              columnCounter: 5623
               stepCounter: "248"
             config: {}
-            dataType: varchar(100)
+            dataType: varachar(50)
             defaultValue: ""
             description: ""
             keyColumnType: None
-            name: newcolumn
+            name: newcol
             nullable: true
             sourceColumnReferences:
               - columnReferences:

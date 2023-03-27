@@ -20,6 +20,20 @@ jobs:
     name: newjob3
     steps: []
     subgraphs: []
+  Job-5:
+    excludeSelector: ""
+    id: 5
+    includeSelector: ""
+    name: New Job
+    steps: []
+    subgraphs: []
+  Job-6:
+    excludeSelector: ""
+    id: 6
+    includeSelector: "+{ location: STG name: FCT_ORDERS_LINEITEM }"
+    name: fact
+    steps: []
+    subgraphs: []
 locations:
   DEV:
     mappingDefinitions:
@@ -3832,8 +3846,7 @@ subgraphs:
   Subgraph-1:
     id: 1
     name: New Subgraph
-    steps:
-      - "186"
+    steps: []
   Subgraph-2:
     id: 2
     name: New Subgraph
