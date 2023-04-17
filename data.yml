@@ -49,8 +49,8 @@ locations:
         database: AUSTIN_TEST_DB
         schema: DEV_STG
       "3":
-        database: AUSTIN_TEST_DB
-        schema: DEV_STG
+        database: AUSTIN_TEST_DB_PROD
+        schema: EDW_PROD
 macros: {}
 packages: {}
 projects: {}
