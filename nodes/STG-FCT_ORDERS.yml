@@ -46,20 +46,6 @@ steps:
                     stepCounter: "242"
                 transform: ""
           - columnReference:
-              columnCounter: 3779
-              stepCounter: 279
-            dataType: number
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: newcolumn
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 3720
-                    stepCounter: "242"
-                transform: ""
-          - columnReference:
               columnCounter: 3772
               stepCounter: 279
             dataType: VARCHAR(1)
