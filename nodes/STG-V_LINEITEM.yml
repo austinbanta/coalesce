@@ -6,7 +6,7 @@ steps:
         selectDistinct: false
       database: ""
       dependencies: []
-      deployEnabled: false
+      deployEnabled: true
       description: ""
       isDataVault: false
       isMultisource: false
