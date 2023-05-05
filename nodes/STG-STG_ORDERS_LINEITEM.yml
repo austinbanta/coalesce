@@ -456,7 +456,7 @@ steps:
             defaultValue: ""
             description: ""
             keyColumnType: None
-            name: newcol
+            name: NEWCOLUMN
             nullable: true
             sourceColumnReferences:
               - columnReferences:
