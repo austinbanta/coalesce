@@ -444,6 +444,27 @@ steps:
                   - columnCounter: 3200
                     stepCounter: "245"
                 transform: UPPER("STG_LINEITEM"."L_COMMENT")
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b47b60de-e6ce-42a4-b361-22db262881ef
+              stepCounter: "248"
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: NEWCOL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: CONCAT("STG_LINEITEM"."L_SHIPMODE","STG_ORDERS"."O_SHIPPRIORITY")
+            systemColumnType: None
+            transform: ""
         cteString: ""
         enabledColumnTestIDs:
           - hasNull

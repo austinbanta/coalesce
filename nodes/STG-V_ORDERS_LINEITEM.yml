@@ -408,6 +408,22 @@ steps:
                   - columnCounter: 5604
                     stepCounter: "254"
                 transform: ""
+          - acceptedValues:
+              strictMatch: false
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0d2f79ff-7234-494d-abe5-06da07ee4a5f
+              stepCounter: cc79f493-a239-4fd9-b691-5665b3f2798f
+            dataType: STRING
+            description: ""
+            name: NEWCOL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0d2f79ff-7234-494d-abe5-06da07ee4a5f
+                    stepCounter: "254"
+                transform: ""
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:
