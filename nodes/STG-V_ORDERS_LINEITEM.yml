@@ -408,22 +408,6 @@ steps:
                   - columnCounter: 5604
                     stepCounter: "254"
                 transform: ""
-          - acceptedValues:
-              strictMatch: false
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: f1d6c513-75c4-45e6-916b-254ee8e2c10b
-              stepCounter: cc79f493-a239-4fd9-b691-5665b3f2798f
-            dataType: varchar(100)
-            description: ""
-            name: NEWCOLUMN
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: f1d6c513-75c4-45e6-916b-254ee8e2c10b
-                    stepCounter: "254"
-                transform: ""
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:
