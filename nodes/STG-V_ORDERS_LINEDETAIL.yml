@@ -7,7 +7,7 @@ steps:
       database: ""
       dependencies: []
       deployEnabled: true
-      description: ""
+      description: This combines order and line item detail information about sales orders. Comes from our CRM.
       isDataVault: false
       isMultisource: false
       locationID: ""
@@ -230,7 +230,7 @@ steps:
               columnCounter: a83d028f-a478-48f6-911b-25c3f3fce726
               stepCounter: c87c8617-8c6a-4c45-b6ee-5fbd8210519c
             dataType: NUMBER(12,2)
-            description: ""
+            description: already takes into account quantity
             hashColumns: []
             hashDetails: null
             name: O_TOTALPRICE
@@ -300,7 +300,7 @@ steps:
               columnCounter: ce8ef69e-4935-4409-84a2-14762fe31083
               stepCounter: c87c8617-8c6a-4c45-b6ee-5fbd8210519c
             dataType: VARCHAR(79)
-            description: ""
+            description: this field is manually entered by sales rep
             hashColumns: []
             hashDetails: null
             name: O_COMMENT
