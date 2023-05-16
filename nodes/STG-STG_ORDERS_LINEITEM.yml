@@ -449,14 +449,14 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: b47b60de-e6ce-42a4-b361-22db262881ef
+              columnCounter: 81d10fdc-0a53-484b-8964-7790860509e0
               stepCounter: "248"
             config: {}
             dataType: STRING
             defaultValue: ""
             description: ""
             keyColumnType: None
-            name: NEWCOL
+            name: newcol
             nullable: true
             sourceColumnReferences:
               - columnReferences:

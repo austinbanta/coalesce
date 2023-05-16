@@ -424,15 +424,15 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 0d2f79ff-7234-494d-abe5-06da07ee4a5f
+              columnCounter: c58bfbad-288e-4154-9c80-fd6798e7b3f6
               stepCounter: "254"
             dataType: STRING
             description: ""
-            name: NEWCOL
+            name: newcol
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: b47b60de-e6ce-42a4-b361-22db262881ef
+                  - columnCounter: 81d10fdc-0a53-484b-8964-7790860509e0
                     stepCounter: "248"
                 transform: ""
         cteString: ""
