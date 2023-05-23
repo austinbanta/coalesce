@@ -38,13 +38,13 @@ locations:
   CRM2:
     mappingDefinitions:
       "3":
-        database: AUSTIN_TEST_DB_PROD
-        schema: EDW_PROD_AW
+        database: AUSTIN_TEST_DB
+        schema: CRM_2
   CRM3:
     mappingDefinitions:
       "3":
-        database: AUSTIN_TEST_DB_PROD
-        schema: EDW_PROD_AW
+        database: AUSTIN_TEST_DB
+        schema: CRM_3
   DEV:
     mappingDefinitions:
       "2":
