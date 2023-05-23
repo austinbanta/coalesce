@@ -410,24 +410,34 @@ steps:
               - columnReferences:
                   - columnCounter: 18e985f5-8b1a-458a-a7f4-c3510ba6fe8d
                     stepCounter: 26311f04-a550-427c-ad09-0c3ab485f312
-                transform: concat(left("SUPPLIER"."S_NAME",3),"STG_CRM2_SUP_PART_MASTER"."PART_SUPP")
+                transform: ""
+          - acceptedValues:
+              strictMatch: false
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 9f912ec4-eb6b-4606-b968-42e7a07be496
+              stepCounter: 8c941ec2-c92b-4ed0-8d56-971bc1bf09ee
+            dataType: STRING
+            description: ""
+            name: dep flag
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: aab7dbde-f4bd-483e-bc63-56cecb712451
+                    stepCounter: d48df697-5dd8-406a-b2b1-877043f34570
+                transform: ""
         enabledColumnTestIDs: []
         sourceMapping:
           - aliases:
               STG_CRM2_SUP_PART_MASTER: 26311f04-a550-427c-ad09-0c3ab485f312
-              SUPPLIER: "199"
             customSQL:
               customSQL: ""
             dependencies:
-              - locationName: DEV
-                nodeName: SUPPLIER
               - locationName: STG
                 nodeName: STG_CRM2_SUP_PART_MASTER
             join:
-              joinCondition: |-
-                FROM {{ ref('STG', 'STG_CRM2_SUP_PART_MASTER') }} "STG_CRM2_SUP_PART_MASTER"
-                INNER JOIN {{ ref('DEV', 'SUPPLIER') }} "SUPPLIER"
-                ON "STG_CRM2_SUP_PART_MASTER"."S_SUPPKEY" = "SUPPLIER"."S_SUPPKEY"
+              joinCondition: FROM {{ ref('STG', 'STG_CRM2_SUP_PART_MASTER') }} "STG_CRM2_SUP_PART_MASTER"
             name: STG_CRM2_SUP_PART_MASTER1
             noLinkRefs: []
           - aliases:

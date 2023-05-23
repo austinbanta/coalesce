@@ -318,11 +318,11 @@ steps:
               - columnReferences:
                   - columnCounter: 43d40e99-e000-4eb4-8a25-0390494f7b4d
                     stepCounter: 02b35428-64c9-4664-a8be-3647fd5bb95a
-                transform: ""
+                transform: "\"STG_CRM2_ORDERS_LINEITEM\".\"L_TAX\"*1.05"
               - columnReferences:
                   - columnCounter: 868d46ba-ba32-47d2-9e54-3cb7a746aaa4
                     stepCounter: 8f684499-1bc2-4b7f-b649-5de33bfdf7c8
-                transform: ""
+                transform: "\"STG_CRM3_ORDERS_LINEITEM\".\"L_TAX\"*1.05"
           - columnReference:
               columnCounter: 13cbfbf8-c3e8-4c6c-9468-f6ae566b9c62
               stepCounter: 575ab2bc-e3cb-4e3e-a75e-628d9e2928cf

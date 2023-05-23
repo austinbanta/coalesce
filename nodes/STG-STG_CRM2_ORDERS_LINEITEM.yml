@@ -254,7 +254,7 @@ steps:
               - columnReferences:
                   - columnCounter: e6bd6c5c-49c3-44f0-8722-847c9ff8f922
                     stepCounter: afb8b2d0-71a4-490b-847f-a216ca8240cf
-                transform: ""
+                transform: "\"CRM2_LINEITEM\".\"L_TAX\"*1.05"
           - columnReference:
               columnCounter: 8338e5b0-4710-439c-8c94-3c36f3bb9024
               stepCounter: 02b35428-64c9-4664-a8be-3647fd5bb95a

@@ -293,6 +293,27 @@ steps:
                   - columnCounter: f9ed7591-795d-48b8-861b-1727bfe2dfa3
                     stepCounter: 575a20e5-3642-4c8c-9de2-616b743d1c58
                 transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: aab7dbde-f4bd-483e-bc63-56cecb712451
+              stepCounter: d48df697-5dd8-406a-b2b1-877043f34570
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: dep flag
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: "'deprecated'"
+            systemColumnType: None
+            transform: ""
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:

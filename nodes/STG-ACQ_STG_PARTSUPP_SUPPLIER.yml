@@ -411,6 +411,22 @@ steps:
                   - columnCounter: b415ab4b-0e8c-43fb-b242-c293baec9884
                     stepCounter: 8c941ec2-c92b-4ed0-8d56-971bc1bf09ee
                 transform: ""
+          - acceptedValues:
+              strictMatch: false
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: fe82dc13-b31f-4d24-853f-ce462095a1a8
+              stepCounter: b3263d3e-05cd-4125-a455-7fca6570b2cf
+            dataType: STRING
+            description: ""
+            name: dep flag
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9f912ec4-eb6b-4606-b968-42e7a07be496
+                    stepCounter: 8c941ec2-c92b-4ed0-8d56-971bc1bf09ee
+                transform: ""
         enabledColumnTestIDs: []
         sourceMapping:
           - customSQL:
