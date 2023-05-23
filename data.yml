@@ -1,5 +1,12 @@
 defaultStorageMapping: STG
-jobs: {}
+jobs:
+  Job-9:
+    excludeSelector: ""
+    id: 9
+    includeSelector: "+{ location: STG name: ACQ_FCT_ORDERS_LINEITEM }"
+    name: fact refresh
+    steps: []
+    subgraphs: []
 locations:
   CRM2:
     mappingDefinitions:
