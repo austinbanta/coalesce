@@ -308,7 +308,7 @@ steps:
           - columnReference:
               columnCounter: e88ae7e5-74a7-4a0f-af16-66b992a0d25c
               stepCounter: 575ab2bc-e3cb-4e3e-a75e-628d9e2928cf
-            dataType: NUMBER(12,2)
+            dataType: NUMBER
             description: ""
             hashColumns: []
             hashDetails: null

@@ -1,37 +1,10 @@
 defaultStorageMapping: STG
 jobs:
-  Job-2:
-    id: 2
-    name: New Job
-    steps:
-      - "257"
-    subgraphs: []
-  Job-3:
+  Job-8:
     excludeSelector: ""
-    id: 3
-    includeSelector: "{ location: STG name: STG_CUSTOMER } OR { location: STG name: DIM_CUSTOMER }"
-    name: New Job
-    steps: []
-    subgraphs: []
-  Job-4:
-    excludeSelector: ""
-    id: 4
-    includeSelector: "{ subgraph: \"pipeline\" } OR { location: STG name: STG_ORDERS_LINEITEM }"
-    name: newjob3
-    steps: []
-    subgraphs: []
-  Job-5:
-    excludeSelector: ""
-    id: 5
-    includeSelector: ""
-    name: New Job
-    steps: []
-    subgraphs: []
-  Job-6:
-    excludeSelector: ""
-    id: 6
-    includeSelector: "+{ location: STG name: FCT_ORDERS_LINEITEM }"
-    name: fact
+    id: 8
+    includeSelector: "+{ location: STG name: ACQ_FCT_ORDERS_LINEITEM }"
+    name: Fact Refresh
     steps: []
     subgraphs: []
 locations:

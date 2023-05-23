@@ -244,7 +244,7 @@ steps:
           - columnReference:
               columnCounter: 868d46ba-ba32-47d2-9e54-3cb7a746aaa4
               stepCounter: 8f684499-1bc2-4b7f-b649-5de33bfdf7c8
-            dataType: NUMBER(12,2)
+            dataType: NUMBER
             description: ""
             hashColumns: []
             hashDetails: null
