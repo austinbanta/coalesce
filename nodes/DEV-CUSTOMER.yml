@@ -1,5 +1,5 @@
 steps:
-  CUSTOMER-47976600-d80c-41dd-93bf-1cebcde9010e:
+  CUSTOMER-63159f44-1d0f-451d-8668-27eae48a4eef:
     operation:
       database: ""
       dataset: ""
@@ -14,8 +14,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 9300c632-6f9d-479a-b380-beb21d2e2011
-              stepCounter: 47976600-d80c-41dd-93bf-1cebcde9010e
+              columnCounter: bc0bad73-44c8-4cdc-a965-6df5c8700e14
+              stepCounter: 63159f44-1d0f-451d-8668-27eae48a4eef
             config: {}
             dataType: NUMBER(38,0)
             defaultValue: ""
@@ -29,8 +29,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 8a8831fa-18b7-4e55-922f-935935cc5832
-              stepCounter: 47976600-d80c-41dd-93bf-1cebcde9010e
+              columnCounter: 0a509e59-8860-412f-b069-091571e4be3d
+              stepCounter: 63159f44-1d0f-451d-8668-27eae48a4eef
             config: {}
             dataType: VARCHAR(25)
             defaultValue: ""
@@ -44,8 +44,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: e3e4ebc7-c988-413b-ac2c-07fd2593cd95
-              stepCounter: 47976600-d80c-41dd-93bf-1cebcde9010e
+              columnCounter: 82c1733a-abb4-455f-8540-3ff679fb14b7
+              stepCounter: 63159f44-1d0f-451d-8668-27eae48a4eef
             config: {}
             dataType: VARCHAR(40)
             defaultValue: ""
@@ -59,8 +59,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: e8f8e475-6f7b-4815-897d-3e8c41ebac60
-              stepCounter: 47976600-d80c-41dd-93bf-1cebcde9010e
+              columnCounter: 3ff9e41c-2f6f-4a39-b676-091810948bf7
+              stepCounter: 63159f44-1d0f-451d-8668-27eae48a4eef
             config: {}
             dataType: NUMBER(38,0)
             defaultValue: ""
@@ -74,8 +74,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: caf03a1b-2a2f-441d-9178-cdaa86fea2e8
-              stepCounter: 47976600-d80c-41dd-93bf-1cebcde9010e
+              columnCounter: 9368f31a-ef32-47e7-a26f-cf56e119356e
+              stepCounter: 63159f44-1d0f-451d-8668-27eae48a4eef
             config: {}
             dataType: VARCHAR(15)
             defaultValue: ""
@@ -89,8 +89,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: d2e676a4-4f88-4ae2-bb9a-feb4651f9fca
-              stepCounter: 47976600-d80c-41dd-93bf-1cebcde9010e
+              columnCounter: c1920db9-73a6-475c-b6a9-a1f686c9eac1
+              stepCounter: 63159f44-1d0f-451d-8668-27eae48a4eef
             config: {}
             dataType: NUMBER(12,2)
             defaultValue: ""
@@ -104,8 +104,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: b43ed46e-ac42-4f0d-a8bb-1834066c1a46
-              stepCounter: 47976600-d80c-41dd-93bf-1cebcde9010e
+              columnCounter: 7dc0d8fa-82dd-4cfd-8f28-dfa4012501fe
+              stepCounter: 63159f44-1d0f-451d-8668-27eae48a4eef
             config: {}
             dataType: VARCHAR(10)
             defaultValue: ""
@@ -119,8 +119,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 0240bae2-4d1f-432e-84d6-4586f0ac46e3
-              stepCounter: 47976600-d80c-41dd-93bf-1cebcde9010e
+              columnCounter: 4fda7809-91e0-4744-a59f-a2d8ce021bbe
+              stepCounter: 63159f44-1d0f-451d-8668-27eae48a4eef
             config: {}
             dataType: VARCHAR(117)
             defaultValue: ""
@@ -136,4 +136,4 @@ steps:
       sqlType: Source
       table: CUSTOMER
       type: sourceInput
-    stepCounter: 47976600-d80c-41dd-93bf-1cebcde9010e
+    stepCounter: 63159f44-1d0f-451d-8668-27eae48a4eef
