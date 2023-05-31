@@ -51,7 +51,7 @@ steps:
               columnCounter: 9e9003dd-6c70-4a9e-a1a0-3f28cc1b29bc
               stepCounter: 4799a5ae-1f0a-427c-b038-c98ccbbf9b13
             dataType: VARCHAR(55)
-            description: ""
+            description: example description of the p_name column
             hashColumns: []
             hashDetails: null
             name: P_NAME
