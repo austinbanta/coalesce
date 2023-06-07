@@ -44,7 +44,7 @@ steps:
               - columnReferences:
                   - columnCounter: 8a3c0d6f-71e0-49d0-bca9-529b7bc23366
                     stepCounter: 0fec82a4-cb10-4034-855d-32842ad0c498
-                transform: ""
+                transform: UPPER("PART"."P_NAME")
           - columnReference:
               columnCounter: a97a18e3-2120-4938-ad41-fdbe6d268f0a
               stepCounter: 71033eee-682c-4d92-8d30-8cfce032f008
