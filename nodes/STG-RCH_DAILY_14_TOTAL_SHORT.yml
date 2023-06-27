@@ -1,0 +1,65 @@
+steps:
+  RCH_DAILY_14_TOTAL_SHORT-13b4ae94-9635-4037-9416-76e4e4327764:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationName: STG
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 9ee826d0-a24b-4bcd-a0bf-e9e7e31c5ed2
+              stepCounter: 13b4ae94-9635-4037-9416-76e4e4327764
+            dataType: VARIANT
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: V
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e2a150a0-91be-4546-8cd5-dd3fc9e775f7
+                    stepCounter: 83eb6897-1cce-4c79-ace4-d0ea46531a47
+                transform: ""
+          - columnReference:
+              columnCounter: 9ccaca21-4107-4980-97e9-caeacdfc69d1
+              stepCounter: 13b4ae94-9635-4037-9416-76e4e4327764
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: T
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2b520d15-ee1d-4cdf-b23c-f191fb636607
+                    stepCounter: 83eb6897-1cce-4c79-ace4-d0ea46531a47
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: UNS
+                nodeName: DAILY_14_TOTAL_SHORT
+            join:
+              joinCondition: FROM {{ ref('UNS', 'DAILY_14_TOTAL_SHORT') }} "DAILY_14_TOTAL_SHORT"
+            name: RCH_DAILY_14_TOTAL_SHORT
+            noLinkRefs: []
+      name: RCH_DAILY_14_TOTAL_SHORT
+      overrideSQL: false
+      schema: ""
+      sqlType: "53"
+      type: sql
+    stepCounter: 13b4ae94-9635-4037-9416-76e4e4327764

@@ -60,20 +60,6 @@ steps:
                     stepCounter: ebe10040-a4e3-49b1-ba4d-70697db40102
                 transform: ""
           - columnReference:
-              columnCounter: 224633ef-86cf-4358-9b5b-573b927c85ea
-              stepCounter: fca2b9b0-b135-44d6-9f95-a7fd7152e568
-            dataType: NUMBER(12,2)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: O_TOTALPRICE
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 410b83f3-c506-4ed8-8fc8-010864a4311f
-                    stepCounter: ebe10040-a4e3-49b1-ba4d-70697db40102
-                transform: ""
-          - columnReference:
               columnCounter: 72c43824-2c93-4771-8c88-fed769a3a895
               stepCounter: fca2b9b0-b135-44d6-9f95-a7fd7152e568
             dataType: DATE
@@ -85,6 +71,20 @@ steps:
             sourceColumnReferences:
               - columnReferences:
                   - columnCounter: 8c17d8bc-212c-4818-bd14-688f094d68db
+                    stepCounter: ebe10040-a4e3-49b1-ba4d-70697db40102
+                transform: ""
+          - columnReference:
+              columnCounter: 224633ef-86cf-4358-9b5b-573b927c85ea
+              stepCounter: fca2b9b0-b135-44d6-9f95-a7fd7152e568
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: O_TOTALPRICE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 410b83f3-c506-4ed8-8fc8-010864a4311f
                     stepCounter: ebe10040-a4e3-49b1-ba4d-70697db40102
                 transform: ""
           - columnReference:

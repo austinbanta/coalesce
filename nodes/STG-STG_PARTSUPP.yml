@@ -58,7 +58,7 @@ steps:
               - columnReferences:
                   - columnCounter: 781148c3-79a3-4414-a923-f0cadee19d50
                     stepCounter: 18f8174a-7bf6-44c3-9753-a76ed39c3477
-                transform: ""
+                transform: "11"
           - columnReference:
               columnCounter: 7fbef186-8ad3-4f3e-a654-b83009ea3250
               stepCounter: 950b22af-fb81-4510-88cc-e0149e70d6ad

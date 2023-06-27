@@ -40,6 +40,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
+            isBusinessKey: true
             name: P_PARTKEY
             nullable: false
             sourceColumnReferences:
@@ -54,6 +55,7 @@ steps:
             description: example description of the p_name column
             hashColumns: []
             hashDetails: null
+            isChangeTracking: true
             name: P_NAME
             nullable: false
             sourceColumnReferences:
@@ -110,6 +112,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
+            isChangeTracking: true
             name: P_SIZE
             nullable: false
             sourceColumnReferences:
