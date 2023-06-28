@@ -30,7 +30,7 @@ jobs:
   Job-6:
     excludeSelector: ""
     id: 6
-    includeSelector: "+{ location: STG name: FCT_ORDERS_LINEITEM }"
+    includeSelector: "+{ location: STG name: FCT_LINEITEM_ORDERS }"
     name: fact
     steps: []
     subgraphs: []
@@ -2557,7 +2557,7 @@ stepTypes:
             		{% endfor %}
             	{% endfor %}
             {% endif %}
-    name: Copy of Dimension
+    name: Type 3 Dim
     version: 1
   StepType-Dimension:
     id: Dimension
