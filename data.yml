@@ -1,5 +1,12 @@
 defaultStorageMapping: STG
 jobs:
+  Job-11:
+    excludeSelector: ""
+    id: 11
+    includeSelector: "+{ location: STG name: DIM* }"
+    name: dim
+    steps: []
+    subgraphs: []
   Job-2:
     id: 2
     name: New Job
