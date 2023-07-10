@@ -366,20 +366,6 @@ steps:
                   - columnCounter: 7af3ae41-46bc-42f6-8942-b7b16407e22b
                     stepCounter: c5bd85a0-abc3-4f8f-b08e-412d6121a115
                 transform: ""
-          - columnReference:
-              columnCounter: c71bea87-d059-4c8c-8623-bfb6af5f9547
-              stepCounter: c21f9946-6221-41cb-9af7-3c7a491daffe
-            dataType: STRING
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: newcol
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 728d10ca-3a18-4a8f-bbb8-1ea2f0677e3e
-                    stepCounter: c5bd85a0-abc3-4f8f-b08e-412d6121a115
-                transform: ""
           - acceptedValues:
               strictMatch: true
               values: []

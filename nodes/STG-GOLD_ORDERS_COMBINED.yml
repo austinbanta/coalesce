@@ -363,20 +363,6 @@ steps:
                     stepCounter: c73028e6-8cb0-435a-a41d-82864992dc11
                 transform: ""
           - columnReference:
-              columnCounter: 9a072cc4-bc3f-4d74-96cd-1a154615a979
-              stepCounter: 965941be-43e0-493d-8f07-5e1b1a84c448
-            dataType: STRING
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: newcol
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: e00670cd-e01f-4dbe-bdb0-8e5ca855c90b
-                    stepCounter: c73028e6-8cb0-435a-a41d-82864992dc11
-                transform: ""
-          - columnReference:
               columnCounter: b7bcbddb-f7a5-439f-a959-235ebe35ee27
               stepCounter: 965941be-43e0-493d-8f07-5e1b1a84c448
             dataType: NUMBER
@@ -948,6 +934,22 @@ steps:
             sourceColumnReferences:
               - columnReferences:
                   - columnCounter: a742cc3c-67df-4fd5-a401-f25f59b2b07e
+                    stepCounter: c73028e6-8cb0-435a-a41d-82864992dc11
+                transform: ""
+          - acceptedValues:
+              strictMatch: false
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 30b367b5-bbe4-4b4c-9718-b15987517e04
+              stepCounter: 965941be-43e0-493d-8f07-5e1b1a84c448
+            dataType: string
+            description: ""
+            name: newcol1
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f23a1c49-e54c-4e50-8f2b-e808bee29069
                     stepCounter: c73028e6-8cb0-435a-a41d-82864992dc11
                 transform: ""
         cteString: ""

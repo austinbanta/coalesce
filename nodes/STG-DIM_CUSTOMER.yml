@@ -254,6 +254,22 @@ steps:
             sourceColumnReferences:
               - columnReferences: []
                 transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: false
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 89ea6b65-76e4-4dda-a470-5716a76ca3c4
+              stepCounter: d7347892-6296-409f-95ec-eee28dc2d992
+            dataType: string
+            description: ""
+            name: newcol
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: da22e6cd-6732-446f-ab15-7ead19ef6d43
+                    stepCounter: 6cb28310-a71d-4745-b4d5-2e2e8c70b850
+                transform: ""
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:
