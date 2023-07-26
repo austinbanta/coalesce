@@ -1,0 +1,245 @@
+steps:
+  CDC_CUSTOMER-4c690299-41bf-4222-95c0-7a8dfa013538:
+    operation:
+      config:
+        taskCustomName: ""
+        taskEnabled: true
+        taskSchedule: Every 30 minutes
+        taskWarehouse: EMEA_TRANSFORM_XS_WH
+        undefined: |-
+          A CDC table consists of a few components:
+           1. A stream on the source node
+           2. The CDC table which contains a persistent replica of recent CDC records
+           3. A sequence to keep track of streams
+           4. Optional: a Task to replicate records from the Stream into the CDC table
+           
+      database: ""
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationName: STG
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 5160b433-0ccc-4db8-984f-dffe861bbfb4
+              stepCounter: 4c690299-41bf-4222-95c0-7a8dfa013538
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: C_CUSTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9a801842-97b0-4afa-aae3-24ae2b3b5288
+                    stepCounter: c9da8c03-44ca-4529-9025-31425a95cceb
+                transform: ""
+          - columnReference:
+              columnCounter: 9a0cf208-0606-418b-86b9-f399cf0ef333
+              stepCounter: 4c690299-41bf-4222-95c0-7a8dfa013538
+            dataType: VARCHAR(25)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: C_NAME
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a37f6d68-6535-45ed-ae33-7ea9478cdc2d
+                    stepCounter: c9da8c03-44ca-4529-9025-31425a95cceb
+                transform: ""
+          - columnReference:
+              columnCounter: eccb41c3-97d9-4d0d-a225-2240ab87f7b5
+              stepCounter: 4c690299-41bf-4222-95c0-7a8dfa013538
+            dataType: VARCHAR(40)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: C_ADDRESS
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4c25f8f3-6bdc-4061-adc8-4d2523342071
+                    stepCounter: c9da8c03-44ca-4529-9025-31425a95cceb
+                transform: ""
+          - columnReference:
+              columnCounter: c8a9d453-92d9-4e60-a199-bb3791159bac
+              stepCounter: 4c690299-41bf-4222-95c0-7a8dfa013538
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: C_NATIONKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 77508bf1-7a80-4e76-9857-be6b51dc33dc
+                    stepCounter: c9da8c03-44ca-4529-9025-31425a95cceb
+                transform: ""
+          - columnReference:
+              columnCounter: 481b36c0-0ba7-4f27-a2c2-5cbc85e9001b
+              stepCounter: 4c690299-41bf-4222-95c0-7a8dfa013538
+            dataType: VARCHAR(15)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: C_PHONE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 457eff16-429c-49d5-a5ac-987c2a0b5967
+                    stepCounter: c9da8c03-44ca-4529-9025-31425a95cceb
+                transform: ""
+          - columnReference:
+              columnCounter: 3020e712-94bc-4217-a7b6-38457f4efe17
+              stepCounter: 4c690299-41bf-4222-95c0-7a8dfa013538
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: C_ACCTBAL
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 73c67601-6f0b-4159-ba8e-42a00afa4def
+                    stepCounter: c9da8c03-44ca-4529-9025-31425a95cceb
+                transform: ""
+          - columnReference:
+              columnCounter: 42c148a9-805a-4053-8998-775d6dce154f
+              stepCounter: 4c690299-41bf-4222-95c0-7a8dfa013538
+            dataType: VARCHAR(10)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: C_MKTSEGMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 221307e2-5d29-4d87-aef6-ca9f428470ef
+                    stepCounter: c9da8c03-44ca-4529-9025-31425a95cceb
+                transform: ""
+          - columnReference:
+              columnCounter: aceb21a4-7973-437f-b11b-0c019a09047c
+              stepCounter: 4c690299-41bf-4222-95c0-7a8dfa013538
+            dataType: VARCHAR(117)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: C_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 93faeda9-f258-40b6-891e-b41ef413733f
+                    stepCounter: c9da8c03-44ca-4529-9025-31425a95cceb
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 79748de1-558e-407a-935a-16f7c18aa9ee
+              stepCounter: 4c690299-41bf-4222-95c0-7a8dfa013538
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: Indicates the DML operation (INSERT, DELETE) recorded.
+            hashColumns: []
+            isStreamMetadataAction: true
+            name: METADATA$ACTION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: METADATA$ACTION
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 2049de65-8e21-4152-bc95-16fe52a1cb3a
+              stepCounter: 4c690299-41bf-4222-95c0-7a8dfa013538
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: Indicates whether the operation was part of an UPDATE statement.
+            hashColumns: []
+            isStreamMetadataIsUpdate: true
+            name: METADATA$ISUPDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: METADATA$ISUPDATE
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 5686bc8f-f34c-4bd1-847d-323f8f009ca0
+              stepCounter: 4c690299-41bf-4222-95c0-7a8dfa013538
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: Specifies the unique and immutable ID for the row, which can be used to track changes to specific rows over time.
+            hashColumns: []
+            isStreamMetadataRowId: true
+            name: METADATA$ROW_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: METADATA$ROW_ID
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b5227f15-e7f2-4656-b593-5ad18ce0aae8
+              stepCounter: 4c690299-41bf-4222-95c0-7a8dfa013538
+            config: {}
+            dataType: INTEGER
+            defaultValue: ""
+            description: Medtronic specific CDC identifier based on a sequence.
+            hashColumns: []
+            isStreamMetadataCDCId: true
+            name: CDC_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4af54c4a-6d12-4a61-8b14-09b761ae7504
+              stepCounter: 4c690299-41bf-4222-95c0-7a8dfa013538
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Medtronic specific attribute containing the timestamp of storing the CDC record.
+            hashColumns: []
+            isSystemCreateDate: true
+            name: CDC_TIMESTAMP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STG
+                nodeName: STG_CUSTOMER
+            join:
+              joinCondition: FROM {{ ref('STG', 'STG_CUSTOMER') }} "STG_CUSTOMER"
+            name: CDC_CUSTOMER
+            noLinkRefs: []
+      name: CDC_CUSTOMER
+      overrideSQL: false
+      schema: ""
+      sqlType: "30"
+      type: sql
+    stepCounter: 4c690299-41bf-4222-95c0-7a8dfa013538
