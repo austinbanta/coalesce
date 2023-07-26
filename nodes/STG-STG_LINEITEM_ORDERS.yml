@@ -384,7 +384,7 @@ steps:
               joinCondition: |-
                 FROM {{ ref('STG', 'STG_LINEITEM') }} "STG_LINEITEM"
                 INNER JOIN {{ ref('STG', 'STG_ORDERS') }} "STG_ORDERS"
-                ON "STG_LINEITEM"."L_ORDERKEY" = "STG_ORDERS"."O_ORDERKEY"
+                ON "STG_LINEITEM"."L_ORDERKEY" = "STG_ORDERS"."O_ORDERKEY" 
             name: STG_LINEITEM_ORDERS
             noLinkRefs: []
       name: STG_LINEITEM_ORDERS

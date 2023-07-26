@@ -395,13 +395,16 @@ steps:
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:
-          - customSQL:
+          - aliases:
+              FCT_LINEITEM_ORDERS: 5fc6bc48-827a-4e83-9556-c46f82930d7a
+            customSQL:
               customSQL: ""
             dependencies:
               - locationName: STG
                 nodeName: FCT_LINEITEM_ORDERS
             join:
-              joinCondition: FROM {{ ref('STG', 'FCT_LINEITEM_ORDERS') }} "FCT_LINEITEM_ORDERS"
+              joinCondition: |
+                FROM {{ ref('STG', 'FCT_LINEITEM_ORDERS') }} "FCT_LINEITEM_ORDERS"
             name: V_LINEITEM_ORDERS
             noLinkRefs: []
       name: V_LINEITEM_ORDERS

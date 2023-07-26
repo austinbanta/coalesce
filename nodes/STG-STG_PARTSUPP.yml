@@ -1,5 +1,5 @@
 steps:
-  STG_PARTSUPP-950b22af-fb81-4510-88cc-e0149e70d6ad:
+  STG_PARTSUPP-e54fb3b7-34db-4bf4-8436-13e87672785e:
     operation:
       config:
         insertStrategy: INSERT
@@ -18,8 +18,8 @@ steps:
         appliedNodeTests: []
         columns:
           - columnReference:
-              columnCounter: 5ea0e0ce-828f-4379-aca0-637fe39047da
-              stepCounter: 950b22af-fb81-4510-88cc-e0149e70d6ad
+              columnCounter: 8c6ad6b9-0157-4b32-8f06-5b876c695105
+              stepCounter: e54fb3b7-34db-4bf4-8436-13e87672785e
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
@@ -32,8 +32,8 @@ steps:
                     stepCounter: 18f8174a-7bf6-44c3-9753-a76ed39c3477
                 transform: ""
           - columnReference:
-              columnCounter: 1e239326-e5bf-462e-aca6-29d4becaed1a
-              stepCounter: 950b22af-fb81-4510-88cc-e0149e70d6ad
+              columnCounter: ba4f7fd0-fe34-4d5a-922e-76d6bbc2b94a
+              stepCounter: e54fb3b7-34db-4bf4-8436-13e87672785e
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
@@ -44,10 +44,10 @@ steps:
               - columnReferences:
                   - columnCounter: d3086246-a477-4ace-8b07-b35d7953b57e
                     stepCounter: 18f8174a-7bf6-44c3-9753-a76ed39c3477
-                transform: UPPER("PARTSUPP"."PS_SUPPKEY")
+                transform: ""
           - columnReference:
-              columnCounter: 7874f363-c34a-44f1-bdf0-ed4f14b9b43e
-              stepCounter: 950b22af-fb81-4510-88cc-e0149e70d6ad
+              columnCounter: 1c3e7324-354a-48c9-a2f0-afd5085c181a
+              stepCounter: e54fb3b7-34db-4bf4-8436-13e87672785e
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
@@ -58,10 +58,10 @@ steps:
               - columnReferences:
                   - columnCounter: 781148c3-79a3-4414-a923-f0cadee19d50
                     stepCounter: 18f8174a-7bf6-44c3-9753-a76ed39c3477
-                transform: "11"
+                transform: ""
           - columnReference:
-              columnCounter: 7fbef186-8ad3-4f3e-a654-b83009ea3250
-              stepCounter: 950b22af-fb81-4510-88cc-e0149e70d6ad
+              columnCounter: 8d8b7c51-9c90-4c1c-bc8e-f74e0c94a341
+              stepCounter: e54fb3b7-34db-4bf4-8436-13e87672785e
             dataType: NUMBER(12,2)
             description: ""
             hashColumns: []
@@ -74,8 +74,8 @@ steps:
                     stepCounter: 18f8174a-7bf6-44c3-9753-a76ed39c3477
                 transform: ""
           - columnReference:
-              columnCounter: d06768ba-cb72-4372-91fc-0242a9f636af
-              stepCounter: 950b22af-fb81-4510-88cc-e0149e70d6ad
+              columnCounter: 0906cb78-271b-4ea8-8171-29bca83abea8
+              stepCounter: e54fb3b7-34db-4bf4-8436-13e87672785e
             dataType: VARCHAR(199)
             description: ""
             hashColumns: []
@@ -104,4 +104,4 @@ steps:
       schema: ""
       sqlType: Stage
       type: sql
-    stepCounter: 950b22af-fb81-4510-88cc-e0149e70d6ad
+    stepCounter: e54fb3b7-34db-4bf4-8436-13e87672785e
