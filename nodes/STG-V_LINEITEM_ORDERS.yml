@@ -398,7 +398,39 @@ steps:
           - aliases:
               FCT_LINEITEM_ORDERS: 5fc6bc48-827a-4e83-9556-c46f82930d7a
             customSQL:
-              customSQL: ""
+              customSQL: |-
+                {{ stage('Override Create SQL') }}
+                	CREATE OR REPLACE VIEW {{ ref('STG', 'V_LINEITEM_ORDERS')}} AS (
+                		SELECT 
+                 L_ORDERKEY AS L_ORDERKEY,
+                 L_PARTKEY AS L_PARTKEY,
+                 L_SUPPKEY AS L_SUPPKEY,
+                 L_LINENUMBER AS L_LINENUMBER,
+                 L_QUANTITY AS L_QUANTITY,
+                 L_EXTENDEDPRICE AS L_EXTENDEDPRICE,
+                 L_DISCOUNT AS L_DISCOUNT,
+                 L_TAX AS L_TAX,
+                 L_RETURNFLAG AS L_RETURNFLAG,
+                 L_LINESTATUS AS L_LINESTATUS,
+                 L_SHIPDATE AS L_SHIPDATE,
+                 L_COMMITDATE AS L_COMMITDATE,
+                 L_RECEIPTDATE AS L_RECEIPTDATE,
+                 L_SHIPINSTRUCT AS L_SHIPINSTRUCT,
+                 L_SHIPMODE AS L_SHIPMODE,
+                 L_COMMENT AS L_COMMENT,
+                 O_ORDERKEY AS O_ORDERKEY,
+                 O_CUSTKEY AS O_CUSTKEY,
+                 O_ORDERSTATUS AS O_ORDERSTATUS,
+                 O_TOTALPRICE AS O_TOTALPRICE,
+                 O_ORDERDATE AS O_ORDERDATE,
+                 O_ORDERPRIORITY AS O_ORDERPRIORITY,
+                 O_CLERK AS O_CLERK,
+                 O_SHIPPRIORITY AS O_SHIPPRIORITY,
+                 O_COMMENT AS O_COMMENT,
+                 SYSTEM_CREATE_DATE AS SYSTEM_CREATE_DATE,
+                 SYSTEM_UPDATE_DATE AS SYSTEM_UPDATE_DATE
+                 FROM {{ ref('STG', 'FCT_LINEITEM_ORDERS') }}
+                	)
             dependencies:
               - locationName: STG
                 nodeName: FCT_LINEITEM_ORDERS
@@ -408,7 +440,7 @@ steps:
             name: V_LINEITEM_ORDERS
             noLinkRefs: []
       name: V_LINEITEM_ORDERS
-      overrideSQL: false
+      overrideSQL: true
       schema: ""
       sqlType: View
       type: sql
