@@ -241,7 +241,9 @@ steps:
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:
-          - customSQL:
+          - aliases:
+              DIM_PART: 4799a5ae-1f0a-427c-b038-c98ccbbf9b13
+            customSQL:
               customSQL: |-
                 {{ stage('Override Create SQL') }}
                 	CREATE OR REPLACE VIEW {{ ref('STG', 'V_PART')}} AS (
