@@ -367,6 +367,27 @@ steps:
                   - columnCounter: bae00006-6fb8-4e11-8730-4704847d4fca
                     stepCounter: fca2b9b0-b135-44d6-9f95-a7fd7152e568
                 transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 3eeef09c-07ab-478b-95a5-d380e2f6f86b
+              stepCounter: 98f389fe-5a99-4023-9cf6-2fc304771538
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: newcol
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: CONCAT("STG_LINEITEM"."L_SHIPMODE","STG_ORDERS"."O_SHIPPRIORITY")
+            systemColumnType: None
+            transform: ""
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:

@@ -1,6 +1,20 @@
 defaultStorageMapping: STG
 installedPackages: {}
-jobs: {}
+jobs:
+  Job-14:
+    excludeSelector: ""
+    id: 14
+    includeSelector: "+{ location: STG name: V_PART }"
+    name: New Job
+    steps: []
+    subgraphs: []
+  Job-15:
+    excludeSelector: ""
+    id: 15
+    includeSelector: "+{ location: STG name: DIM_NATION } OR { location: STG name: DIM_SUPPLIER }"
+    name: New Job
+    steps: []
+    subgraphs: []
 locations:
   DEV:
     mappingDefinitions:

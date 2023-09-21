@@ -1,0 +1,78 @@
+steps:
+  EXT_NODE-3a99ee31-676d-495b-b85b-324cf5528fd2:
+    operation:
+      config:
+        autoRefresh: false
+        compression: ""
+        fieldDelim: ","
+        fieldEnclosed: \042
+        fileLocation: ""
+        filePattern: .*[.]json
+        fileType: JSON
+        recDelim: |+
+
+        skipBlankLines: true
+        skipHeader: "1"
+        snsTopic: arn:aws:sns:your-region:123456789012:your-notification
+        trimSpace: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: STG
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - VALUE: true
+            acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 2d0774b4-f349-4ec6-a039-2f85799f7af0
+              stepCounter: 3a99ee31-676d-495b-b85b-324cf5528fd2
+            config: {}
+            dataType: VARIANT
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            name: VALUE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - METADATA$FILENAME: true
+            acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 087f6e86-3abb-4301-93a6-637a6fc412a8
+              stepCounter: 3a99ee31-676d-495b-b85b-324cf5528fd2
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            name: METADATA$FILENAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies: []
+            join:
+              joinCondition: ""
+            name: EXT_NODE
+            noLinkRefs: []
+      name: EXT_NODE
+      overrideSQL: false
+      schema: ""
+      sqlType: "33"
+      type: sql
+    stepCounter: 3a99ee31-676d-495b-b85b-324cf5528fd2
