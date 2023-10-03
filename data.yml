@@ -1699,7 +1699,7 @@ stepTypes:
             options:
             - "INSERT"
             - "UNION"
-            - "UNION ALL"
+          
             isRequired: true
             enableIf: "{% if node.isMultisource %} true {% else %} false {% endif %}"
 

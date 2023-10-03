@@ -169,7 +169,7 @@ steps:
               - columnReferences:
                   - columnCounter: 3b963597-836d-41c4-9f8a-04e333a73a4b
                     stepCounter: ebe10040-a4e3-49b1-ba4d-70697db40102
-                transform: ""
+                transform: "'abc'"
         cteString: ""
         enabledColumnTestIDs:
           - hasNull
