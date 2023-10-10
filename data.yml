@@ -1,6 +1,13 @@
 defaultStorageMapping: STG
 installedPackages: {}
-jobs: {}
+jobs:
+  Job-16:
+    excludeSelector: ""
+    id: 16
+    includeSelector: "{ location: DEV name: PARTSUPP }"
+    name: New Job
+    steps: []
+    subgraphs: []
 locations:
   DEV:
     mappingDefinitions:
