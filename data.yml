@@ -25,7 +25,44 @@ locations:
       "3":
         database: COALESCE_SAMPLE_DATABASE
         schema: WEATHER
-macros: {}
+macros:
+  Macro-1:
+    id: "1"
+    macroString: |-
+      {%- macro testunique(column) -%}
+      SELECT
+            {{column}},
+            COUNT(*)
+          FROM
+            {{this}}
+          GROUP BY
+            {{column}}
+          HAVING
+            COUNT(*) > 1
+      {%- endmacro %}
+
+      {%- macro testbalance(column,balance_value) -%}
+      SELECT
+            {{column}},
+            "C_NAME"
+          FROM
+            {{this}}
+          WHERE
+            {{column}} > {{balance_value}}
+      {%- endmacro %}
+
+
+      {%- macro testerror(column) -%}
+      SELECT
+            {{column}},
+            COUNT(*)
+          FROM
+            asdfasdf
+          GROUP BY
+            {{column}}
+          HAVING
+            COUNT(*) > 1
+      {%- endmacro %}
 packages: {}
 projects: {}
 stepTypes:

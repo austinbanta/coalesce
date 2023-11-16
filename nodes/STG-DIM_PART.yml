@@ -7,7 +7,7 @@ steps:
         testsEnabled: true
       database: ""
       deployEnabled: true
-      description: ""
+      description: This table contains data for our parts
       isDataVault: false
       isMultisource: false
       locationName: STG
