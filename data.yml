@@ -9,6 +9,13 @@ jobs:
     name: New Job
     steps: []
     subgraphs: []
+  Job-17:
+    excludeSelector: ""
+    id: 17
+    includeSelector: "+{ location: STG name: FCT_LINEITEM_ORDERS }"
+    name: fact table refresh
+    steps: []
+    subgraphs: []
 locations:
   DEV:
     mappingDefinitions:
@@ -4135,7 +4142,6 @@ subgraphs:
       - 5fc6bc48-827a-4e83-9556-c46f82930d7a
       - 4799a5ae-1f0a-427c-b038-c98ccbbf9b13
       - 7d280aa9-88d3-4193-b936-1a52fc6fd3c5
-      - a58f72ad-b6eb-4e80-8576-caab396130b3
       - 8fb153bd-12fb-4b4b-aa2d-9433d885de0b
       - 348e1ce3-f242-4c6d-bfad-72b074db0bec
 version: 2

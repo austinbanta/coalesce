@@ -372,62 +372,20 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: de3963fe-e66f-4267-b1dd-18909744e4bd
+              columnCounter: 0db3a6b4-7d34-4733-be89-d08103f08d04
               stepCounter: 98f389fe-5a99-4023-9cf6-2fc304771538
             config: {}
-            dataType: ""
+            dataType: STRING
             defaultValue: ""
             description: ""
             keyColumnType: None
-            name: new column
+            name: newcolumn
             nullable: true
             sourceColumnReferences:
               - columnReferences:
                   - columnCounter: "0"
                     stepCounter: "0"
                 transform: CONCAT("STG_LINEITEM"."L_SHIPMODE","STG_ORDERS"."O_SHIPPRIORITY")
-            systemColumnType: None
-            transform: ""
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 126935e6-e846-4067-a670-cefb4b9e1bc0
-              stepCounter: 98f389fe-5a99-4023-9cf6-2fc304771538
-            config: {}
-            dataType: ""
-            defaultValue: ""
-            description: ""
-            keyColumnType: None
-            name: newcol2
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: "0"
-                    stepCounter: "0"
-                transform: CONCAT("STG_LINEITEM"."L_SHIPMODE","STG_ORDERS"."O_SHIPPRIORITY")
-            systemColumnType: None
-            transform: ""
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 5d72a82c-7a98-4d9c-8655-d09118fcadb9
-              stepCounter: 98f389fe-5a99-4023-9cf6-2fc304771538
-            config: {}
-            dataType: ""
-            defaultValue: ""
-            description: ""
-            keyColumnType: None
-            name: newcol3
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: "0"
-                    stepCounter: "0"
-                transform: "'abc'"
             systemColumnType: None
             transform: ""
         cteString: ""

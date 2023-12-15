@@ -407,31 +407,15 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 51897c9a-b0d1-4d0c-a9e8-10827dab0b52
+              columnCounter: b6dff591-9aed-465c-8f6a-2a9e420dba96
               stepCounter: 5fc6bc48-827a-4e83-9556-c46f82930d7a
-            dataType: ""
+            dataType: STRING
             description: ""
-            name: newcol2
+            name: newcolumn
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 126935e6-e846-4067-a670-cefb4b9e1bc0
-                    stepCounter: 98f389fe-5a99-4023-9cf6-2fc304771538
-                transform: ""
-          - acceptedValues:
-              strictMatch: false
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 984cdd3c-6c12-43de-afd1-3823279dbf4f
-              stepCounter: 5fc6bc48-827a-4e83-9556-c46f82930d7a
-            dataType: ""
-            description: ""
-            name: newcol3
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 5d72a82c-7a98-4d9c-8655-d09118fcadb9
+                  - columnCounter: 0db3a6b4-7d34-4733-be89-d08103f08d04
                     stepCounter: 98f389fe-5a99-4023-9cf6-2fc304771538
                 transform: ""
         cteString: ""

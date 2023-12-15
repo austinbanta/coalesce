@@ -231,13 +231,14 @@ steps:
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:
-          - customSQL:
+          - aliases: {}
+            customSQL:
               customSQL: ""
             dependencies:
               - locationName: DEV
                 nodeName: LINEITEM
             join:
-              joinCondition: FROM {{ ref('DEV', 'LINEITEM') }} "LINEITEM"
+              joinCondition: FROM {{ ref('DEV', 'LINEITEM') }} "LINEITEM"kjhkjljlkh
             name: STG_LINEITEM
             noLinkRefs: []
       name: STG_LINEITEM
