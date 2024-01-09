@@ -383,7 +383,9 @@ steps:
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:
-          - aliases: {}
+          - aliases:
+              STG_LINEITEM: 77957960-ad57-4312-b5e5-16b8649ef257
+              STG_ORDERS: fca2b9b0-b135-44d6-9f95-a7fd7152e568
             customSQL:
               customSQL: ""
             dependencies:
@@ -395,7 +397,7 @@ steps:
               joinCondition: |-
                 FROM {{ ref('STG', 'STG_ORDERS') }} "STG_ORDERS"
                 INNER JOIN {{ ref('STG', 'STG_LINEITEM') }} "STG_LINEITEM"
-                ON "STG_ORDERS"./*COLUMN*/ = "STG_LINEITEM"./*COLUMN*/
+                ON "STG_ORDERS"."O_ORDERKEY" = "STG_LINEITEM"."L_ORDERKEY"
             name: STG_ORDERS_LINEITEM
             noLinkRefs: []
       name: STG_ORDERS_LINEITEM

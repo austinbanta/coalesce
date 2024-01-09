@@ -209,36 +209,18 @@ steps:
                   - columnCounter: 1148282d-d174-4b26-9961-f07c17af5bb6
                     stepCounter: cb761d1c-bad5-464c-bab7-72287e6ca477
                 transform: ""
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: f8de7542-da68-4cfe-98bb-4d13ded3616f
-              stepCounter: 77957960-ad57-4312-b5e5-16b8649ef257
-            config: {}
-            dataType: STRING
-            defaultValue: ""
-            description: ""
-            hashDetails:
-              hashAlgorithm: SHA1
-            hashedColumns:
-              - columnCounter: bbfc8bb7-a587-486c-a100-a6f2a77bb681
-                stepCounter: 77957960-ad57-4312-b5e5-16b8649ef257
-            name: GH
-            nullable: true
-            sourceColumnReferences: []
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:
-          - aliases: {}
+          - aliases:
+              LINEITEM: cb761d1c-bad5-464c-bab7-72287e6ca477
             customSQL:
               customSQL: ""
             dependencies:
               - locationName: DEV
                 nodeName: LINEITEM
             join:
-              joinCondition: FROM {{ ref('DEV', 'LINEITEM') }} "LINEITEM"kjhkjljlkh
+              joinCondition: FROM {{ ref('DEV', 'LINEITEM') }} "LINEITEM"
             name: STG_LINEITEM
             noLinkRefs: []
       name: STG_LINEITEM
