@@ -366,20 +366,6 @@ steps:
                   - columnCounter: 3bc05494-2cb9-4db2-b1a5-36993c57b7aa
                     stepCounter: 77957960-ad57-4312-b5e5-16b8649ef257
                 transform: ""
-          - columnReference:
-              columnCounter: c4da559d-6a42-439a-973c-95d373c38849
-              stepCounter: 3d761f23-e817-4ce0-89cd-8642ed7b0fa9
-            dataType: STRING
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: GH
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: f8de7542-da68-4cfe-98bb-4d13ded3616f
-                    stepCounter: 77957960-ad57-4312-b5e5-16b8649ef257
-                transform: ""
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:
