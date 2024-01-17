@@ -20,7 +20,7 @@ steps:
         appliedNodeTests: []
         columns:
           - columnReference:
-              columnCounter: 4799
+              columnCounter: "4799"
               stepCounter: "361"
             dataType: NUMBER(38,0)
             description: ""
@@ -34,7 +34,7 @@ steps:
                     stepCounter: "198"
                 transform: ""
           - columnReference:
-              columnCounter: 4800
+              columnCounter: "4800"
               stepCounter: "361"
             dataType: NUMBER(38,0)
             description: ""
@@ -48,7 +48,7 @@ steps:
                     stepCounter: "198"
                 transform: ""
           - columnReference:
-              columnCounter: 4801
+              columnCounter: "4801"
               stepCounter: "361"
             dataType: NUMBER(38,0)
             description: ""
@@ -62,7 +62,7 @@ steps:
                     stepCounter: "198"
                 transform: ""
           - columnReference:
-              columnCounter: 4802
+              columnCounter: "4802"
               stepCounter: "361"
             dataType: NUMBER(12,2)
             description: ""
@@ -76,7 +76,7 @@ steps:
                     stepCounter: "198"
                 transform: ""
           - columnReference:
-              columnCounter: 4803
+              columnCounter: "4803"
               stepCounter: "361"
             dataType: VARCHAR(199)
             description: ""

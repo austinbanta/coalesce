@@ -17,7 +17,7 @@ steps:
         appliedNodeTests: []
         columns:
           - columnReference:
-              columnCounter: 4189
+              columnCounter: "4189"
               stepCounter: "315"
             dataType: NUMBER(38,0)
             description: ""
@@ -31,7 +31,7 @@ steps:
                     stepCounter: "245"
                 transform: ""
           - columnReference:
-              columnCounter: 4190
+              columnCounter: "4190"
               stepCounter: "315"
             dataType: NUMBER(38,0)
             description: ""
@@ -45,7 +45,7 @@ steps:
                     stepCounter: "245"
                 transform: ""
           - columnReference:
-              columnCounter: 4191
+              columnCounter: "4191"
               stepCounter: "315"
             dataType: NUMBER(38,0)
             description: ""
@@ -59,7 +59,7 @@ steps:
                     stepCounter: "245"
                 transform: ""
           - columnReference:
-              columnCounter: 4192
+              columnCounter: "4192"
               stepCounter: "315"
             dataType: NUMBER(38,0)
             description: ""
@@ -73,7 +73,7 @@ steps:
                     stepCounter: "245"
                 transform: ""
           - columnReference:
-              columnCounter: 4193
+              columnCounter: "4193"
               stepCounter: "315"
             dataType: NUMBER(12,2)
             description: ""
@@ -87,7 +87,7 @@ steps:
                     stepCounter: "245"
                 transform: ""
           - columnReference:
-              columnCounter: 4194
+              columnCounter: "4194"
               stepCounter: "315"
             dataType: NUMBER(12,2)
             description: ""
@@ -101,7 +101,7 @@ steps:
                     stepCounter: "245"
                 transform: ""
           - columnReference:
-              columnCounter: 4195
+              columnCounter: "4195"
               stepCounter: "315"
             dataType: NUMBER(12,2)
             description: ""
@@ -115,7 +115,7 @@ steps:
                     stepCounter: "245"
                 transform: ""
           - columnReference:
-              columnCounter: 4196
+              columnCounter: "4196"
               stepCounter: "315"
             dataType: NUMBER(12,2)
             description: ""
@@ -129,7 +129,7 @@ steps:
                     stepCounter: "245"
                 transform: ""
           - columnReference:
-              columnCounter: 4197
+              columnCounter: "4197"
               stepCounter: "315"
             dataType: VARCHAR(1)
             description: ""
@@ -143,7 +143,7 @@ steps:
                     stepCounter: "245"
                 transform: ""
           - columnReference:
-              columnCounter: 4198
+              columnCounter: "4198"
               stepCounter: "315"
             dataType: VARCHAR(1)
             description: ""
@@ -157,7 +157,7 @@ steps:
                     stepCounter: "245"
                 transform: ""
           - columnReference:
-              columnCounter: 4199
+              columnCounter: "4199"
               stepCounter: "315"
             dataType: DATE
             description: ""
@@ -171,7 +171,7 @@ steps:
                     stepCounter: "245"
                 transform: ""
           - columnReference:
-              columnCounter: 4200
+              columnCounter: "4200"
               stepCounter: "315"
             dataType: DATE
             description: ""
@@ -185,7 +185,7 @@ steps:
                     stepCounter: "245"
                 transform: ""
           - columnReference:
-              columnCounter: 4201
+              columnCounter: "4201"
               stepCounter: "315"
             dataType: DATE
             description: ""
@@ -199,7 +199,7 @@ steps:
                     stepCounter: "245"
                 transform: ""
           - columnReference:
-              columnCounter: 4202
+              columnCounter: "4202"
               stepCounter: "315"
             dataType: VARCHAR(25)
             description: ""
@@ -213,7 +213,7 @@ steps:
                     stepCounter: "245"
                 transform: ""
           - columnReference:
-              columnCounter: 4203
+              columnCounter: "4203"
               stepCounter: "315"
             dataType: VARCHAR(10)
             description: ""
@@ -227,7 +227,7 @@ steps:
                     stepCounter: "245"
                 transform: ""
           - columnReference:
-              columnCounter: 4204
+              columnCounter: "4204"
               stepCounter: "315"
             dataType: VARCHAR(44)
             description: ""
@@ -245,7 +245,7 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 5124
+              columnCounter: "5124"
               stepCounter: "315"
             config: {}
             dataType: NUMBER

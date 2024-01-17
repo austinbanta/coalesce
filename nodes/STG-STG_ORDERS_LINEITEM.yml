@@ -23,8 +23,8 @@ steps:
               hasNull: true
               isDistinct: false
             columnReference:
-              columnCounter: 3213
-              stepCounter: 248
+              columnCounter: "3213"
+              stepCounter: "248"
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
@@ -40,8 +40,8 @@ steps:
               hasNull: true
               isDistinct: false
             columnReference:
-              columnCounter: 3214
-              stepCounter: 248
+              columnCounter: "3214"
+              stepCounter: "248"
             dataType: NUMBER(38,0)
             description: test
             hashColumns: []
@@ -57,8 +57,8 @@ steps:
               hasNull: false
               isDistinct: false
             columnReference:
-              columnCounter: 3215
-              stepCounter: 248
+              columnCounter: "3215"
+              stepCounter: "248"
             dataType: VARCHAR(1)
             description: ""
             hashColumns: []
@@ -74,8 +74,8 @@ steps:
               hasNull: false
               isDistinct: false
             columnReference:
-              columnCounter: 3216
-              stepCounter: 248
+              columnCounter: "3216"
+              stepCounter: "248"
             dataType: NUMBER(12,2)
             description: ""
             hashColumns: []
@@ -91,8 +91,8 @@ steps:
               hasNull: false
               isDistinct: false
             columnReference:
-              columnCounter: 3217
-              stepCounter: 248
+              columnCounter: "3217"
+              stepCounter: "248"
             dataType: DATE
             description: ""
             hashColumns: []
@@ -108,8 +108,8 @@ steps:
               hasNull: false
               isDistinct: false
             columnReference:
-              columnCounter: 3218
-              stepCounter: 248
+              columnCounter: "3218"
+              stepCounter: "248"
             dataType: VARCHAR(15)
             description: ""
             hashColumns: []
@@ -125,8 +125,8 @@ steps:
               hasNull: false
               isDistinct: false
             columnReference:
-              columnCounter: 3219
-              stepCounter: 248
+              columnCounter: "3219"
+              stepCounter: "248"
             dataType: VARCHAR(15)
             description: ""
             hashColumns: []
@@ -142,8 +142,8 @@ steps:
               hasNull: false
               isDistinct: false
             columnReference:
-              columnCounter: 3220
-              stepCounter: 248
+              columnCounter: "3220"
+              stepCounter: "248"
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
@@ -159,8 +159,8 @@ steps:
               hasNull: false
               isDistinct: false
             columnReference:
-              columnCounter: 3221
-              stepCounter: 248
+              columnCounter: "3221"
+              stepCounter: "248"
             dataType: VARCHAR(79)
             description: ""
             hashColumns: []
@@ -176,8 +176,8 @@ steps:
               hasNull: false
               isDistinct: false
             columnReference:
-              columnCounter: 3222
-              stepCounter: 248
+              columnCounter: "3222"
+              stepCounter: "248"
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
@@ -193,8 +193,8 @@ steps:
               hasNull: false
               isDistinct: false
             columnReference:
-              columnCounter: 3223
-              stepCounter: 248
+              columnCounter: "3223"
+              stepCounter: "248"
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
@@ -210,8 +210,8 @@ steps:
               hasNull: false
               isDistinct: false
             columnReference:
-              columnCounter: 3224
-              stepCounter: 248
+              columnCounter: "3224"
+              stepCounter: "248"
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
@@ -227,8 +227,8 @@ steps:
               hasNull: false
               isDistinct: false
             columnReference:
-              columnCounter: 3225
-              stepCounter: 248
+              columnCounter: "3225"
+              stepCounter: "248"
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
@@ -244,8 +244,8 @@ steps:
               hasNull: false
               isDistinct: false
             columnReference:
-              columnCounter: 3226
-              stepCounter: 248
+              columnCounter: "3226"
+              stepCounter: "248"
             dataType: NUMBER(12,2)
             description: ""
             hashColumns: []
@@ -261,8 +261,8 @@ steps:
               hasNull: false
               isDistinct: false
             columnReference:
-              columnCounter: 3227
-              stepCounter: 248
+              columnCounter: "3227"
+              stepCounter: "248"
             dataType: NUMBER(12,2)
             description: ""
             hashColumns: []
@@ -278,8 +278,8 @@ steps:
               hasNull: false
               isDistinct: false
             columnReference:
-              columnCounter: 3228
-              stepCounter: 248
+              columnCounter: "3228"
+              stepCounter: "248"
             dataType: NUMBER(12,2)
             description: ""
             hashColumns: []
@@ -295,8 +295,8 @@ steps:
               hasNull: false
               isDistinct: false
             columnReference:
-              columnCounter: 3229
-              stepCounter: 248
+              columnCounter: "3229"
+              stepCounter: "248"
             dataType: NUMBER(12,2)
             description: ""
             hashColumns: []
@@ -312,8 +312,8 @@ steps:
               hasNull: false
               isDistinct: false
             columnReference:
-              columnCounter: 3230
-              stepCounter: 248
+              columnCounter: "3230"
+              stepCounter: "248"
             dataType: VARCHAR(1)
             description: ""
             hashColumns: []
@@ -329,8 +329,8 @@ steps:
               hasNull: false
               isDistinct: false
             columnReference:
-              columnCounter: 3231
-              stepCounter: 248
+              columnCounter: "3231"
+              stepCounter: "248"
             dataType: VARCHAR(1)
             description: ""
             hashColumns: []
@@ -346,8 +346,8 @@ steps:
               hasNull: false
               isDistinct: false
             columnReference:
-              columnCounter: 3232
-              stepCounter: 248
+              columnCounter: "3232"
+              stepCounter: "248"
             dataType: DATE
             description: ""
             hashColumns: []
@@ -363,8 +363,8 @@ steps:
               hasNull: false
               isDistinct: false
             columnReference:
-              columnCounter: 3233
-              stepCounter: 248
+              columnCounter: "3233"
+              stepCounter: "248"
             dataType: DATE
             description: ""
             hashColumns: []
@@ -380,8 +380,8 @@ steps:
               hasNull: false
               isDistinct: false
             columnReference:
-              columnCounter: 3234
-              stepCounter: 248
+              columnCounter: "3234"
+              stepCounter: "248"
             dataType: DATE
             description: ""
             hashColumns: []
@@ -397,8 +397,8 @@ steps:
               hasNull: false
               isDistinct: false
             columnReference:
-              columnCounter: 3235
-              stepCounter: 248
+              columnCounter: "3235"
+              stepCounter: "248"
             dataType: VARCHAR(25)
             description: ""
             hashColumns: []
@@ -414,8 +414,8 @@ steps:
               hasNull: false
               isDistinct: false
             columnReference:
-              columnCounter: 3236
-              stepCounter: 248
+              columnCounter: "3236"
+              stepCounter: "248"
             dataType: VARCHAR(10)
             description: ""
             hashColumns: []
@@ -431,8 +431,8 @@ steps:
               hasNull: false
               isDistinct: false
             columnReference:
-              columnCounter: 3237
-              stepCounter: 248
+              columnCounter: "3237"
+              stepCounter: "248"
             dataType: VARCHAR(44)
             description: ""
             hashColumns: []

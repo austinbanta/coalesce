@@ -20,8 +20,8 @@ steps:
         appliedNodeTests: []
         columns:
           - columnReference:
-              columnCounter: 3173
-              stepCounter: 243
+              columnCounter: "3173"
+              stepCounter: "243"
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
@@ -34,8 +34,8 @@ steps:
                     stepCounter: "189"
                 transform: ""
           - columnReference:
-              columnCounter: 3174
-              stepCounter: 243
+              columnCounter: "3174"
+              stepCounter: "243"
             dataType: VARCHAR(55)
             description: ""
             hashColumns: []
@@ -48,8 +48,8 @@ steps:
                     stepCounter: "189"
                 transform: ""
           - columnReference:
-              columnCounter: 3175
-              stepCounter: 243
+              columnCounter: "3175"
+              stepCounter: "243"
             dataType: VARCHAR(25)
             description: ""
             hashColumns: []
@@ -62,8 +62,8 @@ steps:
                     stepCounter: "189"
                 transform: ""
           - columnReference:
-              columnCounter: 3176
-              stepCounter: 243
+              columnCounter: "3176"
+              stepCounter: "243"
             dataType: VARCHAR(10)
             description: ""
             hashColumns: []
@@ -76,8 +76,8 @@ steps:
                     stepCounter: "189"
                 transform: ""
           - columnReference:
-              columnCounter: 3177
-              stepCounter: 243
+              columnCounter: "3177"
+              stepCounter: "243"
             dataType: VARCHAR(25)
             description: test
             hashColumns: []
@@ -90,8 +90,8 @@ steps:
                     stepCounter: "189"
                 transform: ""
           - columnReference:
-              columnCounter: 3178
-              stepCounter: 243
+              columnCounter: "3178"
+              stepCounter: "243"
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
@@ -104,8 +104,8 @@ steps:
                     stepCounter: "189"
                 transform: ""
           - columnReference:
-              columnCounter: 3179
-              stepCounter: 243
+              columnCounter: "3179"
+              stepCounter: "243"
             dataType: VARCHAR(10)
             description: test
             hashColumns: []
@@ -118,8 +118,8 @@ steps:
                     stepCounter: "189"
                 transform: ""
           - columnReference:
-              columnCounter: 3180
-              stepCounter: 243
+              columnCounter: "3180"
+              stepCounter: "243"
             dataType: NUMBER(12,2)
             description: test
             hashColumns: []
@@ -132,8 +132,8 @@ steps:
                     stepCounter: "189"
                 transform: ""
           - columnReference:
-              columnCounter: 3181
-              stepCounter: 243
+              columnCounter: "3181"
+              stepCounter: "243"
             dataType: VARCHAR(23)
             description: test
             hashColumns: []

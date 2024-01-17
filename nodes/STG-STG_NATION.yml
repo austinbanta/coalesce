@@ -20,8 +20,8 @@ steps:
         appliedNodeTests: []
         columns:
           - columnReference:
-              columnCounter: 3160
-              stepCounter: 241
+              columnCounter: "3160"
+              stepCounter: "241"
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
@@ -34,8 +34,8 @@ steps:
                     stepCounter: "187"
                 transform: ""
           - columnReference:
-              columnCounter: 3161
-              stepCounter: 241
+              columnCounter: "3161"
+              stepCounter: "241"
             dataType: VARCHAR(25)
             description: ""
             hashColumns: []
@@ -48,8 +48,8 @@ steps:
                     stepCounter: "187"
                 transform: ""
           - columnReference:
-              columnCounter: 3162
-              stepCounter: 241
+              columnCounter: "3162"
+              stepCounter: "241"
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
@@ -62,8 +62,8 @@ steps:
                     stepCounter: "187"
                 transform: ""
           - columnReference:
-              columnCounter: 3163
-              stepCounter: 241
+              columnCounter: "3163"
+              stepCounter: "241"
             dataType: VARCHAR(152)
             description: ""
             hashColumns: []

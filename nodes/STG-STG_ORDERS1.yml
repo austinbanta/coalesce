@@ -1,5 +1,5 @@
 steps:
-  STG_ORDERS-242:
+  STG_ORDERS1-09f11509-1697-469c-bde8-768024608097:
     operation:
       config:
         insertStrategy: INSERT
@@ -8,22 +8,17 @@ steps:
         testsEnabled: true
         truncateBefore: true
       database: ""
-      dependencies: []
       deployEnabled: true
       description: ""
-      isDataVault: false
       isMultisource: false
-      locationID: 2
       locationName: STG
       materializationType: table
       metadata:
         appliedNodeTests: []
         columns:
-          - appliedColumnTests:
-              isDistinct: false
-            columnReference:
-              columnCounter: "3164"
-              stepCounter: "242"
+          - columnReference:
+              columnCounter: 49e9eaf5-3321-4738-9a5e-ea253cfb4723
+              stepCounter: 09f11509-1697-469c-bde8-768024608097
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
@@ -32,14 +27,12 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 2145
+                  - columnCounter: "2145"
                     stepCounter: "188"
                 transform: ""
-          - appliedColumnTests:
-              isDistinct: true
-            columnReference:
-              columnCounter: "3165"
-              stepCounter: "242"
+          - columnReference:
+              columnCounter: fec4edfb-7d21-43bd-9038-74fdd6d32dbf
+              stepCounter: 09f11509-1697-469c-bde8-768024608097
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
@@ -48,14 +41,12 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 2146
+                  - columnCounter: "2146"
                     stepCounter: "188"
                 transform: ""
-          - appliedColumnTests:
-              isDistinct: false
-            columnReference:
-              columnCounter: "3166"
-              stepCounter: "242"
+          - columnReference:
+              columnCounter: 9ce2e608-4a16-4ada-ad74-c851b6c8f771
+              stepCounter: 09f11509-1697-469c-bde8-768024608097
             dataType: VARCHAR(1)
             description: ""
             hashColumns: []
@@ -64,14 +55,12 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 2147
+                  - columnCounter: "2147"
                     stepCounter: "188"
                 transform: ""
-          - appliedColumnTests:
-              isDistinct: false
-            columnReference:
-              columnCounter: "3167"
-              stepCounter: "242"
+          - columnReference:
+              columnCounter: fb48341f-e363-4268-b6c2-fb7137771e23
+              stepCounter: 09f11509-1697-469c-bde8-768024608097
             dataType: NUMBER(12,2)
             description: ""
             hashColumns: []
@@ -80,14 +69,12 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 2148
+                  - columnCounter: "2148"
                     stepCounter: "188"
                 transform: ""
-          - appliedColumnTests:
-              isDistinct: false
-            columnReference:
-              columnCounter: "3168"
-              stepCounter: "242"
+          - columnReference:
+              columnCounter: b76c0e22-7402-492d-b446-b4f1bace6f3f
+              stepCounter: 09f11509-1697-469c-bde8-768024608097
             dataType: DATE
             description: ""
             hashColumns: []
@@ -96,14 +83,12 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 2149
+                  - columnCounter: "2149"
                     stepCounter: "188"
                 transform: ""
-          - appliedColumnTests:
-              isDistinct: false
-            columnReference:
-              columnCounter: "3169"
-              stepCounter: "242"
+          - columnReference:
+              columnCounter: feba453b-807d-4f98-bb40-1b4abc040d59
+              stepCounter: 09f11509-1697-469c-bde8-768024608097
             dataType: VARCHAR(15)
             description: ""
             hashColumns: []
@@ -112,14 +97,12 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 2150
+                  - columnCounter: "2150"
                     stepCounter: "188"
                 transform: ""
-          - appliedColumnTests:
-              isDistinct: false
-            columnReference:
-              columnCounter: "3170"
-              stepCounter: "242"
+          - columnReference:
+              columnCounter: 3dd0d4d1-ae92-4fd7-8fde-ea4db5e53595
+              stepCounter: 09f11509-1697-469c-bde8-768024608097
             dataType: VARCHAR(15)
             description: ""
             hashColumns: []
@@ -128,14 +111,12 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 2151
+                  - columnCounter: "2151"
                     stepCounter: "188"
                 transform: ""
-          - appliedColumnTests:
-              isDistinct: false
-            columnReference:
-              columnCounter: "3171"
-              stepCounter: "242"
+          - columnReference:
+              columnCounter: 29e06b67-002c-4282-aee0-469861789293
+              stepCounter: 09f11509-1697-469c-bde8-768024608097
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
@@ -144,14 +125,12 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 2152
+                  - columnCounter: "2152"
                     stepCounter: "188"
                 transform: ""
-          - appliedColumnTests:
-              isDistinct: false
-            columnReference:
-              columnCounter: "3172"
-              stepCounter: "242"
+          - columnReference:
+              columnCounter: 565cee22-9808-49df-8c71-150af33b5e5d
+              stepCounter: 09f11509-1697-469c-bde8-768024608097
             dataType: VARCHAR(79)
             description: ""
             hashColumns: []
@@ -160,15 +139,13 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 2153
+                  - columnCounter: "2153"
                     stepCounter: "188"
                 transform: ""
         cteString: ""
-        enabledColumnTestIDs:
-          - isDistinct
+        enabledColumnTestIDs: []
         sourceMapping:
-          - aliases:
-              ORDERS: "188"
+          - aliases: {}
             customSQL:
               customSQL: ""
             dependencies:
@@ -176,11 +153,11 @@ steps:
                 nodeName: ORDERS
             join:
               joinCondition: FROM {{ ref('DEV', 'ORDERS') }} "ORDERS"
-            name: STG_ORDERS
+            name: STG_ORDERS1
             noLinkRefs: []
-      name: STG_ORDERS
+      name: STG_ORDERS1
       overrideSQL: false
       schema: ""
       sqlType: Stage
       type: sql
-    stepCounter: "242"
+    stepCounter: 09f11509-1697-469c-bde8-768024608097

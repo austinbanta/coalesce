@@ -936,22 +936,6 @@ steps:
                   - columnCounter: a742cc3c-67df-4fd5-a401-f25f59b2b07e
                     stepCounter: c73028e6-8cb0-435a-a41d-82864992dc11
                 transform: ""
-          - acceptedValues:
-              strictMatch: false
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 30b367b5-bbe4-4b4c-9718-b15987517e04
-              stepCounter: 965941be-43e0-493d-8f07-5e1b1a84c448
-            dataType: string
-            description: ""
-            name: newcol1
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: f23a1c49-e54c-4e50-8f2b-e808bee29069
-                    stepCounter: c73028e6-8cb0-435a-a41d-82864992dc11
-                transform: ""
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:

@@ -20,8 +20,8 @@ steps:
         appliedNodeTests: []
         columns:
           - columnReference:
-              columnCounter: 3185
-              stepCounter: 245
+              columnCounter: "3185"
+              stepCounter: "245"
             dataType: NUMBER(38,0)
             description: test
             hashColumns: []
@@ -34,8 +34,8 @@ steps:
                     stepCounter: "197"
                 transform: ""
           - columnReference:
-              columnCounter: 3186
-              stepCounter: 245
+              columnCounter: "3186"
+              stepCounter: "245"
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
@@ -48,8 +48,8 @@ steps:
                     stepCounter: "197"
                 transform: ""
           - columnReference:
-              columnCounter: 3187
-              stepCounter: 245
+              columnCounter: "3187"
+              stepCounter: "245"
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
@@ -62,8 +62,8 @@ steps:
                     stepCounter: "197"
                 transform: ""
           - columnReference:
-              columnCounter: 3188
-              stepCounter: 245
+              columnCounter: "3188"
+              stepCounter: "245"
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
@@ -76,8 +76,8 @@ steps:
                     stepCounter: "197"
                 transform: ""
           - columnReference:
-              columnCounter: 3189
-              stepCounter: 245
+              columnCounter: "3189"
+              stepCounter: "245"
             dataType: NUMBER(12,2)
             description: ""
             hashColumns: []
@@ -90,8 +90,8 @@ steps:
                     stepCounter: "197"
                 transform: ""
           - columnReference:
-              columnCounter: 3190
-              stepCounter: 245
+              columnCounter: "3190"
+              stepCounter: "245"
             dataType: NUMBER(12,2)
             description: ""
             hashColumns: []
@@ -104,8 +104,8 @@ steps:
                     stepCounter: "197"
                 transform: ""
           - columnReference:
-              columnCounter: 3191
-              stepCounter: 245
+              columnCounter: "3191"
+              stepCounter: "245"
             dataType: NUMBER(12,2)
             description: ""
             hashColumns: []
@@ -118,8 +118,8 @@ steps:
                     stepCounter: "197"
                 transform: ""
           - columnReference:
-              columnCounter: 3192
-              stepCounter: 245
+              columnCounter: "3192"
+              stepCounter: "245"
             dataType: NUMBER(12,2)
             description: ""
             hashColumns: []
@@ -132,8 +132,8 @@ steps:
                     stepCounter: "197"
                 transform: ""
           - columnReference:
-              columnCounter: 3193
-              stepCounter: 245
+              columnCounter: "3193"
+              stepCounter: "245"
             dataType: VARCHAR(1)
             description: ""
             hashColumns: []
@@ -146,8 +146,8 @@ steps:
                     stepCounter: "197"
                 transform: ""
           - columnReference:
-              columnCounter: 3194
-              stepCounter: 245
+              columnCounter: "3194"
+              stepCounter: "245"
             dataType: VARCHAR(1)
             description: ""
             hashColumns: []
@@ -160,8 +160,8 @@ steps:
                     stepCounter: "197"
                 transform: ""
           - columnReference:
-              columnCounter: 3195
-              stepCounter: 245
+              columnCounter: "3195"
+              stepCounter: "245"
             dataType: DATE
             description: ""
             hashColumns: []
@@ -174,8 +174,8 @@ steps:
                     stepCounter: "197"
                 transform: ""
           - columnReference:
-              columnCounter: 3196
-              stepCounter: 245
+              columnCounter: "3196"
+              stepCounter: "245"
             dataType: DATE
             description: ""
             hashColumns: []
@@ -188,8 +188,8 @@ steps:
                     stepCounter: "197"
                 transform: ""
           - columnReference:
-              columnCounter: 3197
-              stepCounter: 245
+              columnCounter: "3197"
+              stepCounter: "245"
             dataType: DATE
             description: ""
             hashColumns: []
@@ -202,8 +202,8 @@ steps:
                     stepCounter: "197"
                 transform: ""
           - columnReference:
-              columnCounter: 3198
-              stepCounter: 245
+              columnCounter: "3198"
+              stepCounter: "245"
             dataType: VARCHAR(25)
             description: ""
             hashColumns: []
@@ -216,8 +216,8 @@ steps:
                     stepCounter: "197"
                 transform: ""
           - columnReference:
-              columnCounter: 3199
-              stepCounter: 245
+              columnCounter: "3199"
+              stepCounter: "245"
             dataType: VARCHAR(10)
             description: ""
             hashColumns: []
@@ -230,8 +230,8 @@ steps:
                     stepCounter: "197"
                 transform: ""
           - columnReference:
-              columnCounter: 3200
-              stepCounter: 245
+              columnCounter: "3200"
+              stepCounter: "245"
             dataType: VARCHAR(44)
             description: ""
             hashColumns: []

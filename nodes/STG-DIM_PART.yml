@@ -22,8 +22,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 3276
-              stepCounter: 252
+              columnCounter: "3276"
+              stepCounter: "252"
             config: {}
             dataType: NUMBER
             defaultValue: ""
@@ -36,8 +36,8 @@ steps:
               - columnReferences: []
                 transform: ""
           - columnReference:
-              columnCounter: 3277
-              stepCounter: 252
+              columnCounter: "3277"
+              stepCounter: "252"
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
@@ -51,8 +51,8 @@ steps:
                     stepCounter: "243"
                 transform: ""
           - columnReference:
-              columnCounter: 3278
-              stepCounter: 252
+              columnCounter: "3278"
+              stepCounter: "252"
             dataType: VARCHAR(55)
             description: ""
             hashColumns: []
@@ -65,8 +65,8 @@ steps:
                     stepCounter: "243"
                 transform: ""
           - columnReference:
-              columnCounter: 3279
-              stepCounter: 252
+              columnCounter: "3279"
+              stepCounter: "252"
             dataType: VARCHAR(25)
             description: ""
             hashColumns: []
@@ -79,8 +79,8 @@ steps:
                     stepCounter: "243"
                 transform: ""
           - columnReference:
-              columnCounter: 3280
-              stepCounter: 252
+              columnCounter: "3280"
+              stepCounter: "252"
             dataType: VARCHAR(10)
             description: ""
             hashColumns: []
@@ -93,8 +93,8 @@ steps:
                     stepCounter: "243"
                 transform: ""
           - columnReference:
-              columnCounter: 3281
-              stepCounter: 252
+              columnCounter: "3281"
+              stepCounter: "252"
             dataType: VARCHAR(25)
             description: ""
             hashColumns: []
@@ -107,8 +107,8 @@ steps:
                     stepCounter: "243"
                 transform: ""
           - columnReference:
-              columnCounter: 3282
-              stepCounter: 252
+              columnCounter: "3282"
+              stepCounter: "252"
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
@@ -121,8 +121,8 @@ steps:
                     stepCounter: "243"
                 transform: ""
           - columnReference:
-              columnCounter: 3283
-              stepCounter: 252
+              columnCounter: "3283"
+              stepCounter: "252"
             dataType: VARCHAR(10)
             description: ""
             hashColumns: []
@@ -135,8 +135,8 @@ steps:
                     stepCounter: "243"
                 transform: ""
           - columnReference:
-              columnCounter: 3284
-              stepCounter: 252
+              columnCounter: "3284"
+              stepCounter: "252"
             dataType: NUMBER(12,2)
             description: ""
             hashColumns: []
@@ -149,8 +149,8 @@ steps:
                     stepCounter: "243"
                 transform: ""
           - columnReference:
-              columnCounter: 3285
-              stepCounter: 252
+              columnCounter: "3285"
+              stepCounter: "252"
             dataType: VARCHAR(23)
             description: ""
             hashColumns: []
@@ -167,8 +167,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 3286
-              stepCounter: 252
+              columnCounter: "3286"
+              stepCounter: "252"
             config: {}
             dataType: NUMBER
             defaultValue: ""
@@ -185,8 +185,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 3287
-              stepCounter: 252
+              columnCounter: "3287"
+              stepCounter: "252"
             config: {}
             dataType: VARCHAR
             defaultValue: ""
@@ -203,8 +203,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 3288
-              stepCounter: 252
+              columnCounter: "3288"
+              stepCounter: "252"
             config: {}
             dataType: TIMESTAMP
             defaultValue: ""
@@ -221,8 +221,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 3289
-              stepCounter: 252
+              columnCounter: "3289"
+              stepCounter: "252"
             config: {}
             dataType: TIMESTAMP
             defaultValue: ""
@@ -239,8 +239,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 3290
-              stepCounter: 252
+              columnCounter: "3290"
+              stepCounter: "252"
             config: {}
             dataType: TIMESTAMP
             defaultValue: ""
@@ -257,8 +257,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 3291
-              stepCounter: 252
+              columnCounter: "3291"
+              stepCounter: "252"
             config: {}
             dataType: TIMESTAMP
             defaultValue: ""

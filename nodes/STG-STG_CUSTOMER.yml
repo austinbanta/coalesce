@@ -150,6 +150,27 @@ steps:
                 transform: ""
             systemColumnType: None
             transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a127027f-3dd6-4814-a9c7-e52a622aa6ff
+              stepCounter: 6cb28310-a71d-4745-b4d5-2e2e8c70b850
+            config: {}
+            dataType: string
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: newcolumn2
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+            systemColumnType: None
+            transform: ""
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:

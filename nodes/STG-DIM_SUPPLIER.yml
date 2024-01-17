@@ -22,7 +22,7 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 5249
+              columnCounter: "5249"
               stepCounter: "401"
             config: {}
             dataType: NUMBER
@@ -36,7 +36,7 @@ steps:
               - columnReferences: []
                 transform: ""
           - columnReference:
-              columnCounter: 5250
+              columnCounter: "5250"
               stepCounter: "401"
             dataType: NUMBER(38,0)
             description: ""
@@ -51,7 +51,7 @@ steps:
                     stepCounter: "400"
                 transform: ""
           - columnReference:
-              columnCounter: 5251
+              columnCounter: "5251"
               stepCounter: "401"
             dataType: VARCHAR(25)
             description: ""
@@ -65,7 +65,7 @@ steps:
                     stepCounter: "400"
                 transform: ""
           - columnReference:
-              columnCounter: 5252
+              columnCounter: "5252"
               stepCounter: "401"
             dataType: VARCHAR(40)
             description: ""
@@ -80,7 +80,7 @@ steps:
                     stepCounter: "400"
                 transform: ""
           - columnReference:
-              columnCounter: 5253
+              columnCounter: "5253"
               stepCounter: "401"
             dataType: NUMBER(38,0)
             description: ""
@@ -94,7 +94,7 @@ steps:
                     stepCounter: "400"
                 transform: ""
           - columnReference:
-              columnCounter: 5254
+              columnCounter: "5254"
               stepCounter: "401"
             dataType: VARCHAR(15)
             description: ""
@@ -108,7 +108,7 @@ steps:
                     stepCounter: "400"
                 transform: ""
           - columnReference:
-              columnCounter: 5255
+              columnCounter: "5255"
               stepCounter: "401"
             dataType: NUMBER(12,2)
             description: ""
@@ -122,7 +122,7 @@ steps:
                     stepCounter: "400"
                 transform: ""
           - columnReference:
-              columnCounter: 5256
+              columnCounter: "5256"
               stepCounter: "401"
             dataType: VARCHAR(101)
             description: ""
@@ -140,7 +140,7 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 5257
+              columnCounter: "5257"
               stepCounter: "401"
             config: {}
             dataType: NUMBER
@@ -158,7 +158,7 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 5258
+              columnCounter: "5258"
               stepCounter: "401"
             config: {}
             dataType: VARCHAR
@@ -176,7 +176,7 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 5259
+              columnCounter: "5259"
               stepCounter: "401"
             config: {}
             dataType: TIMESTAMP
@@ -194,7 +194,7 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 5260
+              columnCounter: "5260"
               stepCounter: "401"
             config: {}
             dataType: TIMESTAMP
@@ -212,7 +212,7 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 5261
+              columnCounter: "5261"
               stepCounter: "401"
             config: {}
             dataType: TIMESTAMP
@@ -230,7 +230,7 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 5262
+              columnCounter: "5262"
               stepCounter: "401"
             config: {}
             dataType: TIMESTAMP
