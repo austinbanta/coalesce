@@ -1,0 +1,71 @@
+steps:
+  STG_DAILY_14_TOTAL_SHORT-beb6ef82-d29d-4c70-8de9-d9ccd558eae0:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: STG
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: ae069d29-924a-4cb3-a7ce-36362f13b36d
+              stepCounter: beb6ef82-d29d-4c70-8de9-d9ccd558eae0
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: Date
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2b520d15-ee1d-4cdf-b23c-f191fb636607
+                    stepCounter: 83eb6897-1cce-4c79-ace4-d0ea46531a47
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8fe16e9c-cad3-4668-b765-85edf4cc7b6a
+              stepCounter: beb6ef82-d29d-4c70-8de9-d9ccd558eae0
+            config: {}
+            dataType: DOUBLE
+            description: ""
+            name: Temp
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e2a150a0-91be-4546-8cd5-dd3fc9e775f7
+                    stepCounter: 83eb6897-1cce-4c79-ace4-d0ea46531a47
+                transform: "\"V_data\".value:\"temp\".\"day\"::DOUBLE"
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: UNS
+                nodeName: DAILY_14_TOTAL_SHORT
+            join:
+              joinCondition: |-
+                FROM {{ ref('UNS', 'DAILY_14_TOTAL_SHORT') }} "DAILY_14_TOTAL_SHORT", 
+                lateral flatten(input => "V":"data", OUTER => TRUE) "V_data", 
+                lateral flatten(input => "V_data".value:"weather", OUTER => TRUE) "V_data_weather"
+            name: STG_DAILY_14_TOTAL_SHORT
+            noLinkRefs: []
+      name: STG_DAILY_14_TOTAL_SHORT
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: beb6ef82-d29d-4c70-8de9-d9ccd558eae0
