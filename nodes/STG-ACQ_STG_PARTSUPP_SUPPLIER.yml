@@ -72,24 +72,6 @@ steps:
                     stepCounter: 8c941ec2-c92b-4ed0-8d56-971bc1bf09ee
                 transform: ""
           - columnReference:
-              columnCounter: c906088d-5d96-42c8-8fa5-ac333367141b
-              stepCounter: b3263d3e-05cd-4125-a455-7fca6570b2cf
-            dataType: NUMBER(38,0)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: S_NATIONKEY
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: e79301df-1742-4fba-abd2-9239f31fcb87
-                    stepCounter: 478995f2-9109-4424-a96f-0e15cb55aa22
-                transform: ""
-              - columnReferences:
-                  - columnCounter: ac64d268-c9fc-4fa0-beb2-70ac91e37c73
-                    stepCounter: 8c941ec2-c92b-4ed0-8d56-971bc1bf09ee
-                transform: ""
-          - columnReference:
               columnCounter: 3498c80d-f147-4b0b-84f8-214023a5e010
               stepCounter: b3263d3e-05cd-4125-a455-7fca6570b2cf
             dataType: VARCHAR(15)
@@ -126,60 +108,6 @@ steps:
                     stepCounter: 8c941ec2-c92b-4ed0-8d56-971bc1bf09ee
                 transform: ""
           - columnReference:
-              columnCounter: 645af1d5-190f-491e-bbf5-07052da7bab6
-              stepCounter: b3263d3e-05cd-4125-a455-7fca6570b2cf
-            dataType: VARCHAR(101)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: S_COMMENT
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 41b66716-3a20-4889-93a7-a7575406664e
-                    stepCounter: 478995f2-9109-4424-a96f-0e15cb55aa22
-                transform: ""
-              - columnReferences:
-                  - columnCounter: 39e8a1c1-b39a-485b-8027-69c065b71cb5
-                    stepCounter: 8c941ec2-c92b-4ed0-8d56-971bc1bf09ee
-                transform: ""
-          - columnReference:
-              columnCounter: ff00ad0e-f418-47da-801f-482a8afc34e2
-              stepCounter: b3263d3e-05cd-4125-a455-7fca6570b2cf
-            dataType: NUMBER(38,0)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: PS_PARTKEY
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 5e5bed31-b7d6-4b83-b742-c95bc2b4649f
-                    stepCounter: 478995f2-9109-4424-a96f-0e15cb55aa22
-                transform: ""
-              - columnReferences:
-                  - columnCounter: 991475da-d03e-4ac2-840f-355f0e3d6c98
-                    stepCounter: 8c941ec2-c92b-4ed0-8d56-971bc1bf09ee
-                transform: ""
-          - columnReference:
-              columnCounter: cd617fee-c281-4af1-968a-e2b1bcdc2435
-              stepCounter: b3263d3e-05cd-4125-a455-7fca6570b2cf
-            dataType: NUMBER(38,0)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: PS_SUPPKEY
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: f26f07a5-e7f8-428c-a9ac-bd1397874f1f
-                    stepCounter: 478995f2-9109-4424-a96f-0e15cb55aa22
-                transform: ""
-              - columnReferences:
-                  - columnCounter: dde814b7-b341-446b-be21-5cac8f7fcf47
-                    stepCounter: 8c941ec2-c92b-4ed0-8d56-971bc1bf09ee
-                transform: ""
-          - columnReference:
               columnCounter: d8f6bf85-bf7f-4fae-be71-803727d39006
               stepCounter: b3263d3e-05cd-4125-a455-7fca6570b2cf
             dataType: NUMBER(38,0)
@@ -213,42 +141,6 @@ steps:
                 transform: ""
               - columnReferences:
                   - columnCounter: a249e561-6e2b-49f5-bb4b-a764ef56bf33
-                    stepCounter: 8c941ec2-c92b-4ed0-8d56-971bc1bf09ee
-                transform: ""
-          - columnReference:
-              columnCounter: de1f8ace-d46e-4067-83ae-320c3aa4570b
-              stepCounter: b3263d3e-05cd-4125-a455-7fca6570b2cf
-            dataType: VARCHAR(199)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: PS_COMMENT
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 11ffc77f-e793-4987-9074-b17397fe992a
-                    stepCounter: 478995f2-9109-4424-a96f-0e15cb55aa22
-                transform: ""
-              - columnReferences:
-                  - columnCounter: 1f7e2bb5-258a-4173-a93b-f42ee9044f73
-                    stepCounter: 8c941ec2-c92b-4ed0-8d56-971bc1bf09ee
-                transform: ""
-          - columnReference:
-              columnCounter: d34fe6d4-9d94-4cdf-b6b5-65da6725114d
-              stepCounter: b3263d3e-05cd-4125-a455-7fca6570b2cf
-            dataType: NUMBER(38,0)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: P_PARTKEY
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: e9773a42-518a-4b3f-84b2-7c0ff771e708
-                    stepCounter: 478995f2-9109-4424-a96f-0e15cb55aa22
-                transform: ""
-              - columnReferences:
-                  - columnCounter: 22169e8a-9c2d-47d4-a293-cfd65c74e6c3
                     stepCounter: 8c941ec2-c92b-4ed0-8d56-971bc1bf09ee
                 transform: ""
           - columnReference:
@@ -375,24 +267,6 @@ steps:
                 transform: ""
               - columnReferences:
                   - columnCounter: 77c63039-3b27-4037-bd2a-fc8410e698ac
-                    stepCounter: 8c941ec2-c92b-4ed0-8d56-971bc1bf09ee
-                transform: ""
-          - columnReference:
-              columnCounter: 3fbe24d9-c532-40f9-9e8d-c7e6e379c456
-              stepCounter: b3263d3e-05cd-4125-a455-7fca6570b2cf
-            dataType: VARCHAR(23)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: P_COMMENT
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 847a1972-bae9-4974-ab9d-acd463b686f9
-                    stepCounter: 478995f2-9109-4424-a96f-0e15cb55aa22
-                transform: ""
-              - columnReferences:
-                  - columnCounter: cc09f01f-04f9-4c62-bda8-1f8b5178dbef
                     stepCounter: 8c941ec2-c92b-4ed0-8d56-971bc1bf09ee
                 transform: ""
           - acceptedValues:

@@ -27,21 +27,7 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 3302
-                    stepCounter: "254"
-                transform: ""
-          - columnReference:
-              columnCounter: a30fcbaf-a153-4b39-9cc2-690f4943f9fa
-              stepCounter: cc79f493-a239-4fd9-b691-5665b3f2798f
-            dataType: NUMBER(38,0)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: O_CUSTKEY
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 3303
+                  - columnCounter: "3302"
                     stepCounter: "254"
                 transform: ""
           - columnReference:
@@ -55,7 +41,7 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 3304
+                  - columnCounter: "3304"
                     stepCounter: "254"
                 transform: ""
           - columnReference:
@@ -69,7 +55,7 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 3305
+                  - columnCounter: "3305"
                     stepCounter: "254"
                 transform: ""
           - columnReference:
@@ -83,7 +69,7 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 3306
+                  - columnCounter: "3306"
                     stepCounter: "254"
                 transform: ""
           - columnReference:
@@ -97,7 +83,7 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 3307
+                  - columnCounter: "3307"
                     stepCounter: "254"
                 transform: ""
           - columnReference:
@@ -111,7 +97,7 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 3308
+                  - columnCounter: "3308"
                     stepCounter: "254"
                 transform: ""
           - columnReference:
@@ -125,63 +111,7 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 3309
-                    stepCounter: "254"
-                transform: ""
-          - columnReference:
-              columnCounter: 09ce28d1-edd2-4ddf-aa32-079de06250ce
-              stepCounter: cc79f493-a239-4fd9-b691-5665b3f2798f
-            dataType: VARCHAR(79)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: O_COMMENT
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 3310
-                    stepCounter: "254"
-                transform: ""
-          - columnReference:
-              columnCounter: da98cc09-7697-486b-b94d-2534c1988f9c
-              stepCounter: cc79f493-a239-4fd9-b691-5665b3f2798f
-            dataType: NUMBER(38,0)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: L_ORDERKEY
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 3311
-                    stepCounter: "254"
-                transform: ""
-          - columnReference:
-              columnCounter: 3cc89d69-31a7-4a04-848e-720ff075edbc
-              stepCounter: cc79f493-a239-4fd9-b691-5665b3f2798f
-            dataType: NUMBER(38,0)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: L_PARTKEY
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 3312
-                    stepCounter: "254"
-                transform: ""
-          - columnReference:
-              columnCounter: b08de6e6-0968-4fbc-af03-539226b88fa2
-              stepCounter: cc79f493-a239-4fd9-b691-5665b3f2798f
-            dataType: NUMBER(38,0)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: L_SUPPKEY
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 3313
+                  - columnCounter: "3309"
                     stepCounter: "254"
                 transform: ""
           - columnReference:
@@ -195,7 +125,7 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 3314
+                  - columnCounter: "3314"
                     stepCounter: "254"
                 transform: ""
           - columnReference:
@@ -209,7 +139,7 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 3315
+                  - columnCounter: "3315"
                     stepCounter: "254"
                 transform: ""
           - columnReference:
@@ -223,7 +153,7 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 3316
+                  - columnCounter: "3316"
                     stepCounter: "254"
                 transform: ""
           - columnReference:
@@ -237,7 +167,7 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 3317
+                  - columnCounter: "3317"
                     stepCounter: "254"
                 transform: ""
           - columnReference:
@@ -251,7 +181,7 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 3318
+                  - columnCounter: "3318"
                     stepCounter: "254"
                 transform: ""
           - columnReference:
@@ -265,7 +195,7 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 3319
+                  - columnCounter: "3319"
                     stepCounter: "254"
                 transform: ""
           - columnReference:
@@ -279,7 +209,7 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 3320
+                  - columnCounter: "3320"
                     stepCounter: "254"
                 transform: ""
           - columnReference:
@@ -293,7 +223,7 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 3321
+                  - columnCounter: "3321"
                     stepCounter: "254"
                 transform: ""
           - columnReference:
@@ -307,7 +237,7 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 3322
+                  - columnCounter: "3322"
                     stepCounter: "254"
                 transform: ""
           - columnReference:
@@ -321,7 +251,7 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 3323
+                  - columnCounter: "3323"
                     stepCounter: "254"
                 transform: ""
           - columnReference:
@@ -335,7 +265,7 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 3324
+                  - columnCounter: "3324"
                     stepCounter: "254"
                 transform: ""
           - columnReference:
@@ -349,7 +279,7 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 3325
+                  - columnCounter: "3325"
                     stepCounter: "254"
                 transform: ""
           - columnReference:
@@ -363,7 +293,7 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 3326
+                  - columnCounter: "3326"
                     stepCounter: "254"
                 transform: ""
           - columnReference:
@@ -377,7 +307,7 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 3327
+                  - columnCounter: "3327"
                     stepCounter: "254"
                 transform: ""
           - columnReference:
@@ -391,7 +321,7 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 3328
+                  - columnCounter: "3328"
                     stepCounter: "254"
                 transform: ""
           - columnReference:
@@ -405,7 +335,7 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 5604
+                  - columnCounter: "5604"
                     stepCounter: "254"
                 transform: ""
           - acceptedValues:

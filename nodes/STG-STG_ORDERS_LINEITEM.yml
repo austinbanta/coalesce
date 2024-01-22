@@ -23,8 +23,8 @@ steps:
               hasNull: true
               isDistinct: false
             columnReference:
-              columnCounter: 3213
-              stepCounter: 248
+              columnCounter: "3213"
+              stepCounter: "248"
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
@@ -33,32 +33,15 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 3164
-                    stepCounter: "242"
-                transform: ""
-          - appliedColumnTests:
-              hasNull: true
-              isDistinct: false
-            columnReference:
-              columnCounter: 3214
-              stepCounter: 248
-            dataType: NUMBER(38,0)
-            description: test
-            hashColumns: []
-            hashDetails: null
-            name: O_CUSTKEY
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 3165
+                  - columnCounter: "3164"
                     stepCounter: "242"
                 transform: ""
           - appliedColumnTests:
               hasNull: false
               isDistinct: false
             columnReference:
-              columnCounter: 3215
-              stepCounter: 248
+              columnCounter: "3215"
+              stepCounter: "248"
             dataType: VARCHAR(1)
             description: ""
             hashColumns: []
@@ -67,15 +50,15 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 3166
+                  - columnCounter: "3166"
                     stepCounter: "242"
                 transform: UPPER("STG_ORDERS"."O_ORDERSTATUS")
           - appliedColumnTests:
               hasNull: false
               isDistinct: false
             columnReference:
-              columnCounter: 3216
-              stepCounter: 248
+              columnCounter: "3216"
+              stepCounter: "248"
             dataType: NUMBER(12,2)
             description: ""
             hashColumns: []
@@ -84,15 +67,15 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 3167
+                  - columnCounter: "3167"
                     stepCounter: "242"
                 transform: ""
           - appliedColumnTests:
               hasNull: false
               isDistinct: false
             columnReference:
-              columnCounter: 3217
-              stepCounter: 248
+              columnCounter: "3217"
+              stepCounter: "248"
             dataType: DATE
             description: ""
             hashColumns: []
@@ -101,15 +84,15 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 3168
+                  - columnCounter: "3168"
                     stepCounter: "242"
                 transform: ""
           - appliedColumnTests:
               hasNull: false
               isDistinct: false
             columnReference:
-              columnCounter: 3218
-              stepCounter: 248
+              columnCounter: "3218"
+              stepCounter: "248"
             dataType: VARCHAR(15)
             description: ""
             hashColumns: []
@@ -118,15 +101,15 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 3169
+                  - columnCounter: "3169"
                     stepCounter: "242"
                 transform: UPPER("STG_ORDERS"."O_ORDERPRIORITY")
           - appliedColumnTests:
               hasNull: false
               isDistinct: false
             columnReference:
-              columnCounter: 3219
-              stepCounter: 248
+              columnCounter: "3219"
+              stepCounter: "248"
             dataType: VARCHAR(15)
             description: ""
             hashColumns: []
@@ -135,15 +118,15 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 3170
+                  - columnCounter: "3170"
                     stepCounter: "242"
                 transform: UPPER("STG_ORDERS"."O_CLERK")
           - appliedColumnTests:
               hasNull: false
               isDistinct: false
             columnReference:
-              columnCounter: 3220
-              stepCounter: 248
+              columnCounter: "3220"
+              stepCounter: "248"
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
@@ -152,83 +135,15 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 3171
+                  - columnCounter: "3171"
                     stepCounter: "242"
                 transform: ""
           - appliedColumnTests:
               hasNull: false
               isDistinct: false
             columnReference:
-              columnCounter: 3221
-              stepCounter: 248
-            dataType: VARCHAR(79)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: O_COMMENT
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 3172
-                    stepCounter: "242"
-                transform: UPPER("STG_ORDERS"."O_COMMENT")
-          - appliedColumnTests:
-              hasNull: false
-              isDistinct: false
-            columnReference:
-              columnCounter: 3222
-              stepCounter: 248
-            dataType: NUMBER(38,0)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: L_ORDERKEY
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 3185
-                    stepCounter: "245"
-                transform: ""
-          - appliedColumnTests:
-              hasNull: false
-              isDistinct: false
-            columnReference:
-              columnCounter: 3223
-              stepCounter: 248
-            dataType: NUMBER(38,0)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: L_PARTKEY
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 3186
-                    stepCounter: "245"
-                transform: ""
-          - appliedColumnTests:
-              hasNull: false
-              isDistinct: false
-            columnReference:
-              columnCounter: 3224
-              stepCounter: 248
-            dataType: NUMBER(38,0)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: L_SUPPKEY
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 3187
-                    stepCounter: "245"
-                transform: ""
-          - appliedColumnTests:
-              hasNull: false
-              isDistinct: false
-            columnReference:
-              columnCounter: 3225
-              stepCounter: 248
+              columnCounter: "3225"
+              stepCounter: "248"
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
@@ -237,15 +152,15 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 3188
+                  - columnCounter: "3188"
                     stepCounter: "245"
                 transform: ""
           - appliedColumnTests:
               hasNull: false
               isDistinct: false
             columnReference:
-              columnCounter: 3226
-              stepCounter: 248
+              columnCounter: "3226"
+              stepCounter: "248"
             dataType: NUMBER(12,2)
             description: ""
             hashColumns: []
@@ -254,15 +169,15 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 3189
+                  - columnCounter: "3189"
                     stepCounter: "245"
                 transform: ""
           - appliedColumnTests:
               hasNull: false
               isDistinct: false
             columnReference:
-              columnCounter: 3227
-              stepCounter: 248
+              columnCounter: "3227"
+              stepCounter: "248"
             dataType: NUMBER(12,2)
             description: ""
             hashColumns: []
@@ -271,15 +186,15 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 3190
+                  - columnCounter: "3190"
                     stepCounter: "245"
                 transform: ""
           - appliedColumnTests:
               hasNull: false
               isDistinct: false
             columnReference:
-              columnCounter: 3228
-              stepCounter: 248
+              columnCounter: "3228"
+              stepCounter: "248"
             dataType: NUMBER(12,2)
             description: ""
             hashColumns: []
@@ -288,15 +203,15 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 3191
+                  - columnCounter: "3191"
                     stepCounter: "245"
                 transform: ""
           - appliedColumnTests:
               hasNull: false
               isDistinct: false
             columnReference:
-              columnCounter: 3229
-              stepCounter: 248
+              columnCounter: "3229"
+              stepCounter: "248"
             dataType: NUMBER(12,2)
             description: ""
             hashColumns: []
@@ -305,15 +220,15 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 3192
+                  - columnCounter: "3192"
                     stepCounter: "245"
                 transform: ""
           - appliedColumnTests:
               hasNull: false
               isDistinct: false
             columnReference:
-              columnCounter: 3230
-              stepCounter: 248
+              columnCounter: "3230"
+              stepCounter: "248"
             dataType: VARCHAR(1)
             description: ""
             hashColumns: []
@@ -322,15 +237,15 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 3193
+                  - columnCounter: "3193"
                     stepCounter: "245"
                 transform: ""
           - appliedColumnTests:
               hasNull: false
               isDistinct: false
             columnReference:
-              columnCounter: 3231
-              stepCounter: 248
+              columnCounter: "3231"
+              stepCounter: "248"
             dataType: VARCHAR(1)
             description: ""
             hashColumns: []
@@ -339,15 +254,15 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 3194
+                  - columnCounter: "3194"
                     stepCounter: "245"
                 transform: UPPER("STG_LINEITEM"."L_LINESTATUS")
           - appliedColumnTests:
               hasNull: false
               isDistinct: false
             columnReference:
-              columnCounter: 3232
-              stepCounter: 248
+              columnCounter: "3232"
+              stepCounter: "248"
             dataType: DATE
             description: ""
             hashColumns: []
@@ -356,15 +271,15 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 3195
+                  - columnCounter: "3195"
                     stepCounter: "245"
                 transform: ""
           - appliedColumnTests:
               hasNull: false
               isDistinct: false
             columnReference:
-              columnCounter: 3233
-              stepCounter: 248
+              columnCounter: "3233"
+              stepCounter: "248"
             dataType: DATE
             description: ""
             hashColumns: []
@@ -373,15 +288,15 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 3196
+                  - columnCounter: "3196"
                     stepCounter: "245"
                 transform: ""
           - appliedColumnTests:
               hasNull: false
               isDistinct: false
             columnReference:
-              columnCounter: 3234
-              stepCounter: 248
+              columnCounter: "3234"
+              stepCounter: "248"
             dataType: DATE
             description: ""
             hashColumns: []
@@ -390,15 +305,15 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 3197
+                  - columnCounter: "3197"
                     stepCounter: "245"
                 transform: ""
           - appliedColumnTests:
               hasNull: false
               isDistinct: false
             columnReference:
-              columnCounter: 3235
-              stepCounter: 248
+              columnCounter: "3235"
+              stepCounter: "248"
             dataType: VARCHAR(25)
             description: ""
             hashColumns: []
@@ -407,15 +322,15 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 3198
+                  - columnCounter: "3198"
                     stepCounter: "245"
                 transform: ""
           - appliedColumnTests:
               hasNull: false
               isDistinct: false
             columnReference:
-              columnCounter: 3236
-              stepCounter: 248
+              columnCounter: "3236"
+              stepCounter: "248"
             dataType: VARCHAR(10)
             description: ""
             hashColumns: []
@@ -424,15 +339,15 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 3199
+                  - columnCounter: "3199"
                     stepCounter: "245"
                 transform: UPPER("STG_LINEITEM"."L_SHIPMODE")
           - appliedColumnTests:
               hasNull: false
               isDistinct: false
             columnReference:
-              columnCounter: 3237
-              stepCounter: 248
+              columnCounter: "3237"
+              stepCounter: "248"
             dataType: VARCHAR(44)
             description: ""
             hashColumns: []
@@ -441,7 +356,7 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 3200
+                  - columnCounter: "3200"
                     stepCounter: "245"
                 transform: UPPER("STG_LINEITEM"."L_COMMENT")
           - acceptedValues:
