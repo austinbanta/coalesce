@@ -13,7 +13,12 @@ steps:
       locationName: STG
       materializationType: table
       metadata:
-        appliedNodeTests: []
+        appliedNodeTests:
+          - continueOnFailure: true
+            description: ""
+            name: Test
+            runOrder: After
+            templateString: ""
         columns:
           - acceptedValues:
               strictMatch: true

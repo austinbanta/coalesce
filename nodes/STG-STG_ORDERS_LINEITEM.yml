@@ -14,7 +14,12 @@ steps:
       locationName: STG
       materializationType: table
       metadata:
-        appliedNodeTests: []
+        appliedNodeTests:
+          - continueOnFailure: true
+            description: ""
+            name: Test
+            runOrder: After
+            templateString: ""
         columns:
           - columnReference:
               columnCounter: 861b62e1-ecf8-4c40-bbf1-90bd57f24fbd
