@@ -1043,7 +1043,7 @@ stepTypes:
     version: 1
   StepType-30:
     id: "30"
-    isDisabled: false
+    isDisabled: true
     metadata:
       error: null
       nodeMetadataSpec: |-
@@ -2433,7 +2433,7 @@ stepTypes:
     version: 1
   StepType-68:
     id: "68"
-    isDisabled: false
+    isDisabled: true
     metadata:
       defaultStorageLocation: null
       error: null
