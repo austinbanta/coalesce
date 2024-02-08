@@ -1,0 +1,78 @@
+steps:
+  NATION-26db9efd-502e-495f-86c5-e499004cf0c3:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationName: DEV
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c9c0def5-4f8e-4b28-999d-00d53c75acbb
+              stepCounter: 26db9efd-502e-495f-86c5-e499004cf0c3
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: N_NATIONKEY
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c6bccbf3-1746-4d98-8462-c33bc91a61a1
+              stepCounter: 26db9efd-502e-495f-86c5-e499004cf0c3
+            config: {}
+            dataType: VARCHAR(25)
+            defaultValue: ""
+            description: ""
+            name: N_NAME
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7b91e83a-92e9-4918-837b-5b4c7f9bc076
+              stepCounter: 26db9efd-502e-495f-86c5-e499004cf0c3
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: N_REGIONKEY
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 780eb9a4-aee6-4cb4-9462-e2e736aa932f
+              stepCounter: 26db9efd-502e-495f-86c5-e499004cf0c3
+            config: {}
+            dataType: VARCHAR(152)
+            defaultValue: ""
+            description: ""
+            name: N_COMMENT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('DEV', 'NATION') }}
+      name: NATION
+      schema: ""
+      sqlType: Source
+      table: NATION
+      type: sourceInput
+    stepCounter: 26db9efd-502e-495f-86c5-e499004cf0c3

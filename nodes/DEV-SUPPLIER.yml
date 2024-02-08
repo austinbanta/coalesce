@@ -1,0 +1,123 @@
+steps:
+  SUPPLIER-d8b3ceac-fd0f-4898-87f9-fd4d725ed9c6:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationName: DEV
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4566621e-3da1-4fb5-aa8a-5c03a3f2bc06
+              stepCounter: d8b3ceac-fd0f-4898-87f9-fd4d725ed9c6
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: S_SUPPKEY
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a41cff12-ed94-4fdb-bf7c-12733e804033
+              stepCounter: d8b3ceac-fd0f-4898-87f9-fd4d725ed9c6
+            config: {}
+            dataType: VARCHAR(25)
+            defaultValue: ""
+            description: ""
+            name: S_NAME
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 14f2ada5-a1df-4246-ab83-139babcbc9f5
+              stepCounter: d8b3ceac-fd0f-4898-87f9-fd4d725ed9c6
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: S_ADDRESS
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0043bc95-19f5-4ec6-a052-54fd00faaf0f
+              stepCounter: d8b3ceac-fd0f-4898-87f9-fd4d725ed9c6
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: S_NATIONKEY
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 977ed8a0-5be5-47bb-8567-4b724ca6bf7c
+              stepCounter: d8b3ceac-fd0f-4898-87f9-fd4d725ed9c6
+            config: {}
+            dataType: VARCHAR(15)
+            defaultValue: ""
+            description: ""
+            name: S_PHONE
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8bacd858-83ea-49b3-a47b-759331dfa771
+              stepCounter: d8b3ceac-fd0f-4898-87f9-fd4d725ed9c6
+            config: {}
+            dataType: NUMBER(12,2)
+            defaultValue: ""
+            description: ""
+            name: S_ACCTBAL
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0da4af0d-7c70-43e4-9164-857b080e4d8a
+              stepCounter: d8b3ceac-fd0f-4898-87f9-fd4d725ed9c6
+            config: {}
+            dataType: VARCHAR(101)
+            defaultValue: ""
+            description: ""
+            name: S_COMMENT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('DEV', 'SUPPLIER') }}
+      name: SUPPLIER
+      schema: ""
+      sqlType: Source
+      table: SUPPLIER
+      type: sourceInput
+    stepCounter: d8b3ceac-fd0f-4898-87f9-fd4d725ed9c6

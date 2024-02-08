@@ -1,40 +1,41 @@
 defaultStorageMapping: STG
 installedPackages: {}
 jobs:
+  Job-1:
+    excludeSelector: ""
+    id: 1
+    includeSelector: "+{ location: STG name: FCT_ORDERS_LINEITEM }"
+    name: New Job
   Job-16:
     excludeSelector: ""
     id: 16
     includeSelector: |
       { location: DEV name: PARTSUPP }+
     name: New Job
-    steps: []
-    subgraphs: []
   Job-17:
     excludeSelector: ""
     id: 17
     includeSelector: "+{ location: STG name: FCT_LINEITEM_ORDERS }"
     name: fact table refresh
-    steps: []
-    subgraphs: []
 locations:
   COVID:
     mappingDefinitions:
-      "3":
+      "7":
         database: COVID19
         schema: PUBLIC
   DEV:
     mappingDefinitions:
-      "3":
+      "7":
         database: COALESCE_SAMPLE_DATABASE
         schema: TPCH_SF001
   STG:
     mappingDefinitions:
-      "3":
+      "7":
         database: AUSTIN_TEST_DB_PROD
         schema: EDW_PROD
   UNS:
     mappingDefinitions:
-      "3":
+      "7":
         database: COALESCE_SAMPLE_DATABASE
         schema: WEATHER
 macros:
