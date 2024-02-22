@@ -359,6 +359,22 @@ steps:
                   - columnCounter: f5244752-1b9c-4556-8c8b-bc7925c72a6e
                     stepCounter: 8f684499-1bc2-4b7f-b649-5de33bfdf7c8
                 transform: ""
+          - acceptedValues:
+              strictMatch: false
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 231691fd-37ec-4db9-8485-64f02f4dfa6d
+              stepCounter: 575ab2bc-e3cb-4e3e-a75e-628d9e2928cf
+            dataType: STRING
+            description: ""
+            name: deprecated flag
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d6db72ce-be55-47bd-950b-880e96eefde4
+                    stepCounter: 8f684499-1bc2-4b7f-b649-5de33bfdf7c8
+                transform: ""
         enabledColumnTestIDs: []
         sourceMapping:
           - customSQL:

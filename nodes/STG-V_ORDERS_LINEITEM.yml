@@ -338,22 +338,6 @@ steps:
                   - columnCounter: "5604"
                     stepCounter: "254"
                 transform: ""
-          - acceptedValues:
-              strictMatch: false
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: c58bfbad-288e-4154-9c80-fd6798e7b3f6
-              stepCounter: cc79f493-a239-4fd9-b691-5665b3f2798f
-            dataType: STRING
-            description: ""
-            name: newcol
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: c58bfbad-288e-4154-9c80-fd6798e7b3f6
-                    stepCounter: "254"
-                transform: ""
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:

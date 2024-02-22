@@ -367,6 +367,27 @@ steps:
                   - columnCounter: a40b56f9-8a56-45dc-8412-19e978b00728
                     stepCounter: 890defe1-50ba-45ab-a943-3ccaf7cc9a9e
                 transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d6db72ce-be55-47bd-950b-880e96eefde4
+              stepCounter: 8f684499-1bc2-4b7f-b649-5de33bfdf7c8
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: deprecated flag
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: "'deprecated CRM - please ignore'"
+            systemColumnType: None
+            transform: ""
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:

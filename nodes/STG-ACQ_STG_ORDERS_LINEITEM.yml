@@ -359,21 +359,21 @@ steps:
                   - columnCounter: fb6d01bc-e9e9-4d22-a21a-42dd1ec0c00f
                     stepCounter: 575ab2bc-e3cb-4e3e-a75e-628d9e2928cf
                 transform: ""
-          - columnReference:
-              columnCounter: 728d10ca-3a18-4a8f-bbb8-1ea2f0677e3e
+          - acceptedValues:
+              strictMatch: false
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 46761557-225d-4f23-914d-df5b84f4e5c6
               stepCounter: c5bd85a0-abc3-4f8f-b08e-412d6121a115
             dataType: STRING
             description: ""
-            hashColumns: []
-            hashDetails: null
-            name: newcol
+            name: deprecated flag
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 81d10fdc-0a53-484b-8964-7790860509e0
-                    stepCounter: "248"
-                transform: ""
-              - columnReferences: []
+                  - columnCounter: 231691fd-37ec-4db9-8485-64f02f4dfa6d
+                    stepCounter: 575ab2bc-e3cb-4e3e-a75e-628d9e2928cf
                 transform: ""
         enabledColumnTestIDs: []
         sourceMapping:

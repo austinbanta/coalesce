@@ -281,20 +281,6 @@ steps:
                     stepCounter: c21f9946-6221-41cb-9af7-3c7a491daffe
                 transform: ""
           - columnReference:
-              columnCounter: e00670cd-e01f-4dbe-bdb0-8e5ca855c90b
-              stepCounter: c73028e6-8cb0-435a-a41d-82864992dc11
-            dataType: STRING
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: newcol
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: c71bea87-d059-4c8c-8623-bfb6af5f9547
-                    stepCounter: c21f9946-6221-41cb-9af7-3c7a491daffe
-                transform: ""
-          - columnReference:
               columnCounter: b5d0cc6a-d991-4eda-a6ac-94506fbd17a6
               stepCounter: c73028e6-8cb0-435a-a41d-82864992dc11
             dataType: NUMBER
@@ -396,7 +382,7 @@ steps:
               columnCounter: 0cdb537d-7a1f-4891-b9ee-0ddbbbb8c3df
               stepCounter: c73028e6-8cb0-435a-a41d-82864992dc11
             dataType: NUMBER(12,2)
-            description: ""
+            description: Invoiced amount adjusted for local tax rate in Europe (CRM2) business
             hashColumns: []
             hashDetails: null
             name: PS_SUPPLYCOST
@@ -757,6 +743,22 @@ steps:
               - columnReferences:
                   - columnCounter: 3383286a-45e6-40e9-8f0a-e783c3b77aec
                     stepCounter: a5a550fc-c39e-4f57-bf2c-2e4ce56bc0d6
+                transform: ""
+          - acceptedValues:
+              strictMatch: false
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ad706173-020d-43b2-8543-3f618970da50
+              stepCounter: c73028e6-8cb0-435a-a41d-82864992dc11
+            dataType: STRING
+            description: ""
+            name: deprecated flag
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6f01126d-7b08-405f-a4de-3a54a4beb582
+                    stepCounter: c21f9946-6221-41cb-9af7-3c7a491daffe
                 transform: ""
         cteString: ""
         enabledColumnTestIDs: []

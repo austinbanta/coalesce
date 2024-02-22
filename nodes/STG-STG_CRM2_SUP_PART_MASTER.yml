@@ -170,7 +170,7 @@ steps:
               - columnReferences:
                   - columnCounter: cce74592-b0fb-4115-bc41-fc2500a443eb
                     stepCounter: fe731410-aee3-419d-b38f-3b6ed11e5285
-                transform: ""
+                transform: "\"CRM2_PARTSUPP\".\"PS_SUPPLYCOST\"*1.09"
           - columnReference:
               columnCounter: 844c6bbe-eca1-4698-ab71-744b32e038e6
               stepCounter: 26311f04-a550-427c-ad09-0c3ab485f312

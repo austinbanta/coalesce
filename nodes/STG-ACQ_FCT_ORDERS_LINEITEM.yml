@@ -282,20 +282,6 @@ steps:
                   - columnCounter: 8c48571c-ba95-48b1-b67b-d4e60f568b00
                     stepCounter: c5bd85a0-abc3-4f8f-b08e-412d6121a115
                 transform: ""
-          - columnReference:
-              columnCounter: c71bea87-d059-4c8c-8623-bfb6af5f9547
-              stepCounter: c21f9946-6221-41cb-9af7-3c7a491daffe
-            dataType: STRING
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: newcol
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 728d10ca-3a18-4a8f-bbb8-1ea2f0677e3e
-                    stepCounter: c5bd85a0-abc3-4f8f-b08e-412d6121a115
-                transform: ""
           - acceptedValues:
               strictMatch: true
               values: []
@@ -374,6 +360,22 @@ steps:
                 transform: ""
             systemColumnType: None
             transform: ""
+          - acceptedValues:
+              strictMatch: false
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 6f01126d-7b08-405f-a4de-3a54a4beb582
+              stepCounter: c21f9946-6221-41cb-9af7-3c7a491daffe
+            dataType: STRING
+            description: ""
+            name: deprecated flag
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 46761557-225d-4f23-914d-df5b84f4e5c6
+                    stepCounter: c5bd85a0-abc3-4f8f-b08e-412d6121a115
+                transform: ""
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:
