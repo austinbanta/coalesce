@@ -32,6 +32,16 @@ locations:
       "3":
         database: AUSTIN_TEST_DB_PROD
         schema: EDW_PROD
+  TASTY_CUST:
+    mappingDefinitions:
+      "3":
+        database: ""
+        schema: ""
+  TASTY_POS:
+    mappingDefinitions:
+      "3":
+        database: ""
+        schema: ""
   UNS:
     mappingDefinitions:
       "3":
