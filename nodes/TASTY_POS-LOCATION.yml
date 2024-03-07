@@ -1,0 +1,123 @@
+steps:
+  LOCATION-75e85033-4cff-4e7c-abb8-c5f6304a60f9:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationName: TASTY_POS
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 213d7a2b-f251-4853-a3d8-4f75105b190e
+              stepCounter: 75e85033-4cff-4e7c-abb8-c5f6304a60f9
+            config: {}
+            dataType: NUMBER(19,0)
+            defaultValue: ""
+            description: ""
+            name: LOCATION_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 9fa85053-ba4c-4581-9faa-7adeef9bb27e
+              stepCounter: 75e85033-4cff-4e7c-abb8-c5f6304a60f9
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: PLACEKEY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 33b4f338-00fe-44ca-8447-eeba25ccbcdf
+              stepCounter: 75e85033-4cff-4e7c-abb8-c5f6304a60f9
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: LOCATION
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 50c04439-78ab-4256-87af-a1cf185f8fd9
+              stepCounter: 75e85033-4cff-4e7c-abb8-c5f6304a60f9
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: CITY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 05612f7f-1b9f-4519-8051-54a1b2562ad8
+              stepCounter: 75e85033-4cff-4e7c-abb8-c5f6304a60f9
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: REGION
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 46820cf7-bbb3-4c7f-9927-718b0a549e38
+              stepCounter: 75e85033-4cff-4e7c-abb8-c5f6304a60f9
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: ISO_COUNTRY_CODE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8fee63e1-b491-415d-8b8f-7e5011940d8c
+              stepCounter: 75e85033-4cff-4e7c-abb8-c5f6304a60f9
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: COUNTRY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('TASTY_POS', 'LOCATION') }}
+      name: LOCATION
+      schema: ""
+      sqlType: Source
+      table: LOCATION
+      type: sourceInput
+    stepCounter: 75e85033-4cff-4e7c-abb8-c5f6304a60f9

@@ -1054,237 +1054,195 @@ stepTypes:
     id: "30"
     isDisabled: false
     metadata:
+      defaultStorageLocation: null
       error: null
       nodeMetadataSpec: |-
-        capitalized: CDC Table
-        short: "CDC"
-        tagColor: "#ff33cc"
-        plural: CDC Tables
+        capitalized: Snowflake Cortex ML Forecast 2
+        short: SF_ML_FCSTS
+        tagColor: "#2ab3e7"
+        plural: Snowflake ML Forecasts
 
         config:
-        - groupName: Stream
-          items:
-          - displayName: Description
-            attributename: description
-            type: textBox
-            isRequired: false
-            default: "A CDC table consists of a few components:\n
-              1. A stream on the source node\n
-              2. The CDC table which contains a persistent replica of recent CDC records\n
-              3. A sequence to keep track of streams\n
-              4. Optional: a Task to replicate records from the Stream into the CDC table\n
-              "
 
-        - groupName: Task
+        - groupName: Forecast Model Input
           items:
 
-          - displayName: Create Task
-            enableIf: {{config.cdcTableEnabled}}
-            attributeName: taskEnabled
-            type: toggleButton
-            default: false
-            isRequired: false
+            - type: toggleButton
+              displayName: 'Multi-Series Forecast'
+              attributeName: 'multiseries'
+              isRequired: false
+              default: 'true'
 
-          - displayName: Task Schedule
-            enableIf: "{{config.taskEnabled}}"
-            attributeName: taskSchedule
-            type: dropdownSelector
-            default: "Every 30 minutes"
-            options:
-            - "Every minute"
-            - "Every 5 minutes"
-            - "Every 30 minutes"
-            - "Every hour"
-            - "Every day"
-            isRequired: false
+            - type: columnDropdownSelector
+              displayName: 'Series Column'
+              attributeName: 'seriescol'
+              isRequired: false
+              enableIf: "{{ config.multiseries }}"
 
-          - displayName: Warehouse
-            enableIf: "{{config.taskEnabled}}"
-            attributeName: taskWarehouse
-            type: dropdownSelector
-            default: "EMEA_TRANSFORM_XS_WH"
-            options:
-            - "EMEA_TRANSFORM_XS_WH"
-            - "EMEA_TRANSFORM_S_WH"
-            - "EMEA_TRANSFORM_M_WH"
-            - "EMEA_TRANSFORM_L_WH"
-            - "COMPUTE_WH"
-            isRequired: false
+            - type: columnDropdownSelector
+              displayName: 'Timestamp Column'
+              attributeName: 'tscol'
+              isRequired: true
 
-          - displayName: Custom Task Name
-            enableIf: "{{config.taskEnabled}}"
-            attributeName: taskCustomName
-            type: textBox
-            isRequired: false
+            - type: columnDropdownSelector
+              displayName: 'Target Column'
+              attributeName: 'tgtcol'
+              isRequired: true
 
-        - groupName: Hidden config
-          enableIf: "false"
-          items:
-          - displayName: Type
-            type: materializationSelector
-            default: table
-            options:
-            - table
-            isRequired: false
+            - type: toggleButton
+              displayName: 'Exogenous Variables'
+              attributeName: 'exvar'
+              isRequired: false
+              default: 'true'
+          
+            - displayName: Days To Forecast
+              attributeName: fcdays
+              type: textBox
+              enableIf: '{%- if not config.exvar %}true{%- else %}false{%- endif %}' 
+              isRequired: false
+              default: '30'
 
         systemColumns:
-        - displayName: "METADATA$ACTION"
-          transform: "METADATA$ACTION"
-          dataType: STRING
-          placement: end
-          attributeName: isStreamMetadataAction
-          description: Indicates the DML operation (INSERT, DELETE) recorded.
-        - displayName: "METADATA$ISUPDATE"
-          transform: "METADATA$ISUPDATE"
-          dataType: STRING
-          placement: end
-          attributeName: isStreamMetadataIsUpdate
-          description: Indicates whether the operation was part of an UPDATE statement.
-        - displayName: "METADATA$ROW_ID"
-          transform: "METADATA$ROW_ID"
-          dataType: STRING
-          placement: end
-          attributeName: isStreamMetadataRowId
-          description: Specifies the unique and immutable ID for the row, which can be used to track changes to specific rows over time.
-        - displayName: "CDC_ID"
+        - displayName: "FORECAST"
+          attributeName: forecast
           transform: ""
-          dataType: INTEGER
+          dataType: FLOAT
           placement: end
-          attributeName: isStreamMetadataCDCId
-          description: Medtronic specific CDC identifier based on a sequence.
-        - displayName: "CDC_TIMESTAMP"
-          transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
-          dataType: TIMESTAMP
+          description: 'Generated by ML Forecast Model'
+        - displayName: "LOWER_BOUND"
+          attributeName: lower_bound
+          transform: ""
+          dataType: FLOAT
           placement: end
-          attributeName: isSystemCreateDate
-          description: Medtronic specific attribute containing the timestamp of storing the CDC record.
+          description: 'Generated by ML Forecast Model'
+        - displayName: "UPPER_BOUND"
+          attributeName: upper_bound
+          transform: ""
+          dataType: FLOAT
+          placement: end
+          description: 'Generated by ML Forecast Model'
       templates:
         create:
-          templateString: |-
-            {{ stage('Create Stream') }}
+          templateString: |+
+            {% set source = sources[0] %}
+            {% set src_node = source.dependencies[0].node %}
+            {% set forecast_name = 'FORECAST_' ~ src_node.name %}
 
-            CREATE OR REPLACE STREAM {{ ref_no_link(node.location.name, "STR_" + node.name) }}
-            ON TABLE {{ ref(sources[0].dependencies[0].node.location.name, sources[0].dependencies[0].node.name) }}
-            APPEND_ONLY = FALSE
-            COMMENT = 'CDC Stream on {{ ref(node.location.name, sources[0].dependencies[0].node.name) }}'
+            {{ stage('Create Forecast Table') }}
 
-            {{ stage('Create Sequence') }}
 
-            CREATE OR REPLACE SEQUENCE {{ ref_no_link(node.location.name, "SEQ_" + node.name) }}
-
-            {{ stage('Create CDC Table') }}
-
-            CREATE OR REPLACE TABLE {{ ref_no_link(node.location.name, node.name) }}
+            CREATE OR REPLACE TABLE {{ this }}
             (
-                {% for col in columns %}
-                    "{{ col.name }}" {{ col.dataType }}
-                    {%- if not col.nullable %} NOT NULL
-                        {%- if col.defaultValue | length > 0 %} DEFAULT {{ col.defaultValue }}{% endif %}
-                    {% endif %}
-                    {%- if col.description | length > 0 %} COMMENT '{{ col.description }}'{% endif %}
+                {% for col in source.columns  %}
+                    "{{ col.name }}" 
+                    {%- if col.name == config.tscol.name %} TIMESTAMP 
+                    {%- elif col.name == config.tgtcol.name %} FLOAT 
+                    {%- else %} {{ col.dataType }}
+                    {%- endif %}
+                    {%- if col.description | length > 0 %} COMMENT '{{ col.description | escape }}'{%- endif %}
                     {%- if not loop.last -%}, {% endif %}
                 {% endfor %}
             )
-            {%- if node.description | length > 0 %} COMMENT = '{{ node.description }}'{% endif %}
+            {%- if node.description | length > 0 %} COMMENT = '{{ node.description | escape }}'{% endif %}
 
-            {% if config.taskEnabled is true %}
 
-                {{ stage('Create Task') }}
-
-                CREATE OR REPLACE TASK 
-                {% if config.taskCustomName != '' %}
-                    {{ ref_no_link(node.location.name, config.taskCustomName) }}
-                {% else %}
-                    {{ ref_no_link(node.location.name, "TSK_" + node.name) }}
-                {% endif %}
-                WAREHOUSE = {{config.taskWarehouse}}
-             
-                SCHEDULE = 
-                {% if config.taskSchedule == 'Every minute' %}
-                    '1 MINUTE'
-                {% elif config.taskSchedule == 'Every 5 minutes' %}
-                    '5 MINUTE'
-                {% elif config.taskSchedule == 'Every 30 minutes' %}
-                    '30 MINUTE'
-                {% elif config.taskSchedule == 'Every hour' %}
-                    '60 MINUTE'
-                {% elif config.taskSchedule == 'Every day' %}
-                    '3600 MINUTE'
-                {% else %}
-                    'INVALID'
-                {% endif %}
-                COMMENT='Task to copy data of stream STR_{{node.name}} to CDC Table {{node.name}}'
-                WHEN SYSTEM$STREAM_HAS_DATA('{{ ref_no_link(node.location.name, "STR_" + node.name) }}')
-                AS
-                INSERT INTO {{ ref_no_link(node.location.name, node.name) }}
-
-                {% for source in sources %}
-                    SELECT
-                    {% for col in source.columns %}
-                        {% if col.name == 'CDC_ID' %}
-                            SEQ_{{node.name}}.NEXTVAL
-                        {% elif col.transform | trim != '' %}
-                            {{ col.transform.replace(source.dependencies[0].node.name, 'STR_' + node.name) }}
-                        {% elif col.sourceColumns[0].column and col.sourceColumns[0].column.name %}
-                            "STR_{{ node.name }}"."{{ col.sourceColumns[0].column.name }}"
-                        {% else %}
-                            NULL
-                        {% endif %}
-                        AS "{{ col.name }}"
-                        {%- if not loop.last -%}, {% endif %}
-                    {% endfor %}
-
-                    FROM {{ ref_no_link(node.location.name, "STR_" + node.name) }}
-
-                    {% if config.insertStrategy in ['UNION', 'UNION ALL'] and not loop.last %}
-                        {{config.insertStrategy}}
-                    {% endif %}
-
-                {% endfor %}
-
-            {% endif %}
         run:
-          templateString: |-
-            {% if config.taskEnabled is true %}
+          templateString: |+
+            {% set source = sources[0] %}
+            {% set src_node = source.dependencies[0].node %}
+            {% set forecast_name = 'FORECAST_' ~ src_node.name %}
 
-                {{ stage('Resume Task') }}
+            {{ stage('Truncate Forecast table') }}
+            TRUNCATE IF EXISTS {{ this }}
 
-                ALTER TASK 
-                {% if config.taskCustomName != '' %}
-                    {{ ref_no_link(node.location.name, config.taskCustomName) }}
-                {% else %}
-                    {{ ref_no_link(node.location.name, "TSK_" + node.name) }}
-                {% endif %}
-                RESUME
+            {{ stage('Populate Forecast Table') }}
+
+            INSERT INTO {{ this }}
+            (
+                {%- for col in source.columns  %} 
+                    "{{ col.name }}" {%- if not loop.last -%}, {% endif %}
+                {%- endfor %}
+            )
+            SELECT 
+                {% for col in source.columns  %} 
+                    {{ get_source_transform(col) }} AS "{{ col.name }}"
+                    {%- if not loop.last -%}, {% endif %}
+                {% endfor %}
+            {{ source.join }}
+
+            {{ stage('Create Forecast Model Instance') }}
+
+            CREATE OR REPLACE SNOWFLAKE.ML.FORECAST
+             {{ ref_no_link(node.location.name, forecast_name) }}(
+                INPUT_DATA => SYSTEM$QUERY_REFERENCE('
+                    SELECT
+                    {%- for col in columns if not (col.forecast or col.upper_bound or col.lower_bound) %}
+                        "{{col.name}}"{%- if not loop.last %}, {%- endif %}
+                    {%- endfor %}            
+                    FROM {{ this }}
+                    WHERE  "{{ config.tgtcol.name }}" IS NOT NULL
+                '),
+                {% if config.multiseries %}SERIES_COLNAME => '{{ config.seriescol.name }}', {% endif %}
+                TIMESTAMP_COLNAME => '{{ config.tscol.name }}',
+                TARGET_COLNAME => '{{ config.tgtcol.name }}'
+            )
+
+
+            {{ stage('Insert ' + source.name | string ) }}
+            BEGIN
+
+            {% if config.exvar %}
+                CALL {{ ref_no_link(node.location.name, forecast_name) }}!FORECAST(
+                    INPUT_DATA => SYSTEM$QUERY_REFERENCE('
+                    SELECT 
+                    {%- for col in columns if not (col.forecast or col.upper_bound or col.lower_bound) %}
+                        "{{col.name}}"{%- if not loop.last %}, {%- endif %}
+                    {%- endfor %}            
+                    FROM {{ this }}
+                    WHERE  "{{ config.tgtcol.name }}" IS NULL
+                '),
+                {%if config.multiseries %}SERIES_COLNAME => '{{ config.seriescol.name }}', {% endif %}
+                TIMESTAMP_COLNAME => '{{ config.tscol.name }}' );
+
+                UPDATE {{ this }} SRC
+                SET 
+                    {%- for col in columns if  col.forecast or col.lower_bound or col.upper_bound %}
+                        "{{ col.name }}" = RES."{{ col.name }}" {%- if not loop.last %}, {%- endif %}
+                    {%- endfor %}
+                FROM TABLE(RESULT_SCAN(-1)) RES
+                WHERE 
+                    RES."TS" = SRC."{{ config.tscol.name }}"
+                    {%- if config.multiseries  %}
+                    AND RES."SERIES" = SRC."{{ config.seriescol.name }}"            
+                    {%- endif %};
 
             {% else %}
 
-                {{ stage('Insert From Stream') }}
+                CALL {{ ref_no_link(node.location.name, forecast_name) }}!FORECAST({{ config.fcdays }});
 
-                INSERT INTO {{ ref_no_link(node.location.name, node.name) }}
-
-                {% for source in sources %}
-                
-                    SELECT
+                INSERT INTO {{ this }}
+                (
+                    {%- for col in source.columns  %} 
+                        "{{ col.name }}" {%- if not loop.last -%}, {% endif %}
+                    {%- endfor %}
+                )
+                SELECT 
                     {% for col in source.columns %}
-                        {% if col.name == 'CDC_ID' %}
-                            {{ ref_no_link(node.location.name, "SEQ_" + node.name) }}.NEXTVAL
-                        {% else %}
-                            {{ get_source_transform(col) }}
-                        {% endif %} AS "{{ col.name }}"
-                        {%- if not loop.last -%}, {% endif %}
+                        {%- if config.multiseries and col.id == config.seriescol.id %}"SERIES"
+            	        {%- elif col.id == config.tscol.id %}"TS"
+            	        {%- elif col.id == config.tgtcol.id %}NULL
+            	        {%- elif col.forecast or col.lower_bound or col.upper_bound %}"{{ col.name }}"
+            	        {%- else %}{{ get_source_transform(col) }} AS "{{ col.name }}"
+            	        {%- endif %}{%- if not loop.last %}, {%- endif %}
                     {% endfor %}
-
-                    FROM {{ ref_no_link(node.location.name, "STR_" + node.name) }} AS "{{ sources[0].dependencies[0].node.name }}"
-
-                    {% if config.insertStrategy in ['UNION', 'UNION ALL'] and not loop.last %}
-                        {{config.insertStrategy}}
-                    {% endif %}
-
-                {% endfor %}
-
+                FROM TABLE(RESULT_SCAN(-1)) RES;
             {% endif %}
-    name: CDC Table
+
+
+            END
+
+
+    name: "Snowflake: Cortex ML Forecast 2"
     version: 1
   StepType-33:
     id: "33"
@@ -2438,7 +2396,7 @@ stepTypes:
                     {% endfor %}
                 {% endfor %}
             {% endif %}
-    name: "Snowflake Cortex: ML Forecast"
+    name: "Snowflake: Cortex ML Forecast"
     version: 1
   StepType-68:
     id: "68"
