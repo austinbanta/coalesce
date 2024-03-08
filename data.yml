@@ -90,7 +90,7 @@ projects: {}
 stepTypes:
   StepType-22:
     id: "22"
-    isDisabled: false
+    isDisabled: true
     metadata:
       error: null
       nodeMetadataSpec: |-
@@ -221,7 +221,7 @@ stepTypes:
     version: 1
   StepType-23:
     id: "23"
-    isDisabled: false
+    isDisabled: true
     metadata:
       error: null
       nodeMetadataSpec: |
@@ -358,7 +358,7 @@ stepTypes:
     version: 1
   StepType-24:
     id: "24"
-    isDisabled: false
+    isDisabled: true
     metadata:
       error: null
       nodeMetadataSpec: |-
@@ -486,7 +486,7 @@ stepTypes:
     version: 1
   StepType-25:
     id: "25"
-    isDisabled: false
+    isDisabled: true
     metadata:
       error: null
       nodeMetadataSpec: |
@@ -615,7 +615,7 @@ stepTypes:
     version: 1
   StepType-26:
     id: "26"
-    isDisabled: false
+    isDisabled: true
     metadata:
       error: null
       nodeMetadataSpec: |
@@ -745,7 +745,7 @@ stepTypes:
     version: 1
   StepType-27:
     id: "27"
-    isDisabled: false
+    isDisabled: true
     metadata:
       error: null
       nodeMetadataSpec: |+
@@ -866,7 +866,7 @@ stepTypes:
     version: 1
   StepType-28:
     id: "28"
-    isDisabled: false
+    isDisabled: true
     metadata:
       error: null
       nodeMetadataSpec: |-
@@ -946,7 +946,7 @@ stepTypes:
     version: 1
   StepType-29:
     id: "29"
-    isDisabled: false
+    isDisabled: true
     metadata:
       error: null
       nodeMetadataSpec: |-
@@ -1242,7 +1242,7 @@ stepTypes:
             END
 
 
-    name: "Snowflake: Cortex ML Forecast 2"
+    name: Snowflake Cortex ML Forecast 2
     version: 1
   StepType-33:
     id: "33"
@@ -2154,7 +2154,7 @@ stepTypes:
     version: 1
   StepType-67:
     id: "67"
-    isDisabled: false
+    isDisabled: true
     metadata:
       defaultStorageLocation: null
       error: null
