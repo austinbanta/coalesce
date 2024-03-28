@@ -1,5 +1,5 @@
 steps:
-  COUNTRY-2d52f992-9293-4d20-b024-886d3edbdcbd:
+  COUNTRY-18b08b75-7045-45df-83b0-d464b38de580:
     operation:
       database: ""
       dataset: ""
@@ -13,8 +13,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: b467ac47-a21d-411c-8bc7-8ed700309e5b
-              stepCounter: 2d52f992-9293-4d20-b024-886d3edbdcbd
+              columnCounter: bff5cb4d-13ac-4795-b753-b261f56cc83a
+              stepCounter: 18b08b75-7045-45df-83b0-d464b38de580
             config: {}
             dataType: NUMBER(18,0)
             defaultValue: ""
@@ -28,8 +28,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 7f1c5a4c-b0d9-49d2-82f8-7749b7c796e0
-              stepCounter: 2d52f992-9293-4d20-b024-886d3edbdcbd
+              columnCounter: e7c65581-385d-4f57-8d06-5e1e71aae36f
+              stepCounter: 18b08b75-7045-45df-83b0-d464b38de580
             config: {}
             dataType: VARCHAR(16777216)
             defaultValue: ""
@@ -43,8 +43,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: ec806eef-8956-4b6f-86a9-6b364a5b5490
-              stepCounter: 2d52f992-9293-4d20-b024-886d3edbdcbd
+              columnCounter: 3206639c-db01-47be-9cec-65fac4d537f2
+              stepCounter: 18b08b75-7045-45df-83b0-d464b38de580
             config: {}
             dataType: VARCHAR(3)
             defaultValue: ""
@@ -58,8 +58,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 2cdce554-81c5-491e-870c-578daf8a5d4f
-              stepCounter: 2d52f992-9293-4d20-b024-886d3edbdcbd
+              columnCounter: 82717b20-0c0b-4755-b323-b67bcf080dc1
+              stepCounter: 18b08b75-7045-45df-83b0-d464b38de580
             config: {}
             dataType: VARCHAR(2)
             defaultValue: ""
@@ -73,8 +73,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 0abdfbbb-68f9-43b3-a566-1f0ba8607eec
-              stepCounter: 2d52f992-9293-4d20-b024-886d3edbdcbd
+              columnCounter: a4d4c9d6-1dc9-4d3a-b1ac-4ea8655831b3
+              stepCounter: 18b08b75-7045-45df-83b0-d464b38de580
             config: {}
             dataType: NUMBER(19,0)
             defaultValue: ""
@@ -88,8 +88,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: b03047ef-371d-46a2-89ae-e666d9ca170d
-              stepCounter: 2d52f992-9293-4d20-b024-886d3edbdcbd
+              columnCounter: 66a7a776-e3e3-4eed-af28-5a12bb429df7
+              stepCounter: 18b08b75-7045-45df-83b0-d464b38de580
             config: {}
             dataType: VARCHAR(16777216)
             defaultValue: ""
@@ -103,8 +103,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 14c69a5c-df27-4239-a7d3-637492d9f620
-              stepCounter: 2d52f992-9293-4d20-b024-886d3edbdcbd
+              columnCounter: 981b9c57-8dca-4125-8f38-419819176724
+              stepCounter: 18b08b75-7045-45df-83b0-d464b38de580
             config: {}
             dataType: VARCHAR(16777216)
             defaultValue: ""
@@ -120,4 +120,4 @@ steps:
       sqlType: Source
       table: COUNTRY
       type: sourceInput
-    stepCounter: 2d52f992-9293-4d20-b024-886d3edbdcbd
+    stepCounter: 18b08b75-7045-45df-83b0-d464b38de580
