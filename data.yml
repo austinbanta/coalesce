@@ -16,6 +16,13 @@ jobs:
     name: fact table refresh
     steps: []
     subgraphs: []
+  Job-18:
+    excludeSelector: ""
+    id: 18
+    includeSelector: "+{ location: STG name: FCT_ORDER_DETAIL_38M_ORDER_HEADER_14M }"
+    name: sf job
+    steps: []
+    subgraphs: []
 locations:
   COVID:
     mappingDefinitions:

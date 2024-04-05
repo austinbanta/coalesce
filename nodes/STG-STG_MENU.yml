@@ -1,0 +1,274 @@
+steps:
+  STG_MENU-2e718870-d122-4659-87d9-1eb1bd01be58:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: STG
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: a24186f1-f1be-467e-873c-cfe1364ee0de
+              stepCounter: 2e718870-d122-4659-87d9-1eb1bd01be58
+            dataType: NUMBER(19,0)
+            description: ""
+            name: MENU_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 24a4c2a4-eeb1-4f3d-8635-17ea1e2d5b1c
+                    stepCounter: 8300eaa0-e184-40de-ab0d-aa5ff48d71f5
+                transform: ""
+          - columnReference:
+              columnCounter: b361fa94-62fe-4517-ba9d-7d4232bc39cf
+              stepCounter: 2e718870-d122-4659-87d9-1eb1bd01be58
+            dataType: NUMBER(38,0)
+            description: ""
+            name: MENU_TYPE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6cec3c4f-4eca-4ba4-a7a5-57c5f6f025ae
+                    stepCounter: 8300eaa0-e184-40de-ab0d-aa5ff48d71f5
+                transform: ""
+          - columnReference:
+              columnCounter: 78fddc7b-dadc-4d22-bbf4-0ff0f7e04ccf
+              stepCounter: 2e718870-d122-4659-87d9-1eb1bd01be58
+            dataType: VARCHAR(16777216)
+            description: ""
+            name: MENU_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f9556cee-d15c-4801-a418-df7098e3d7a0
+                    stepCounter: 8300eaa0-e184-40de-ab0d-aa5ff48d71f5
+                transform: UPPER("MENU"."MENU_TYPE")
+          - columnReference:
+              columnCounter: fe2b5ada-3e2a-4132-9d1c-1ac0c88671a2
+              stepCounter: 2e718870-d122-4659-87d9-1eb1bd01be58
+            dataType: VARCHAR(16777216)
+            description: ""
+            name: TRUCK_BRAND_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0a9839c1-1440-4bcf-a1a3-7aa016fccf8c
+                    stepCounter: 8300eaa0-e184-40de-ab0d-aa5ff48d71f5
+                transform: UPPER("MENU"."TRUCK_BRAND_NAME")
+          - columnReference:
+              columnCounter: 05dbc6f7-3255-4faf-b20f-277eb3158229
+              stepCounter: 2e718870-d122-4659-87d9-1eb1bd01be58
+            dataType: NUMBER(38,0)
+            description: ""
+            name: MENU_ITEM_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: be95aa97-a996-4453-9ca9-956703fd439f
+                    stepCounter: 8300eaa0-e184-40de-ab0d-aa5ff48d71f5
+                transform: ""
+          - columnReference:
+              columnCounter: a2f1d93a-ba75-40b9-b746-1389dec0f88d
+              stepCounter: 2e718870-d122-4659-87d9-1eb1bd01be58
+            dataType: VARCHAR(16777216)
+            description: ""
+            name: MENU_ITEM_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7d6bff8a-8d82-4fe5-89cb-11304176c704
+                    stepCounter: 8300eaa0-e184-40de-ab0d-aa5ff48d71f5
+                transform: UPPER("MENU"."MENU_ITEM_NAME")
+          - columnReference:
+              columnCounter: 9b18879c-5ec1-43b1-9d0e-a1abbb967b18
+              stepCounter: 2e718870-d122-4659-87d9-1eb1bd01be58
+            dataType: VARCHAR(16777216)
+            description: ""
+            name: ITEM_CATEGORY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3c740318-9cc5-4dd7-97bc-5eb1b42d6bec
+                    stepCounter: 8300eaa0-e184-40de-ab0d-aa5ff48d71f5
+                transform: UPPER("MENU"."ITEM_CATEGORY")
+          - columnReference:
+              columnCounter: 63ca6ed3-1f90-4597-aede-8603b84e0878
+              stepCounter: 2e718870-d122-4659-87d9-1eb1bd01be58
+            dataType: VARCHAR(16777216)
+            description: ""
+            name: ITEM_SUBCATEGORY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c1011aeb-ae40-4523-9a36-af80bc8d8c65
+                    stepCounter: 8300eaa0-e184-40de-ab0d-aa5ff48d71f5
+                transform: UPPER("MENU"."ITEM_SUBCATEGORY")
+          - columnReference:
+              columnCounter: 29bed887-0da7-4e39-a6fa-1d0336acee99
+              stepCounter: 2e718870-d122-4659-87d9-1eb1bd01be58
+            dataType: NUMBER(38,4)
+            description: ""
+            name: COST_OF_GOODS_USD
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f994f26b-b15a-4cdd-ba09-363270ecefab
+                    stepCounter: 8300eaa0-e184-40de-ab0d-aa5ff48d71f5
+                transform: ""
+          - columnReference:
+              columnCounter: 6263594f-cd46-4998-96d9-e762be557c99
+              stepCounter: 2e718870-d122-4659-87d9-1eb1bd01be58
+            dataType: NUMBER(38,4)
+            description: ""
+            name: SALE_PRICE_USD
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: bf407727-7215-4d75-8dc9-a2f88da315b1
+                    stepCounter: 8300eaa0-e184-40de-ab0d-aa5ff48d71f5
+                transform: ""
+          - columnReference:
+              columnCounter: c6b7c3de-ca7f-474e-9744-86dcb69fa839
+              stepCounter: 2e718870-d122-4659-87d9-1eb1bd01be58
+            dataType: VARIANT
+            description: ""
+            name: MENU_ITEM_HEALTH_METRICS_OBJ
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f908bcf7-7f76-4286-b88e-6a053c2d5144
+                    stepCounter: 8300eaa0-e184-40de-ab0d-aa5ff48d71f5
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7b79a33d-16fd-4ac5-99ae-cd611f4b00b1
+              stepCounter: 2e718870-d122-4659-87d9-1eb1bd01be58
+            config: {}
+            dataType: STRING
+            description: ""
+            name: menu_item_health_metrics_ingredients
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f908bcf7-7f76-4286-b88e-6a053c2d5144
+                    stepCounter: 8300eaa0-e184-40de-ab0d-aa5ff48d71f5
+                transform: "\"MENU_ITEM_HEALTH_METRICS_OBJ_menu_item_health_metrics_ingredients\".value::STRING"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7f5ed4bc-6b05-476e-b31f-bba4b8f59220
+              stepCounter: 2e718870-d122-4659-87d9-1eb1bd01be58
+            config: {}
+            dataType: STRING
+            description: ""
+            name: menu_item_health_metrics_is_dairy_free_flag
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f908bcf7-7f76-4286-b88e-6a053c2d5144
+                    stepCounter: 8300eaa0-e184-40de-ab0d-aa5ff48d71f5
+                transform: "\"MENU_ITEM_HEALTH_METRICS_OBJ_menu_item_health_metrics\".value:\"is_dairy_free_flag\"::STRING"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c6ef833d-0810-4b40-af70-25c1af469d68
+              stepCounter: 2e718870-d122-4659-87d9-1eb1bd01be58
+            config: {}
+            dataType: STRING
+            description: ""
+            name: menu_item_health_metrics_is_gluten_free_flag
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f908bcf7-7f76-4286-b88e-6a053c2d5144
+                    stepCounter: 8300eaa0-e184-40de-ab0d-aa5ff48d71f5
+                transform: "\"MENU_ITEM_HEALTH_METRICS_OBJ_menu_item_health_metrics\".value:\"is_gluten_free_flag\"::STRING"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: fd4cba78-ded4-42fd-adaa-34fb6bd32669
+              stepCounter: 2e718870-d122-4659-87d9-1eb1bd01be58
+            config: {}
+            dataType: STRING
+            description: ""
+            name: menu_item_health_metrics_is_healthy_flag
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f908bcf7-7f76-4286-b88e-6a053c2d5144
+                    stepCounter: 8300eaa0-e184-40de-ab0d-aa5ff48d71f5
+                transform: "\"MENU_ITEM_HEALTH_METRICS_OBJ_menu_item_health_metrics\".value:\"is_healthy_flag\"::STRING"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: fa555b53-3699-4b95-8dad-a5110cb4d242
+              stepCounter: 2e718870-d122-4659-87d9-1eb1bd01be58
+            config: {}
+            dataType: STRING
+            description: ""
+            name: menu_item_health_metrics_is_nut_free_flag
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f908bcf7-7f76-4286-b88e-6a053c2d5144
+                    stepCounter: 8300eaa0-e184-40de-ab0d-aa5ff48d71f5
+                transform: "\"MENU_ITEM_HEALTH_METRICS_OBJ_menu_item_health_metrics\".value:\"is_nut_free_flag\"::STRING"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 99884d18-c9ad-4396-b0a7-aafa5890f760
+              stepCounter: 2e718870-d122-4659-87d9-1eb1bd01be58
+            config: {}
+            dataType: DOUBLE
+            description: ""
+            name: menu_item_id
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f908bcf7-7f76-4286-b88e-6a053c2d5144
+                    stepCounter: 8300eaa0-e184-40de-ab0d-aa5ff48d71f5
+                transform: "\"MENU\".\"MENU_ITEM_HEALTH_METRICS_OBJ\":\"menu_item_id\"::DOUBLE"
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: TASTY_POS
+                nodeName: MENU
+            join:
+              joinCondition: |-
+                FROM {{ ref('TASTY_POS', 'MENU') }} "MENU", 
+                lateral flatten(input => "MENU_ITEM_HEALTH_METRICS_OBJ":"menu_item_health_metrics", OUTER => TRUE) "MENU_ITEM_HEALTH_METRICS_OBJ_menu_item_health_metrics", 
+                lateral flatten(input => "MENU_ITEM_HEALTH_METRICS_OBJ_menu_item_health_metrics".value:"ingredients", OUTER => TRUE) "MENU_ITEM_HEALTH_METRICS_OBJ_menu_item_health_metrics_ingredients"
+            name: STG_MENU
+            noLinkRefs: []
+      name: STG_MENU
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 2e718870-d122-4659-87d9-1eb1bd01be58
