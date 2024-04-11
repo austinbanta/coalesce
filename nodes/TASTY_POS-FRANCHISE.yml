@@ -1,5 +1,5 @@
 steps:
-  FRANCHISE-0ea0e46b-cd5c-484c-a229-4b973a346e7d:
+  FRANCHISE-bfe92fa6-681a-4f3f-a634-42a293c8e0a7:
     operation:
       database: ""
       dataset: ""
@@ -13,8 +13,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 3478a8b5-4707-40d7-9abf-6c111c31e8e9
-              stepCounter: 0ea0e46b-cd5c-484c-a229-4b973a346e7d
+              columnCounter: 562e4500-d023-49fd-abc9-1ebcbaa52dca
+              stepCounter: bfe92fa6-681a-4f3f-a634-42a293c8e0a7
             config: {}
             dataType: NUMBER(38,0)
             defaultValue: ""
@@ -28,8 +28,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 0982871b-7ad5-46a6-9bae-0236edfa3a64
-              stepCounter: 0ea0e46b-cd5c-484c-a229-4b973a346e7d
+              columnCounter: 24870b37-c3bc-46a9-95f3-afa5955f4439
+              stepCounter: bfe92fa6-681a-4f3f-a634-42a293c8e0a7
             config: {}
             dataType: VARCHAR(16777216)
             defaultValue: ""
@@ -43,8 +43,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: e0d088e1-a472-4231-9afa-13ef8c7e6aac
-              stepCounter: 0ea0e46b-cd5c-484c-a229-4b973a346e7d
+              columnCounter: cd53b434-c87e-4c04-b9c0-498d3f0e4447
+              stepCounter: bfe92fa6-681a-4f3f-a634-42a293c8e0a7
             config: {}
             dataType: VARCHAR(16777216)
             defaultValue: ""
@@ -58,8 +58,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: a77a79bf-02c7-4ab7-a869-93f83ed3c355
-              stepCounter: 0ea0e46b-cd5c-484c-a229-4b973a346e7d
+              columnCounter: 0b07274a-e154-489d-984d-e0be5291cf8a
+              stepCounter: bfe92fa6-681a-4f3f-a634-42a293c8e0a7
             config: {}
             dataType: VARCHAR(16777216)
             defaultValue: ""
@@ -73,8 +73,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 60783495-7635-4533-b6a1-ccaecbf9737c
-              stepCounter: 0ea0e46b-cd5c-484c-a229-4b973a346e7d
+              columnCounter: d1aaaa49-051d-4c61-8dd8-b3620c65d779
+              stepCounter: bfe92fa6-681a-4f3f-a634-42a293c8e0a7
             config: {}
             dataType: VARCHAR(16777216)
             defaultValue: ""
@@ -88,8 +88,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 0eb1621f-5074-490e-8641-474ff8a871c3
-              stepCounter: 0ea0e46b-cd5c-484c-a229-4b973a346e7d
+              columnCounter: 2aece5d5-d09d-4188-a375-55697c873b6c
+              stepCounter: bfe92fa6-681a-4f3f-a634-42a293c8e0a7
             config: {}
             dataType: VARCHAR(16777216)
             defaultValue: ""
@@ -103,8 +103,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: da681f7e-c3e4-4593-ac8d-a8c812ebe3c8
-              stepCounter: 0ea0e46b-cd5c-484c-a229-4b973a346e7d
+              columnCounter: 4faf5dda-34fd-4b07-be2e-4ea81e53db1b
+              stepCounter: bfe92fa6-681a-4f3f-a634-42a293c8e0a7
             config: {}
             dataType: VARCHAR(16777216)
             defaultValue: ""
@@ -120,4 +120,4 @@ steps:
       sqlType: Source
       table: FRANCHISE
       type: sourceInput
-    stepCounter: 0ea0e46b-cd5c-484c-a229-4b973a346e7d
+    stepCounter: bfe92fa6-681a-4f3f-a634-42a293c8e0a7
