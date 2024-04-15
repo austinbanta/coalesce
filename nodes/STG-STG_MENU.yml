@@ -1,0 +1,169 @@
+steps:
+  STG_MENU-f3c30213-dc0b-4a39-b9e2-05bea0a37545:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: STG
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 9b9602f6-9320-4c72-8be3-0de893cbd0d0
+              stepCounter: f3c30213-dc0b-4a39-b9e2-05bea0a37545
+            dataType: NUMBER(19,0)
+            description: ""
+            name: MENU_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4be8be1b-6db9-4d84-80c2-74f8c7f99401
+                    stepCounter: c8f792cd-732d-4552-a363-ac5a97f76007
+                transform: ""
+          - columnReference:
+              columnCounter: 3fcaf17e-212d-45f7-87e4-81bc0cd367ff
+              stepCounter: f3c30213-dc0b-4a39-b9e2-05bea0a37545
+            dataType: NUMBER(38,0)
+            description: ""
+            name: MENU_TYPE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0993131b-7db2-4ee7-b7a2-9537c96e0393
+                    stepCounter: c8f792cd-732d-4552-a363-ac5a97f76007
+                transform: ""
+          - columnReference:
+              columnCounter: c51feb9c-80bb-4d86-819f-f93f42a42117
+              stepCounter: f3c30213-dc0b-4a39-b9e2-05bea0a37545
+            dataType: VARCHAR(16777216)
+            description: ""
+            name: MENU_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: be26d094-7da9-4ae6-b12f-8ec91c0a8145
+                    stepCounter: c8f792cd-732d-4552-a363-ac5a97f76007
+                transform: ""
+          - columnReference:
+              columnCounter: d3a63f0c-8f9e-4ca8-8028-36170dbccf9c
+              stepCounter: f3c30213-dc0b-4a39-b9e2-05bea0a37545
+            dataType: VARCHAR(16777216)
+            description: ""
+            name: TRUCK_BRAND_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 99960b7e-ace9-4ebd-ba97-ff5852ec6f63
+                    stepCounter: c8f792cd-732d-4552-a363-ac5a97f76007
+                transform: ""
+          - columnReference:
+              columnCounter: c0eeaa6c-41f1-4d92-bc5f-d59001304f93
+              stepCounter: f3c30213-dc0b-4a39-b9e2-05bea0a37545
+            dataType: NUMBER(38,0)
+            description: ""
+            name: MENU_ITEM_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9a6319f9-9ccc-4e6a-9481-f62ae8f22874
+                    stepCounter: c8f792cd-732d-4552-a363-ac5a97f76007
+                transform: ""
+          - columnReference:
+              columnCounter: e887368d-3c07-404b-8a0e-353e00ae8d39
+              stepCounter: f3c30213-dc0b-4a39-b9e2-05bea0a37545
+            dataType: VARCHAR(16777216)
+            description: ""
+            name: MENU_ITEM_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b700f354-0e81-427a-96a2-c06418dea7de
+                    stepCounter: c8f792cd-732d-4552-a363-ac5a97f76007
+                transform: ""
+          - columnReference:
+              columnCounter: a5a01611-d0ab-4c15-9177-7ee815512b0e
+              stepCounter: f3c30213-dc0b-4a39-b9e2-05bea0a37545
+            dataType: VARCHAR(16777216)
+            description: ""
+            name: ITEM_CATEGORY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1e24e94d-c92e-4545-babb-5901fac1ed17
+                    stepCounter: c8f792cd-732d-4552-a363-ac5a97f76007
+                transform: ""
+          - columnReference:
+              columnCounter: 491a9be8-dfed-4d62-b3ba-91050d24c575
+              stepCounter: f3c30213-dc0b-4a39-b9e2-05bea0a37545
+            dataType: VARCHAR(16777216)
+            description: ""
+            name: ITEM_SUBCATEGORY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c98916be-59a7-4370-b1ff-96016873190b
+                    stepCounter: c8f792cd-732d-4552-a363-ac5a97f76007
+                transform: ""
+          - columnReference:
+              columnCounter: 6f0ec1b1-be2c-4e37-8d38-490b8a321cd2
+              stepCounter: f3c30213-dc0b-4a39-b9e2-05bea0a37545
+            dataType: NUMBER(38,4)
+            description: ""
+            name: COST_OF_GOODS_USD
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7358c3bf-7038-44b4-8feb-c5f675b04103
+                    stepCounter: c8f792cd-732d-4552-a363-ac5a97f76007
+                transform: ""
+          - columnReference:
+              columnCounter: 5d3c86ea-b374-4e58-a94d-a76199ab3a82
+              stepCounter: f3c30213-dc0b-4a39-b9e2-05bea0a37545
+            dataType: NUMBER(38,4)
+            description: ""
+            name: SALE_PRICE_USD
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e32cb25f-e890-4db5-a5b2-3972b21c9141
+                    stepCounter: c8f792cd-732d-4552-a363-ac5a97f76007
+                transform: ""
+          - columnReference:
+              columnCounter: c4c95081-b499-4928-ae36-5bf1603af09b
+              stepCounter: f3c30213-dc0b-4a39-b9e2-05bea0a37545
+            dataType: VARIANT
+            description: ""
+            name: MENU_ITEM_HEALTH_METRICS_OBJ
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 42f4bf17-2b5c-4ae8-a522-6d77f88b9e8e
+                    stepCounter: c8f792cd-732d-4552-a363-ac5a97f76007
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: TASTY_POS
+                nodeName: MENU
+            join:
+              joinCondition: FROM {{ ref('TASTY_POS', 'MENU') }} "MENU"
+            name: STG_MENU
+            noLinkRefs: []
+      name: STG_MENU
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: f3c30213-dc0b-4a39-b9e2-05bea0a37545
