@@ -42,13 +42,13 @@ locations:
   TASTY_CUST:
     mappingDefinitions:
       "3":
-        database: ""
-        schema: ""
+        database: FROSTBYTE_TASTY_BYTES
+        schema: RAW_CUSTOMER
   TASTY_POS:
     mappingDefinitions:
       "3":
-        database: ""
-        schema: ""
+        database: FROSTBYTE_TASTY_BYTES
+        schema: RAW_POS
   UNS:
     mappingDefinitions:
       "3":
