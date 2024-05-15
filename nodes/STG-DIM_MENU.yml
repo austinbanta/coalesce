@@ -8,7 +8,7 @@ operation:
     testsEnabled: true
   database: ""
   deployEnabled: true
-  description: ""
+  description: Master menu table containing current and historical menu items and associated details
   isMultisource: false
   locationName: STG
   materializationType: table
@@ -69,7 +69,7 @@ operation:
           stepCounter: b740eee2-d8ed-46da-96f3-f4dacc67c073
         config: {}
         dataType: VARCHAR(16777216)
-        description: ""
+        description: Cuisine (BBQ, Mexican, etc.)
         hashDetails: null
         name: MENU_TYPE
         nullable: true
@@ -84,7 +84,7 @@ operation:
           stepCounter: b740eee2-d8ed-46da-96f3-f4dacc67c073
         config: {}
         dataType: VARCHAR(16777216)
-        description: ""
+        description: Carrier make
         hashDetails: null
         name: TRUCK_BRAND_NAME
         nullable: true
@@ -114,7 +114,7 @@ operation:
           stepCounter: b740eee2-d8ed-46da-96f3-f4dacc67c073
         config: {}
         dataType: VARCHAR(16777216)
-        description: ""
+        description: Name displayed in store
         hashDetails: null
         isChangeTracking: true
         name: MENU_ITEM_NAME
@@ -130,7 +130,7 @@ operation:
           stepCounter: b740eee2-d8ed-46da-96f3-f4dacc67c073
         config: {}
         dataType: VARCHAR(16777216)
-        description: ""
+        description: Backend POS category
         hashDetails: null
         isChangeTracking: true
         name: ITEM_CATEGORY
@@ -146,7 +146,7 @@ operation:
           stepCounter: b740eee2-d8ed-46da-96f3-f4dacc67c073
         config: {}
         dataType: VARCHAR(16777216)
-        description: ""
+        description: Backend POS subcategory
         hashDetails: null
         isChangeTracking: true
         name: ITEM_SUBCATEGORY
@@ -178,7 +178,7 @@ operation:
           stepCounter: b740eee2-d8ed-46da-96f3-f4dacc67c073
         config: {}
         dataType: NUMBER(38,4)
-        description: ""
+        description: USD dollars. Converted from sold currency when transaction occurred at international location.
         hashDetails: null
         isChangeTracking: true
         name: SALE_PRICE_USD

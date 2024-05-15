@@ -11,11 +11,11 @@ mappingDefinitions:
     database: AUSTIN_TEST_DB_PROD
     schema: EDW_PROD
   TASTY_CUST:
-    database: ""
-    schema: ""
+    database: FROSTBYTE_TASTY_BYTES
+    schema: RAW_CUSTOMER
   TASTY_POS:
-    database: ""
-    schema: ""
+    database: FROSTBYTE_TASTY_BYTES
+    schema: RAW_POS
   UNS:
     database: COALESCE_SAMPLE_DATABASE
     schema: WEATHER

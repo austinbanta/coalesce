@@ -1,6 +1,6 @@
 fileVersion: 1
 id: bf76b940-05f4-48ae-a1c8-34e6508f2bf7
-name: STG_FRANCHISE
+name: stgfranch
 operation:
   config:
     insertStrategy: INSERT
@@ -115,7 +115,7 @@ operation:
         dataType: VARCHAR(16777216)
         description: ""
         hashDetails: null
-        name: PHONE_NUMBER
+        name: phonenum
         nullable: true
         sourceColumnReferences:
           - columnReferences:
@@ -133,9 +133,9 @@ operation:
             nodeName: FRANCHISE
         join:
           joinCondition: FROM {{ ref('TASTY_POS', 'FRANCHISE') }} "FRANCHISE"
-        name: STG_FRANCHISE
+        name: stgfranch
         noLinkRefs: []
-  name: STG_FRANCHISE
+  name: stgfranch
   overrideSQL: false
   schema: ""
   sqlType: Stage

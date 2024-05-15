@@ -1,0 +1,143 @@
+fileVersion: 1
+id: 4b4df338-b6a7-4b01-9957-6e4b3c46850a
+name: V_ORDER_ROLLUP
+operation:
+  config:
+    insertStrategy: UNION
+    selectDistinct: false
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: STG
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests:
+          isDistinct: false
+        columnReference:
+          columnCounter: e7886f68-b997-4d7f-b829-bac7cc8246ea
+          stepCounter: 4b4df338-b6a7-4b01-9957-6e4b3c46850a
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        description: ""
+        hashDetails: null
+        name: ORDER_TS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4089a67b-7b78-446e-91ce-c4a3ccd61530
+                stepCounter: 91989f82-bccd-49f9-a281-d4e2557d75b8
+            transform: "\"V_ORDER_DETAIL_ORDER_HEADER_MENU_TRUCK_CUSTOMER_LOYALTY\".\"ORDER_TS\"::date"
+      - appliedColumnTests:
+          isDistinct: false
+        columnReference:
+          columnCounter: b1e2445a-0523-4014-a736-0de1874ec64d
+          stepCounter: 4b4df338-b6a7-4b01-9957-6e4b3c46850a
+        config: {}
+        dataType: NUMBER(38,4)
+        description: ""
+        hashDetails: null
+        name: ORDER_AMOUNT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ee45b08a-37c3-4d9d-bc90-c6442e6f929d
+                stepCounter: 91989f82-bccd-49f9-a281-d4e2557d75b8
+            transform: SUM("V_ORDER_DETAIL_ORDER_HEADER_MENU_TRUCK_CUSTOMER_LOYALTY"."ORDER_AMOUNT")
+    cteString: ""
+    enabledColumnTestIDs:
+      - isDistinct
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: |-
+            {{ stage('Override Create SQL') }}
+            	CREATE OR REPLACE VIEW {{ ref('STG', 'V_ORDER_ROLLUP')}} AS (
+            		SELECT 
+             "ORDER_DETAIL_ID" AS "ORDER_DETAIL_ID",
+             "ORDER_ID" AS "ORDER_ID",
+             "MENU_ITEM_ID" AS "MENU_ITEM_ID",
+             "DISCOUNT_ID" AS "DISCOUNT_ID",
+             "LINE_NUMBER" AS "LINE_NUMBER",
+             "QUANTITY" AS "QUANTITY",
+             "UNIT_PRICE" AS "UNIT_PRICE",
+             "PRICE" AS "PRICE",
+             "ORDER_ITEM_DISCOUNT_AMOUNT" AS "ORDER_ITEM_DISCOUNT_AMOUNT",
+             "TRUCK_ID" AS "TRUCK_ID",
+             "LOCATION_ID" AS "LOCATION_ID",
+             "CUSTOMER_ID" AS "CUSTOMER_ID",
+             "SHIFT_ID" AS "SHIFT_ID",
+             "SHIFT_START_TIME" AS "SHIFT_START_TIME",
+             "SHIFT_END_TIME" AS "SHIFT_END_TIME",
+             "ORDER_CHANNEL" AS "ORDER_CHANNEL",
+             "ORDER_TS" AS "ORDER_TS",
+             "SERVED_TS" AS "SERVED_TS",
+             "ORDER_CURRENCY" AS "ORDER_CURRENCY",
+             "ORDER_AMOUNT" AS "ORDER_AMOUNT",
+             "ORDER_TAX_AMOUNT" AS "ORDER_TAX_AMOUNT",
+             "ORDER_DISCOUNT_AMOUNT" AS "ORDER_DISCOUNT_AMOUNT",
+             "ORDER_TOTAL" AS "ORDER_TOTAL",
+             "DIM_MENU_KEY" AS "DIM_MENU_KEY",
+             "MENU_ID" AS "MENU_ID",
+             "MENU_TYPE_ID" AS "MENU_TYPE_ID",
+             "MENU_TYPE" AS "MENU_TYPE",
+             "TRUCK_BRAND_NAME" AS "TRUCK_BRAND_NAME",
+             "MENU_ITEM_NAME" AS "MENU_ITEM_NAME",
+             "ITEM_CATEGORY" AS "ITEM_CATEGORY",
+             "ITEM_SUBCATEGORY" AS "ITEM_SUBCATEGORY",
+             "COST_OF_GOODS_USD" AS "COST_OF_GOODS_USD",
+             "SALE_PRICE_USD" AS "SALE_PRICE_USD",
+             "MENU_ITEM_HEALTH_METRICS_OBJ" AS "MENU_ITEM_HEALTH_METRICS_OBJ",
+             "menu_item_health_metrics_ingredients" AS "menu_item_health_metrics_ingredients",
+             "menu_item_health_metrics_is_dairy_free_flag" AS "menu_item_health_metrics_is_dairy_free_flag",
+             "menu_item_health_metrics_is_gluten_free_flag" AS "menu_item_health_metrics_is_gluten_free_flag",
+             "menu_item_health_metrics_is_healthy_flag" AS "menu_item_health_metrics_is_healthy_flag",
+             "menu_item_health_metrics_is_nut_free_flag" AS "menu_item_health_metrics_is_nut_free_flag",
+             "menu_item_id" AS "menu_item_id",
+             "DIM_TRUCK_KEY" AS "DIM_TRUCK_KEY",
+             "PRIMARY_CITY" AS "PRIMARY_CITY",
+             "REGION" AS "REGION",
+             "ISO_REGION" AS "ISO_REGION",
+             "COUNTRY" AS "COUNTRY",
+             "ISO_COUNTRY_CODE" AS "ISO_COUNTRY_CODE",
+             "FRANCHISE_FLAG" AS "FRANCHISE_FLAG",
+             "YEAR" AS "YEAR",
+             "MAKE" AS "MAKE",
+             "MODEL" AS "MODEL",
+             "EV_FLAG" AS "EV_FLAG",
+             "FRANCHISE_ID" AS "FRANCHISE_ID",
+             "TRUCK_OPENING_DATE" AS "TRUCK_OPENING_DATE",
+             "DIM_CUSTOMER_LOYALTY_KEY" AS "DIM_CUSTOMER_LOYALTY_KEY",
+             "FIRST_NAME" AS "FIRST_NAME",
+             "LAST_NAME" AS "LAST_NAME",
+             "CITY" AS "CITY",
+             "POSTAL_CODE" AS "POSTAL_CODE",
+             "PREFERRED_LANGUAGE" AS "PREFERRED_LANGUAGE",
+             "GENDER" AS "GENDER",
+             "FAVOURITE_BRAND" AS "FAVOURITE_BRAND",
+             "MARITAL_STATUS" AS "MARITAL_STATUS",
+             "CHILDREN_COUNT" AS "CHILDREN_COUNT",
+             "SIGN_UP_DATE" AS "SIGN_UP_DATE",
+             "BIRTHDAY_DATE" AS "BIRTHDAY_DATE",
+             "E_MAIL" AS "E_MAIL",
+             "PHONE_NUMBER" AS "PHONE_NUMBER"
+             FROM {{ ref('STG', 'V_ORDER_DETAIL_ORDER_HEADER_MENU_TRUCK_CUSTOMER_LOYALTY') }}
+            	)
+        dependencies:
+          - locationName: STG
+            nodeName: V_ORDER_DETAIL_ORDER_HEADER_MENU_TRUCK_CUSTOMER_LOYALTY
+        join:
+          joinCondition: |-
+            FROM {{ ref('STG', 'V_ORDER_DETAIL_ORDER_HEADER_MENU_TRUCK_CUSTOMER_LOYALTY') }} "V_ORDER_DETAIL_ORDER_HEADER_MENU_TRUCK_CUSTOMER_LOYALTY"
+            group by all
+        name: V_ORDER_ROLLUP
+        noLinkRefs: []
+  name: V_ORDER_ROLLUP
+  overrideSQL: true
+  schema: ""
+  sqlType: View
+  type: sql
+  version: 1
+type: Node

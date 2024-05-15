@@ -1,23 +1,26 @@
 fileVersion: 1
-id: 4b4df338-b6a7-4b01-9957-6e4b3c46850a
-name: V_ORDER_DETAIL_ORDER_HEADER_MENU_TRUCK_CUSTOMER_LOYALTY1
+id: 41a18b91-72a5-498a-9092-d52cab1f7819
+name: STG_ORDER_DETAIL_ORDER_HEADER_MENU_TRUCK_CUSTOMER_LOYALTY
 operation:
   config:
-    insertStrategy: UNION
-    selectDistinct: false
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
   database: ""
   deployEnabled: true
   description: ""
   isMultisource: false
   locationName: STG
-  materializationType: view
+  materializationType: table
   metadata:
     appliedNodeTests: []
     columns:
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: e7886f68-b997-4d7f-b829-bac7cc8246ea
-          stepCounter: 4b4df338-b6a7-4b01-9957-6e4b3c46850a
+          columnCounter: aed30296-44f6-4bb3-95ab-fc89e091252f
+          stepCounter: 41a18b91-72a5-498a-9092-d52cab1f7819
         config: {}
         dataType: TIMESTAMP_NTZ(9)
         description: ""
@@ -31,8 +34,8 @@ operation:
             transform: "\"V_ORDER_DETAIL_ORDER_HEADER_MENU_TRUCK_CUSTOMER_LOYALTY\".\"ORDER_TS\"::date"
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: b1e2445a-0523-4014-a736-0de1874ec64d
-          stepCounter: 4b4df338-b6a7-4b01-9957-6e4b3c46850a
+          columnCounter: f60eb94d-3a17-47cc-918f-6bcc9822d4b1
+          stepCounter: 41a18b91-72a5-498a-9092-d52cab1f7819
         config: {}
         dataType: NUMBER(38,4)
         description: ""
@@ -46,8 +49,8 @@ operation:
             transform: SUM("V_ORDER_DETAIL_ORDER_HEADER_MENU_TRUCK_CUSTOMER_LOYALTY"."ORDER_AMOUNT")
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 289b7dec-da3a-4d9b-af7a-a7f2d2bb9ce6
-          stepCounter: 4b4df338-b6a7-4b01-9957-6e4b3c46850a
+          columnCounter: 151d6e5e-a492-4cc0-890e-47c0fd945fc4
+          stepCounter: 41a18b91-72a5-498a-9092-d52cab1f7819
         config: {}
         dataType: VARCHAR(16777216)
         description: ""
@@ -71,13 +74,14 @@ operation:
         join:
           joinCondition: |-
             FROM {{ ref('STG', 'V_ORDER_DETAIL_ORDER_HEADER_MENU_TRUCK_CUSTOMER_LOYALTY') }} "V_ORDER_DETAIL_ORDER_HEADER_MENU_TRUCK_CUSTOMER_LOYALTY"
+            where year("ORDER_TS")>=2022
             group by all
-        name: V_ORDER_DETAIL_ORDER_HEADER_MENU_TRUCK_CUSTOMER_LOYALTY1
+        name: STG_ORDER_DETAIL_ORDER_HEADER_MENU_TRUCK_CUSTOMER_LOYALTY
         noLinkRefs: []
-  name: V_ORDER_DETAIL_ORDER_HEADER_MENU_TRUCK_CUSTOMER_LOYALTY1
+  name: STG_ORDER_DETAIL_ORDER_HEADER_MENU_TRUCK_CUSTOMER_LOYALTY
   overrideSQL: false
   schema: ""
-  sqlType: View
+  sqlType: Stage
   type: sql
   version: 1
 type: Node
