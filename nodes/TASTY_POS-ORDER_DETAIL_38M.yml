@@ -1,153 +1,155 @@
-steps:
-  ORDER_DETAIL_38M-134b15ea-d39f-4d65-abc0-177d842a7000:
-    operation:
-      database: ""
-      dataset: ""
-      deployEnabled: true
-      description: ""
-      locationName: TASTY_POS
-      metadata:
-        columns:
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 65999e08-cdf0-482c-8529-014c9be46aaa
-              stepCounter: 134b15ea-d39f-4d65-abc0-177d842a7000
-            config: {}
-            dataType: NUMBER(38,0)
-            defaultValue: ""
-            description: ""
-            name: ORDER_DETAIL_ID
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 5bb77298-6407-4870-b36b-626119fd2005
-              stepCounter: 134b15ea-d39f-4d65-abc0-177d842a7000
-            config: {}
-            dataType: NUMBER(38,0)
-            defaultValue: ""
-            description: ""
-            name: ORDER_ID
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: a400f812-8c1d-4681-88ce-15202d4a85a3
-              stepCounter: 134b15ea-d39f-4d65-abc0-177d842a7000
-            config: {}
-            dataType: NUMBER(38,0)
-            defaultValue: ""
-            description: ""
-            name: MENU_ITEM_ID
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 2680e847-cdbd-4115-9435-ad19d4320087
-              stepCounter: 134b15ea-d39f-4d65-abc0-177d842a7000
-            config: {}
-            dataType: VARCHAR(16777216)
-            defaultValue: ""
-            description: ""
-            name: DISCOUNT_ID
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 34ac5176-f1b9-4022-9f92-e1745588305a
-              stepCounter: 134b15ea-d39f-4d65-abc0-177d842a7000
-            config: {}
-            dataType: NUMBER(38,0)
-            defaultValue: ""
-            description: ""
-            name: LINE_NUMBER
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: ce2cf0fb-b911-4964-8d82-d1ea92264364
-              stepCounter: 134b15ea-d39f-4d65-abc0-177d842a7000
-            config: {}
-            dataType: NUMBER(5,0)
-            defaultValue: ""
-            description: ""
-            name: QUANTITY
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 9eca8b98-31f4-45ef-8126-22c84e7bda8d
-              stepCounter: 134b15ea-d39f-4d65-abc0-177d842a7000
-            config: {}
-            dataType: NUMBER(38,4)
-            defaultValue: ""
-            description: ""
-            name: UNIT_PRICE
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 63a0a0dd-e460-4bd3-9d1f-9d96c5fc9b56
-              stepCounter: 134b15ea-d39f-4d65-abc0-177d842a7000
-            config: {}
-            dataType: NUMBER(38,4)
-            defaultValue: ""
-            description: ""
-            name: PRICE
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: df93ce62-c550-4c5d-b784-e96e29179dd9
-              stepCounter: 134b15ea-d39f-4d65-abc0-177d842a7000
-            config: {}
-            dataType: VARCHAR(16777216)
-            defaultValue: ""
-            description: ""
-            name: ORDER_ITEM_DISCOUNT_AMOUNT
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-        join:
-          joinCondition: FROM {{ ref('TASTY_POS', 'ORDER_DETAIL_38M') }}
-      name: ORDER_DETAIL_38M
-      schema: ""
-      sqlType: Source
-      table: ORDER_DETAIL_38M
-      type: sourceInput
-    stepCounter: 134b15ea-d39f-4d65-abc0-177d842a7000
+fileVersion: 1
+id: 134b15ea-d39f-4d65-abc0-177d842a7000
+name: ORDER_DETAIL_38M
+operation:
+  database: ""
+  dataset: ""
+  deployEnabled: true
+  description: ""
+  locationName: TASTY_POS
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 65999e08-cdf0-482c-8529-014c9be46aaa
+          stepCounter: 134b15ea-d39f-4d65-abc0-177d842a7000
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: ORDER_DETAIL_ID
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5bb77298-6407-4870-b36b-626119fd2005
+          stepCounter: 134b15ea-d39f-4d65-abc0-177d842a7000
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: ORDER_ID
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a400f812-8c1d-4681-88ce-15202d4a85a3
+          stepCounter: 134b15ea-d39f-4d65-abc0-177d842a7000
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: MENU_ITEM_ID
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2680e847-cdbd-4115-9435-ad19d4320087
+          stepCounter: 134b15ea-d39f-4d65-abc0-177d842a7000
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: DISCOUNT_ID
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 34ac5176-f1b9-4022-9f92-e1745588305a
+          stepCounter: 134b15ea-d39f-4d65-abc0-177d842a7000
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: LINE_NUMBER
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ce2cf0fb-b911-4964-8d82-d1ea92264364
+          stepCounter: 134b15ea-d39f-4d65-abc0-177d842a7000
+        config: {}
+        dataType: NUMBER(5,0)
+        defaultValue: ""
+        description: ""
+        name: QUANTITY
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9eca8b98-31f4-45ef-8126-22c84e7bda8d
+          stepCounter: 134b15ea-d39f-4d65-abc0-177d842a7000
+        config: {}
+        dataType: NUMBER(38,4)
+        defaultValue: ""
+        description: ""
+        name: UNIT_PRICE
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 63a0a0dd-e460-4bd3-9d1f-9d96c5fc9b56
+          stepCounter: 134b15ea-d39f-4d65-abc0-177d842a7000
+        config: {}
+        dataType: NUMBER(38,4)
+        defaultValue: ""
+        description: ""
+        name: PRICE
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: df93ce62-c550-4c5d-b784-e96e29179dd9
+          stepCounter: 134b15ea-d39f-4d65-abc0-177d842a7000
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: ORDER_ITEM_DISCOUNT_AMOUNT
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+    join:
+      joinCondition: FROM {{ ref('TASTY_POS', 'ORDER_DETAIL_38M') }}
+  name: ORDER_DETAIL_38M
+  schema: ""
+  sqlType: Source
+  table: ORDER_DETAIL_38M
+  type: sourceInput
+  version: 1
+type: Node

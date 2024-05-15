@@ -1,123 +1,125 @@
-steps:
-  COUNTRY-58037831-d358-4655-85c9-6e9c877a3f8a:
-    operation:
-      database: ""
-      dataset: ""
-      deployEnabled: true
-      description: ""
-      locationName: TASTY_POS
-      metadata:
-        columns:
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 870e56b4-664f-4616-8e15-b890ba395d32
-              stepCounter: 58037831-d358-4655-85c9-6e9c877a3f8a
-            config: {}
-            dataType: NUMBER(18,0)
-            defaultValue: ""
-            description: ""
-            name: COUNTRY_ID
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 6ae0a799-0b9d-4c66-ac49-ec753605f02e
-              stepCounter: 58037831-d358-4655-85c9-6e9c877a3f8a
-            config: {}
-            dataType: VARCHAR(16777216)
-            defaultValue: ""
-            description: ""
-            name: COUNTRY
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 86b399ae-1fce-46d0-83f5-8e3482e626f3
-              stepCounter: 58037831-d358-4655-85c9-6e9c877a3f8a
-            config: {}
-            dataType: VARCHAR(3)
-            defaultValue: ""
-            description: ""
-            name: ISO_CURRENCY
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 1434cd52-05bd-4440-8a7e-da36af0703ac
-              stepCounter: 58037831-d358-4655-85c9-6e9c877a3f8a
-            config: {}
-            dataType: VARCHAR(2)
-            defaultValue: ""
-            description: ""
-            name: ISO_COUNTRY
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: b8a5f994-c450-4049-a148-e62f84fa4f7f
-              stepCounter: 58037831-d358-4655-85c9-6e9c877a3f8a
-            config: {}
-            dataType: NUMBER(19,0)
-            defaultValue: ""
-            description: ""
-            name: CITY_ID
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: bf6d00a9-58d0-4d5b-809f-46bae8a6ea47
-              stepCounter: 58037831-d358-4655-85c9-6e9c877a3f8a
-            config: {}
-            dataType: VARCHAR(16777216)
-            defaultValue: ""
-            description: ""
-            name: CITY
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: dfaad0f7-f2ac-4877-b478-99167db3bab3
-              stepCounter: 58037831-d358-4655-85c9-6e9c877a3f8a
-            config: {}
-            dataType: VARCHAR(16777216)
-            defaultValue: ""
-            description: ""
-            name: CITY_POPULATION
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-        join:
-          joinCondition: FROM {{ ref('TASTY_POS', 'COUNTRY') }}
-      name: COUNTRY
-      schema: ""
-      sqlType: Source
-      table: COUNTRY
-      type: sourceInput
-    stepCounter: 58037831-d358-4655-85c9-6e9c877a3f8a
+fileVersion: 1
+id: 58037831-d358-4655-85c9-6e9c877a3f8a
+name: COUNTRY
+operation:
+  database: ""
+  dataset: ""
+  deployEnabled: true
+  description: ""
+  locationName: TASTY_POS
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 870e56b4-664f-4616-8e15-b890ba395d32
+          stepCounter: 58037831-d358-4655-85c9-6e9c877a3f8a
+        config: {}
+        dataType: NUMBER(18,0)
+        defaultValue: ""
+        description: ""
+        name: COUNTRY_ID
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6ae0a799-0b9d-4c66-ac49-ec753605f02e
+          stepCounter: 58037831-d358-4655-85c9-6e9c877a3f8a
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: COUNTRY
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 86b399ae-1fce-46d0-83f5-8e3482e626f3
+          stepCounter: 58037831-d358-4655-85c9-6e9c877a3f8a
+        config: {}
+        dataType: VARCHAR(3)
+        defaultValue: ""
+        description: ""
+        name: ISO_CURRENCY
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1434cd52-05bd-4440-8a7e-da36af0703ac
+          stepCounter: 58037831-d358-4655-85c9-6e9c877a3f8a
+        config: {}
+        dataType: VARCHAR(2)
+        defaultValue: ""
+        description: ""
+        name: ISO_COUNTRY
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b8a5f994-c450-4049-a148-e62f84fa4f7f
+          stepCounter: 58037831-d358-4655-85c9-6e9c877a3f8a
+        config: {}
+        dataType: NUMBER(19,0)
+        defaultValue: ""
+        description: ""
+        name: CITY_ID
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: bf6d00a9-58d0-4d5b-809f-46bae8a6ea47
+          stepCounter: 58037831-d358-4655-85c9-6e9c877a3f8a
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: CITY
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: dfaad0f7-f2ac-4877-b478-99167db3bab3
+          stepCounter: 58037831-d358-4655-85c9-6e9c877a3f8a
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: CITY_POPULATION
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+    join:
+      joinCondition: FROM {{ ref('TASTY_POS', 'COUNTRY') }}
+  name: COUNTRY
+  schema: ""
+  sqlType: Source
+  table: COUNTRY
+  type: sourceInput
+  version: 1
+type: Node

@@ -1,0 +1,23 @@
+fileVersion: 1
+id: "3"
+mappingDefinitions:
+  COVID:
+    database: COVID19
+    schema: PUBLIC
+  DEV:
+    database: COALESCE_SAMPLE_DATABASE
+    schema: TPCH_SF001
+  STG:
+    database: AUSTIN_TEST_DB_PROD
+    schema: EDW_PROD
+  TASTY_CUST:
+    database: FROSTBYTE_TASTY_BYTES
+    schema: RAW_CUSTOMER
+  TASTY_POS:
+    database: FROSTBYTE_TASTY_BYTES
+    schema: RAW_POS
+  UNS:
+    database: COALESCE_SAMPLE_DATABASE
+    schema: WEATHER
+name: PROD
+type: Environment
