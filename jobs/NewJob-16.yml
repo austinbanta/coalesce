@@ -1,0 +1,7 @@
+excludeSelector: ""
+fileVersion: 1
+id: "16"
+includeSelector: |
+  { location: DEV name: PARTSUPP }+
+name: New Job
+type: Job
