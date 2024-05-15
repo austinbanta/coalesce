@@ -1,483 +1,485 @@
-steps:
-  CT_US_COVID_TESTS-30285db5-999f-4965-87a6-26c10ef8d6e9:
-    operation:
-      database: ""
-      dataset: ""
-      deployEnabled: true
-      description: US COVID-19 testing and mortality
-      locationName: COVID
-      metadata:
-        columns:
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 1c1fb683-3d6f-4df7-b95c-b2424a9736de
-              stepCounter: 30285db5-999f-4965-87a6-26c10ef8d6e9
-            config: {}
-            dataType: VARCHAR(16777216)
-            defaultValue: ""
-            description: ISO-3166-1 entity name
-            name: COUNTRY_REGION
-            nullable: false
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 618def8a-1acf-4176-8171-69622e27c5c1
-              stepCounter: 30285db5-999f-4965-87a6-26c10ef8d6e9
-            config: {}
-            dataType: VARCHAR(16777216)
-            defaultValue: ""
-            description: ISO-3166-2 entity name (U.S. State)
-            name: PROVINCE_STATE
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 4f3e5d94-897d-4cd5-810c-a3e81217d4b5
-              stepCounter: 30285db5-999f-4965-87a6-26c10ef8d6e9
-            config: {}
-            dataType: DATE
-            defaultValue: ""
-            description: Date of data point
-            name: DATE
-            nullable: false
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 77669adf-16a5-4d64-81db-221e02bec129
-              stepCounter: 30285db5-999f-4965-87a6-26c10ef8d6e9
-            config: {}
-            dataType: NUMBER(38,0)
-            defaultValue: ""
-            description: Positive cases on date of report
-            name: POSITIVE
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: a46216b7-88bc-4520-a03a-c6e3bb9c82fa
-              stepCounter: 30285db5-999f-4965-87a6-26c10ef8d6e9
-            config: {}
-            dataType: NUMBER(38,0)
-            defaultValue: ""
-            description: Positive cases since previous date of report
-            name: POSITIVE_SINCE_PREVIOUS_DAY
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: cb811c76-9744-48cb-ad02-dbd4232380fa
-              stepCounter: 30285db5-999f-4965-87a6-26c10ef8d6e9
-            config: {}
-            dataType: NUMBER(38,0)
-            defaultValue: ""
-            description: Negative tests on date of report
-            name: NEGATIVE
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: ec492347-e9ca-4ce0-9884-60e7943aa060
-              stepCounter: 30285db5-999f-4965-87a6-26c10ef8d6e9
-            config: {}
-            dataType: NUMBER(38,0)
-            defaultValue: ""
-            description: Negative tests since previous date of report
-            name: NEGATIVE_SINCE_PREVIOUS_DAY
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: a201e0fb-e6c0-4c1b-85ff-90a2e90c330d
-              stepCounter: 30285db5-999f-4965-87a6-26c10ef8d6e9
-            config: {}
-            dataType: NUMBER(38,0)
-            defaultValue: ""
-            description: Pending tests on date of report
-            name: PENDING
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 42fb748d-2df9-4eef-8bef-403fe14d4091
-              stepCounter: 30285db5-999f-4965-87a6-26c10ef8d6e9
-            config: {}
-            dataType: NUMBER(38,0)
-            defaultValue: ""
-            description: Pending tests since previous date of report
-            name: PENDING_SINCE_PREVIOUS_DAY
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 8c6e0491-c7db-481a-a678-3e8dbe73b6eb
-              stepCounter: 30285db5-999f-4965-87a6-26c10ef8d6e9
-            config: {}
-            dataType: NUMBER(38,0)
-            defaultValue: ""
-            description: Deaths attributed to COVID-19 on date of report
-            name: DEATH
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 025114f8-790b-4837-92f9-79ebf0df891e
-              stepCounter: 30285db5-999f-4965-87a6-26c10ef8d6e9
-            config: {}
-            dataType: NUMBER(38,0)
-            defaultValue: ""
-            description: Deaths attributed to COVID-19 since previous date of report
-            name: DEATH_SINCE_PREVIOUS_DAY
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: a9304df4-4d87-47c1-ae8e-6c1f89d4cedf
-              stepCounter: 30285db5-999f-4965-87a6-26c10ef8d6e9
-            config: {}
-            dataType: NUMBER(38,0)
-            defaultValue: ""
-            description: Hospitalized cases of COVID-19 on date of report
-            name: HOSPITALIZED
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 9a69af41-5bf7-450b-ba01-f3b8f9e59ae1
-              stepCounter: 30285db5-999f-4965-87a6-26c10ef8d6e9
-            config: {}
-            dataType: NUMBER(38,0)
-            defaultValue: ""
-            description: Hospitalized cases of COVID-19 since previous date of report
-            name: HOSPITALIZED_SINCE_PREVIOUS_DAY
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 71c1ca79-5e43-4b6d-8d1e-270f466db23e
-              stepCounter: 30285db5-999f-4965-87a6-26c10ef8d6e9
-            config: {}
-            dataType: NUMBER(38,0)
-            defaultValue: ""
-            description: Total of positive, negative, pending and deaths on date of report
-            name: TOTAL
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 420829ff-80da-4052-b203-da8f060331ee
-              stepCounter: 30285db5-999f-4965-87a6-26c10ef8d6e9
-            config: {}
-            dataType: NUMBER(38,0)
-            defaultValue: ""
-            description: Total of positive, negative, pending and deaths on date of report attributed to COVID-19 since previous date of report
-            name: TOTAL_SINCE_PREVIOUS_DAY
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 1ffae9c1-defc-40f9-89e3-29f51f4620f4
-              stepCounter: 30285db5-999f-4965-87a6-26c10ef8d6e9
-            config: {}
-            dataType: VARCHAR(16777216)
-            defaultValue: ""
-            description: ISO-3166-1 code for geography of report
-            name: ISO3166_1
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: ad2a00fc-3e45-4b6c-93ec-706832b2f2c3
-              stepCounter: 30285db5-999f-4965-87a6-26c10ef8d6e9
-            config: {}
-            dataType: VARCHAR(16777216)
-            defaultValue: ""
-            description: ISO-3166-2 code for geography of report
-            name: ISO3166_2
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: e72d2d4e-9544-460b-b50d-4f03d8564ad1
-              stepCounter: 30285db5-999f-4965-87a6-26c10ef8d6e9
-            config: {}
-            dataType: TIMESTAMP_NTZ(9)
-            defaultValue: ""
-            description: Timestamp of last update (UTC)
-            name: LAST_UPDATED_DATE
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 0dfba8f2-f462-4d79-8116-ec3032382e70
-              stepCounter: 30285db5-999f-4965-87a6-26c10ef8d6e9
-            config: {}
-            dataType: BOOLEAN
-            defaultValue: ""
-            description: New data in last import
-            name: LAST_REPORTED_FLAG
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 1f69da37-e1b7-4097-aad8-6a6b45c22ff6
-              stepCounter: 30285db5-999f-4965-87a6-26c10ef8d6e9
-            config: {}
-            dataType: NUMBER(38,0)
-            defaultValue: ""
-            description: Patients currently hospitalised
-            name: HOSPITALIZEDCURRENTLY
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 4c40952f-da29-4e69-b440-b1fd53622e66
-              stepCounter: 30285db5-999f-4965-87a6-26c10ef8d6e9
-            config: {}
-            dataType: NUMBER(38,0)
-            defaultValue: ""
-            description: Patients hospitalised since previous date of report
-            name: HOSPITALIZEDCURRENTLYINCREASE
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 05b68cdb-a649-4708-90e4-fe4985d90b16
-              stepCounter: 30285db5-999f-4965-87a6-26c10ef8d6e9
-            config: {}
-            dataType: NUMBER(38,0)
-            defaultValue: ""
-            description: Cumulative number of patients hospitalized
-            name: HOSPITALIZEDCUMULATIVE
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 02b2cc10-e380-407a-b75e-025ae8141dc9
-              stepCounter: 30285db5-999f-4965-87a6-26c10ef8d6e9
-            config: {}
-            dataType: NUMBER(38,0)
-            defaultValue: ""
-            description: Increase in cumulative number of patients hospitalized
-            name: HOSPITALIZEDCUMULATIVEINCREASE
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 45f0ec6f-1ef4-493e-bb1c-36a70af133e1
-              stepCounter: 30285db5-999f-4965-87a6-26c10ef8d6e9
-            config: {}
-            dataType: NUMBER(38,0)
-            defaultValue: ""
-            description: Patients currently in ICU
-            name: INICUCURRENTLY
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 2427edb4-4a9e-488e-81f3-f8fc4308f12a
-              stepCounter: 30285db5-999f-4965-87a6-26c10ef8d6e9
-            config: {}
-            dataType: NUMBER(38,0)
-            defaultValue: ""
-            description: Patients currently in ICU since previous date of report
-            name: INICUCURRENTLYINCREASE
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 654402bc-8332-4a7c-9ae2-3ea75913891c
-              stepCounter: 30285db5-999f-4965-87a6-26c10ef8d6e9
-            config: {}
-            dataType: NUMBER(38,0)
-            defaultValue: ""
-            description: Cumulative number of patients in ICU since previous date of report
-            name: INICUCUMULATIVE
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: df2f40e8-5afc-40ec-9e78-225ef29ab0f5
-              stepCounter: 30285db5-999f-4965-87a6-26c10ef8d6e9
-            config: {}
-            dataType: NUMBER(38,0)
-            defaultValue: ""
-            description: Increase in cumulative number of patients in ICU
-            name: INICUCUMULATIVEINCREASE
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 85255deb-2cdb-4104-9fb8-5f605fd85302
-              stepCounter: 30285db5-999f-4965-87a6-26c10ef8d6e9
-            config: {}
-            dataType: NUMBER(38,0)
-            defaultValue: ""
-            description: Patients currently receiving mechanical ventilation
-            name: ONVENTILATORCURRENTLY
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: a61aa1be-d7c5-4662-9042-8ea46fda50c6
-              stepCounter: 30285db5-999f-4965-87a6-26c10ef8d6e9
-            config: {}
-            dataType: NUMBER(38,0)
-            defaultValue: ""
-            description: Patients currently receiving mechanical ventilation since previous date of report
-            name: ONVENTILATORCURRENTLYINCREASE
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 19c8f293-5a77-454b-af8f-fa6fe30e6b6f
-              stepCounter: 30285db5-999f-4965-87a6-26c10ef8d6e9
-            config: {}
-            dataType: NUMBER(38,0)
-            defaultValue: ""
-            description: Cumulative number of patients receiving mechanical ventilation
-            name: ONVENTILATORCUMULATIVE
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 4491a4b8-0f62-471a-bed2-ebf435db4c6a
-              stepCounter: 30285db5-999f-4965-87a6-26c10ef8d6e9
-            config: {}
-            dataType: NUMBER(38,0)
-            defaultValue: ""
-            description: Increase in cumulative number of patients receiving mechanical ventilation
-            name: ONVENTILATORCUMULATIVEINCREASE
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-        join:
-          joinCondition: FROM {{ ref('COVID', 'CT_US_COVID_TESTS') }}
-      name: CT_US_COVID_TESTS
-      schema: ""
-      sqlType: Source
-      table: CT_US_COVID_TESTS
-      type: sourceInput
-    stepCounter: 30285db5-999f-4965-87a6-26c10ef8d6e9
+fileVersion: 1
+id: 30285db5-999f-4965-87a6-26c10ef8d6e9
+name: CT_US_COVID_TESTS
+operation:
+  database: ""
+  dataset: ""
+  deployEnabled: true
+  description: US COVID-19 testing and mortality
+  locationName: COVID
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1c1fb683-3d6f-4df7-b95c-b2424a9736de
+          stepCounter: 30285db5-999f-4965-87a6-26c10ef8d6e9
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ISO-3166-1 entity name
+        name: COUNTRY_REGION
+        nullable: false
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 618def8a-1acf-4176-8171-69622e27c5c1
+          stepCounter: 30285db5-999f-4965-87a6-26c10ef8d6e9
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ISO-3166-2 entity name (U.S. State)
+        name: PROVINCE_STATE
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4f3e5d94-897d-4cd5-810c-a3e81217d4b5
+          stepCounter: 30285db5-999f-4965-87a6-26c10ef8d6e9
+        config: {}
+        dataType: DATE
+        defaultValue: ""
+        description: Date of data point
+        name: DATE
+        nullable: false
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 77669adf-16a5-4d64-81db-221e02bec129
+          stepCounter: 30285db5-999f-4965-87a6-26c10ef8d6e9
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: Positive cases on date of report
+        name: POSITIVE
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a46216b7-88bc-4520-a03a-c6e3bb9c82fa
+          stepCounter: 30285db5-999f-4965-87a6-26c10ef8d6e9
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: Positive cases since previous date of report
+        name: POSITIVE_SINCE_PREVIOUS_DAY
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: cb811c76-9744-48cb-ad02-dbd4232380fa
+          stepCounter: 30285db5-999f-4965-87a6-26c10ef8d6e9
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: Negative tests on date of report
+        name: NEGATIVE
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ec492347-e9ca-4ce0-9884-60e7943aa060
+          stepCounter: 30285db5-999f-4965-87a6-26c10ef8d6e9
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: Negative tests since previous date of report
+        name: NEGATIVE_SINCE_PREVIOUS_DAY
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a201e0fb-e6c0-4c1b-85ff-90a2e90c330d
+          stepCounter: 30285db5-999f-4965-87a6-26c10ef8d6e9
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: Pending tests on date of report
+        name: PENDING
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 42fb748d-2df9-4eef-8bef-403fe14d4091
+          stepCounter: 30285db5-999f-4965-87a6-26c10ef8d6e9
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: Pending tests since previous date of report
+        name: PENDING_SINCE_PREVIOUS_DAY
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8c6e0491-c7db-481a-a678-3e8dbe73b6eb
+          stepCounter: 30285db5-999f-4965-87a6-26c10ef8d6e9
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: Deaths attributed to COVID-19 on date of report
+        name: DEATH
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 025114f8-790b-4837-92f9-79ebf0df891e
+          stepCounter: 30285db5-999f-4965-87a6-26c10ef8d6e9
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: Deaths attributed to COVID-19 since previous date of report
+        name: DEATH_SINCE_PREVIOUS_DAY
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a9304df4-4d87-47c1-ae8e-6c1f89d4cedf
+          stepCounter: 30285db5-999f-4965-87a6-26c10ef8d6e9
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: Hospitalized cases of COVID-19 on date of report
+        name: HOSPITALIZED
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9a69af41-5bf7-450b-ba01-f3b8f9e59ae1
+          stepCounter: 30285db5-999f-4965-87a6-26c10ef8d6e9
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: Hospitalized cases of COVID-19 since previous date of report
+        name: HOSPITALIZED_SINCE_PREVIOUS_DAY
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 71c1ca79-5e43-4b6d-8d1e-270f466db23e
+          stepCounter: 30285db5-999f-4965-87a6-26c10ef8d6e9
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: Total of positive, negative, pending and deaths on date of report
+        name: TOTAL
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 420829ff-80da-4052-b203-da8f060331ee
+          stepCounter: 30285db5-999f-4965-87a6-26c10ef8d6e9
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: Total of positive, negative, pending and deaths on date of report attributed to COVID-19 since previous date of report
+        name: TOTAL_SINCE_PREVIOUS_DAY
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1ffae9c1-defc-40f9-89e3-29f51f4620f4
+          stepCounter: 30285db5-999f-4965-87a6-26c10ef8d6e9
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ISO-3166-1 code for geography of report
+        name: ISO3166_1
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ad2a00fc-3e45-4b6c-93ec-706832b2f2c3
+          stepCounter: 30285db5-999f-4965-87a6-26c10ef8d6e9
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ISO-3166-2 code for geography of report
+        name: ISO3166_2
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e72d2d4e-9544-460b-b50d-4f03d8564ad1
+          stepCounter: 30285db5-999f-4965-87a6-26c10ef8d6e9
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        defaultValue: ""
+        description: Timestamp of last update (UTC)
+        name: LAST_UPDATED_DATE
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0dfba8f2-f462-4d79-8116-ec3032382e70
+          stepCounter: 30285db5-999f-4965-87a6-26c10ef8d6e9
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: New data in last import
+        name: LAST_REPORTED_FLAG
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1f69da37-e1b7-4097-aad8-6a6b45c22ff6
+          stepCounter: 30285db5-999f-4965-87a6-26c10ef8d6e9
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: Patients currently hospitalised
+        name: HOSPITALIZEDCURRENTLY
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4c40952f-da29-4e69-b440-b1fd53622e66
+          stepCounter: 30285db5-999f-4965-87a6-26c10ef8d6e9
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: Patients hospitalised since previous date of report
+        name: HOSPITALIZEDCURRENTLYINCREASE
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 05b68cdb-a649-4708-90e4-fe4985d90b16
+          stepCounter: 30285db5-999f-4965-87a6-26c10ef8d6e9
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: Cumulative number of patients hospitalized
+        name: HOSPITALIZEDCUMULATIVE
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 02b2cc10-e380-407a-b75e-025ae8141dc9
+          stepCounter: 30285db5-999f-4965-87a6-26c10ef8d6e9
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: Increase in cumulative number of patients hospitalized
+        name: HOSPITALIZEDCUMULATIVEINCREASE
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 45f0ec6f-1ef4-493e-bb1c-36a70af133e1
+          stepCounter: 30285db5-999f-4965-87a6-26c10ef8d6e9
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: Patients currently in ICU
+        name: INICUCURRENTLY
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2427edb4-4a9e-488e-81f3-f8fc4308f12a
+          stepCounter: 30285db5-999f-4965-87a6-26c10ef8d6e9
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: Patients currently in ICU since previous date of report
+        name: INICUCURRENTLYINCREASE
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 654402bc-8332-4a7c-9ae2-3ea75913891c
+          stepCounter: 30285db5-999f-4965-87a6-26c10ef8d6e9
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: Cumulative number of patients in ICU since previous date of report
+        name: INICUCUMULATIVE
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: df2f40e8-5afc-40ec-9e78-225ef29ab0f5
+          stepCounter: 30285db5-999f-4965-87a6-26c10ef8d6e9
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: Increase in cumulative number of patients in ICU
+        name: INICUCUMULATIVEINCREASE
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 85255deb-2cdb-4104-9fb8-5f605fd85302
+          stepCounter: 30285db5-999f-4965-87a6-26c10ef8d6e9
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: Patients currently receiving mechanical ventilation
+        name: ONVENTILATORCURRENTLY
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a61aa1be-d7c5-4662-9042-8ea46fda50c6
+          stepCounter: 30285db5-999f-4965-87a6-26c10ef8d6e9
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: Patients currently receiving mechanical ventilation since previous date of report
+        name: ONVENTILATORCURRENTLYINCREASE
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 19c8f293-5a77-454b-af8f-fa6fe30e6b6f
+          stepCounter: 30285db5-999f-4965-87a6-26c10ef8d6e9
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: Cumulative number of patients receiving mechanical ventilation
+        name: ONVENTILATORCUMULATIVE
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4491a4b8-0f62-471a-bed2-ebf435db4c6a
+          stepCounter: 30285db5-999f-4965-87a6-26c10ef8d6e9
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: Increase in cumulative number of patients receiving mechanical ventilation
+        name: ONVENTILATORCUMULATIVEINCREASE
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+    join:
+      joinCondition: FROM {{ ref('COVID', 'CT_US_COVID_TESTS') }}
+  name: CT_US_COVID_TESTS
+  schema: ""
+  sqlType: Source
+  table: CT_US_COVID_TESTS
+  type: sourceInput
+  version: 1
+type: Node
