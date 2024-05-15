@@ -13,5 +13,8 @@ mappingDefinitions:
   UNS:
     database: COALESCE_SAMPLE_DATABASE
     schema: WEATHER
+  WOOD:
+    database: ""
+    schema: ""
 name: PROD
 type: Environment

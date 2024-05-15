@@ -1,0 +1,35 @@
+fileVersion: 1
+id: 1efcd18d-008f-43e2-a836-49faa9683a08
+name: PATIENT
+operation:
+  database: ""
+  dataset: ""
+  deployEnabled: true
+  description: ""
+  locationName: WOOD
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5433babe-fcf2-4633-98d7-0e9073b5d4f9
+          stepCounter: 1efcd18d-008f-43e2-a836-49faa9683a08
+        config: {}
+        dataType: VARIANT
+        defaultValue: ""
+        description: ""
+        name: V
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+    join:
+      joinCondition: FROM {{ ref('WOOD', 'PATIENT') }}
+  name: PATIENT
+  schema: ""
+  sqlType: Source
+  table: PATIENT
+  type: sourceInput
+  version: 1
+type: Node

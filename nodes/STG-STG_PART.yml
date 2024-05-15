@@ -15,7 +15,17 @@ operation:
   locationName: STG
   materializationType: table
   metadata:
-    appliedNodeTests: []
+    appliedNodeTests:
+      - continueOnFailure: true
+        description: ""
+        name: Test
+        runOrder: After
+        templateString: "{{testunique(\"P_NAME\")}}"
+      - continueOnFailure: true
+        description: ""
+        name: Test 1
+        runOrder: After
+        templateString: "{{testunique(\"P_PARTKEY\")}} "
     columns:
       - appliedColumnTests: {}
         columnReference:
@@ -61,7 +71,7 @@ operation:
           - columnReferences:
               - columnCounter: 140d3813-67dd-465f-85b3-dfcac27c6281
                 stepCounter: 0fec82a4-cb10-4034-855d-32842ad0c498
-            transform: ""
+            transform: UPPER("PART"."P_MFGR")
       - appliedColumnTests: {}
         columnReference:
           columnCounter: c4c1a141-178f-41a9-ae65-c5c9c877fac0
