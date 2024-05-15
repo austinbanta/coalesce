@@ -1,0 +1,14 @@
+fileVersion: 1
+id: "3"
+mappingDefinitions:
+  DEV:
+    database: COALESCE_SAMPLE_DATABASE
+    schema: TPCH_SF001
+  STG:
+    database: AUSTIN_TEST_DB_PROD
+    schema: EDW_PROD
+  UNS:
+    database: COALESCE_SAMPLE_DATABASE
+    schema: WEATHER
+name: PROD
+type: Environment

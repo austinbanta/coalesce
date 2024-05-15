@@ -1,0 +1,6 @@
+excludeSelector: ""
+fileVersion: 1
+id: "4"
+includeSelector: "{ subgraph: \"pipeline\" } OR { location: STG name: STG_ORDERS_LINEITEM }"
+name: newjob3
+type: Job
