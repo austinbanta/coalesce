@@ -1,14 +1,14 @@
 fileVersion: 1
-id: Stage
+id: "22"
 isDisabled: false
 metadata:
-  defaultStorageLocation: null
+  defaultStorageLocation: DATA
   error: null
   nodeMetadataSpec: |
-    capitalized: Stage
-    short: STG
+    capitalized: Reference
+    short: REF
     plural: Stages
-    tagColor: '#2EB67D'
+    tagColor: 'yellow'
 
     config:
     - groupName: Options
@@ -21,11 +21,11 @@ metadata:
         isRequired: true
 
       - type: multisourceToggle
-        enableIf: "{% if node.materializationType == 'table' %} true {% else %} false {% endif %}"
+        enableIf: "{% if node.materializationType == 'table' %} true {% else %} false {% endif %}" 
 
       - type: overrideSQLToggle
         enableIf: "{% if node.materializationType == 'view' %} true {% else %} false {% endif %}"
-
+        
       - displayName: Multi Source Strategy
         attributeName: insertStrategy
         type: dropdownSelector
@@ -46,7 +46,7 @@ metadata:
         attributeName: testsEnabled
         type: toggleButton
         default: true
-
+        
       - displayName: Pre-SQL
         attributeName: preSQL
         type: textBox
@@ -58,5 +58,5 @@ metadata:
         type: textBox
         syntax: sql
         isRequired: false
-name: Stage
+name: Reference Data
 type: NodeType
