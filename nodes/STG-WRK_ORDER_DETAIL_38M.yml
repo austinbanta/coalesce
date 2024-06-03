@@ -1,13 +1,19 @@
 fileVersion: 1
-id: 72e9797f-2f3a-4327-89ef-84a66a1a2fb9
-name: STG_ORDER_DETAIL_38M
+id: 6b920be5-0b51-470c-8920-14a7d57326f1
+name: WRK_ORDER_DETAIL_38M
 operation:
   config:
+    groupByAll: false
     insertStrategy: INSERT
+    orderby: false
+    orderbycolumn:
+      items:
+        - {}
     postSQL: ""
     preSQL: ""
-    testsEnabled: true
-    truncateBefore: true
+    selectDistinct: false
+    testsEnabled: false
+    truncateBefore: false
   database: ""
   deployEnabled: true
   description: ""
@@ -19,8 +25,8 @@ operation:
     columns:
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: cc27710e-1c30-4199-8fae-3b296822616b
-          stepCounter: 72e9797f-2f3a-4327-89ef-84a66a1a2fb9
+          columnCounter: 43cdf163-502a-401f-b053-f849bd50dc96
+          stepCounter: 6b920be5-0b51-470c-8920-14a7d57326f1
         config: {}
         dataType: NUMBER(38,0)
         description: ""
@@ -33,8 +39,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 6922ae60-0b1d-426b-b0ed-1d021c83537c
-          stepCounter: 72e9797f-2f3a-4327-89ef-84a66a1a2fb9
+          columnCounter: 581b0f5a-5996-4b4c-8784-d3e1fd8968e6
+          stepCounter: 6b920be5-0b51-470c-8920-14a7d57326f1
         config: {}
         dataType: NUMBER(38,0)
         description: ""
@@ -47,8 +53,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 84657b9e-abb1-40e3-88ae-89a387c7a199
-          stepCounter: 72e9797f-2f3a-4327-89ef-84a66a1a2fb9
+          columnCounter: f2a75998-6c1c-445a-bf73-0bf336e26ec0
+          stepCounter: 6b920be5-0b51-470c-8920-14a7d57326f1
         config: {}
         dataType: NUMBER(38,0)
         description: ""
@@ -61,8 +67,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 75202bf5-bd28-4f9a-8f7e-0a7af69790c9
-          stepCounter: 72e9797f-2f3a-4327-89ef-84a66a1a2fb9
+          columnCounter: 03d0f106-7026-4c2f-b0dd-0276ec96afa8
+          stepCounter: 6b920be5-0b51-470c-8920-14a7d57326f1
         config: {}
         dataType: VARCHAR(16777216)
         description: ""
@@ -75,8 +81,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 093852ab-aab5-44e1-91f7-f7915e676774
-          stepCounter: 72e9797f-2f3a-4327-89ef-84a66a1a2fb9
+          columnCounter: ab08ec53-e120-47e7-ab6a-57a0669daff6
+          stepCounter: 6b920be5-0b51-470c-8920-14a7d57326f1
         config: {}
         dataType: NUMBER(38,0)
         description: ""
@@ -89,8 +95,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 1c45548e-badb-48ff-ac45-8671c7f63d47
-          stepCounter: 72e9797f-2f3a-4327-89ef-84a66a1a2fb9
+          columnCounter: 840dd24f-848d-4899-9d7a-6f5ff41d537d
+          stepCounter: 6b920be5-0b51-470c-8920-14a7d57326f1
         config: {}
         dataType: NUMBER(5,0)
         description: ""
@@ -103,8 +109,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 6c37ee33-a24a-43d8-8353-d4a6f3dcf403
-          stepCounter: 72e9797f-2f3a-4327-89ef-84a66a1a2fb9
+          columnCounter: 1d12e6e3-34b0-4edd-be8a-6daadab8e359
+          stepCounter: 6b920be5-0b51-470c-8920-14a7d57326f1
         config: {}
         dataType: NUMBER(38,4)
         description: ""
@@ -117,8 +123,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: b70737d7-d5a1-472e-b135-65a64f01f08e
-          stepCounter: 72e9797f-2f3a-4327-89ef-84a66a1a2fb9
+          columnCounter: 368e136a-11e6-43e3-94d9-b26480fdca09
+          stepCounter: 6b920be5-0b51-470c-8920-14a7d57326f1
         config: {}
         dataType: NUMBER(38,4)
         description: ""
@@ -131,8 +137,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 36f81a69-d1f4-4d83-b163-34ce7adcb381
-          stepCounter: 72e9797f-2f3a-4327-89ef-84a66a1a2fb9
+          columnCounter: b2b7d6fd-3661-4127-bdaa-72b4a402cc0d
+          stepCounter: 6b920be5-0b51-470c-8920-14a7d57326f1
         config: {}
         dataType: VARCHAR(16777216)
         description: ""
@@ -154,12 +160,12 @@ operation:
             nodeName: ORDER_DETAIL_38M
         join:
           joinCondition: FROM {{ ref('TASTY_POS', 'ORDER_DETAIL_38M') }} "ORDER_DETAIL_38M"
-        name: STG_ORDER_DETAIL_38M
+        name: WRK_ORDER_DETAIL_38M
         noLinkRefs: []
-  name: STG_ORDER_DETAIL_38M
+  name: WRK_ORDER_DETAIL_38M
   overrideSQL: false
   schema: ""
-  sqlType: Stage
+  sqlType: base-nodes:::204
   type: sql
   version: 1
 type: Node
