@@ -1,6 +1,0 @@
-excludeSelector: ""
-fileVersion: 1
-id: "25"
-includeSelector: "+{ location: STG name: INC_ORDER_HEADER_14M_ORDER_DETAIL_38M1 }"
-name: New Job
-type: Job
