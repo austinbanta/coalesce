@@ -64,7 +64,7 @@ operation:
           - columnReferences:
               - columnCounter: 82458ae4-25e7-481a-966a-94383c26c367
                 stepCounter: 48ad6900-db2b-4d15-970e-08e6b5c483de
-            transform: UPPER("MENU"."MENU_TYPE")
+            transform: LOWER("MENU"."MENU_TYPE")
       - appliedColumnTests: {}
         columnReference:
           columnCounter: 5c01b45b-8519-40af-b5ed-21add5239706
@@ -279,6 +279,26 @@ operation:
               - columnCounter: e2631b76-cd99-45aa-ac72-793726329615
                 stepCounter: 48ad6900-db2b-4d15-970e-08e6b5c483de
             transform: "\"MENU\".\"MENU_ITEM_HEALTH_METRICS_OBJ\":\"menu_item_id\"::DOUBLE"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8b3695f3-45c5-466e-8d09-3b1975b5dd9a
+          stepCounter: 067eecd3-0fa0-4d99-8b90-0f1e9a13a14c
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: newcol2
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: ""
+        systemColumnType: None
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
