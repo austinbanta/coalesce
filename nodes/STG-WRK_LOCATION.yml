@@ -1,0 +1,143 @@
+fileVersion: 1
+id: 908a6f86-ccac-4499-a051-f4c29683b44a
+name: WRK_LOCATION
+operation:
+  config:
+    groupByAll: false
+    insertStrategy: INSERT
+    orderby: false
+    orderbycolumn:
+      items:
+        - {}
+    postSQL: ""
+    preSQL: ""
+    selectDistinct: false
+    testsEnabled: false
+    truncateBefore: false
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: STG
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 133ef17f-0861-429d-9d74-d2488bd476ae
+          stepCounter: 908a6f86-ccac-4499-a051-f4c29683b44a
+        config: {}
+        dataType: NUMBER(19,0)
+        description: ""
+        name: LOCATION_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6605c62d-70a2-4bf2-9512-2209f1bcadb5
+                stepCounter: 9687fb5b-1882-46ab-b661-bac6bee1ed55
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a2fc2a86-2ba5-45fb-bb06-55f31777a1f1
+          stepCounter: 908a6f86-ccac-4499-a051-f4c29683b44a
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: PLACEKEY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 7e1e9e57-ca94-4092-9d2a-e95427ed46c9
+                stepCounter: 9687fb5b-1882-46ab-b661-bac6bee1ed55
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1dbaa4a7-c454-47e2-b0f0-0685992a1fbc
+          stepCounter: 908a6f86-ccac-4499-a051-f4c29683b44a
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: LOCATION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a162509e-aa44-49da-910b-ca4380cd0e18
+                stepCounter: 9687fb5b-1882-46ab-b661-bac6bee1ed55
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2f5c969f-5864-4bc3-b8ca-8a11d27f668b
+          stepCounter: 908a6f86-ccac-4499-a051-f4c29683b44a
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: CITY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 289cdcdd-fd83-4544-842c-9fb2cd719bf2
+                stepCounter: 9687fb5b-1882-46ab-b661-bac6bee1ed55
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 443ef285-6487-487f-82cb-f0850b252408
+          stepCounter: 908a6f86-ccac-4499-a051-f4c29683b44a
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: REGION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 08c6f841-2bfd-430b-b057-5ebf94c700b6
+                stepCounter: 9687fb5b-1882-46ab-b661-bac6bee1ed55
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 10b84647-3fd1-4f61-a053-ffb61e6ae092
+          stepCounter: 908a6f86-ccac-4499-a051-f4c29683b44a
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: ISO_COUNTRY_CODE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ad02b863-e566-4ca7-93d4-2a6d69a457e8
+                stepCounter: 9687fb5b-1882-46ab-b661-bac6bee1ed55
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a1e06f0e-362f-45cb-a6a5-616aaf12f36d
+          stepCounter: 908a6f86-ccac-4499-a051-f4c29683b44a
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: COUNTRY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3c4d6aa8-0e7b-49c8-8d6c-fe62de384ed0
+                stepCounter: 9687fb5b-1882-46ab-b661-bac6bee1ed55
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: TASTY_POS
+            nodeName: LOCATION
+        join:
+          joinCondition: FROM {{ ref('TASTY_POS', 'LOCATION') }} "LOCATION"
+        name: WRK_LOCATION
+        noLinkRefs: []
+  name: WRK_LOCATION
+  overrideSQL: false
+  schema: ""
+  sqlType: base-nodes:::204
+  type: sql
+  version: 1
+type: Node

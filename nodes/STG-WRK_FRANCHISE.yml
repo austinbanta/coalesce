@@ -1,0 +1,143 @@
+fileVersion: 1
+id: c5d53ac7-c479-434e-9d4a-998560ccf656
+name: WRK_FRANCHISE
+operation:
+  config:
+    groupByAll: false
+    insertStrategy: INSERT
+    orderby: false
+    orderbycolumn:
+      items:
+        - {}
+    postSQL: ""
+    preSQL: ""
+    selectDistinct: false
+    testsEnabled: false
+    truncateBefore: false
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: STG
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 530aa5e3-dd03-4486-90b1-3ea503fb4c95
+          stepCounter: c5d53ac7-c479-434e-9d4a-998560ccf656
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: FRANCHISE_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1e53387f-83ad-4c59-868c-727a434459e2
+                stepCounter: 31a542c6-8bed-4417-984b-8d10be31afd0
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c6c0a0fb-d2ab-4e93-92b2-70d7420e2da1
+          stepCounter: c5d53ac7-c479-434e-9d4a-998560ccf656
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: FIRST_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: dcfed616-d899-4052-ae91-353332fc3441
+                stepCounter: 31a542c6-8bed-4417-984b-8d10be31afd0
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ae849d8e-14e0-41a7-8f53-7574c4c6f716
+          stepCounter: c5d53ac7-c479-434e-9d4a-998560ccf656
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: LAST_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: cd42a422-5bb1-4a85-bcca-6f40b7acc47c
+                stepCounter: 31a542c6-8bed-4417-984b-8d10be31afd0
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: acd7e5be-54bd-4872-9b86-3e16565d714b
+          stepCounter: c5d53ac7-c479-434e-9d4a-998560ccf656
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: CITY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 312282d9-fd7f-40a7-9676-5a08acfc4785
+                stepCounter: 31a542c6-8bed-4417-984b-8d10be31afd0
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c8d88464-270f-40d8-95e6-08b063ca0676
+          stepCounter: c5d53ac7-c479-434e-9d4a-998560ccf656
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: COUNTRY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c96d854d-9cd1-4a65-9364-f018dc430bc4
+                stepCounter: 31a542c6-8bed-4417-984b-8d10be31afd0
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 45b58a41-0c4c-494d-badc-5d12e1f319c5
+          stepCounter: c5d53ac7-c479-434e-9d4a-998560ccf656
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: E_MAIL
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d8266653-6448-40a5-befa-fbdd50eb5fed
+                stepCounter: 31a542c6-8bed-4417-984b-8d10be31afd0
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 04ceef68-7ef8-41d3-80c5-bfa18f1a07bc
+          stepCounter: c5d53ac7-c479-434e-9d4a-998560ccf656
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: PHONE_NUMBER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ecfe68a1-97ee-4c15-9bb4-2f84f8f0816e
+                stepCounter: 31a542c6-8bed-4417-984b-8d10be31afd0
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: TASTY_POS
+            nodeName: FRANCHISE
+        join:
+          joinCondition: FROM {{ ref('TASTY_POS', 'FRANCHISE') }} "FRANCHISE"
+        name: WRK_FRANCHISE
+        noLinkRefs: []
+  name: WRK_FRANCHISE
+  overrideSQL: false
+  schema: ""
+  sqlType: base-nodes:::204
+  type: sql
+  version: 1
+type: Node
