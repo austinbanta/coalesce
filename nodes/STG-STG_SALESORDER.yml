@@ -94,21 +94,6 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: "13327"
-          stepCounter: "77"
-        config: {}
-        dataType: DATE
-        description: ""
-        hashDetails: null
-        name: CREATED_DATE
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: c3ed2638-d3b5-41c6-9d1f-9c96592be28b
-                stepCounter: 639b81a9-9261-4b29-b225-802a26ea2fb2
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
           columnCounter: "13329"
           stepCounter: "77"
         config: {}
@@ -150,6 +135,21 @@ operation:
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: cdcf03da-64e3-4ff1-863f-bfbb66a583af
+                stepCounter: 639b81a9-9261-4b29-b225-802a26ea2fb2
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: "13327"
+          stepCounter: "77"
+        config: {}
+        dataType: DATE
+        description: ""
+        hashDetails: null
+        name: CREATED_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c3ed2638-d3b5-41c6-9d1f-9c96592be28b
                 stepCounter: 639b81a9-9261-4b29-b225-802a26ea2fb2
             transform: ""
       - appliedColumnTests: {}
