@@ -1,0 +1,114 @@
+{# Create various lists of columns to work with #}
+{% set tblColLs = columns | map(attribute='name') | list %}
+{% set tblKeyColLs = columns | selectattr('tblKey', 'defined') | map(attribute='name') | list %}
+{% set tblChgTSColLs = columns | selectattr('tblChgTS', 'defined') | map(attribute='name') | list %}
+{% set tblColDMLLs = columns | selectattr('colDML', 'defined') | map(attribute='name') | list %}
+{% set tblColExcludeLs = (tblChgTSColLs + tblColDMLLs) | unique | list %}
+{% set tblColIncludeLs = tblColLs | reject('in', tblColExcludeLs) | list %}
+
+{# Turn lists of columns into strings or joined strings where needed#}
+{% set tblKeyColStr = '"'+tblKeyColLs | join('", "')+'"' %}
+{% set tblChgTSColStr = tblChgTSColLs | first %}
+{% set tblColDMLStr = tblColDMLLs | first %}
+{% set tblColDMLDelete = config.dmlDelete %}
+{% set dtLagNumber = config.lagSpecification.get('items') | map(attribute='lagNumber') | first %}
+{% set dtLagType = config.lagSpecification.get('items') | map(attribute='lagType') | first %}
+
+{%- if config.matType == 'dynamic table' %} 
+
+	{{ stage('Try Drop View') }}
+        {{dropTblView()}}
+
+    {{ stage('Create Dynamic Table') }}
+{{ tst }}
+        CREATE OR REPLACE DYNAMIC TABLE {{ ref_no_link(node.location.name, node.name) }}
+            LAG = '{{ dtLagNumber }} {{ dtLagType }}'
+            WAREHOUSE = {{config.whName}}
+        AS
+            SELECT
+            {% for col in tblColIncludeLs %}
+                {% set colTransform = sources[0].columns | selectattr('name', 'equalto', col) | map(attribute='transform') | first %}
+                {% set colDesc = columns | selectattr('name', 'equalto', col) | map(attribute='description') | first %}
+
+
+                {% if colTransform == "" %}
+                    {% set colVal = '"' + col + '"' %}
+                {% else %}
+                    {% set colVal = colTransform %}
+                {% endif %}
+
+                {% if config.propNonDelete == false %}
+                    {{ colVal }} as {{ col }}
+                {% else %}
+                    case when "{{ tblColDMLStr }}" = '{{tblColDMLDelete}}' then lead({{colVal}}) over (partition by {{ tblKeyColStr }} order by "{{ tblChgTSColStr }}" desc) else {{colVal}} end as {{ col }}
+                {% endif %}
+                ,
+            {% endfor %}
+
+            {{ tblChgTSColStr }} as "START_TIME",
+            lag("{{ tblChgTSColStr }}") over (partition by {{ tblKeyColStr }} order by "{{ tblChgTSColStr }}" desc) as "END_TIME",
+            case when (row_number() over (partition by {{ tblKeyColStr }} order by "{{ tblChgTSColStr }}" desc) = 1) then 1 else 0 end as "CURRENT_FLAG",
+            "{{ tblColDMLStr }}" as "LAST_DML_OPERATION"
+
+            {{ sources[0].join }}
+
+            {% if config.isCurVal == true %}
+                QUALIFY "CURRENT_FLAG" = 1
+            {% endif %}
+{% endif %}
+
+{%- if config.matType == 'view' %} 
+	{{ stage('Try Drop Table') }}
+        {{dropTblView()}}
+
+    {{ stage('Create Stage View') }}
+
+        CREATE OR REPLACE VIEW {{ ref_no_link(node.location.name, node.name) }}
+        (
+            {% for col in tblColIncludeLs %}
+                "{{ columns | selectattr('name', 'equalto', col) | map(attribute='name') | first }}"
+                {% set colDesc = columns | selectattr('name', 'equalto', col) | map(attribute='description') | first %}
+                {%- if colDesc | length > 0 %} COMMENT '{{ colDesc }}'{% endif %}
+                ,
+            {% endfor %}
+
+            "START_TIME",
+            "END_TIME",
+            "CURRENT_FLAG",
+            "LAST_DML_OPERATION"
+        )
+        {%- if node.description | length > 0 %} COMMENT = '{{ node.description }}'{% endif %}
+
+        AS
+            SELECT
+            {% for col in tblColIncludeLs %}
+                {% set colTransform = sources[0].columns | selectattr('name', 'equalto', col) | map(attribute='transform') | first %}
+                {% set colDesc = columns | selectattr('name', 'equalto', col) | map(attribute='description') | first %}
+
+
+                {% if colTransform == "" %}
+                    {% set colVal = '"' + col + '"' %}
+                {% else %}
+                    {% set colVal = colTransform %}
+                {% endif %}
+
+                {% if config.propNonDelete == false %}
+                    {{ colVal }} as {{ col }}
+                {% else %}
+                    case when "{{ tblColDMLStr }}" = '{{tblColDMLDelete}}' then lead({{colVal}}) over (partition by {{ tblKeyColStr }} order by "{{ tblChgTSColStr }}" desc) else {{colVal}} end as {{ col }}
+                {% endif %}
+                ,
+            {% endfor %}
+
+            {{ tblChgTSColStr }} as "START_TIME",
+            lag("{{ tblChgTSColStr }}") over (partition by {{ tblKeyColStr }} order by "{{ tblChgTSColStr }}" desc) as "END_TIME",
+            case when (row_number() over (partition by {{ tblKeyColStr }} order by "{{ tblChgTSColStr }}" desc) = 1) then 1 else 0 end as "CURRENT_FLAG",
+            "{{ tblColDMLStr }}" as "LAST_DML_OPERATION"
+
+            {{ sources[0].join }}
+
+            {% if config.isCurVal == true %}
+                QUALIFY "CURRENT_FLAG" = 1
+            {% endif %}
+
+{% endif %}

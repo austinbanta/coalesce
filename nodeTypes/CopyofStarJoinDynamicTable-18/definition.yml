@@ -1,0 +1,123 @@
+fileVersion: 1
+id: "18"
+isDisabled: false
+metadata:
+  defaultStorageLocation: null
+  error: null
+  nodeMetadataSpec: |
+    capitalized: Copy of Dynamic Table Type 2 SCD
+    short: DTSCD2
+    plural: Dynamic Table Type 2 SCD
+    tagColor: green
+
+    config:
+    - groupName: Materialization Type
+      items:
+      - type: dropdownSelector
+        attributeName: matType
+        default: dynamic table
+        options:
+        - dynamic table
+        - view
+        isRequired: true
+        
+      - displayName: Warehouse on which to execute Dynamic Table
+        attributeName: whName
+        type: textBox
+        default: 'dev_wh_xs'
+        isRequired: false
+        enableIf: "{% if config.matType == 'dynamic table' %} true {% else %} false {% endif %}"
+
+      - type: tabular
+        displayName: 'Lag Specification'
+        attributeName: lagSpecification
+        columns:
+      
+        -  type: textBox
+           displayName: Time Value
+           attributeName: lagNumber
+           default: 60
+           isRequired: false
+           enableIf: "{% if config.matType == 'dynamic table' %} true {% else %} false {% endif %}"
+        
+        -  type: dropdownSelector
+           displayName: Time Period
+           attributeName: lagType
+           default: Minutes
+           options:
+           - Seconds
+           - Minutes
+           - Hours
+           - Days
+           isRequired: false
+           enableIf: "{% if config.matType == 'dynamic table' %} true {% else %} false {% endif %}"
+        
+        isRequired: false
+        enableIf: "{% if config.matType == 'dynamic table' %} true {% else %} false {% endif %}"
+
+
+      - displayName: Current Values Only
+        attributeName: isCurVal
+        type: toggleButton
+        default: false
+
+    - groupName: Change Tracking Options
+      items:
+      - displayName: Propagate Last Non-Delete
+        attributeName: propNonDelete
+        type: toggleButton
+        default: false
+
+      - displayName: Table Key Column(s)
+        attributeName: tblKey
+        type: columnSelector
+        isRequired: true
+
+      - displayName: Row Update Timestamp Column
+        attributeName: tblChgTS
+        type: columnSelector
+        isRequired: true
+
+      - displayName: DML Identifier Column
+        attributeName: colDML
+        type: columnSelector
+        isRequired: true
+
+      - displayName: DML Insert Indentifier
+        attributeName: dmlInsert
+        type: textBox
+        default: 'I'
+        isRequired: true
+     
+      - displayName: DML Update Indentifier
+        attributeName: dmlUpdate
+        type: textBox
+        default: 'U'
+        isRequired: true
+     
+      - displayName: DML Delete Indentifier
+        attributeName: dmlDelete
+        type: textBox
+        default: 'D'
+        isRequired: true
+     
+    - groupName: Other Options
+      items:
+      - displayName: Enable Tests
+        attributeName: testsEnabled
+        type: toggleButton
+        default: true
+        
+      - displayName: Pre-SQL
+        attributeName: preSQL
+        type: textBox
+        syntax: sql
+        isRequired: false
+
+      - displayName: Post-SQL
+        attributeName: postSQL
+        type: textBox
+        syntax: sql
+        isRequired: false
+name: Copy of Star Join Dynamic Table
+type: NodeType
