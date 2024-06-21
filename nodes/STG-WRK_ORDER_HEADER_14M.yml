@@ -263,7 +263,7 @@ operation:
   name: WRK_ORDER_HEADER_14M
   overrideSQL: false
   schema: ""
-  sqlType: base-nodes:::204
+  sqlType: base-nodes-1-1-0:::204
   type: sql
   version: 1
 type: Node

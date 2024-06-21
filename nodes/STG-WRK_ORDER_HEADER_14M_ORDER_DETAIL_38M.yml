@@ -348,7 +348,9 @@ operation:
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
-      - aliases: {}
+      - aliases:
+          WRK_ORDER_DETAIL_38M: 6b920be5-0b51-470c-8920-14a7d57326f1
+          WRK_ORDER_HEADER_14M: e989bb0e-d4ec-43f3-9654-c4bd9eaa864a
         customSQL:
           customSQL: ""
         dependencies:
@@ -360,13 +362,13 @@ operation:
           joinCondition: |-
             FROM {{ ref('STG', 'WRK_ORDER_HEADER_14M') }} "WRK_ORDER_HEADER_14M"
             INNER JOIN {{ ref('STG', 'WRK_ORDER_DETAIL_38M') }} "WRK_ORDER_DETAIL_38M"
-            ON "WRK_ORDER_HEADER_14M"./*COLUMN*/ = "WRK_ORDER_DETAIL_38M"./*COLUMN*/
+            ON "WRK_ORDER_HEADER_14M"."ORDER_ID" = "WRK_ORDER_DETAIL_38M"."ORDER_ID"
         name: WRK_ORDER_HEADER_14M_ORDER_DETAIL_38M
         noLinkRefs: []
   name: WRK_ORDER_HEADER_14M_ORDER_DETAIL_38M
   overrideSQL: false
   schema: ""
-  sqlType: base-nodes:::204
+  sqlType: base-nodes-1-1-0:::204
   type: sql
   version: 1
 type: Node

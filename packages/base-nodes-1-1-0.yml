@@ -18,11 +18,11 @@ config:
         isDisabled: false
       "248":
         defaultStorageLocation: null
-        isDisabled: true
+        isDisabled: false
   packageVariables: ""
 fileVersion: 1
 id: "@coalesce/base-node-types"
-name: base-nodes
+name: base-nodes-1-1-0
 packageID: "@coalesce/base-node-types"
-releaseID: ee04147b-dfc2-483e-b008-19ba0bf7c7f2
+releaseID: 49a07609-cb08-4c0e-a178-e4a388ee5a02
 type: Package
