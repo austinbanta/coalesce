@@ -2,6 +2,7 @@ fileVersion: 1
 id: "27"
 isDisabled: true
 metadata:
+  defaultStorageLocation: null
   error: null
   nodeMetadataSpec: |+
     capitalized: Satellite Milti-Active User-Defined
