@@ -177,26 +177,6 @@ operation:
               - columnCounter: e2631b76-cd99-45aa-ac72-793726329615
                 stepCounter: 48ad6900-db2b-4d15-970e-08e6b5c483de
             transform: ""
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: c283d200-ee00-45b9-ada5-813f1741ac0c
-          stepCounter: d0750877-9885-4d07-bae5-24e8efaca205
-        config: {}
-        dataType: STRING
-        defaultValue: ""
-        description: ""
-        keyColumnType: None
-        name: newcol
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: "0"
-                stepCounter: "0"
-            transform: ""
-        systemColumnType: None
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
