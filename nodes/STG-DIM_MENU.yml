@@ -195,20 +195,6 @@ operation:
               - columnCounter: 2356c7fc-eef8-400b-b7ca-ec532589b71b
                 stepCounter: d0750877-9885-4d07-bae5-24e8efaca205
             transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: 32f837a4-6e92-49e5-8a47-88d5c764988b
-          stepCounter: 76895d79-cb72-4944-ac37-e59780c094c8
-        config: {}
-        dataType: STRING
-        description: ""
-        name: newcol
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: c283d200-ee00-45b9-ada5-813f1741ac0c
-                stepCounter: d0750877-9885-4d07-bae5-24e8efaca205
-            transform: ""
       - acceptedValues:
           strictMatch: true
           values: []
