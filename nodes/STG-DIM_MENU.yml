@@ -3,7 +3,7 @@ id: 76895d79-cb72-4944-ac37-e59780c094c8
 name: DIM_MENU
 operation:
   config:
-    groupByAll: false
+    groupByAll: true
     insertStrategy: UNION ALL
     orderby: true
     orderbycolumn:
