@@ -5,10 +5,13 @@ operation:
   config:
     groupByAll: false
     insertStrategy: UNION ALL
-    orderby: false
+    orderby: true
     orderbycolumn:
       items:
-        - {}
+        - sortColName:
+            columnCounter: c8f73ad7-15c8-46ba-8248-1c7a63483c54
+            stepCounter: 76895d79-cb72-4944-ac37-e59780c094c8
+          sortOrder: desc
     postSQL: ""
     preSQL: ""
     selectDistinct: false
