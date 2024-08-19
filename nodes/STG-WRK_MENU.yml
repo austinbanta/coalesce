@@ -193,7 +193,7 @@ operation:
   name: WRK_MENU
   overrideSQL: false
   schema: ""
-  sqlType: base-nodes-1-1-0:::204
+  sqlType: base-1-1-2:::204
   type: sql
   version: 1
 type: Node

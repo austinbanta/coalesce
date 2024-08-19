@@ -30,7 +30,7 @@ config:
         isDisabled: false
       "6":
         defaultStorageLocation: null
-        isDisabled: true
+        isDisabled: false
       "7":
         defaultStorageLocation: null
         isDisabled: false

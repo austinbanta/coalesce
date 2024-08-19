@@ -313,7 +313,7 @@ operation:
   name: DIM_MENU
   overrideSQL: false
   schema: ""
-  sqlType: base-nodes-1-1-0:::194
+  sqlType: base-1-1-2:::194
   type: sql
   version: 1
 type: Node
