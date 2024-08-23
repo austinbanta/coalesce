@@ -5,7 +5,7 @@ operation:
   config:
     groupByAll: false
     insertStrategy: INSERT
-    orderby: true
+    orderby: false
     orderbycolumn:
       items:
         - {}
