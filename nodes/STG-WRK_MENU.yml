@@ -3,7 +3,7 @@ id: d0750877-9885-4d07-bae5-24e8efaca205
 name: WRK_MENU
 operation:
   config:
-    groupByAll: false
+    groupByAll: true
     insertStrategy: INSERT
     orderby: false
     orderbycolumn:
