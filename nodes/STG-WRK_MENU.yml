@@ -109,7 +109,7 @@ operation:
           - columnReferences:
               - columnCounter: 11a80655-2236-40be-90fc-3b66a5d8126e
                 stepCounter: 48ad6900-db2b-4d15-970e-08e6b5c483de
-            transform: ""
+            transform: UPPER("MENU"."MENU_ITEM_NAME")
       - appliedColumnTests: {}
         columnReference:
           columnCounter: c0fda614-54e7-4d66-a7ed-8ec23cb678d0
