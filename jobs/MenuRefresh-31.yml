@@ -1,7 +1,8 @@
 excludeSelector: ""
 fileVersion: 1
 id: "31"
-includeSelector: "+{ location: STG name: DIM_MENU }"
+includeSelector: |
+  +{ location: STG name: WRK_MENU }+
 name: Menu Refresh
 type: Job
 version: 2
