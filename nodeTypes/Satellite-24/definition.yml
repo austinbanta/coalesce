@@ -2,6 +2,7 @@ fileVersion: 1
 id: "24"
 isDisabled: true
 metadata:
+  defaultStorageLocation: null
   error: null
   nodeMetadataSpec: |-
     capitalized: Satellite User-Defined

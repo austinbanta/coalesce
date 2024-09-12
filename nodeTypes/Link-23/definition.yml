@@ -2,6 +2,7 @@ fileVersion: 1
 id: "23"
 isDisabled: true
 metadata:
+  defaultStorageLocation: null
   error: null
   nodeMetadataSpec: |
     capitalized: Link User-Defined
