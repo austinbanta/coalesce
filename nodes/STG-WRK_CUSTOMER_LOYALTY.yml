@@ -5,7 +5,7 @@ operation:
   config:
     groupByAll: false
     insertStrategy: INSERT
-    orderby: true
+    orderby: false
     orderbycolumn:
       items:
         - {}
@@ -236,18 +236,15 @@ operation:
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
-      - aliases: {}
+      - aliases:
+          CUSTOMER_LOYALTY: 924d0e33-01c3-40df-9e2e-01279d640b5c
         customSQL:
           customSQL: ""
         dependencies:
           - locationName: TASTY_CUST
             nodeName: CUSTOMER_LOYALTY
         join:
-          joinCondition: |-
-            FROM {{ ref('TASTY_CUST', 'CUSTOMER_LOYALTY') }} "CUSTOMER_LOYALTY"
-            where "CUSTOMER_LOYALTY"= ST_HAUSDORFFDISTANCE()sdff
-
-            where 
+          joinCondition: FROM {{ ref('TASTY_CUST', 'CUSTOMER_LOYALTY') }} "CUSTOMER_LOYALTY"
         name: WRK_CUSTOMER_LOYALTY
         noLinkRefs: []
   name: WRK_CUSTOMER_LOYALTY

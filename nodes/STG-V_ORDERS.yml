@@ -23,7 +23,7 @@ operation:
           stepCounter: 4bc194bb-321e-49e1-9ab8-bea81d1faf9a
         config: {}
         dataType: DATE
-        description: ""
+        description: test
         name: ORDER_DATE
         nullable: true
         sourceColumnReferences:

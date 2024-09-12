@@ -1,0 +1,9 @@
+defaultStorageMapping: STG
+fileVersion: 1
+locations:
+  - COVID
+  - DEV
+  - STG
+  - TASTY_CUST
+  - TASTY_POS
+  - UNS
