@@ -1,6 +1,6 @@
 fileVersion: 1
-id: 76895d79-cb72-4944-ac37-e59780c094c9
-name: DIM_MENU222222
+id: 76895d79-cb72-4944-ac37-e59780c094c8
+name: DIM_MEN
 operation:
   config:
     groupByAll: true
@@ -311,9 +311,9 @@ operation:
             nodeName: WRK_MENU
         join:
           joinCondition: FROM {{ ref('STG', 'WRK_MENU') }} "WRK_MENU"
-        name: DIM_MENU
+        name: DIM_MEN
         noLinkRefs: []
-  name: DIM_MENU222222
+  name: DIM_MEN
   overrideSQL: false
   schema: ""
   sqlType: base-1-1-2:::194
