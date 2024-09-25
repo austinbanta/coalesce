@@ -15,7 +15,12 @@ operation:
   locationName: STG
   materializationType: view
   metadata:
-    appliedNodeTests: []
+    appliedNodeTests:
+      - continueOnFailure: true
+        description: ""
+        name: Test
+        runOrder: After
+        templateString: ""
     columns:
       - appliedColumnTests: {}
         columnReference:
@@ -48,14 +53,16 @@ operation:
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
-      - aliases: {}
+      - aliases:
+          FCT_ORDERS: 81a365f1-b471-4651-ba6d-eff053c80626
         customSQL:
           customSQL: ""
         dependencies:
           - locationName: STG
             nodeName: FCT_ORDERS
         join:
-          joinCondition: FROM {{ ref('STG', 'FCT_ORDERS') }} "FCT_ORDERS"
+          joinCondition: |
+            FROM {{ ref('STG', 'FCT_ORDERS') }} "FCT_ORDERS"
         name: V_ORDERS
         noLinkRefs: []
   name: V_ORDERS
