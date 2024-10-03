@@ -1,0 +1,82 @@
+fileVersion: 1
+id: 5dc3c9f9-bdd3-4ee4-a86f-3ea059599792
+name: WRK_ORDER_DETAIL_38M_ORDER_HEADER_14M
+operation:
+  config:
+    groupByAll: false
+    insertStrategy: INSERT
+    orderby: false
+    orderbycolumn:
+      items:
+        - {}
+    postSQL: ""
+    preSQL: ""
+    selectDistinct: false
+    testsEnabled: false
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: STG
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: dd5c9286-9e7e-4a9a-8499-9827ca5de6ce
+          stepCounter: 5dc3c9f9-bdd3-4ee4-a86f-3ea059599792
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: ORDER_CHANNEL
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 7bfe2fa5-6f19-4827-a841-2250e6ccd6d0
+                stepCounter: 6cbfe4e7-780a-409e-ad50-3018201d4113
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3fb89e3d-1ad6-42df-9db1-04a7a6c8cfa6
+          stepCounter: 5dc3c9f9-bdd3-4ee4-a86f-3ea059599792
+        config: {}
+        dataType: NUMBER(38,4)
+        description: ""
+        name: ORDER_AMOUNT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c2c2873f-716f-444d-8537-5621ef59099f
+                stepCounter: 6cbfe4e7-780a-409e-ad50-3018201d4113
+            transform: SUM("ORDER_HEADER_14M"."ORDER_AMOUNT")
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          ORDER_DETAIL_38M: b6bbf288-5200-43d8-8f41-b9ec325cb33c
+          ORDER_HEADER_14M: 6cbfe4e7-780a-409e-ad50-3018201d4113
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: TASTY_POS
+            nodeName: ORDER_DETAIL_38M
+          - locationName: TASTY_POS
+            nodeName: ORDER_HEADER_14M
+        join:
+          joinCondition: |-
+            FROM {{ ref('TASTY_POS', 'ORDER_DETAIL_38M') }} "ORDER_DETAIL_38M"
+            INNER JOIN {{ ref('TASTY_POS', 'ORDER_HEADER_14M') }} "ORDER_HEADER_14M"
+            ON "ORDER_DETAIL_38M"."ORDER_ID" = "ORDER_HEADER_14M"."ORDER_ID"
+            WHERE "ORDER_AMOUNT">0
+            group by ALL
+        name: WRK_ORDER_DETAIL_38M_ORDER_HEADER_14M
+        noLinkRefs: []
+  name: WRK_ORDER_DETAIL_38M_ORDER_HEADER_14M
+  overrideSQL: false
+  schema: ""
+  sqlType: base-1-1-2:::204
+  type: sql
+  version: 1
+type: Node
