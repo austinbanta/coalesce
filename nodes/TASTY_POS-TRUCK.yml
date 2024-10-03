@@ -1,5 +1,5 @@
 fileVersion: 1
-id: 05288367-5b3d-4439-be61-2ac2fd519576
+id: 2b00e148-51fe-4db7-a632-664176f3fbe1
 name: TRUCK
 operation:
   database: ""
@@ -14,8 +14,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: db668eff-f823-4f08-b0a1-63927d0ec421
-          stepCounter: 05288367-5b3d-4439-be61-2ac2fd519576
+          columnCounter: 8f3fa211-4e6b-4aee-af35-2ec3da0992c1
+          stepCounter: 2b00e148-51fe-4db7-a632-664176f3fbe1
         config: {}
         dataType: NUMBER(38,0)
         defaultValue: ""
@@ -23,14 +23,18 @@ operation:
         name: TRUCK_ID
         nullable: true
         primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
         uniqueKey: false
       - acceptedValues:
           strictMatch: true
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 18abd1bc-5bdb-4124-a0c7-184d802eac74
-          stepCounter: 05288367-5b3d-4439-be61-2ac2fd519576
+          columnCounter: 3c5a8b18-2bb0-421d-b602-04da8a6e76e1
+          stepCounter: 2b00e148-51fe-4db7-a632-664176f3fbe1
         config: {}
         dataType: NUMBER(38,0)
         defaultValue: ""
@@ -38,14 +42,18 @@ operation:
         name: MENU_TYPE_ID
         nullable: true
         primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
         uniqueKey: false
       - acceptedValues:
           strictMatch: true
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 67e1d5d8-17ac-46f8-9814-27cbe0e43e01
-          stepCounter: 05288367-5b3d-4439-be61-2ac2fd519576
+          columnCounter: 0e6cb121-bb4c-45bf-ac67-7e385384a821
+          stepCounter: 2b00e148-51fe-4db7-a632-664176f3fbe1
         config: {}
         dataType: VARCHAR(16777216)
         defaultValue: ""
@@ -53,14 +61,18 @@ operation:
         name: PRIMARY_CITY
         nullable: true
         primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
         uniqueKey: false
       - acceptedValues:
           strictMatch: true
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: e08bcd31-ed1d-46cd-8b36-5d9c960e9e01
-          stepCounter: 05288367-5b3d-4439-be61-2ac2fd519576
+          columnCounter: 9bc0bdc4-7e6d-420f-97df-c55928601458
+          stepCounter: 2b00e148-51fe-4db7-a632-664176f3fbe1
         config: {}
         dataType: VARCHAR(16777216)
         defaultValue: ""
@@ -68,14 +80,18 @@ operation:
         name: REGION
         nullable: true
         primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
         uniqueKey: false
       - acceptedValues:
           strictMatch: true
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 4afc9e2c-7976-4cf9-9a66-41c1cf37e7b0
-          stepCounter: 05288367-5b3d-4439-be61-2ac2fd519576
+          columnCounter: 2d98d732-e241-42aa-b05c-ae7e8386b124
+          stepCounter: 2b00e148-51fe-4db7-a632-664176f3fbe1
         config: {}
         dataType: VARCHAR(16777216)
         defaultValue: ""
@@ -83,14 +99,18 @@ operation:
         name: ISO_REGION
         nullable: true
         primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
         uniqueKey: false
       - acceptedValues:
           strictMatch: true
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: e02e3f29-008f-4350-b984-16b0f9e25ebb
-          stepCounter: 05288367-5b3d-4439-be61-2ac2fd519576
+          columnCounter: a4917bba-eb02-4393-be9e-0ced4d8c33b7
+          stepCounter: 2b00e148-51fe-4db7-a632-664176f3fbe1
         config: {}
         dataType: VARCHAR(16777216)
         defaultValue: ""
@@ -98,14 +118,18 @@ operation:
         name: COUNTRY
         nullable: true
         primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
         uniqueKey: false
       - acceptedValues:
           strictMatch: true
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: fd8cb3d1-05b7-4f6d-a681-3d15294b2d52
-          stepCounter: 05288367-5b3d-4439-be61-2ac2fd519576
+          columnCounter: 0aa07ce8-a5c2-4f16-8d53-bbef3482bb8f
+          stepCounter: 2b00e148-51fe-4db7-a632-664176f3fbe1
         config: {}
         dataType: VARCHAR(16777216)
         defaultValue: ""
@@ -113,14 +137,18 @@ operation:
         name: ISO_COUNTRY_CODE
         nullable: true
         primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
         uniqueKey: false
       - acceptedValues:
           strictMatch: true
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 1d207f83-0947-475a-ae1a-f7206fed0c2c
-          stepCounter: 05288367-5b3d-4439-be61-2ac2fd519576
+          columnCounter: ba19b736-8d9a-45c1-95cb-3d346e512c82
+          stepCounter: 2b00e148-51fe-4db7-a632-664176f3fbe1
         config: {}
         dataType: NUMBER(38,0)
         defaultValue: ""
@@ -128,14 +156,18 @@ operation:
         name: FRANCHISE_FLAG
         nullable: true
         primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
         uniqueKey: false
       - acceptedValues:
           strictMatch: true
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: fe27bb02-21ba-4a3c-9de1-13c110b05010
-          stepCounter: 05288367-5b3d-4439-be61-2ac2fd519576
+          columnCounter: 3d251b21-baa0-4b75-8716-240ce966eb4a
+          stepCounter: 2b00e148-51fe-4db7-a632-664176f3fbe1
         config: {}
         dataType: NUMBER(38,0)
         defaultValue: ""
@@ -143,14 +175,18 @@ operation:
         name: YEAR
         nullable: true
         primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
         uniqueKey: false
       - acceptedValues:
           strictMatch: true
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 9a746b33-fd31-447b-8539-96d74f07a853
-          stepCounter: 05288367-5b3d-4439-be61-2ac2fd519576
+          columnCounter: 55c9323e-730b-4b67-b33f-33e9aeb64cd3
+          stepCounter: 2b00e148-51fe-4db7-a632-664176f3fbe1
         config: {}
         dataType: VARCHAR(16777216)
         defaultValue: ""
@@ -158,14 +194,18 @@ operation:
         name: MAKE
         nullable: true
         primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
         uniqueKey: false
       - acceptedValues:
           strictMatch: true
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 86403b96-2674-4b3d-8e6e-4ddd7dac9adf
-          stepCounter: 05288367-5b3d-4439-be61-2ac2fd519576
+          columnCounter: cd31d932-4ae7-4b54-80c0-eca22484c513
+          stepCounter: 2b00e148-51fe-4db7-a632-664176f3fbe1
         config: {}
         dataType: VARCHAR(16777216)
         defaultValue: ""
@@ -173,14 +213,18 @@ operation:
         name: MODEL
         nullable: true
         primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
         uniqueKey: false
       - acceptedValues:
           strictMatch: true
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 521a9583-1e3e-4d3c-9503-cddd8533353d
-          stepCounter: 05288367-5b3d-4439-be61-2ac2fd519576
+          columnCounter: 0376492f-bd6d-4349-9728-64c3b4030a56
+          stepCounter: 2b00e148-51fe-4db7-a632-664176f3fbe1
         config: {}
         dataType: NUMBER(38,0)
         defaultValue: ""
@@ -188,14 +232,18 @@ operation:
         name: EV_FLAG
         nullable: true
         primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
         uniqueKey: false
       - acceptedValues:
           strictMatch: true
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 10fa6811-5bc7-4a5e-a641-fdfce3ae2f11
-          stepCounter: 05288367-5b3d-4439-be61-2ac2fd519576
+          columnCounter: f4e9eaf7-f04d-4829-abe2-6770fb9ce1c5
+          stepCounter: 2b00e148-51fe-4db7-a632-664176f3fbe1
         config: {}
         dataType: NUMBER(38,0)
         defaultValue: ""
@@ -203,14 +251,18 @@ operation:
         name: FRANCHISE_ID
         nullable: true
         primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
         uniqueKey: false
       - acceptedValues:
           strictMatch: true
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 2b34043a-938a-4541-92ad-36c09d730299
-          stepCounter: 05288367-5b3d-4439-be61-2ac2fd519576
+          columnCounter: f1079768-d33a-4e10-b53e-68eb23a10664
+          stepCounter: 2b00e148-51fe-4db7-a632-664176f3fbe1
         config: {}
         dataType: DATE
         defaultValue: ""
@@ -218,6 +270,10 @@ operation:
         name: TRUCK_OPENING_DATE
         nullable: true
         primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
         uniqueKey: false
     join:
       joinCondition: FROM {{ ref('TASTY_POS', 'TRUCK') }}

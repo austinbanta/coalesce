@@ -1,26 +1,31 @@
 fileVersion: 1
-id: b5d2f8ed-58d2-4352-8348-dbcb5f12757e
-name: LOCATION
+id: cd95929b-90ac-476d-94aa-fee15e64b6e9
+name: V_FRANCHISE
 operation:
+  config:
+    insertStrategy: UNION
+    selectDistinct: false
   database: ""
-  dataset: ""
   deployEnabled: true
   description: ""
-  locationName: TASTY_POS
+  isMultisource: false
+  locationName: STG
+  materializationType: view
   metadata:
+    appliedNodeTests: []
     columns:
       - acceptedValues:
           strictMatch: true
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 1d255fb9-5af1-48f3-bc08-64c58dbc3acb
-          stepCounter: b5d2f8ed-58d2-4352-8348-dbcb5f12757e
+          columnCounter: 524fd6b1-e328-4bd0-9a0a-fb682ef7094b
+          stepCounter: cd95929b-90ac-476d-94aa-fee15e64b6e9
         config: {}
-        dataType: NUMBER(19,0)
+        dataType: NUMBER(38,0)
         defaultValue: ""
         description: ""
-        name: LOCATION_ID
+        name: FRANCHISE_ID
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -33,32 +38,13 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 94ed4419-038b-44e9-b372-9c312ed9c521
-          stepCounter: b5d2f8ed-58d2-4352-8348-dbcb5f12757e
-        config: {}
-        dataType: VARCHAR(16777216)
-        defaultValue: ""
-        description: ""
-        name: PLACEKEY
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: ca3528e3-0233-4c63-bd4c-1cc7ef523f25
-          stepCounter: b5d2f8ed-58d2-4352-8348-dbcb5f12757e
+          columnCounter: aa11e960-c06b-47b0-b494-b3adcad81da5
+          stepCounter: cd95929b-90ac-476d-94aa-fee15e64b6e9
         config: {}
         dataType: VARCHAR(16777216)
         defaultValue: ""
         description: ""
-        name: LOCATION
+        name: FIRST_NAME
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -71,8 +57,27 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: dc78fcc5-c848-4a12-9f9f-bc8421299345
-          stepCounter: b5d2f8ed-58d2-4352-8348-dbcb5f12757e
+          columnCounter: c83fd0a0-3a28-4f87-b3fc-17432a2f72c0
+          stepCounter: cd95929b-90ac-476d-94aa-fee15e64b6e9
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: LAST_NAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 500667f1-ca3b-48d3-b9d2-0ebf9cfeadef
+          stepCounter: cd95929b-90ac-476d-94aa-fee15e64b6e9
         config: {}
         dataType: VARCHAR(16777216)
         defaultValue: ""
@@ -90,46 +95,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 33daa7b4-1d30-4e87-a6ba-32ea9c2eb0e1
-          stepCounter: b5d2f8ed-58d2-4352-8348-dbcb5f12757e
-        config: {}
-        dataType: VARCHAR(16777216)
-        defaultValue: ""
-        description: ""
-        name: REGION
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: 89ef50b6-c212-44e3-8b0d-a9a142b8a55b
-          stepCounter: b5d2f8ed-58d2-4352-8348-dbcb5f12757e
-        config: {}
-        dataType: VARCHAR(16777216)
-        defaultValue: ""
-        description: ""
-        name: ISO_COUNTRY_CODE
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: 4473f519-acea-4064-b7a8-552650ba21f3
-          stepCounter: b5d2f8ed-58d2-4352-8348-dbcb5f12757e
+          columnCounter: 0f50bc30-98b5-40dd-bc1d-41a2abbf9d07
+          stepCounter: cd95929b-90ac-476d-94aa-fee15e64b6e9
         config: {}
         dataType: VARCHAR(16777216)
         defaultValue: ""
@@ -142,12 +109,73 @@ operation:
             transform: ""
         transform: ""
         uniqueKey: false
-    join:
-      joinCondition: FROM {{ ref('TASTY_POS', 'LOCATION') }}
-  name: LOCATION
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 92b44232-ab14-47ce-b253-b693c2822f6a
+          stepCounter: cd95929b-90ac-476d-94aa-fee15e64b6e9
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: E_MAIL
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a55fe6f7-c9fe-4a14-a909-fea38c6a2af5
+          stepCounter: cd95929b-90ac-476d-94aa-fee15e64b6e9
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: PHONE_NUMBER
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: |-
+            {{ stage('Override Create SQL') }}
+            	CREATE OR REPLACE VIEW {{ ref('STG', 'V_FRANCHISE')}} AS (
+            		SELECT 
+             "FRANCHISE_ID" AS "FRANCHISE_ID",
+             "FIRST_NAME" AS "FIRST_NAME",
+             LEFT("LAST_NAME",2) AS "LAST_NAME",
+             "CITY" AS "CITY",
+             "COUNTRY" AS "COUNTRY",
+             "E_MAIL" AS "E_MAIL",
+             "PHONE_NUMBER" AS "PHONE_NUMBER"
+             FROM {{ ref('TASTY_POS', 'FRANCHISE') }}
+            	)
+        dependencies:
+          - locationName: TASTY_POS
+            nodeName: FRANCHISE
+        join:
+          joinCondition: FROM {{ ref('TASTY_POS', 'FRANCHISE') }} "FRANCHISE"
+        name: V_FRANCHISE
+        noLinkRefs: []
+  name: V_FRANCHISE
+  overrideSQL: true
   schema: ""
-  sqlType: Source
-  table: LOCATION
-  type: sourceInput
+  sqlType: View
+  type: sql
   version: 1
 type: Node

@@ -1,5 +1,5 @@
 fileVersion: 1
-id: 64e77f2f-36c3-4844-bd55-957fcf9459a3
+id: 6cbfe4e7-780a-409e-ad50-3018201d4113
 name: ORDER_HEADER_14M
 operation:
   database: ""
@@ -14,8 +14,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 400c7bbd-608f-4589-8c65-8386ca0acbdc
-          stepCounter: 64e77f2f-36c3-4844-bd55-957fcf9459a3
+          columnCounter: 57899485-e55e-41d0-9f72-c8972c11deeb
+          stepCounter: 6cbfe4e7-780a-409e-ad50-3018201d4113
         config: {}
         dataType: NUMBER(38,0)
         defaultValue: ""
@@ -23,14 +23,18 @@ operation:
         name: ORDER_ID
         nullable: true
         primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
         uniqueKey: false
       - acceptedValues:
           strictMatch: true
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: cff965c7-3819-4594-8549-3cd251332e99
-          stepCounter: 64e77f2f-36c3-4844-bd55-957fcf9459a3
+          columnCounter: 5a4b89cd-53f6-441b-94aa-bbd2740d8c7c
+          stepCounter: 6cbfe4e7-780a-409e-ad50-3018201d4113
         config: {}
         dataType: NUMBER(38,0)
         defaultValue: ""
@@ -38,14 +42,18 @@ operation:
         name: TRUCK_ID
         nullable: true
         primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
         uniqueKey: false
       - acceptedValues:
           strictMatch: true
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: add41927-6e95-437c-ae85-4371ddde8306
-          stepCounter: 64e77f2f-36c3-4844-bd55-957fcf9459a3
+          columnCounter: ec4cf815-e79a-425a-a6a4-478c371e812e
+          stepCounter: 6cbfe4e7-780a-409e-ad50-3018201d4113
         config: {}
         dataType: FLOAT
         defaultValue: ""
@@ -53,14 +61,18 @@ operation:
         name: LOCATION_ID
         nullable: true
         primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
         uniqueKey: false
       - acceptedValues:
           strictMatch: true
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 2ef00047-b730-4643-a0b9-509bade87bcf
-          stepCounter: 64e77f2f-36c3-4844-bd55-957fcf9459a3
+          columnCounter: 3503dbc6-917d-418a-a7a2-1f31d33c9577
+          stepCounter: 6cbfe4e7-780a-409e-ad50-3018201d4113
         config: {}
         dataType: NUMBER(38,0)
         defaultValue: ""
@@ -68,14 +80,18 @@ operation:
         name: CUSTOMER_ID
         nullable: true
         primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
         uniqueKey: false
       - acceptedValues:
           strictMatch: true
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 0661986b-6dfd-419b-9793-89f9c06cb4dd
-          stepCounter: 64e77f2f-36c3-4844-bd55-957fcf9459a3
+          columnCounter: c40087c4-0c25-4640-ac2c-1ebb4276f14d
+          stepCounter: 6cbfe4e7-780a-409e-ad50-3018201d4113
         config: {}
         dataType: VARCHAR(16777216)
         defaultValue: ""
@@ -83,14 +99,18 @@ operation:
         name: DISCOUNT_ID
         nullable: true
         primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
         uniqueKey: false
       - acceptedValues:
           strictMatch: true
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 75f9b7ac-9f07-4f73-88e4-798175a37393
-          stepCounter: 64e77f2f-36c3-4844-bd55-957fcf9459a3
+          columnCounter: 6151163f-ebc1-4db4-ad63-8522f0b9f451
+          stepCounter: 6cbfe4e7-780a-409e-ad50-3018201d4113
         config: {}
         dataType: NUMBER(38,0)
         defaultValue: ""
@@ -98,14 +118,18 @@ operation:
         name: SHIFT_ID
         nullable: true
         primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
         uniqueKey: false
       - acceptedValues:
           strictMatch: true
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: c57a05e0-59c7-4625-a841-d8ad245284a3
-          stepCounter: 64e77f2f-36c3-4844-bd55-957fcf9459a3
+          columnCounter: 759aff82-de77-45d0-bd3e-efb74fee5fdd
+          stepCounter: 6cbfe4e7-780a-409e-ad50-3018201d4113
         config: {}
         dataType: TIME(9)
         defaultValue: ""
@@ -113,14 +137,18 @@ operation:
         name: SHIFT_START_TIME
         nullable: true
         primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
         uniqueKey: false
       - acceptedValues:
           strictMatch: true
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: f9387525-e91b-40e9-bb5d-5ad0cd74866a
-          stepCounter: 64e77f2f-36c3-4844-bd55-957fcf9459a3
+          columnCounter: 313777fb-ddb6-40b6-b6d7-2d171fe4746b
+          stepCounter: 6cbfe4e7-780a-409e-ad50-3018201d4113
         config: {}
         dataType: TIME(9)
         defaultValue: ""
@@ -128,14 +156,18 @@ operation:
         name: SHIFT_END_TIME
         nullable: true
         primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
         uniqueKey: false
       - acceptedValues:
           strictMatch: true
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 3a6270a7-ef11-4a79-9758-d9da591cbf0d
-          stepCounter: 64e77f2f-36c3-4844-bd55-957fcf9459a3
+          columnCounter: 7bfe2fa5-6f19-4827-a841-2250e6ccd6d0
+          stepCounter: 6cbfe4e7-780a-409e-ad50-3018201d4113
         config: {}
         dataType: VARCHAR(16777216)
         defaultValue: ""
@@ -143,14 +175,18 @@ operation:
         name: ORDER_CHANNEL
         nullable: true
         primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
         uniqueKey: false
       - acceptedValues:
           strictMatch: true
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 92fde8c4-cd42-47a6-9a7b-70cb9680d542
-          stepCounter: 64e77f2f-36c3-4844-bd55-957fcf9459a3
+          columnCounter: b553817f-6011-4cae-a9dc-90d7b2d39055
+          stepCounter: 6cbfe4e7-780a-409e-ad50-3018201d4113
         config: {}
         dataType: TIMESTAMP_NTZ(9)
         defaultValue: ""
@@ -158,14 +194,18 @@ operation:
         name: ORDER_TS
         nullable: true
         primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
         uniqueKey: false
       - acceptedValues:
           strictMatch: true
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 5d953608-06ce-42e3-a4bb-e89cc5bf05e7
-          stepCounter: 64e77f2f-36c3-4844-bd55-957fcf9459a3
+          columnCounter: 137179b7-a488-45d5-8e56-3205c8ffea6e
+          stepCounter: 6cbfe4e7-780a-409e-ad50-3018201d4113
         config: {}
         dataType: VARCHAR(16777216)
         defaultValue: ""
@@ -173,14 +213,18 @@ operation:
         name: SERVED_TS
         nullable: true
         primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
         uniqueKey: false
       - acceptedValues:
           strictMatch: true
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: fa9281f4-04a6-4cf9-a88f-b2aa2b78cee9
-          stepCounter: 64e77f2f-36c3-4844-bd55-957fcf9459a3
+          columnCounter: a27d0530-1957-4803-8646-585f81330d8d
+          stepCounter: 6cbfe4e7-780a-409e-ad50-3018201d4113
         config: {}
         dataType: VARCHAR(3)
         defaultValue: ""
@@ -188,14 +232,18 @@ operation:
         name: ORDER_CURRENCY
         nullable: true
         primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
         uniqueKey: false
       - acceptedValues:
           strictMatch: true
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: f56cbb2c-e366-4d3e-b3e7-943ad8637cb6
-          stepCounter: 64e77f2f-36c3-4844-bd55-957fcf9459a3
+          columnCounter: c2c2873f-716f-444d-8537-5621ef59099f
+          stepCounter: 6cbfe4e7-780a-409e-ad50-3018201d4113
         config: {}
         dataType: NUMBER(38,4)
         defaultValue: ""
@@ -203,14 +251,18 @@ operation:
         name: ORDER_AMOUNT
         nullable: true
         primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
         uniqueKey: false
       - acceptedValues:
           strictMatch: true
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 94fba711-91aa-4989-b2b0-52f832c56000
-          stepCounter: 64e77f2f-36c3-4844-bd55-957fcf9459a3
+          columnCounter: 90621d8d-f16f-47dc-b7fd-567f7462f53e
+          stepCounter: 6cbfe4e7-780a-409e-ad50-3018201d4113
         config: {}
         dataType: VARCHAR(16777216)
         defaultValue: ""
@@ -218,14 +270,18 @@ operation:
         name: ORDER_TAX_AMOUNT
         nullable: true
         primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
         uniqueKey: false
       - acceptedValues:
           strictMatch: true
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 452c5f15-1e83-4aa2-890f-fe8530afed67
-          stepCounter: 64e77f2f-36c3-4844-bd55-957fcf9459a3
+          columnCounter: cb82f4ea-6486-4910-b733-bc6a6faa52d1
+          stepCounter: 6cbfe4e7-780a-409e-ad50-3018201d4113
         config: {}
         dataType: VARCHAR(16777216)
         defaultValue: ""
@@ -233,14 +289,18 @@ operation:
         name: ORDER_DISCOUNT_AMOUNT
         nullable: true
         primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
         uniqueKey: false
       - acceptedValues:
           strictMatch: true
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: c585ca3b-8703-4da9-b071-14ac70134a1f
-          stepCounter: 64e77f2f-36c3-4844-bd55-957fcf9459a3
+          columnCounter: 3c33e3cb-d810-461d-928a-a0b1682f9049
+          stepCounter: 6cbfe4e7-780a-409e-ad50-3018201d4113
         config: {}
         dataType: NUMBER(38,4)
         defaultValue: ""
@@ -248,6 +308,10 @@ operation:
         name: ORDER_TOTAL
         nullable: true
         primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
         uniqueKey: false
     join:
       joinCondition: FROM {{ ref('TASTY_POS', 'ORDER_HEADER_14M') }}
