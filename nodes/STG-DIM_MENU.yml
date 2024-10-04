@@ -47,6 +47,7 @@ operation:
         config: {}
         dataType: NUMBER(19,0)
         description: ""
+        isBusinessKey: true
         name: MENU_ID
         nullable: true
         sourceColumnReferences:
