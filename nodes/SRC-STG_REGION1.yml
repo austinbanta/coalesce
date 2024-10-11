@@ -1,0 +1,157 @@
+steps:
+  STG_REGION1-203ff557-c787-4a65-9b89-2c9342e387f5:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: SRC
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: daf548ac-cb47-46ca-82ee-c7d881352fa1
+              stepCounter: 203ff557-c787-4a65-9b89-2c9342e387f5
+            dataType: NUMBER
+            description: ""
+            name: DIM_REGION_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 740e5341-0237-4115-9230-9078b57f1679
+                    stepCounter: 7cd3c66e-baff-4b09-bff0-426c45c39a94
+                transform: ""
+          - columnReference:
+              columnCounter: 45a15802-d34c-4587-9073-0c703ce03944
+              stepCounter: 203ff557-c787-4a65-9b89-2c9342e387f5
+            dataType: NUMBER(38,0)
+            description: ""
+            name: R_REGIONKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5b1a033e-0d66-45d9-94c2-618a027b18b0
+                    stepCounter: 7cd3c66e-baff-4b09-bff0-426c45c39a94
+                transform: ""
+          - columnReference:
+              columnCounter: ca09f8b7-029a-4554-8cdd-260838cdff24
+              stepCounter: 203ff557-c787-4a65-9b89-2c9342e387f5
+            dataType: VARCHAR(25)
+            description: ""
+            name: R_NAME
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 36703380-77cf-4b31-8736-0e720ac92842
+                    stepCounter: 7cd3c66e-baff-4b09-bff0-426c45c39a94
+                transform: ""
+          - columnReference:
+              columnCounter: da7a1057-db30-42dc-9407-c41f114fcd0d
+              stepCounter: 203ff557-c787-4a65-9b89-2c9342e387f5
+            dataType: VARCHAR(152)
+            description: ""
+            name: R_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d374fa22-ee8e-43fe-9a90-24a264d0207f
+                    stepCounter: 7cd3c66e-baff-4b09-bff0-426c45c39a94
+                transform: ""
+          - columnReference:
+              columnCounter: 505ec955-a706-4af1-9a49-d1ab30bcdfa5
+              stepCounter: 203ff557-c787-4a65-9b89-2c9342e387f5
+            dataType: NUMBER
+            description: ""
+            name: SYSTEM_VERSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0e9eb38d-975e-4109-8864-068cfb09d338
+                    stepCounter: 7cd3c66e-baff-4b09-bff0-426c45c39a94
+                transform: ""
+          - columnReference:
+              columnCounter: bed8b8bd-c0a4-41b6-b454-fd9d9a6ea01b
+              stepCounter: 203ff557-c787-4a65-9b89-2c9342e387f5
+            dataType: VARCHAR
+            description: ""
+            name: SYSTEM_CURRENT_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 81f3ceca-937c-4d86-b7b9-70a7e5f07c2b
+                    stepCounter: 7cd3c66e-baff-4b09-bff0-426c45c39a94
+                transform: ""
+          - columnReference:
+              columnCounter: 06ebf2e0-b180-4d51-882a-ad9d6630c611
+              stepCounter: 203ff557-c787-4a65-9b89-2c9342e387f5
+            dataType: TIMESTAMP
+            description: ""
+            name: SYSTEM_START_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: bdf99d88-d035-460e-a0c5-c697be31174a
+                    stepCounter: 7cd3c66e-baff-4b09-bff0-426c45c39a94
+                transform: ""
+          - columnReference:
+              columnCounter: de12a188-2130-425f-9eaa-6e577d9438a4
+              stepCounter: 203ff557-c787-4a65-9b89-2c9342e387f5
+            dataType: TIMESTAMP
+            description: ""
+            name: SYSTEM_END_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 126e0cae-164b-4136-b12d-d128ca0ef332
+                    stepCounter: 7cd3c66e-baff-4b09-bff0-426c45c39a94
+                transform: ""
+          - columnReference:
+              columnCounter: e25e38e4-128b-4670-bead-e15aa6de45d3
+              stepCounter: 203ff557-c787-4a65-9b89-2c9342e387f5
+            dataType: TIMESTAMP
+            description: ""
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 09d31e35-1adf-437b-9b5c-794e21e4d72d
+                    stepCounter: 7cd3c66e-baff-4b09-bff0-426c45c39a94
+                transform: ""
+          - columnReference:
+              columnCounter: 8ecfd349-efb4-4179-b097-d275c2550d4f
+              stepCounter: 203ff557-c787-4a65-9b89-2c9342e387f5
+            dataType: TIMESTAMP
+            description: ""
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f27019eb-4498-40db-9ec1-6981bcf6adee
+                    stepCounter: 7cd3c66e-baff-4b09-bff0-426c45c39a94
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SRC
+                nodeName: DIM_REGION
+            join:
+              joinCondition: FROM {{ ref('SRC', 'DIM_REGION') }} "DIM_REGION"
+            name: STG_REGION1
+            noLinkRefs: []
+      name: STG_REGION1
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 203ff557-c787-4a65-9b89-2c9342e387f5
