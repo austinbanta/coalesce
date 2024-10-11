@@ -1,7 +1,0 @@
-excludeSelector: ""
-fileVersion: 1
-id: "33"
-includeSelector: "+{ location: STG name: FCT_ORDERS }"
-name: Hands on Lab Testing - Job1
-type: Job
-version: 2
