@@ -1,130 +1,144 @@
-steps:
-  STG_SUPPLIER-17:
-    operation:
-      config:
-        insertStrategy: INSERT
-        postSQL: ""
-        preSQL: ""
-        testsEnabled: true
-        truncateBefore: true
-      database: ""
-      dependencies: []
-      deployEnabled: true
-      description: ""
-      isDataVault: false
-      isMultisource: false
-      locationID: ""
-      locationName: SRC
-      materializationType: table
-      metadata:
-        appliedNodeTests: []
-        columns:
-          - columnReference:
-              columnCounter: "131"
-              stepCounter: "17"
-            dataType: NUMBER(38,0)
-            description: ""
-            hashDetails: null
-            name: S_SUPPKEY
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 55
-                    stepCounter: "8"
-                transform: ""
-          - columnReference:
-              columnCounter: "132"
-              stepCounter: "17"
-            dataType: VARCHAR(25)
-            description: ""
-            hashDetails: null
-            name: S_NAME
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 56
-                    stepCounter: "8"
-                transform: ""
-          - columnReference:
-              columnCounter: "133"
-              stepCounter: "17"
-            dataType: VARCHAR(40)
-            description: ""
-            hashDetails: null
-            name: S_ADDRESS
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 57
-                    stepCounter: "8"
-                transform: ""
-          - columnReference:
-              columnCounter: "134"
-              stepCounter: "17"
-            dataType: NUMBER(38,0)
-            description: ""
-            hashDetails: null
-            name: S_NATIONKEY
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 58
-                    stepCounter: "8"
-                transform: ""
-          - columnReference:
-              columnCounter: "135"
-              stepCounter: "17"
-            dataType: VARCHAR(15)
-            description: ""
-            hashDetails: null
-            name: S_PHONE
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 59
-                    stepCounter: "8"
-                transform: ""
-          - columnReference:
-              columnCounter: "136"
-              stepCounter: "17"
-            dataType: NUMBER(12,2)
-            description: ""
-            hashDetails: null
-            name: S_ACCTBAL
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 60
-                    stepCounter: "8"
-                transform: ""
-          - columnReference:
-              columnCounter: "137"
-              stepCounter: "17"
-            dataType: VARCHAR(101)
-            description: ""
-            hashDetails: null
-            name: S_COMMENT
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 61
-                    stepCounter: "8"
-                transform: ""
-        cteString: ""
-        enabledColumnTestIDs: []
-        sourceMapping:
-          - customSQL:
-              customSQL: ""
-            dependencies:
-              - locationName: SRC
-                nodeName: SUPPLIER
-            join:
-              joinCondition: FROM {{ ref('SRC', 'SUPPLIER') }} "SUPPLIER"
-            name: STG_SUPPLIER
-            noLinkRefs: []
-      name: STG_SUPPLIER
-      overrideSQL: false
-      schema: ""
-      sqlType: Stage
-      type: sql
-    stepCounter: "17"
+fileVersion: 1
+id: "17"
+name: STG_SUPPLIER
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: SRC
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: "131"
+          stepCounter: "17"
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        hashDetails: null
+        name: S_SUPPKEY
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "55"
+                stepCounter: "8"
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: "132"
+          stepCounter: "17"
+        config: {}
+        dataType: VARCHAR(25)
+        description: ""
+        hashDetails: null
+        name: S_NAME
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "56"
+                stepCounter: "8"
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: "133"
+          stepCounter: "17"
+        config: {}
+        dataType: VARCHAR(40)
+        description: ""
+        hashDetails: null
+        name: S_ADDRESS
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "57"
+                stepCounter: "8"
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: "134"
+          stepCounter: "17"
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        hashDetails: null
+        name: S_NATIONKEY
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "58"
+                stepCounter: "8"
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: "135"
+          stepCounter: "17"
+        config: {}
+        dataType: VARCHAR(15)
+        description: ""
+        hashDetails: null
+        name: S_PHONE
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "59"
+                stepCounter: "8"
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: "136"
+          stepCounter: "17"
+        config: {}
+        dataType: NUMBER(12,2)
+        description: ""
+        hashDetails: null
+        name: S_ACCTBAL
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "60"
+                stepCounter: "8"
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: "137"
+          stepCounter: "17"
+        config: {}
+        dataType: VARCHAR(101)
+        description: ""
+        hashDetails: null
+        name: S_COMMENT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "61"
+                stepCounter: "8"
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: SUPPLIER
+        join:
+          joinCondition: FROM {{ ref('SRC', 'SUPPLIER') }} "SUPPLIER"
+        name: STG_SUPPLIER
+        noLinkRefs: []
+  name: STG_SUPPLIER
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

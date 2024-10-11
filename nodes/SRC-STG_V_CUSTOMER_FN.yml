@@ -1,234 +1,264 @@
-steps:
-  STG_V_CUSTOMER_FN-18:
-    operation:
-      config:
-        insertStrategy: INSERT
-        postSQL: ""
-        preSQL: ""
-        testsEnabled: true
-        truncateBefore: true
-      database: ""
-      dependencies: []
-      deployEnabled: true
-      description: ""
-      isDataVault: false
-      isMultisource: false
-      locationID: ""
-      locationName: SRC
-      materializationType: table
-      metadata:
-        appliedNodeTests: []
-        columns:
-          - columnReference:
-              columnCounter: "138"
-              stepCounter: "18"
-            dataType: NUMBER(38,0)
-            description: ""
-            hashDetails: null
-            name: DIM_CUSTOMER_KEY
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 62
-                    stepCounter: "9"
-                transform: ""
-          - columnReference:
-              columnCounter: "139"
-              stepCounter: "18"
-            dataType: NUMBER(38,0)
-            description: ""
-            hashDetails: null
-            name: C_CUSTKEY
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 63
-                    stepCounter: "9"
-                transform: ""
-          - columnReference:
-              columnCounter: "140"
-              stepCounter: "18"
-            dataType: VARCHAR(25)
-            description: ""
-            hashDetails: null
-            name: C_NAME
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 64
-                    stepCounter: "9"
-                transform: ""
-          - columnReference:
-              columnCounter: "141"
-              stepCounter: "18"
-            dataType: VARCHAR(40)
-            description: ""
-            hashDetails: null
-            name: C_ADDRESS
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 65
-                    stepCounter: "9"
-                transform: ""
-          - columnReference:
-              columnCounter: "142"
-              stepCounter: "18"
-            dataType: NUMBER(38,0)
-            description: ""
-            hashDetails: null
-            name: C_NATIONKEY
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 66
-                    stepCounter: "9"
-                transform: ""
-          - columnReference:
-              columnCounter: "143"
-              stepCounter: "18"
-            dataType: NUMBER(12,2)
-            description: ""
-            hashDetails: null
-            name: C_ACCTBAL
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 67
-                    stepCounter: "9"
-                transform: ""
-          - columnReference:
-              columnCounter: "144"
-              stepCounter: "18"
-            dataType: VARCHAR(117)
-            description: ""
-            hashDetails: null
-            name: C_COMMENT
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 68
-                    stepCounter: "9"
-                transform: ""
-          - columnReference:
-              columnCounter: "145"
-              stepCounter: "18"
-            dataType: NUMBER(38,0)
-            description: ""
-            hashDetails: null
-            name: SYSTEM_VERSION
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 69
-                    stepCounter: "9"
-                transform: ""
-          - columnReference:
-              columnCounter: "146"
-              stepCounter: "18"
-            dataType: VARCHAR(16777216)
-            description: ""
-            hashDetails: null
-            name: SYSTEM_CURRENT_FLAG
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 70
-                    stepCounter: "9"
-                transform: ""
-          - columnReference:
-              columnCounter: "147"
-              stepCounter: "18"
-            dataType: TIMESTAMP_NTZ(9)
-            description: ""
-            hashDetails: null
-            name: SYSTEM_START_DATE
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 71
-                    stepCounter: "9"
-                transform: ""
-          - columnReference:
-              columnCounter: "148"
-              stepCounter: "18"
-            dataType: TIMESTAMP_NTZ(9)
-            description: ""
-            hashDetails: null
-            name: SYSTEM_END_DATE
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 72
-                    stepCounter: "9"
-                transform: ""
-          - columnReference:
-              columnCounter: "149"
-              stepCounter: "18"
-            dataType: TIMESTAMP_NTZ(9)
-            description: ""
-            hashDetails: null
-            name: SYSTEM_CREATE_DATE
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 73
-                    stepCounter: "9"
-                transform: ""
-          - columnReference:
-              columnCounter: "150"
-              stepCounter: "18"
-            dataType: TIMESTAMP_NTZ(9)
-            description: ""
-            hashDetails: null
-            name: SYSTEM_UPDATE_DATE
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 74
-                    stepCounter: "9"
-                transform: ""
-          - columnReference:
-              columnCounter: "151"
-              stepCounter: "18"
-            dataType: NUMBER(38,0)
-            description: ""
-            hashDetails: null
-            name: New_Col
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 75
-                    stepCounter: "9"
-                transform: ""
-          - columnReference:
-              columnCounter: "152"
-              stepCounter: "18"
-            dataType: VARCHAR(15)
-            description: ""
-            hashDetails: null
-            name: C_PHONE
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 76
-                    stepCounter: "9"
-                transform: ""
-        cteString: ""
-        enabledColumnTestIDs: []
-        sourceMapping:
-          - customSQL:
-              customSQL: ""
-            dependencies:
-              - locationName: SRC
-                nodeName: V_CUSTOMER_FN
-            join:
-              joinCondition: FROM {{ ref('SRC', 'V_CUSTOMER_FN') }} "V_CUSTOMER_FN"
-            name: STG_V_CUSTOMER_FN
-            noLinkRefs: []
-      name: STG_V_CUSTOMER_FN
-      overrideSQL: false
-      schema: ""
-      sqlType: Stage
-      type: sql
-    stepCounter: "18"
+fileVersion: 1
+id: "18"
+name: STG_V_CUSTOMER_FN
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: SRC
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: "138"
+          stepCounter: "18"
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        hashDetails: null
+        name: DIM_CUSTOMER_KEY
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "62"
+                stepCounter: "9"
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: "139"
+          stepCounter: "18"
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        hashDetails: null
+        name: C_CUSTKEY
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "63"
+                stepCounter: "9"
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: "140"
+          stepCounter: "18"
+        config: {}
+        dataType: VARCHAR(25)
+        description: ""
+        hashDetails: null
+        name: C_NAME
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "64"
+                stepCounter: "9"
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: "141"
+          stepCounter: "18"
+        config: {}
+        dataType: VARCHAR(40)
+        description: ""
+        hashDetails: null
+        name: C_ADDRESS
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "65"
+                stepCounter: "9"
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: "142"
+          stepCounter: "18"
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        hashDetails: null
+        name: C_NATIONKEY
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "66"
+                stepCounter: "9"
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: "143"
+          stepCounter: "18"
+        config: {}
+        dataType: NUMBER(12,2)
+        description: ""
+        hashDetails: null
+        name: C_ACCTBAL
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "67"
+                stepCounter: "9"
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: "144"
+          stepCounter: "18"
+        config: {}
+        dataType: VARCHAR(117)
+        description: ""
+        hashDetails: null
+        name: C_COMMENT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "68"
+                stepCounter: "9"
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: "145"
+          stepCounter: "18"
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        hashDetails: null
+        name: SYSTEM_VERSION
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "69"
+                stepCounter: "9"
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: "146"
+          stepCounter: "18"
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        hashDetails: null
+        name: SYSTEM_CURRENT_FLAG
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "70"
+                stepCounter: "9"
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: "147"
+          stepCounter: "18"
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        description: ""
+        hashDetails: null
+        name: SYSTEM_START_DATE
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "71"
+                stepCounter: "9"
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: "148"
+          stepCounter: "18"
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        description: ""
+        hashDetails: null
+        name: SYSTEM_END_DATE
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "72"
+                stepCounter: "9"
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: "149"
+          stepCounter: "18"
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        description: ""
+        hashDetails: null
+        name: SYSTEM_CREATE_DATE
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "73"
+                stepCounter: "9"
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: "150"
+          stepCounter: "18"
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        description: ""
+        hashDetails: null
+        name: SYSTEM_UPDATE_DATE
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "74"
+                stepCounter: "9"
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: "151"
+          stepCounter: "18"
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        hashDetails: null
+        name: New_Col
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "75"
+                stepCounter: "9"
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: "152"
+          stepCounter: "18"
+        config: {}
+        dataType: VARCHAR(15)
+        description: ""
+        hashDetails: null
+        name: C_PHONE
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "76"
+                stepCounter: "9"
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: V_CUSTOMER_FN
+        join:
+          joinCondition: FROM {{ ref('SRC', 'V_CUSTOMER_FN') }} "V_CUSTOMER_FN"
+        name: STG_V_CUSTOMER_FN
+        noLinkRefs: []
+  name: STG_V_CUSTOMER_FN
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node
