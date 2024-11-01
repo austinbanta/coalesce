@@ -1,11 +1,11 @@
 fileVersion: 1
-id: Stage
+id: "88"
 isDisabled: false
 metadata:
   defaultStorageLocation: null
   error: null
-  nodeMetadataSpec: |
-    capitalized: Stage
+  nodeMetadataSpec: |-
+    capitalized: Copy of Stage
     short: STG
     plural: Stages
     tagColor: '#2EB67D'
@@ -21,11 +21,11 @@ metadata:
         isRequired: true
 
       - type: multisourceToggle
-        enableIf: "{% if node.materializationType == 'table' %} true {% else %} false {% endif %}" 
+        enableIf: "{% if node.materializationType == 'table' %} true {% else %} false {% endif %}"
 
       - type: overrideSQLToggle
         enableIf: "{% if node.materializationType == 'view' %} true {% else %} false {% endif %}"
-        
+
       - displayName: Multi Source Strategy
         attributeName: insertStrategy
         type: dropdownSelector
@@ -46,7 +46,7 @@ metadata:
         attributeName: testsEnabled
         type: toggleButton
         default: true
-        
+
       - displayName: Pre-SQL
         attributeName: preSQL
         type: textBox
@@ -58,5 +58,20 @@ metadata:
         type: textBox
         syntax: sql
         isRequired: false
-name: Stage
+
+
+    mappingColumns:
+
+    - headerName: data model owner
+      attributeName: myMappingColumn
+      type: textBox
+
+    - headerName: pii data
+      attributeName: techDesc
+      type: textBox
+      
+    - headerName: Ghost Record
+      attributeName: ghostRecord
+      type: textBox
+name: Copy of Stage
 type: NodeType
