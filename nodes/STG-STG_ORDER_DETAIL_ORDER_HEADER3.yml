@@ -21,7 +21,9 @@ operation:
         columnReference:
           columnCounter: c61af7a1-681f-4238-a1eb-e011c5b46980
           stepCounter: 1d15f108-3098-4415-91eb-ba0068728e13
-        config: {}
+        config:
+          myMappingColumn: test
+          techDesc: test
         dataType: NUMBER(38,0)
         description: ""
         name: ORDER_DETAIL_ID
