@@ -5,4 +5,3 @@ includeSelector: |
   +{ location: STG name: WRK_MENU }+
 name: Menu Refresh
 type: Job
-version: 2
