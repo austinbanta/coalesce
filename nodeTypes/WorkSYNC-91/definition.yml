@@ -102,5 +102,5 @@ metadata:
         syntax: sql
         isRequired: false
         enableIf: "{% if node.materializationType == 'view' %} false {% else %} true {% endif %}"
-name: Work w/ Import
+name: Work SYNC
 type: NodeType
