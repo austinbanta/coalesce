@@ -1,0 +1,43 @@
+fileVersion: 1
+id: ab143555-e5f6-4d90-9d93-c45aa377a54f
+name: WRK_NODE2
+operation:
+  config:
+    groupByAll: false
+    insertStrategy: INSERT
+    orderby: false
+    orderbycolumn:
+      items:
+        - {}
+    postSQL: ""
+    preSQL: ""
+    selectDistinct: false
+    testsEnabled: false
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: STG
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns: []
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies: []
+        join:
+          joinCondition: ""
+        name: WRK_NODE2
+        noLinkRefs: []
+  name: WRK_NODE2
+  overrideSQL: false
+  schema: ""
+  sqlType: "91"
+  type: sql
+  version: 1
+type: Node
