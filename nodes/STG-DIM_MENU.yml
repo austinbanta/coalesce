@@ -1,0 +1,456 @@
+fileVersion: 1
+id: cfaa0e56-d309-4c51-9315-0744744b1a3a
+name: DIM_MENU
+operation:
+  config:
+    groupByAll: false
+    insertStrategy: UNION ALL
+    orderby: false
+    orderbycolumn:
+      items:
+        - {}
+    postSQL: ""
+    preSQL: ""
+    selectDistinct: false
+    testsEnabled: false
+    truncateBefore: false
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: STG
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1cfe250a-b47c-467c-af61-633acbbfb8e6
+          stepCounter: cfaa0e56-d309-4c51-9315-0744744b1a3a
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        isSurrogateKey: true
+        name: DIM_MENU_KEY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: af6e2db7-45db-42b5-a55d-8d6377e12d3e
+          stepCounter: cfaa0e56-d309-4c51-9315-0744744b1a3a
+        config: {}
+        dataType: NUMBER(19,0)
+        description: |-
+          - Represents the unique identifier for each menu item, directly sourced from the 'MENU' table in the 'TASTY_POS' database.
+          - This column is used in downstream calculations and joins to link with other tables, such as order details or sales records.
+          - This column serves as a primary key in the current node, ensuring data integrity and efficient retrieval.
+        isBusinessKey: true
+        name: MENU_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 327fd9a8-e35b-4263-b84c-eddbf7cd0c51
+                stepCounter: eb05e498-6d03-49a7-b496-6ac1c38bab13
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1ad600f2-b211-4c04-ab36-9c87c713c431
+          stepCounter: cfaa0e56-d309-4c51-9315-0744744b1a3a
+        config: {}
+        dataType: NUMBER(38,0)
+        description: |-
+          - Represents the unique identifier for the type of menu, extracted from the 'MENU' table in the 'TASTY_POS' database.
+          - This column is used in conjunction with the 'MENU_TYPE' column to categorize menus based on their type.
+          - It acts as a foreign key, referencing the corresponding primary key in the 'MENU_TYPE' table, allowing for data relationships.
+        name: MENU_TYPE_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5903019c-066b-4f06-932a-cd45efdff45f
+                stepCounter: eb05e498-6d03-49a7-b496-6ac1c38bab13
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: fec53c73-88a1-4a29-9f4c-edaefc66215f
+          stepCounter: cfaa0e56-d309-4c51-9315-0744744b1a3a
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: |-
+          - Represents the type of menu, derived from the 'MENU_TYPE' column in the 'MENU' table, converted to uppercase for consistency.
+          - This column provides a descriptive label for the menu type, allowing for filtering and analysis of menu data.
+          - The transformation ensures data consistency across different sources and facilitates comparisons and reporting.
+        name: MENU_TYPE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: eb6e7e8c-13c1-4439-a246-67ce182c17c3
+                stepCounter: eb05e498-6d03-49a7-b496-6ac1c38bab13
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3f937143-eb8d-4fc2-b850-8f82419278c9
+          stepCounter: cfaa0e56-d309-4c51-9315-0744744b1a3a
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: |-
+          - Represents the brand name of the food truck associated with the menu, extracted from the 'TRUCK_BRAND_NAME' column in the 'MENU' table and converted to uppercase.
+          - This column provides information about the origin of the food truck, allowing for analysis of menu items based on the truck brand.
+          - The uppercase transformation standardizes the brand names for consistent reporting and analysis.
+        name: TRUCK_BRAND_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f57a1071-0518-4e16-a49b-a985a8634295
+                stepCounter: eb05e498-6d03-49a7-b496-6ac1c38bab13
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 81ae2e35-5796-48ca-b149-9468bbfc948d
+          stepCounter: cfaa0e56-d309-4c51-9315-0744744b1a3a
+        config: {}
+        dataType: NUMBER(38,0)
+        description: |-
+          - Represents the unique identifier for each specific menu item, directly sourced from the 'MENU_ITEM_ID' column in the 'MENU' table.
+          - This column is used in downstream joins and aggregations to link menu items with other relevant data, such as orders or sales information.
+          - This column acts as a primary key in the current node, guaranteeing the uniqueness of each menu item.
+        name: MENU_ITEM_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 48be370a-cc72-4dea-beb0-5e4b2324e011
+                stepCounter: eb05e498-6d03-49a7-b496-6ac1c38bab13
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 041d7639-4b4c-4d7c-a4b7-f1c3369d1f28
+          stepCounter: cfaa0e56-d309-4c51-9315-0744744b1a3a
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: |-
+          - Represents the name of the menu item, sourced from the 'MENU_ITEM_NAME' column in the 'MENU' table and converted to uppercase.
+          - This column provides a descriptive label for each menu item, allowing for easy identification and filtering in reports or dashboards.
+          - The uppercase transformation ensures consistency across different sources and simplifies analysis by eliminating case sensitivity.
+        isChangeTracking: true
+        name: MENU_ITEM_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: fceef6ab-f97d-4d0e-ae17-5e923a05fd46
+                stepCounter: eb05e498-6d03-49a7-b496-6ac1c38bab13
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: caabefef-e8d9-424e-bfa9-dd7543ed3681
+          stepCounter: cfaa0e56-d309-4c51-9315-0744744b1a3a
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: |-
+          - Represents the category of the menu item, obtained from the 'ITEM_CATEGORY' column in the 'MENU' table and converted to uppercase.
+          - This column allows for grouping and analysis of menu items by their category, providing insights into menu composition and customer preferences.
+          - The uppercase transformation ensures consistency and simplifies filtering and reporting.
+        isChangeTracking: true
+        name: ITEM_CATEGORY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 35a8a7ac-f94b-4638-942d-0f08928c9f26
+                stepCounter: eb05e498-6d03-49a7-b496-6ac1c38bab13
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8d690d97-73f0-465b-ac0a-91110fc2ce70
+          stepCounter: cfaa0e56-d309-4c51-9315-0744744b1a3a
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: |-
+          - Represents the subcategory of the menu item, sourced from the 'ITEM_SUBCATEGORY' column in the 'MENU' table and converted to uppercase.
+          - This column provides a more granular categorization of menu items within their respective categories, allowing for detailed analysis and segmentation.
+          - The uppercase transformation standardizes the data and ensures consistent results across different analyses.
+        name: ITEM_SUBCATEGORY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c938d61d-5513-4f8d-bc00-eaf7d9c3469d
+                stepCounter: eb05e498-6d03-49a7-b496-6ac1c38bab13
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: eeeeffb3-a32a-4645-abe7-b6b917613ada
+          stepCounter: cfaa0e56-d309-4c51-9315-0744744b1a3a
+        config: {}
+        dataType: NUMBER(38,4)
+        description: |-
+          - Represents the cost of goods associated with a menu item, directly sourced from the 'COST_OF_GOODS_USD' column in the 'MENU' table.
+          - This column is used in downstream calculations for profitability analysis and to determine the cost per piece of each menu item.
+          - The datatype 'NUMBER(38,4)' indicates the cost is represented as a decimal number with a precision of 38 digits and 4 decimal places, capturing fine-grained cost information.
+        name: COST_OF_GOODS_USD
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5c31127f-0068-42c1-b136-2c617da70836
+                stepCounter: eb05e498-6d03-49a7-b496-6ac1c38bab13
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a8f8a599-a237-438b-a36e-8571af2ca9e7
+          stepCounter: cfaa0e56-d309-4c51-9315-0744744b1a3a
+        config: {}
+        dataType: NUMBER(38,4)
+        description: |-
+          - Represents the selling price of a menu item in US Dollars, directly sourced from the 'SALE_PRICE_USD' column in the 'MENU' table.
+          - This column is used in revenue calculations and analysis to understand the pricing strategy for different menu items.
+          - The datatype 'NUMBER(38,4)' ensures the ability to store accurate pricing information with sufficient decimal places.
+        name: SALE_PRICE_USD
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 96a66ff4-9a14-4a69-b696-29f1b16bd96b
+                stepCounter: eb05e498-6d03-49a7-b496-6ac1c38bab13
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 888b0091-217d-4d2b-a87d-728e4b290d37
+          stepCounter: cfaa0e56-d309-4c51-9315-0744744b1a3a
+        config: {}
+        dataType: VARIANT
+        description: |-
+          - Represents the health metrics associated with a menu item, directly sourced from the 'MENU_ITEM_HEALTH_METRICS_OBJ' column in the 'MENU' table.
+          - This column stores information about the nutritional content, dietary restrictions, and other health-related aspects of a menu item.
+          - The datatype 'VARIANT' provides flexibility to store diverse data structures related to health metrics, allowing for detailed analysis of menu item health characteristics.
+        name: MENU_ITEM_HEALTH_METRICS_OBJ
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ce06cb40-3132-46b2-87c3-086bafbad671
+                stepCounter: eb05e498-6d03-49a7-b496-6ac1c38bab13
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ba7427c7-7b06-441b-869e-3249c04fec2d
+          stepCounter: cfaa0e56-d309-4c51-9315-0744744b1a3a
+        config: {}
+        dataType: STRING
+        description: |-
+          - Represents the list of ingredients for the menu item, extracted from the 'MENU_ITEM_HEALTH_METRICS_OBJ' column using the 'menu_item_health_metrics_ingredients' key and converted to a string.
+          - This column provides a detailed breakdown of the ingredients used in each menu item, enabling analysis of nutritional content, allergen identification, and ingredient sourcing.
+          - The transformation allows for easier manipulation and analysis of the ingredients information for downstream applications.
+        name: menu_item_health_metrics_ingredients
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 85a43e00-8cb9-43f1-b1af-68f325910db6
+                stepCounter: eb05e498-6d03-49a7-b496-6ac1c38bab13
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5f6b0f18-6c7c-4267-8186-4a0a0c966196
+          stepCounter: cfaa0e56-d309-4c51-9315-0744744b1a3a
+        config: {}
+        dataType: STRING
+        description: |-
+          - Represents whether a menu item is dairy-free, extracted from the 'MENU_ITEM_HEALTH_METRICS_OBJ' column using the 'is_dairy_free_flag' key and converted to a string.
+          - This column allows for filtering menu items based on dietary restrictions, ensuring customers with dairy allergies can easily identify suitable options.
+          - The transformation provides a clear and concise representation of the dairy-free status, facilitating quick and accurate filtering and analysis.
+        name: menu_item_health_metrics_is_dairy_free_flag
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: defffdab-2e7b-49af-9a69-4871753ac7f6
+                stepCounter: eb05e498-6d03-49a7-b496-6ac1c38bab13
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d254d25b-1472-4420-bd32-40616d10319c
+          stepCounter: cfaa0e56-d309-4c51-9315-0744744b1a3a
+        config: {}
+        dataType: STRING
+        description: |-
+          - Represents whether a menu item is gluten-free, extracted from the 'MENU_ITEM_HEALTH_METRICS_OBJ' column using the 'is_gluten_free_flag' key and converted to a string.
+          - This column aids in filtering menu items based on dietary restrictions, allowing customers with gluten sensitivities to choose appropriate options.
+          - The transformation simplifies the representation of gluten-free status, making it easier to analyze and use in filtering and reporting.
+        name: menu_item_health_metrics_is_gluten_free_flag
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e019f2a1-64a2-4090-8a1f-afa0a2f6e085
+                stepCounter: eb05e498-6d03-49a7-b496-6ac1c38bab13
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a4afe95e-e292-4404-b091-6cc08b3b5970
+          stepCounter: cfaa0e56-d309-4c51-9315-0744744b1a3a
+        config: {}
+        dataType: STRING
+        description: |-
+          - Represents whether a menu item is considered healthy, extracted from the 'MENU_ITEM_HEALTH_METRICS_OBJ' column using the 'is_healthy_flag' key and converted to a string.
+          - This column allows for filtering and analysis of menu items based on their healthfulness, providing insights into customer preferences and potential dietary choices.
+          - The transformation ensures a clear and straightforward representation of the healthy flag, simplifying analysis and downstream applications.
+        name: menu_item_health_metrics_is_healthy_flag
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ae12a701-9274-4708-ab9f-1071098c8ff8
+                stepCounter: eb05e498-6d03-49a7-b496-6ac1c38bab13
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 94397d84-03a8-40e7-88d1-7268031147cd
+          stepCounter: cfaa0e56-d309-4c51-9315-0744744b1a3a
+        config: {}
+        dataType: STRING
+        description: |-
+          - Represents whether a menu item is nut-free, extracted from the 'MENU_ITEM_HEALTH_METRICS_OBJ' column using the 'is_nut_free_flag' key and converted to a string.
+          - This column assists in filtering menu items based on dietary restrictions, ensuring customers with nut allergies can identify safe options.
+          - The transformation provides a clear and easily interpretable representation of the nut-free status, facilitating filtering and analysis.
+        name: menu_item_health_metrics_is_nut_free_flag
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a0668b0a-0b2d-401d-9cf7-1ddfccfb01e0
+                stepCounter: eb05e498-6d03-49a7-b496-6ac1c38bab13
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8fb0808d-e28e-4a61-b92d-ca2825010f19
+          stepCounter: cfaa0e56-d309-4c51-9315-0744744b1a3a
+        config: {}
+        dataType: DOUBLE
+        description: |-
+          - Represents the unique identifier for the menu item, extracted from the 'MENU_ITEM_HEALTH_METRICS_OBJ' column using the 'menu_item_id' key and converted to a double.
+          - This column serves as a cross-reference to the 'MENU_ITEM_ID' column, ensuring data consistency and allowing for accurate linking of health metrics to the corresponding menu item.
+          - The transformation facilitates analysis and comparison by ensuring data consistency and compatibility with other datasets.
+        name: menu_item_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5972ae7b-3f47-43a1-b9a4-2cec0b71efc4
+                stepCounter: eb05e498-6d03-49a7-b496-6ac1c38bab13
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ef28067d-5890-4780-a4dc-ea075a3dc2c0
+          stepCounter: cfaa0e56-d309-4c51-9315-0744744b1a3a
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        isSystemVersion: true
+        name: SYSTEM_VERSION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 714e1fce-9be4-4471-9716-1bf86667eae4
+          stepCounter: cfaa0e56-d309-4c51-9315-0744744b1a3a
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        isSystemCurrentFlag: true
+        name: SYSTEM_CURRENT_FLAG
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0c6780ee-29a4-46f3-a2db-4af35cb8f8dc
+          stepCounter: cfaa0e56-d309-4c51-9315-0744744b1a3a
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        isSystemStartDate: true
+        name: SYSTEM_START_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: bf13f55c-8d41-4598-bdb7-0c3ca58c3a18
+          stepCounter: cfaa0e56-d309-4c51-9315-0744744b1a3a
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        isSystemEndDate: true
+        name: SYSTEM_END_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CAST('2999-12-31 00:00:00' AS TIMESTAMP)
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1d0816bd-9f8a-4bf5-8f2c-f21c410179c6
+          stepCounter: cfaa0e56-d309-4c51-9315-0744744b1a3a
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        isSystemCreateDate: true
+        name: SYSTEM_CREATE_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 195f8545-4862-4e1f-9d73-11da99b5f537
+          stepCounter: cfaa0e56-d309-4c51-9315-0744744b1a3a
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        isSystemUpdateDate: true
+        name: SYSTEM_UPDATE_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: STG
+            nodeName: WRK_MENU
+        join:
+          joinCondition: FROM {{ ref('STG', 'WRK_MENU') }} "WRK_MENU"
+        name: DIM_MENU
+        noLinkRefs: []
+  name: DIM_MENU
+  overrideSQL: false
+  schema: ""
+  sqlType: base-1-1-2:::194
+  type: sql
+  version: 1
+type: Node

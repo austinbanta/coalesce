@@ -1,19 +1,19 @@
 config:
   entities:
     nodeTypes:
-      "156":
+      "347":
         defaultStorageLocation: null
         isDisabled: false
-      "249":
+      "350":
         defaultStorageLocation: null
         isDisabled: false
-      "260":
+      "351":
         defaultStorageLocation: null
         isDisabled: false
   packageVariables: ""
 fileVersion: 1
 id: "@coalesce/dynamic-tables"
-name: dtables
+name: dt
 packageID: "@coalesce/dynamic-tables"
-releaseID: db193098-3039-44ea-8d16-603d5baed591
+releaseID: 5225b07b-77eb-4b22-b318-6033dfbd7b41
 type: Package
