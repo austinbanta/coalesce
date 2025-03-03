@@ -13,10 +13,16 @@ config:
       "279":
         defaultStorageLocation: null
         isDisabled: false
+      "337":
+        defaultStorageLocation: null
+        isDisabled: false
+      "429":
+        defaultStorageLocation: null
+        isDisabled: false
   packageVariables: ""
 fileVersion: 1
 id: "@coalesce/cortex"
 name: cortex
 packageID: "@coalesce/cortex"
-releaseID: 051fce82-92bf-4bd2-966d-af2236056e3d
+releaseID: 0186132e-3b4a-451b-91f9-d19cd3ee913f
 type: Package
