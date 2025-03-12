@@ -226,6 +226,26 @@ operation:
               - columnCounter: b3c47dff-b32c-4b51-89ad-0d7dc8a10ff4
                 stepCounter: 25987061-bca1-4937-8965-a25f94b2238a
             transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1c7cccfd-a82f-4006-a570-b0fd48911a71
+          stepCounter: aca914aa-70c1-4bc7-9354-f62c3615be90
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: NEWCOLUMN
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: "'ford f150'"
+        systemColumnType: None
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
