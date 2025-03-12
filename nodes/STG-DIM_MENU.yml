@@ -1,0 +1,409 @@
+fileVersion: 1
+id: f22542b2-5cce-4f5e-a312-22f0344ebb01
+name: DIM_MENU
+operation:
+  config:
+    customZeroKeyValues:
+      items:
+        - {}
+    groupByAll: false
+    insertStrategy: UNION ALL
+    insertZeroKey: false
+    insertZeroKeyAdvanced: false
+    insertZeroKeyBol: "TRUE"
+    insertZeroKeyDate: 01-01-1900
+    insertZeroKeyStr: UNKNOWN
+    insertZeroKeySurrogateKey: "0"
+    orderby: false
+    orderbycolumn:
+      items:
+        - {}
+    postSQL: ""
+    preSQL: ""
+    selectDistinct: false
+    testsEnabled: false
+    truncateBefore: false
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: STG
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9a5d25f8-a6e8-4c0e-ac7b-33e86e6b6dea
+          stepCounter: f22542b2-5cce-4f5e-a312-22f0344ebb01
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        isSurrogateKey: true
+        name: DIM_MENU_KEY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 03582351-1229-42c8-8d63-ad635feb7b62
+          stepCounter: f22542b2-5cce-4f5e-a312-22f0344ebb01
+        config: {}
+        dataType: NUMBER(19,0)
+        description: |-
+          - This column represents the unique identifier for a menu item. 
+          - It is sourced directly from the 'MENU_ID' column in the source table 'MENU' located in the 'TASTY_POS' database.
+          - It serves as a crucial identifier for menu-related data, enabling the tracking of performance metrics and trends associated with specific menu offerings.
+          - The datatype is NUMBER(19,0).
+        isBusinessKey: true
+        name: MENU_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 70788d8e-f0dc-4939-8bc6-c217e7408279
+                stepCounter: 7798d244-aacc-45c0-ba26-0e0dd5ced7cb
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7e86703b-a265-44e5-81f6-bcc76ca8cf85
+          stepCounter: f22542b2-5cce-4f5e-a312-22f0344ebb01
+        config: {}
+        dataType: NUMBER(38,0)
+        description: |-
+          - This column represents the unique identifier for a menu type.
+          - It is sourced directly from the 'MENU_TYPE_ID' column in the source table 'MENU' located in the 'TASTY_POS' database.
+          - This ID is essential for categorizing and analyzing menu items based on their type, which is leveraged in reports and dashboards.
+          - The datatype is NUMBER(38,0).
+        name: MENU_TYPE_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f239d993-6d8e-4fc0-81e1-e1df7c623cc3
+                stepCounter: 7798d244-aacc-45c0-ba26-0e0dd5ced7cb
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 779e347f-3eab-41c2-89f6-7c78473e878a
+          stepCounter: f22542b2-5cce-4f5e-a312-22f0344ebb01
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: |-
+          - This column describes the type of menu, such as 'Breakfast', 'Lunch', or 'Dinner'.
+          - It is derived from the 'MENU_TYPE' column of the source table 'MENU' from the 'TASTY_POS' database.
+          - The values in this column are transformed to uppercase using the SQL function UPPER.
+          - This standardization ensures consistency for filtering and grouping in reports.
+          - The current description for this column is 'xkasjfdasfd'
+        name: MENU_TYPE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b3a1bbcc-3f2a-4a98-b024-a3da15dc6356
+                stepCounter: 7798d244-aacc-45c0-ba26-0e0dd5ced7cb
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d73bb2fb-72e8-463e-b139-2690ed6f9743
+          stepCounter: f22542b2-5cce-4f5e-a312-22f0344ebb01
+        config: {}
+        dataType: STRING
+        description: |-
+          - This column specifies the brand name of the food truck offering the menu item.
+          - It is sourced from the 'TRUCK_BRAND_NAME' column in the 'MENU' table within the 'TASTY_POS' database.
+          - The values in this column are converted to uppercase using the SQL function UPPER to maintain consistency.
+          - This standardization aids in reporting and analysis related to truck brand performance and menu popularity.
+        isChangeTracking: true
+        name: TRUCK_BRAND_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: fcdc0e25-a7f9-4f94-8ee3-cd6afaa43ba5
+                stepCounter: 7798d244-aacc-45c0-ba26-0e0dd5ced7cb
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 585bb6da-8c29-4d08-86e3-f9a4ccff91b1
+          stepCounter: f22542b2-5cce-4f5e-a312-22f0344ebb01
+        config: {}
+        dataType: NUMBER(38,0)
+        description: |-
+          - This column uniquely identifies each item on the menu.
+          - It is sourced directly from the 'MENU_ITEM_ID' column in the source table 'MENU' located in the 'TASTY_POS' database.
+          - The 'MENU_ITEM_ID' is a crucial identifier for tracking sales, costs, and other metrics associated with specific menu items.
+          - The datatype is NUMBER(38,0).
+        name: MENU_ITEM_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 967f47ec-f0c7-48d8-a9d5-bbd036488ffd
+                stepCounter: 7798d244-aacc-45c0-ba26-0e0dd5ced7cb
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 589181ca-1ccf-48f7-9ad8-2cdfac07919f
+          stepCounter: f22542b2-5cce-4f5e-a312-22f0344ebb01
+        config: {}
+        dataType: STRING
+        description: |-
+          - This column provides the name of the menu item, such as 'Burger', 'Pizza', or 'Salad'.
+          - It is derived from the 'MENU_ITEM_NAME' column in the source table 'MENU' from the 'TASTY_POS' database.
+          - The values are transformed to uppercase using the SQL function UPPER for consistency.
+          - This standardized name is used in reports, dashboards, and other analytical tools to identify and track menu item performance.
+        isChangeTracking: true
+        name: MENU_ITEM_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f2ad8b69-a74c-4b8d-aecb-374dff4440e5
+                stepCounter: 7798d244-aacc-45c0-ba26-0e0dd5ced7cb
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1c87facd-8fcd-46fb-8302-cdf613bc91b8
+          stepCounter: f22542b2-5cce-4f5e-a312-22f0344ebb01
+        config: {}
+        dataType: STRING
+        description: |-
+          - This column categorizes the menu item, such as 'Entree', 'Appetizer', or 'Dessert'.
+          - It is sourced from the 'ITEM_CATEGORY' column in the 'MENU' table within the 'TASTY_POS' database.
+          - The values in this column are converted to uppercase using the SQL function UPPER to ensure uniformity.
+          - This standardization supports effective grouping and filtering of menu items for reporting and analysis.
+        isChangeTracking: true
+        name: ITEM_CATEGORY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3712d3fc-2225-48f6-af6e-286f7e9b8149
+                stepCounter: 7798d244-aacc-45c0-ba26-0e0dd5ced7cb
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 73602c08-281a-4d70-b58b-303ccf1ec4db
+          stepCounter: f22542b2-5cce-4f5e-a312-22f0344ebb01
+        config: {}
+        dataType: STRING
+        description: ""
+        isChangeTracking: true
+        name: ITEM_SUBCATEGORY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 75d31050-91f8-40ed-a862-a371b96709f7
+                stepCounter: 7798d244-aacc-45c0-ba26-0e0dd5ced7cb
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 29c67168-4a86-444c-a361-639ba51bde34
+          stepCounter: f22542b2-5cce-4f5e-a312-22f0344ebb01
+        config: {}
+        dataType: NUMBER(38,4)
+        description: |-
+          - This column represents the cost of goods in USD for a menu item.
+          - It is sourced directly from the 'COST_OF_GOODS_USD' column in the source table 'MENU' located in the 'TASTY_POS' database.
+          - This value is essential for calculating profit margins, food costs, and other financial metrics related to menu offerings.
+          - The datatype is NUMBER(38,4).
+        name: COST_OF_GOODS_USD
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c2405b1e-a7f7-4d24-8be7-aa477d14ee5e
+                stepCounter: 7798d244-aacc-45c0-ba26-0e0dd5ced7cb
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8071dbf2-be7b-4b4a-bf8d-8af993156ff4
+          stepCounter: f22542b2-5cce-4f5e-a312-22f0344ebb01
+        config: {}
+        dataType: NUMBER(38,4)
+        description: |-
+          - This column represents the price at which a menu item is sold in USD.
+          - It is sourced directly from the 'SALE_PRICE_USD' column in the source table 'MENU' located in the 'TASTY_POS' database.
+          - It is used in conjunction with cost data to determine profitability and revenue metrics, which are crucial for financial reporting and analysis.
+          - The datatype is NUMBER(38,4).
+        name: SALE_PRICE_USD
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d8589887-5ec4-4c37-ad6c-11722d538e9d
+                stepCounter: 7798d244-aacc-45c0-ba26-0e0dd5ced7cb
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 11a3a065-3ae2-4725-8fdf-5e324477dc63
+          stepCounter: f22542b2-5cce-4f5e-a312-22f0344ebb01
+        config: {}
+        dataType: NUMBER(38,4)
+        description: |-
+          - This column represents the price at which a menu item is sold in USD.
+          - It is sourced directly from the 'SALE_PRICE_USD' column in the source table 'MENU' located in the 'TASTY_POS' database.
+          - This value is essential for calculating revenue and profitability metrics at the menu item level, supporting pricing strategy analysis and financial reporting.
+          - The datatype is NUMBER(38,4).
+        name: SALE_PRICE_USD1
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2f6cbcf3-3fbc-48eb-a69c-f7e099a7cf06
+                stepCounter: 7798d244-aacc-45c0-ba26-0e0dd5ced7cb
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 44e8a040-6765-461a-9580-0989ae700a74
+          stepCounter: f22542b2-5cce-4f5e-a312-22f0344ebb01
+        config: {}
+        dataType: VARIANT
+        description: |-
+          - This column stores health-related metrics for each menu item in a JSON format.
+          - It is sourced directly from the 'MENU_ITEM_HEALTH_METRICS_OBJ' column in the source table 'MENU' located in the 'TASTY_POS' database.
+          - This object contains details like calorie count, fat content, and allergen information, enabling health-conscious consumers to make informed choices.
+          - The datatype is VARIANT.
+        name: MENU_ITEM_HEALTH_METRICS_OBJ
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5ad62303-7412-43ca-83de-e3e6f97e38d2
+                stepCounter: 7798d244-aacc-45c0-ba26-0e0dd5ced7cb
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9259c155-4a95-4653-8773-0ebc38c5ca44
+          stepCounter: f22542b2-5cce-4f5e-a312-22f0344ebb01
+        config: {}
+        dataType: STRING
+        description: |-
+          - This column categorizes menu items into 'expensive' or 'cheap' based on their sale price in USD.
+          - It is derived using a CASE statement that checks if the 'SALE_PRICE_USD' from the 'MENU' table is greater than 5.
+          - If the price is greater than 5, the item is categorized as 'expensive'; otherwise, it's 'cheap'.
+          - This categorization is helpful for analyzing customer preferences and sales trends based on price sensitivity.
+        name: PRICE BAND
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2d0fad08-1d64-4b92-b575-8965554a5a92
+                stepCounter: 7798d244-aacc-45c0-ba26-0e0dd5ced7cb
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ccc9c8dd-5667-42b9-92ce-bad75734e0d4
+          stepCounter: f22542b2-5cce-4f5e-a312-22f0344ebb01
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        isSystemVersion: true
+        name: SYSTEM_VERSION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 16c5ccbf-45d1-4fa0-98b8-61a841a08c9c
+          stepCounter: f22542b2-5cce-4f5e-a312-22f0344ebb01
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        isSystemCurrentFlag: true
+        name: SYSTEM_CURRENT_FLAG
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 00ffed1f-c721-4dc9-8f70-f2eb56b5d6ed
+          stepCounter: f22542b2-5cce-4f5e-a312-22f0344ebb01
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        isSystemStartDate: true
+        name: SYSTEM_START_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e0220e69-7d41-43f7-a474-57ff06fd2cf7
+          stepCounter: f22542b2-5cce-4f5e-a312-22f0344ebb01
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        isSystemEndDate: true
+        name: SYSTEM_END_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CAST('2999-12-31 00:00:00' AS TIMESTAMP)
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 85a07afe-b0fe-4a14-b43a-c4e44d4eb10a
+          stepCounter: f22542b2-5cce-4f5e-a312-22f0344ebb01
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        isSystemCreateDate: true
+        name: SYSTEM_CREATE_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: fde7269a-cd75-471a-b2a3-8c1eb3564b55
+          stepCounter: f22542b2-5cce-4f5e-a312-22f0344ebb01
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        isSystemUpdateDate: true
+        name: SYSTEM_UPDATE_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: STG
+            nodeName: WRK_MENU
+        join:
+          joinCondition: FROM {{ ref('STG', 'WRK_MENU') }} "WRK_MENU"
+        name: DIM_MENU
+        noLinkRefs: []
+  name: DIM_MENU
+  overrideSQL: false
+  schema: ""
+  sqlType: base:::194
+  type: sql
+  version: 1
+type: Node

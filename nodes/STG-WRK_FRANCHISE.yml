@@ -1,0 +1,154 @@
+fileVersion: 1
+id: cd2af0b1-ef27-4bef-9d4a-9f806de1df80
+name: WRK_FRANCHISE
+operation:
+  config:
+    asofColumn:
+      items:
+        - {}
+    asofJoin: true
+    asofJoinMain: false
+    asofJoinON: false
+    asofJoinUSING: false
+    groupByAll: false
+    insertStrategy: INSERT
+    orderby: false
+    orderbycolumn:
+      items:
+        - {}
+    postSQL: ""
+    preSQL: ""
+    selectDistinct: false
+    testsEnabled: false
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: STG
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6706b580-61ee-4d00-aaa2-45da09c2c1be
+          stepCounter: cd2af0b1-ef27-4bef-9d4a-9f806de1df80
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: FRANCHISE_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1df63f84-d11e-4cce-8192-5f434a43b5ea
+                stepCounter: 4a1adc96-9b3f-4ff9-a143-4a63650914e4
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 43680d4a-ab67-4901-8088-03389f2decbf
+          stepCounter: cd2af0b1-ef27-4bef-9d4a-9f806de1df80
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: FIRST_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2fa01703-7659-4d37-99ab-933256df421b
+                stepCounter: 4a1adc96-9b3f-4ff9-a143-4a63650914e4
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f00c762c-acea-4ced-aa41-1346e1af6303
+          stepCounter: cd2af0b1-ef27-4bef-9d4a-9f806de1df80
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: LAST_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 74509d5d-3eb7-466a-b9d3-53c0a5fa4cda
+                stepCounter: 4a1adc96-9b3f-4ff9-a143-4a63650914e4
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: cafd81ab-3112-4b34-b69b-af38dd799b98
+          stepCounter: cd2af0b1-ef27-4bef-9d4a-9f806de1df80
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: CITY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5a9da15f-c9e8-4fd3-8633-e2d89523aa86
+                stepCounter: 4a1adc96-9b3f-4ff9-a143-4a63650914e4
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: caf11c77-823a-4dc0-bb62-6e17d8632ab9
+          stepCounter: cd2af0b1-ef27-4bef-9d4a-9f806de1df80
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: COUNTRY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8b96e20c-b80e-4109-9d37-6034d436b4b6
+                stepCounter: 4a1adc96-9b3f-4ff9-a143-4a63650914e4
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: bff34796-d199-4b36-9336-750ed5c99eb8
+          stepCounter: cd2af0b1-ef27-4bef-9d4a-9f806de1df80
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: E_MAIL
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 7da9d8f6-38d9-49d7-b060-4447bd9969e6
+                stepCounter: 4a1adc96-9b3f-4ff9-a143-4a63650914e4
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a9b0c269-d2db-46c5-8d91-fb86382ee1b3
+          stepCounter: cd2af0b1-ef27-4bef-9d4a-9f806de1df80
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: PHONE_NUMBER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9b2af536-fba1-4793-9623-0a3bf9dce730
+                stepCounter: 4a1adc96-9b3f-4ff9-a143-4a63650914e4
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: TASTY_POS
+            nodeName: FRANCHISE
+        join:
+          joinCondition: |2-
+
+
+             
+              FROM  {{ ref('TASTY_POS', 'FRANCHISE') }} FRANCHISE
+        name: WRK_FRANCHISE
+        noLinkRefs: []
+  name: WRK_FRANCHISE
+  overrideSQL: false
+  schema: ""
+  sqlType: base:::204
+  type: sql
+  version: 1
+type: Node

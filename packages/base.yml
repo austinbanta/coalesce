@@ -22,7 +22,7 @@ config:
   packageVariables: ""
 fileVersion: 1
 id: "@coalesce/base-node-types"
-name: base-1-1-2
+name: base
 packageID: "@coalesce/base-node-types"
-releaseID: 360da3b1-79c1-4d68-8847-90302f2a7b61
+releaseID: 2c74ce43-5678-4743-aa5e-c996a0008965
 type: Package

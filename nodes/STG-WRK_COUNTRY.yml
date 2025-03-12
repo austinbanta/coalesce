@@ -1,0 +1,154 @@
+fileVersion: 1
+id: 928638ef-417a-44b9-afe9-320e4c2fb4d9
+name: WRK_COUNTRY
+operation:
+  config:
+    asofColumn:
+      items:
+        - {}
+    asofJoin: true
+    asofJoinMain: false
+    asofJoinON: false
+    asofJoinUSING: false
+    groupByAll: false
+    insertStrategy: INSERT
+    orderby: false
+    orderbycolumn:
+      items:
+        - {}
+    postSQL: ""
+    preSQL: ""
+    selectDistinct: false
+    testsEnabled: false
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: STG
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 53e430b1-c734-4ad9-b945-cf77752a7c00
+          stepCounter: 928638ef-417a-44b9-afe9-320e4c2fb4d9
+        config: {}
+        dataType: NUMBER(18,0)
+        description: ""
+        name: COUNTRY_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a12dbe34-63d0-4872-881b-b11e1f6617e2
+                stepCounter: f031fd76-619d-4523-bf2d-6699a1f5c7b8
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9d993c2a-55ce-4216-849f-09965f4c43b5
+          stepCounter: 928638ef-417a-44b9-afe9-320e4c2fb4d9
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: COUNTRY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e0fefdb4-8333-4e53-8af1-c470b6a5bfcd
+                stepCounter: f031fd76-619d-4523-bf2d-6699a1f5c7b8
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a19f284c-0c12-405f-8082-479cca56cf8d
+          stepCounter: 928638ef-417a-44b9-afe9-320e4c2fb4d9
+        config: {}
+        dataType: VARCHAR(3)
+        description: ""
+        name: ISO_CURRENCY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0306a135-045c-4a26-91cc-c2ddc66a9b85
+                stepCounter: f031fd76-619d-4523-bf2d-6699a1f5c7b8
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 23699d48-75c5-456b-ae08-f2c4d764b73a
+          stepCounter: 928638ef-417a-44b9-afe9-320e4c2fb4d9
+        config: {}
+        dataType: VARCHAR(2)
+        description: ""
+        name: ISO_COUNTRY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8cca8d13-dbeb-48a8-bb8d-e654f0a08dc9
+                stepCounter: f031fd76-619d-4523-bf2d-6699a1f5c7b8
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0f301356-8bc4-44cd-b8ef-3401188bb9db
+          stepCounter: 928638ef-417a-44b9-afe9-320e4c2fb4d9
+        config: {}
+        dataType: NUMBER(19,0)
+        description: ""
+        name: CITY_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b1888a39-d9bd-406f-a659-ae5d6c2aba08
+                stepCounter: f031fd76-619d-4523-bf2d-6699a1f5c7b8
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: daa4966c-908f-45bc-b983-20ababe414f9
+          stepCounter: 928638ef-417a-44b9-afe9-320e4c2fb4d9
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: CITY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3334e918-2e6e-4db1-be63-336d540e111f
+                stepCounter: f031fd76-619d-4523-bf2d-6699a1f5c7b8
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a0b4b1cd-e3b0-47e2-85ce-85b781f32c7a
+          stepCounter: 928638ef-417a-44b9-afe9-320e4c2fb4d9
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: CITY_POPULATION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b3fef5d4-d8cf-4c23-9f04-a019ab456d80
+                stepCounter: f031fd76-619d-4523-bf2d-6699a1f5c7b8
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: TASTY_POS
+            nodeName: COUNTRY
+        join:
+          joinCondition: |2-
+
+
+             
+              FROM  {{ ref('TASTY_POS', 'COUNTRY') }} COUNTRY
+        name: WRK_COUNTRY
+        noLinkRefs: []
+  name: WRK_COUNTRY
+  overrideSQL: false
+  schema: ""
+  sqlType: base:::204
+  type: sql
+  version: 1
+type: Node
