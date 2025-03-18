@@ -1,6 +1,0 @@
-excludeSelector: ""
-fileVersion: 1
-id: "35"
-includeSelector: "+{ location: STG name: FCT_ORDER_DETAIL_ORDER_HEADER }"
-name: fact refresh
-type: Job
