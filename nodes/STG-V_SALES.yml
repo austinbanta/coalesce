@@ -1,6 +1,6 @@
 fileVersion: 1
 id: a6ffceeb-309f-43b7-b1d9-6a46b4171314
-name: V_ORDERS_MENU_TRUCK_FRANCHISE_CUSTOMER_LOYALTY
+name: V_SALES
 operation:
   config:
     insertStrategy: UNION
@@ -1044,9 +1044,9 @@ operation:
             ON "FCT_ORDERS"."TRUCK_ID" = "DIM_TRUCK"."TRUCK_ID"
             INNER JOIN {{ ref('STG', 'DIM_CUSTOMER_LOYALTY') }} "DIM_CUSTOMER_LOYALTY"
             ON "FCT_ORDERS"."CUSTOMER_ID" = "DIM_CUSTOMER_LOYALTY"."CUSTOMER_ID"
-        name: V_ORDERS_MENU_TRUCK_FRANCHISE_CUSTOMER_LOYALTY
+        name: V_SALES
         noLinkRefs: []
-  name: V_ORDERS_MENU_TRUCK_FRANCHISE_CUSTOMER_LOYALTY
+  name: V_SALES
   overrideSQL: false
   schema: ""
   sqlType: View
