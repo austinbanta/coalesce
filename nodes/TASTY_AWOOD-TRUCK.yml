@@ -1,12 +1,12 @@
 fileVersion: 1
-id: 25987061-bca1-4937-8965-a25f94b2238a
+id: eb41e35c-1842-4cf9-aa9c-adc0f7d1b8f6
 name: TRUCK
 operation:
   database: ""
   dataset: ""
   deployEnabled: true
   description: ""
-  locationName: TASTY_POS
+  locationName: TASTY_AWOOD
   metadata:
     columns:
       - acceptedValues:
@@ -14,8 +14,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 0928e97e-e948-4e97-9269-c4609972e54f
-          stepCounter: 25987061-bca1-4937-8965-a25f94b2238a
+          columnCounter: 454eadd0-6964-4cd2-9a36-7f620d66304a
+          stepCounter: eb41e35c-1842-4cf9-aa9c-adc0f7d1b8f6
         config: {}
         dataType: NUMBER(38,0)
         defaultValue: ""
@@ -33,8 +33,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: f81c0e94-25b1-4910-b3bd-0b2350a3430e
-          stepCounter: 25987061-bca1-4937-8965-a25f94b2238a
+          columnCounter: 2f978780-3e4d-4b61-b504-ee29154b9bbb
+          stepCounter: eb41e35c-1842-4cf9-aa9c-adc0f7d1b8f6
         config: {}
         dataType: NUMBER(38,0)
         defaultValue: ""
@@ -52,8 +52,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: a291374b-bdb1-4c47-a200-9da3ab1b9139
-          stepCounter: 25987061-bca1-4937-8965-a25f94b2238a
+          columnCounter: fc49c174-d153-412b-aed8-30fac75f8393
+          stepCounter: eb41e35c-1842-4cf9-aa9c-adc0f7d1b8f6
         config: {}
         dataType: VARCHAR(16777216)
         defaultValue: ""
@@ -71,8 +71,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 84c70637-84f7-45ed-84f9-4584bcbfa135
-          stepCounter: 25987061-bca1-4937-8965-a25f94b2238a
+          columnCounter: 937aed1f-cd48-46a6-90f9-e32986049890
+          stepCounter: eb41e35c-1842-4cf9-aa9c-adc0f7d1b8f6
         config: {}
         dataType: VARCHAR(16777216)
         defaultValue: ""
@@ -90,8 +90,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 3fe62254-5739-4bd0-befa-dca2c67ec784
-          stepCounter: 25987061-bca1-4937-8965-a25f94b2238a
+          columnCounter: ccb0004a-2f69-4687-8dec-505f84e4390c
+          stepCounter: eb41e35c-1842-4cf9-aa9c-adc0f7d1b8f6
         config: {}
         dataType: VARCHAR(16777216)
         defaultValue: ""
@@ -109,8 +109,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 41c8ce90-d95e-46bc-b032-2c17f3f23a13
-          stepCounter: 25987061-bca1-4937-8965-a25f94b2238a
+          columnCounter: 08729a82-a7b8-4af1-94e4-f9153579971f
+          stepCounter: eb41e35c-1842-4cf9-aa9c-adc0f7d1b8f6
         config: {}
         dataType: VARCHAR(16777216)
         defaultValue: ""
@@ -128,8 +128,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 392c399b-5157-4c96-bcbd-f211dad6e23a
-          stepCounter: 25987061-bca1-4937-8965-a25f94b2238a
+          columnCounter: d1e0df98-d8c4-49e4-b1af-525128663b24
+          stepCounter: eb41e35c-1842-4cf9-aa9c-adc0f7d1b8f6
         config: {}
         dataType: VARCHAR(16777216)
         defaultValue: ""
@@ -147,8 +147,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: cc1b5a72-a98c-4114-ae45-735370b88a98
-          stepCounter: 25987061-bca1-4937-8965-a25f94b2238a
+          columnCounter: 633fbf95-12d9-4cc4-8b86-3a0af24e957e
+          stepCounter: eb41e35c-1842-4cf9-aa9c-adc0f7d1b8f6
         config: {}
         dataType: NUMBER(38,0)
         defaultValue: ""
@@ -166,8 +166,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: d548a291-ef9a-44dd-93dc-69ea53cfb3e2
-          stepCounter: 25987061-bca1-4937-8965-a25f94b2238a
+          columnCounter: 522daf11-e895-4502-ae3a-ffd099593a3a
+          stepCounter: eb41e35c-1842-4cf9-aa9c-adc0f7d1b8f6
         config: {}
         dataType: NUMBER(38,0)
         defaultValue: ""
@@ -185,8 +185,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 00a769bc-dc2d-4326-82b5-88dcc6ccd571
-          stepCounter: 25987061-bca1-4937-8965-a25f94b2238a
+          columnCounter: 4006c3ec-c3df-4bcd-a882-eedcfcf4e9dc
+          stepCounter: eb41e35c-1842-4cf9-aa9c-adc0f7d1b8f6
         config: {}
         dataType: VARCHAR(16777216)
         defaultValue: ""
@@ -204,8 +204,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 4023bbfe-a098-4cad-bbe6-e8c5ff691a2f
-          stepCounter: 25987061-bca1-4937-8965-a25f94b2238a
+          columnCounter: addbb48a-b412-4761-83da-3ae23958a25b
+          stepCounter: eb41e35c-1842-4cf9-aa9c-adc0f7d1b8f6
         config: {}
         dataType: VARCHAR(16777216)
         defaultValue: ""
@@ -223,8 +223,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 91fdf6e4-9176-4adb-a6bd-0b6b275e7513
-          stepCounter: 25987061-bca1-4937-8965-a25f94b2238a
+          columnCounter: 4869db91-7bc1-4876-9413-bcca5efe42b1
+          stepCounter: eb41e35c-1842-4cf9-aa9c-adc0f7d1b8f6
         config: {}
         dataType: NUMBER(38,0)
         defaultValue: ""
@@ -242,8 +242,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 1fc946a8-2999-44bf-9fa4-c2283ef7404f
-          stepCounter: 25987061-bca1-4937-8965-a25f94b2238a
+          columnCounter: 5da0bb03-c7b6-4e72-b7db-f5777bc73aff
+          stepCounter: eb41e35c-1842-4cf9-aa9c-adc0f7d1b8f6
         config: {}
         dataType: NUMBER(38,0)
         defaultValue: ""
@@ -261,8 +261,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: b3c47dff-b32c-4b51-89ad-0d7dc8a10ff4
-          stepCounter: 25987061-bca1-4937-8965-a25f94b2238a
+          columnCounter: 780e2f39-9d01-48b8-8511-a0f799f166f1
+          stepCounter: eb41e35c-1842-4cf9-aa9c-adc0f7d1b8f6
         config: {}
         dataType: DATE
         defaultValue: ""
@@ -276,7 +276,7 @@ operation:
         transform: ""
         uniqueKey: false
     join:
-      joinCondition: FROM {{ ref('TASTY_POS', 'TRUCK') }}
+      joinCondition: FROM {{ ref('TASTY_AWOOD', 'TRUCK') }}
   name: TRUCK
   schema: ""
   sqlType: Source

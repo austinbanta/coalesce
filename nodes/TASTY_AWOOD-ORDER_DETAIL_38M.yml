@@ -1,12 +1,12 @@
 fileVersion: 1
-id: f031fd76-619d-4523-bf2d-6699a1f5c7b8
-name: COUNTRY
+id: 6d9a4235-9f3a-4b66-be72-28fc38c402db
+name: ORDER_DETAIL_38M
 operation:
   database: ""
   dataset: ""
   deployEnabled: true
   description: ""
-  locationName: TASTY_POS
+  locationName: TASTY_AWOOD
   metadata:
     columns:
       - acceptedValues:
@@ -14,13 +14,13 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: a12dbe34-63d0-4872-881b-b11e1f6617e2
-          stepCounter: f031fd76-619d-4523-bf2d-6699a1f5c7b8
+          columnCounter: e6103371-88b6-49aa-acb2-463a63e97350
+          stepCounter: 6d9a4235-9f3a-4b66-be72-28fc38c402db
         config: {}
-        dataType: NUMBER(18,0)
+        dataType: NUMBER(38,0)
         defaultValue: ""
         description: ""
-        name: COUNTRY_ID
+        name: ORDER_DETAIL_ID
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -33,13 +33,51 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: e0fefdb4-8333-4e53-8af1-c470b6a5bfcd
-          stepCounter: f031fd76-619d-4523-bf2d-6699a1f5c7b8
+          columnCounter: 6ea61ddc-ffeb-4707-8ca2-b7937327c3f4
+          stepCounter: 6d9a4235-9f3a-4b66-be72-28fc38c402db
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: ORDER_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e7d11611-e0da-43c3-a314-db2995d4aea6
+          stepCounter: 6d9a4235-9f3a-4b66-be72-28fc38c402db
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: MENU_ITEM_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8dbd9cec-1ac1-4118-96a9-a2a6af5db2a2
+          stepCounter: 6d9a4235-9f3a-4b66-be72-28fc38c402db
         config: {}
         dataType: VARCHAR(16777216)
         defaultValue: ""
         description: ""
-        name: COUNTRY
+        name: DISCOUNT_ID
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -52,13 +90,13 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 0306a135-045c-4a26-91cc-c2ddc66a9b85
-          stepCounter: f031fd76-619d-4523-bf2d-6699a1f5c7b8
+          columnCounter: 280f5f1c-5039-4a13-8362-3b199fd24a51
+          stepCounter: 6d9a4235-9f3a-4b66-be72-28fc38c402db
         config: {}
-        dataType: VARCHAR(3)
+        dataType: NUMBER(38,0)
         defaultValue: ""
         description: ""
-        name: ISO_CURRENCY
+        name: LINE_NUMBER
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -71,13 +109,13 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 8cca8d13-dbeb-48a8-bb8d-e654f0a08dc9
-          stepCounter: f031fd76-619d-4523-bf2d-6699a1f5c7b8
+          columnCounter: b64377f9-b039-40a5-8106-c9a2aee1de2e
+          stepCounter: 6d9a4235-9f3a-4b66-be72-28fc38c402db
         config: {}
-        dataType: VARCHAR(2)
+        dataType: NUMBER(5,0)
         defaultValue: ""
         description: ""
-        name: ISO_COUNTRY
+        name: QUANTITY
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -90,13 +128,13 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: b1888a39-d9bd-406f-a659-ae5d6c2aba08
-          stepCounter: f031fd76-619d-4523-bf2d-6699a1f5c7b8
+          columnCounter: e4c7e066-760f-4264-b5c0-6940b9786595
+          stepCounter: 6d9a4235-9f3a-4b66-be72-28fc38c402db
         config: {}
-        dataType: NUMBER(19,0)
+        dataType: NUMBER(38,4)
         defaultValue: ""
         description: ""
-        name: CITY_ID
+        name: UNIT_PRICE
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -109,32 +147,32 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 3334e918-2e6e-4db1-be63-336d540e111f
-          stepCounter: f031fd76-619d-4523-bf2d-6699a1f5c7b8
+          columnCounter: 933a190b-db56-4d55-bef1-3aca70298304
+          stepCounter: 6d9a4235-9f3a-4b66-be72-28fc38c402db
+        config: {}
+        dataType: NUMBER(38,4)
+        defaultValue: ""
+        description: ""
+        name: PRICE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 906874c6-ebca-430e-a3ea-849f74edf05d
+          stepCounter: 6d9a4235-9f3a-4b66-be72-28fc38c402db
         config: {}
         dataType: VARCHAR(16777216)
         defaultValue: ""
         description: ""
-        name: CITY
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: b3fef5d4-d8cf-4c23-9f04-a019ab456d80
-          stepCounter: f031fd76-619d-4523-bf2d-6699a1f5c7b8
-        config: {}
-        dataType: VARCHAR(16777216)
-        defaultValue: ""
-        description: ""
-        name: CITY_POPULATION
+        name: ORDER_ITEM_DISCOUNT_AMOUNT
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -143,11 +181,11 @@ operation:
         transform: ""
         uniqueKey: false
     join:
-      joinCondition: FROM {{ ref('TASTY_POS', 'COUNTRY') }}
-  name: COUNTRY
+      joinCondition: FROM {{ ref('TASTY_AWOOD', 'ORDER_DETAIL_38M') }}
+  name: ORDER_DETAIL_38M
   schema: ""
   sqlType: Source
-  table: COUNTRY
+  table: ORDER_DETAIL_38M
   type: sourceInput
   version: 1
 type: Node

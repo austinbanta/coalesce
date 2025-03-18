@@ -1,0 +1,1055 @@
+fileVersion: 1
+id: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+name: V_ORDERS_MENU_TRUCK_FRANCHISE_CUSTOMER_LOYALTY
+operation:
+  config:
+    insertStrategy: UNION
+    selectDistinct: false
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: STG
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 589676c9-7a84-4479-bb90-74326c5308cb
+          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: TRUCK_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f526ee3e-f584-4331-8f30-8ebf57fcdb5e
+                stepCounter: fe367fe0-6970-4043-b97a-cadf0a48031d
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 77b14611-b596-49c7-822f-0b308437c7fb
+          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: LOCATION_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: dab1aeea-6d8e-461a-8701-6c7b64020b72
+                stepCounter: fe367fe0-6970-4043-b97a-cadf0a48031d
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 33ab35fb-8e11-4fbb-ab8d-cbe8c1209fb4
+          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: CUSTOMER_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b4e3206e-348f-4df8-a1f3-4414337b4dd5
+                stepCounter: fe367fe0-6970-4043-b97a-cadf0a48031d
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 01af086b-6586-48b0-8860-40235eedef5a
+          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: SHIFT_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a1259341-b544-499f-a913-4cef7b106a4b
+                stepCounter: fe367fe0-6970-4043-b97a-cadf0a48031d
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 33ba352e-c9fe-4dc4-ae56-75816c0f3d25
+          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+        config: {}
+        dataType: TIME(9)
+        description: ""
+        name: SHIFT_START_TIME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 50fcf1d5-cc5a-46fe-a9c3-6e13671430b6
+                stepCounter: fe367fe0-6970-4043-b97a-cadf0a48031d
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: bedb675b-5290-4ccb-a5e6-5cce0f4399a8
+          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+        config: {}
+        dataType: TIME(9)
+        description: ""
+        name: SHIFT_END_TIME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e6ea9997-6b25-4441-babb-d71831e877d1
+                stepCounter: fe367fe0-6970-4043-b97a-cadf0a48031d
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 01a53433-26c1-4959-a9da-8a16e0d8ebc3
+          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: ORDER_CHANNEL
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5ddb507f-14b0-411c-ab09-b48fc1a03f35
+                stepCounter: fe367fe0-6970-4043-b97a-cadf0a48031d
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 984ca36a-22c9-4730-a2da-e3e5a76a7cab
+          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        description: ""
+        name: ORDER_TS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 75ef334d-e437-49d6-bb64-75733dd4e2aa
+                stepCounter: fe367fe0-6970-4043-b97a-cadf0a48031d
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d9cfea61-1f3d-4c91-b3bf-b03eed4f4c91
+          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: SERVED_TS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a1b65660-416a-42ba-b916-3bc981fddd70
+                stepCounter: fe367fe0-6970-4043-b97a-cadf0a48031d
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f3cf370a-e2f0-4333-9b60-5d0b019a19c8
+          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+        config: {}
+        dataType: VARCHAR(3)
+        description: ""
+        name: ORDER_CURRENCY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2da90105-0b9d-400b-bdd6-afdc785cec29
+                stepCounter: fe367fe0-6970-4043-b97a-cadf0a48031d
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e865af83-a0ac-476f-915f-c5148bd03e53
+          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+        config: {}
+        dataType: NUMBER(38,4)
+        description: ""
+        name: ORDER_AMOUNT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 49a70ca1-dc06-4061-8e8d-c736a487e572
+                stepCounter: fe367fe0-6970-4043-b97a-cadf0a48031d
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6442f27a-8e97-4859-9956-48b8d67247c7
+          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: ORDER_TAX_AMOUNT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 418b1042-a930-42fa-a1f0-d9d5c18fa6df
+                stepCounter: fe367fe0-6970-4043-b97a-cadf0a48031d
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4100f7a0-2dc5-4fe8-83f6-e6e9574c77e7
+          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: ORDER_DISCOUNT_AMOUNT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 38c66f24-2c60-43ec-aa5f-797bc077b01e
+                stepCounter: fe367fe0-6970-4043-b97a-cadf0a48031d
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 311ebbc2-eefa-41c7-b080-6402d7f66d5a
+          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+        config: {}
+        dataType: NUMBER(38,4)
+        description: ""
+        name: ORDER_TOTAL
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c9fd772d-54a3-4543-8d65-7aa19182d857
+                stepCounter: fe367fe0-6970-4043-b97a-cadf0a48031d
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4a1c35e2-8c77-49fe-bfeb-13181e9d3576
+          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: ORDER_DETAIL_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2a73d6e7-fa56-44d3-b11e-bc06e26ead6e
+                stepCounter: fe367fe0-6970-4043-b97a-cadf0a48031d
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: acb56e7e-70a0-4625-8273-139ddb638de6
+          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: ORDER_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d5058b10-871c-47e5-893c-f70b9aee4910
+                stepCounter: fe367fe0-6970-4043-b97a-cadf0a48031d
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: fec525fd-ceee-44a5-b7c1-a9bde57e5284
+          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: MENU_ITEM_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5493c0e5-280f-4854-ad5d-6d44f6ee1348
+                stepCounter: fe367fe0-6970-4043-b97a-cadf0a48031d
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 16b52da0-6306-4262-895b-fe1e67329bfd
+          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: DISCOUNT_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f52f96f2-8f3b-4723-aa3b-6be49c07df71
+                stepCounter: fe367fe0-6970-4043-b97a-cadf0a48031d
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e7b08485-9954-4e22-9a5a-dba3f3a2f88b
+          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: LINE_NUMBER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: cd146732-3992-456e-8178-a2d23f6dd2c4
+                stepCounter: fe367fe0-6970-4043-b97a-cadf0a48031d
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1c0930b1-58fb-422f-9e58-f8eff8b1df73
+          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+        config: {}
+        dataType: NUMBER(5,0)
+        description: ""
+        name: QUANTITY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f506bad9-6ab7-41b0-a1eb-ab287c78250c
+                stepCounter: fe367fe0-6970-4043-b97a-cadf0a48031d
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 733ff482-3777-44c0-b69a-0d4d18ac622f
+          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+        config: {}
+        dataType: NUMBER(38,4)
+        description: ""
+        name: UNIT_PRICE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 22a18495-d319-4751-928b-e38487781af6
+                stepCounter: fe367fe0-6970-4043-b97a-cadf0a48031d
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a19716ad-97de-44e8-b104-27cf7b729e86
+          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+        config: {}
+        dataType: NUMBER(38,4)
+        description: ""
+        name: PRICE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0861e301-c51f-490b-a881-7096a3935701
+                stepCounter: fe367fe0-6970-4043-b97a-cadf0a48031d
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f98fb95e-de1c-4c15-a45e-8bbc3bbedec5
+          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: ORDER_ITEM_DISCOUNT_AMOUNT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 47447ba6-0868-4044-8cc3-d6952ed753b3
+                stepCounter: fe367fe0-6970-4043-b97a-cadf0a48031d
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f7dc2e36-fc57-4fb9-aefe-38ffb8321836
+          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+        config: {}
+        dataType: NUMBER
+        description: ""
+        name: DIM_MENU_KEY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e5226eac-b94e-429a-b291-eda3d8d6a272
+                stepCounter: f5a39e3e-2f59-48bf-8bca-35311f27a612
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1ae516ad-2e42-4810-b331-7f5997c47130
+          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+        config: {}
+        dataType: NUMBER(19,0)
+        description: |-
+          - This column represents the unique identifier for a menu.
+          - It is sourced from the 'MENU_ID' column in the 'MENU' table within the 'TASTY_AWOOD' database.
+          - This ID is crucial for linking menu items to specific menus, which is used in reports and analysis.
+          - As a primary key, it ensures the uniqueness of each menu entry.
+        name: MENU_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ce972b00-ec1b-4179-92eb-c6e1e1a36cbf
+                stepCounter: f5a39e3e-2f59-48bf-8bca-35311f27a612
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 95c12356-dd0d-458d-90b1-3743c9821fdd
+          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+        config: {}
+        dataType: NUMBER(38,0)
+        description: |-
+          - This column represents the unique identifier for a menu type.
+          - It is sourced from the 'MENU_TYPE_ID' column in the 'MENU' table within the 'TASTY_AWOOD' database.
+          - This ID is essential for categorizing menus by type, which can be used in reports and analysis.
+          - It serves as a foreign key relating the menu to a specific menu type.
+        name: MENU_TYPE_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4722ef2b-4427-4856-8a36-eafe0ad9df1b
+                stepCounter: f5a39e3e-2f59-48bf-8bca-35311f27a612
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 172fa37e-708c-47c9-bba8-77e1998f16b6
+          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: |-
+          - This column describes the type of menu, such as 'Breakfast', 'Lunch', or 'Dinner'.
+          - It is sourced from the 'MENU_TYPE' column in the 'MENU' table within the 'TASTY_AWOOD' database.
+          - This information can be used for filtering and grouping data in reports, dashboards, and KPI calculations related to menu performance.
+          - Business users can leverage this to understand the distribution of different menu types.
+        name: MENU_TYPE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 942b4bc8-56f4-4378-ad25-b60f0b030763
+                stepCounter: f5a39e3e-2f59-48bf-8bca-35311f27a612
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3293e207-07dd-4445-8cf7-ec5a26583573
+          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: |-
+          - This column stores the brand name of the truck offering the menu item.
+          - It is sourced from the 'TRUCK_BRAND_NAME' column in the 'MENU' table within the 'TASTY_AWOOD' database.
+          - This attribute allows for analysis of menu performance across different truck brands.
+          - It is useful for business users to understand which brands are associated with popular menu items.
+        name: TRUCK_BRAND_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3611b688-895e-4f63-a478-8ff5e8ea1e6f
+                stepCounter: f5a39e3e-2f59-48bf-8bca-35311f27a612
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 499875f5-152d-4c62-9e99-3657ccf694c8
+          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: |-
+          - This column provides the name of the menu item, such as 'Burger', 'Salad', or 'Pizza'.
+          - It is sourced from the 'MENU_ITEM_NAME' column in the 'MENU' table within the 'TASTY_AWOOD' database.
+          - This information can be used for filtering and grouping data in reports, dashboards, and KPI calculations related to menu item performance.
+          - Business users can leverage this to understand which menu items are most popular.
+        name: MENU_ITEM_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 120c1710-4bf9-4fa6-b665-ff216d781fa4
+                stepCounter: f5a39e3e-2f59-48bf-8bca-35311f27a612
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4b795116-44b8-4a15-b85a-af7f455aba30
+          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: |-
+          - This column categorizes the menu item, such as 'Main Course', 'Appetizer', or 'Dessert'.
+          - It is sourced from the 'ITEM_CATEGORY' column in the 'MENU' table within the 'TASTY_AWOOD' database.
+          - This attribute enables categorization and analysis of menu items for sales analysis and menu planning.
+          - Business users can leverage this to understand which categories are most popular.
+        name: ITEM_CATEGORY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: db4a5d1d-1620-4dcf-8fdc-d1a3588a4a7b
+                stepCounter: f5a39e3e-2f59-48bf-8bca-35311f27a612
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a9e13221-4d4c-4039-99c4-1509f7a954f4
+          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: |-
+          - This column provides a more granular categorization of the menu item, such as 'Beef Burger' or 'Chicken Salad'.
+          - It is sourced from the 'ITEM_SUBCATEGORY' column in the 'MENU' table within the 'TASTY_AWOOD' database.
+          - This attribute provides a more detailed breakdown for menu analysis and reporting, improving the granularity of insights.
+          - Business users can leverage this to understand which subcategories are most popular.
+        name: ITEM_SUBCATEGORY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 040f3765-5c8a-4e67-8f7f-0a6d1b674c36
+                stepCounter: f5a39e3e-2f59-48bf-8bca-35311f27a612
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0d6db01f-3d80-43a4-aeec-b6488ec5c3fd
+          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+        config: {}
+        dataType: NUMBER(38,4)
+        description: |-
+          - This column represents the cost of the ingredients required to make the menu item, expressed in US dollars.
+          - It is sourced from the 'COST_OF_GOODS_USD' column in the 'MENU' table within the 'TASTY_AWOOD' database.
+          - This value is used to calculate profit margins and food costs, which is crucial for financial analysis and reporting.
+          - It aids in determining the profitability of each menu item.
+        name: COST_OF_GOODS_USD
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b131d7ae-e860-4dd3-9706-a6238e6dbc1e
+                stepCounter: f5a39e3e-2f59-48bf-8bca-35311f27a612
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b6311768-905f-422b-b327-54fb7e1e2ebb
+          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+        config: {}
+        dataType: NUMBER(38,4)
+        description: |-
+          - This column indicates the price at which the menu item is sold to customers, expressed in US dollars.
+          - It is sourced from the 'SALE_PRICE_USD' column in the 'MENU' table within the 'TASTY_AWOOD' database.
+          - This value is used in conjunction with the cost of goods to calculate profit margins and revenue metrics.
+          - It helps in understanding revenue generation per item.
+        name: SALE_PRICE_USD
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b0fe1720-84b4-4fbd-b7f1-11018068c1c9
+                stepCounter: f5a39e3e-2f59-48bf-8bca-35311f27a612
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f1008782-e5a7-4e56-8f8d-85be45364fb0
+          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+        config: {}
+        dataType: VARIANT
+        description: |-
+          - This column stores a JSON object containing health-related metrics for each menu item.
+          - It is sourced from the 'MENU_ITEM_HEALTH_METRICS_OBJ' column in the 'MENU' table within the 'TASTY_AWOOD' database.
+          - This object contains information on ingredients, allergen flags, and health scores, enabling health-conscious menu analysis.
+          - Downstream, the JSON object is parsed to extract specific health metrics for reporting.
+        name: MENU_ITEM_HEALTH_METRICS_OBJ
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 7da1d90f-aea9-4231-94cd-94d17d5e8d2c
+                stepCounter: f5a39e3e-2f59-48bf-8bca-35311f27a612
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4f9f180f-c245-4739-9975-e4992d20c08d
+          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+        config: {}
+        dataType: STRING
+        description: |-
+          - This column represents a list of ingredients used in the menu item.
+          - It is derived from the 'MENU_ITEM_HEALTH_METRICS_OBJ' column in the 'MENU' table within the 'TASTY_AWOOD' database, extracting the 'ingredients' field.
+          - The transformation applied is: `"MENU_ITEM_HEALTH_METRICS_OBJ_menu_item_health_metrics_ingredients".value::STRING`.
+          - This information is valuable for customers with dietary restrictions or preferences.
+        name: menu_item_health_metrics_ingredients
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ce993aa4-826b-46e2-a760-bd03fb68e04e
+                stepCounter: f5a39e3e-2f59-48bf-8bca-35311f27a612
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: bb88d761-d251-43ab-b9e8-2d97c756e08d
+          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+        config: {}
+        dataType: STRING
+        description: |-
+          - This column indicates whether the menu item is dairy-free.
+          - It is extracted from the 'MENU_ITEM_HEALTH_METRICS_OBJ' column in the 'MENU' table within the 'TASTY_AWOOD' database, specifically the 'is_dairy_free_flag' field.
+          - The transformation applied is: `"MENU_ITEM_HEALTH_METRICS_OBJ_menu_item_health_metrics".value:"is_dairy_free_flag"::STRING`.
+          - This flag is useful for filtering and identifying options suitable for dairy-free diets.
+        name: menu_item_health_metrics_is_dairy_free_flag
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f97f6741-74e0-486c-9674-c7dae8fe880c
+                stepCounter: f5a39e3e-2f59-48bf-8bca-35311f27a612
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 095d8c06-73ae-4114-93f2-f1b0e97ba1f5
+          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+        config: {}
+        dataType: STRING
+        description: |-
+          - This column indicates whether the menu item is gluten-free.
+          - It is extracted from the 'MENU_ITEM_HEALTH_METRICS_OBJ' column in the 'MENU' table within the 'TASTY_AWOOD' database, specifically the 'is_gluten_free_flag' field.
+          - The transformation applied is: `"MENU_ITEM_HEALTH_METRICS_OBJ_menu_item_health_metrics".value:"is_gluten_free_flag"::STRING`.
+          - This flag is valuable for customers with gluten intolerance or celiac disease.
+        name: menu_item_health_metrics_is_gluten_free_flag
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 04bba14d-27e5-4a83-9e5b-7420b4bd8c14
+                stepCounter: f5a39e3e-2f59-48bf-8bca-35311f27a612
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8431466b-c3ce-44bc-b257-a9cc16120e86
+          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+        config: {}
+        dataType: STRING
+        description: |-
+          - This column indicates whether the menu item is considered healthy based on predefined criteria.
+          - It is sourced from the 'MENU_ITEM_HEALTH_METRICS_OBJ' column in the 'MENU' table within the 'TASTY_AWOOD' database, extracting the 'is_healthy_flag' field.
+          - The transformation applied is: `"MENU_ITEM_HEALTH_METRICS_OBJ_menu_item_health_metrics".value:"is_healthy_flag"::STRING`.
+          - It allows for filtering and highlighting healthier options on the menu.
+        name: menu_item_health_metrics_is_healthy_flag
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 63c646c0-26e1-4c29-a392-90e546501b81
+                stepCounter: f5a39e3e-2f59-48bf-8bca-35311f27a612
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4984e255-b7f6-4682-b8d5-b4387c04b43c
+          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+        config: {}
+        dataType: STRING
+        description: |-
+          - This column indicates whether the menu item is nut-free.
+          - It is extracted from the 'MENU_ITEM_HEALTH_METRICS_OBJ' column in the 'MENU' table within the 'TASTY_AWOOD' database, specifically the 'is_nut_free_flag' field.
+          - The transformation applied is: `"MENU_ITEM_HEALTH_METRICS_OBJ_menu_item_health_metrics".value:"is_nut_free_flag"::STRING`.
+          - This flag helps customers with nut allergies easily identify safe options.
+        name: menu_item_health_metrics_is_nut_free_flag
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e0db5b88-100a-4b39-a325-aad063ad0da3
+                stepCounter: f5a39e3e-2f59-48bf-8bca-35311f27a612
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 73276c36-266d-4afa-b063-30c4734e6edf
+          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+        config: {}
+        dataType: DOUBLE
+        description: |-
+          - This column represents the unique identifier for a menu item within the health metrics object.
+          - It is derived from the 'MENU_ITEM_HEALTH_METRICS_OBJ' column in the 'MENU' table within the 'TASTY_AWOOD' database, extracting the 'menu_item_id' field.
+          - The transformation applied is: `"MENU"."MENU_ITEM_HEALTH_METRICS_OBJ":"menu_item_id"::DOUBLE`.
+          - It serves as a link between health metrics and the specific menu item.
+        name: menu_item_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 81a8d752-b91f-4423-8b1d-30c1cdb2c846
+                stepCounter: f5a39e3e-2f59-48bf-8bca-35311f27a612
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 891a7010-64f9-4c5d-bd76-c46a7259ab0f
+          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+        config: {}
+        dataType: NUMBER
+        description: ""
+        name: DIM_TRUCK_KEY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: fa350087-31fa-4b3f-9a80-53c80cce5423
+                stepCounter: 2ed29715-7fad-4dd5-940a-bbac10f9c9d2
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1d01fd9f-925e-4f83-88c7-2e2cc3393317
+          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: PRIMARY_CITY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5df03059-68b2-425e-8816-44976b14d976
+                stepCounter: 2ed29715-7fad-4dd5-940a-bbac10f9c9d2
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0e562525-a7cd-469b-9f8c-d0f3505e84ac
+          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: REGION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 65e7a4f5-bc7e-4b6d-9280-b0ed9a9b38dc
+                stepCounter: 2ed29715-7fad-4dd5-940a-bbac10f9c9d2
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 592b69d6-4070-4108-8e80-2f2ce1167873
+          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: ISO_REGION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9482755a-ed15-4aa2-9e3c-8c242d4d9a71
+                stepCounter: 2ed29715-7fad-4dd5-940a-bbac10f9c9d2
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e9ee1255-9a38-4cc2-ac8a-fe79946193e5
+          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: COUNTRY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ba71653a-1fd6-4eb4-8aa2-b8961b4d0863
+                stepCounter: 2ed29715-7fad-4dd5-940a-bbac10f9c9d2
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 57a8f180-44fb-4a6f-acd1-d075def40689
+          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: ISO_COUNTRY_CODE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 94c85aa4-04f4-4cb8-9df9-7c74435a2c2f
+                stepCounter: 2ed29715-7fad-4dd5-940a-bbac10f9c9d2
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 194d2330-4d72-42f4-9b91-d8aec5e1fd33
+          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: FRANCHISE_FLAG
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6fc8dad9-082b-4afb-a2de-d503d79285fd
+                stepCounter: 2ed29715-7fad-4dd5-940a-bbac10f9c9d2
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0a950f69-171a-4d2d-bcc7-d3f00fe6cbdb
+          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: YEAR
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 672ac869-2ee7-4f8e-8fac-3502284c9f01
+                stepCounter: 2ed29715-7fad-4dd5-940a-bbac10f9c9d2
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6b2329ce-102a-4459-a484-1ae8421c5c4f
+          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: MAKE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 327cafdd-39e1-43b5-b1c1-123f16fa617b
+                stepCounter: 2ed29715-7fad-4dd5-940a-bbac10f9c9d2
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0e5976af-4ecf-40b7-b246-0a6f715dc3eb
+          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: MODEL
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4f6d52a6-88e0-4e9e-8787-ea40655a4715
+                stepCounter: 2ed29715-7fad-4dd5-940a-bbac10f9c9d2
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d67806a1-7cdc-41cc-8d68-9a1ab2cceb13
+          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: EV_FLAG
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d915fb63-8467-4c9b-a33f-56b1fdb6de0f
+                stepCounter: 2ed29715-7fad-4dd5-940a-bbac10f9c9d2
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 67a72b3a-33fc-47ad-990b-12ca2dbc335b
+          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: FRANCHISE_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 635f874d-8f57-446a-afc1-12fb0e1e079b
+                stepCounter: 2ed29715-7fad-4dd5-940a-bbac10f9c9d2
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5ea4dbb1-4706-4daa-b282-9aaaa9bfb636
+          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+        config: {}
+        dataType: DATE
+        description: ""
+        name: TRUCK_OPENING_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d4a8b696-24f6-4717-9493-ea97152491db
+                stepCounter: 2ed29715-7fad-4dd5-940a-bbac10f9c9d2
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b01a4195-77f3-447f-81fe-435d20a08875
+          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+        config: {}
+        dataType: NUMBER
+        description: ""
+        name: DIM_CUSTOMER_LOYALTY_KEY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d22fd72c-dbd3-45f3-b5eb-1999ac52695c
+                stepCounter: b4e70d66-0b69-48b2-95c5-3ec198467287
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 27ae2477-f462-42d2-97cd-5afb4acd5c19
+          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: FIRST_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 7f55a1eb-0dcb-4ba6-849e-483806dabc73
+                stepCounter: b4e70d66-0b69-48b2-95c5-3ec198467287
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b15f56d1-f11b-4209-bf19-9c7d16e3617d
+          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: LAST_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 044ce5ea-c7ee-4ab6-9575-a244bbaec45c
+                stepCounter: b4e70d66-0b69-48b2-95c5-3ec198467287
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: cdf55320-cef2-4371-ad0a-35f4671ece81
+          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: CITY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: cd21547b-eac2-41a0-8a83-93607b288a73
+                stepCounter: b4e70d66-0b69-48b2-95c5-3ec198467287
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 463443aa-66c9-48a3-82d3-0c320654e4d3
+          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: POSTAL_CODE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 90bab52a-5f36-4903-968c-82f65eae92aa
+                stepCounter: b4e70d66-0b69-48b2-95c5-3ec198467287
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0a0bd985-86ac-4456-944e-711bb1916886
+          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: PREFERRED_LANGUAGE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3cd5c68b-c198-4383-942c-8a944015a741
+                stepCounter: b4e70d66-0b69-48b2-95c5-3ec198467287
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6b844986-9ef5-4b30-ab8e-0fe95f3eb550
+          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: GENDER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8a765d96-a5e6-4230-8801-2849920cec97
+                stepCounter: b4e70d66-0b69-48b2-95c5-3ec198467287
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9563597f-868e-4718-9a19-e4c53ca511ce
+          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: FAVOURITE_BRAND
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9b8aa354-b4b5-4412-be8c-315d6fe7d761
+                stepCounter: b4e70d66-0b69-48b2-95c5-3ec198467287
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0d439ed5-fa74-4894-9e50-33c0340186fe
+          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: MARITAL_STATUS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 01abcfea-0e4b-4481-89e8-1da20991d3d4
+                stepCounter: b4e70d66-0b69-48b2-95c5-3ec198467287
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a2d1461b-23b6-478a-8039-a2fe94048642
+          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: CHILDREN_COUNT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4d7a9e62-264b-41f2-bbc3-ba0b861d5361
+                stepCounter: b4e70d66-0b69-48b2-95c5-3ec198467287
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 27398b50-d4d8-4cef-b7d9-9e082a9fe7b5
+          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+        config: {}
+        dataType: DATE
+        description: ""
+        name: SIGN_UP_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a0102fb9-6190-4273-85e8-d505576f363e
+                stepCounter: b4e70d66-0b69-48b2-95c5-3ec198467287
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f8096e68-3269-4c72-9a84-1e97edebd6f3
+          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+        config: {}
+        dataType: DATE
+        description: ""
+        name: BIRTHDAY_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 08c2dd47-11ee-44e5-8c34-87ad738ea023
+                stepCounter: b4e70d66-0b69-48b2-95c5-3ec198467287
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8d6ba793-1bcd-4749-9eea-9b2f49081120
+          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: E_MAIL
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3b4cda77-eb56-4a93-993b-5403f5358b55
+                stepCounter: b4e70d66-0b69-48b2-95c5-3ec198467287
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 61ec49ad-4a7b-4eef-8a8e-162629389110
+          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: PHONE_NUMBER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9e4eddbc-3eea-4a1d-906e-778d0532b4cf
+                stepCounter: b4e70d66-0b69-48b2-95c5-3ec198467287
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          DIM_CUSTOMER_LOYALTY: b4e70d66-0b69-48b2-95c5-3ec198467287
+          DIM_MENU: f5a39e3e-2f59-48bf-8bca-35311f27a612
+          DIM_TRUCK: 2ed29715-7fad-4dd5-940a-bbac10f9c9d2
+          FCT_ORDERS: fe367fe0-6970-4043-b97a-cadf0a48031d
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: STG
+            nodeName: DIM_CUSTOMER_LOYALTY
+          - locationName: STG
+            nodeName: DIM_MENU
+          - locationName: STG
+            nodeName: DIM_TRUCK
+          - locationName: STG
+            nodeName: FCT_ORDERS
+        join:
+          joinCondition: |-
+            FROM {{ ref('STG', 'FCT_ORDERS') }} "FCT_ORDERS"
+            INNER JOIN {{ ref('STG', 'DIM_MENU') }} "DIM_MENU"
+            ON "FCT_ORDERS"."MENU_ITEM_ID" = "DIM_MENU"."MENU_ITEM_ID"
+            INNER JOIN {{ ref('STG', 'DIM_TRUCK') }} "DIM_TRUCK"
+            ON "FCT_ORDERS"."TRUCK_ID" = "DIM_TRUCK"."TRUCK_ID"
+            INNER JOIN {{ ref('STG', 'DIM_CUSTOMER_LOYALTY') }} "DIM_CUSTOMER_LOYALTY"
+            ON "FCT_ORDERS"."CUSTOMER_ID" = "DIM_CUSTOMER_LOYALTY"."CUSTOMER_ID"
+        name: V_ORDERS_MENU_TRUCK_FRANCHISE_CUSTOMER_LOYALTY
+        noLinkRefs: []
+  name: V_ORDERS_MENU_TRUCK_FRANCHISE_CUSTOMER_LOYALTY
+  overrideSQL: false
+  schema: ""
+  sqlType: View
+  type: sql
+  version: 1
+type: Node

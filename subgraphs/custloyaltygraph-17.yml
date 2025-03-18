@@ -1,6 +1,5 @@
 fileVersion: 1
 id: "17"
 name: cust loyalty graph
-steps:
-  - 2e3aa36d-5942-4d05-8463-794e115fb44a
+steps: []
 type: Subgraph

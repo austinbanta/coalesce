@@ -1,12 +1,12 @@
 fileVersion: 1
-id: 4a1adc96-9b3f-4ff9-a143-4a63650914e4
+id: e950b19f-c644-4ce1-a66e-e4dbc22589a2
 name: FRANCHISE
 operation:
   database: ""
   dataset: ""
   deployEnabled: true
   description: ""
-  locationName: TASTY_POS
+  locationName: TASTY_AWOOD
   metadata:
     columns:
       - acceptedValues:
@@ -14,8 +14,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 1df63f84-d11e-4cce-8192-5f434a43b5ea
-          stepCounter: 4a1adc96-9b3f-4ff9-a143-4a63650914e4
+          columnCounter: 7638123f-e52b-4c54-9688-6e3e97141d55
+          stepCounter: e950b19f-c644-4ce1-a66e-e4dbc22589a2
         config: {}
         dataType: NUMBER(38,0)
         defaultValue: ""
@@ -33,8 +33,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 2fa01703-7659-4d37-99ab-933256df421b
-          stepCounter: 4a1adc96-9b3f-4ff9-a143-4a63650914e4
+          columnCounter: ec237b77-67a2-4b71-9969-b7247c01bf70
+          stepCounter: e950b19f-c644-4ce1-a66e-e4dbc22589a2
         config: {}
         dataType: VARCHAR(16777216)
         defaultValue: ""
@@ -52,8 +52,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 74509d5d-3eb7-466a-b9d3-53c0a5fa4cda
-          stepCounter: 4a1adc96-9b3f-4ff9-a143-4a63650914e4
+          columnCounter: 5f71bd48-eaeb-496a-a38d-a81caba229ee
+          stepCounter: e950b19f-c644-4ce1-a66e-e4dbc22589a2
         config: {}
         dataType: VARCHAR(16777216)
         defaultValue: ""
@@ -71,8 +71,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 5a9da15f-c9e8-4fd3-8633-e2d89523aa86
-          stepCounter: 4a1adc96-9b3f-4ff9-a143-4a63650914e4
+          columnCounter: 29e3b7d5-4b89-4283-8214-d54f16b418b5
+          stepCounter: e950b19f-c644-4ce1-a66e-e4dbc22589a2
         config: {}
         dataType: VARCHAR(16777216)
         defaultValue: ""
@@ -90,8 +90,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 8b96e20c-b80e-4109-9d37-6034d436b4b6
-          stepCounter: 4a1adc96-9b3f-4ff9-a143-4a63650914e4
+          columnCounter: 18014f0a-241e-4509-85dd-e716005f036e
+          stepCounter: e950b19f-c644-4ce1-a66e-e4dbc22589a2
         config: {}
         dataType: VARCHAR(16777216)
         defaultValue: ""
@@ -109,8 +109,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 7da9d8f6-38d9-49d7-b060-4447bd9969e6
-          stepCounter: 4a1adc96-9b3f-4ff9-a143-4a63650914e4
+          columnCounter: b15ac57b-c8c1-4d0c-9ea0-6386a030f468
+          stepCounter: e950b19f-c644-4ce1-a66e-e4dbc22589a2
         config: {}
         dataType: VARCHAR(16777216)
         defaultValue: ""
@@ -128,8 +128,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 9b2af536-fba1-4793-9623-0a3bf9dce730
-          stepCounter: 4a1adc96-9b3f-4ff9-a143-4a63650914e4
+          columnCounter: 6654b81f-7b2c-48a2-bcfe-c1f3556cee14
+          stepCounter: e950b19f-c644-4ce1-a66e-e4dbc22589a2
         config: {}
         dataType: VARCHAR(16777216)
         defaultValue: ""
@@ -143,7 +143,7 @@ operation:
         transform: ""
         uniqueKey: false
     join:
-      joinCondition: FROM {{ ref('TASTY_POS', 'FRANCHISE') }}
+      joinCondition: FROM {{ ref('TASTY_AWOOD', 'FRANCHISE') }}
   name: FRANCHISE
   schema: ""
   sqlType: Source

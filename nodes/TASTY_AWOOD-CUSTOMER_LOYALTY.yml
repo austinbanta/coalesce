@@ -1,12 +1,12 @@
 fileVersion: 1
-id: 7c887be9-8a4a-4c37-98c4-afc5997db598
-name: MENU
+id: 96b5760e-9cd5-4b63-a93d-8793a718f776
+name: CUSTOMER_LOYALTY
 operation:
   database: ""
   dataset: ""
   deployEnabled: true
   description: ""
-  locationName: TASTY_POS
+  locationName: TASTY_AWOOD
   metadata:
     columns:
       - acceptedValues:
@@ -14,32 +14,13 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: e2b57856-8776-4294-ad8a-e19718b35a3b
-          stepCounter: 7c887be9-8a4a-4c37-98c4-afc5997db598
-        config: {}
-        dataType: NUMBER(19,0)
-        defaultValue: ""
-        description: ""
-        name: MENU_ID
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: 1390113f-40c6-4783-8d8c-2f21055cd46d
-          stepCounter: 7c887be9-8a4a-4c37-98c4-afc5997db598
+          columnCounter: 86fb6d57-bd83-4d2e-ae39-54ba2f416256
+          stepCounter: 96b5760e-9cd5-4b63-a93d-8793a718f776
         config: {}
         dataType: NUMBER(38,0)
         defaultValue: ""
         description: ""
-        name: MENU_TYPE_ID
+        name: CUSTOMER_ID
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -52,13 +33,13 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 54099e42-45c4-41e7-9a62-99148da82ba5
-          stepCounter: 7c887be9-8a4a-4c37-98c4-afc5997db598
+          columnCounter: dd45f7cf-706a-422c-9a23-0e1433de4980
+          stepCounter: 96b5760e-9cd5-4b63-a93d-8793a718f776
         config: {}
         dataType: VARCHAR(16777216)
         defaultValue: ""
         description: ""
-        name: MENU_TYPE
+        name: FIRST_NAME
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -71,13 +52,13 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 3a8e6001-3778-4481-871e-8f4b722900ee
-          stepCounter: 7c887be9-8a4a-4c37-98c4-afc5997db598
+          columnCounter: 5844415c-f31c-4261-9bf7-38e388b340a1
+          stepCounter: 96b5760e-9cd5-4b63-a93d-8793a718f776
         config: {}
         dataType: VARCHAR(16777216)
         defaultValue: ""
         description: ""
-        name: TRUCK_BRAND_NAME
+        name: LAST_NAME
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -90,32 +71,13 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 5a2cd2ed-0383-43dd-8761-5a24837330f0
-          stepCounter: 7c887be9-8a4a-4c37-98c4-afc5997db598
-        config: {}
-        dataType: NUMBER(38,0)
-        defaultValue: ""
-        description: ""
-        name: MENU_ITEM_ID
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: 09196dc9-07e8-4fda-8b1e-4a3155e5aaa5
-          stepCounter: 7c887be9-8a4a-4c37-98c4-afc5997db598
+          columnCounter: 27f609f7-a424-4948-ab5c-54e73f165337
+          stepCounter: 96b5760e-9cd5-4b63-a93d-8793a718f776
         config: {}
         dataType: VARCHAR(16777216)
         defaultValue: ""
         description: ""
-        name: MENU_ITEM_NAME
+        name: CITY
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -128,13 +90,13 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 134bf7b7-8017-410c-be90-c7afde06b81f
-          stepCounter: 7c887be9-8a4a-4c37-98c4-afc5997db598
+          columnCounter: e85760cb-87ff-483c-aa44-458dc5de8bc6
+          stepCounter: 96b5760e-9cd5-4b63-a93d-8793a718f776
         config: {}
         dataType: VARCHAR(16777216)
         defaultValue: ""
         description: ""
-        name: ITEM_CATEGORY
+        name: COUNTRY
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -147,13 +109,13 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 05f8732f-5b03-404d-bf2e-40701e5e2238
-          stepCounter: 7c887be9-8a4a-4c37-98c4-afc5997db598
+          columnCounter: f07e3579-ce58-4b0e-83a7-0403323cae58
+          stepCounter: 96b5760e-9cd5-4b63-a93d-8793a718f776
         config: {}
         dataType: VARCHAR(16777216)
         defaultValue: ""
         description: ""
-        name: ITEM_SUBCATEGORY
+        name: POSTAL_CODE
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -166,13 +128,13 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: d5ae5304-8f3a-4f1a-a761-359700811fae
-          stepCounter: 7c887be9-8a4a-4c37-98c4-afc5997db598
+          columnCounter: d24e6239-e0cb-474d-825a-9e91e9d0b8b2
+          stepCounter: 96b5760e-9cd5-4b63-a93d-8793a718f776
         config: {}
-        dataType: NUMBER(38,4)
+        dataType: VARCHAR(16777216)
         defaultValue: ""
         description: ""
-        name: COST_OF_GOODS_USD
+        name: PREFERRED_LANGUAGE
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -185,13 +147,13 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: cd77dee3-0e3f-437d-8c09-e92e54afa22c
-          stepCounter: 7c887be9-8a4a-4c37-98c4-afc5997db598
+          columnCounter: a8f015dc-0208-457a-a9d7-5bd934fca200
+          stepCounter: 96b5760e-9cd5-4b63-a93d-8793a718f776
         config: {}
-        dataType: NUMBER(38,4)
+        dataType: VARCHAR(16777216)
         defaultValue: ""
         description: ""
-        name: SALE_PRICE_USD
+        name: GENDER
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -204,13 +166,127 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: da9294af-3dc6-4292-82a6-71579dc79d3f
-          stepCounter: 7c887be9-8a4a-4c37-98c4-afc5997db598
+          columnCounter: 76a1dfb7-6455-4039-922b-f0282a518542
+          stepCounter: 96b5760e-9cd5-4b63-a93d-8793a718f776
         config: {}
-        dataType: VARIANT
+        dataType: VARCHAR(16777216)
         defaultValue: ""
         description: ""
-        name: MENU_ITEM_HEALTH_METRICS_OBJ
+        name: FAVOURITE_BRAND
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5b58f4cb-1add-4e27-ac2a-c7cf4ee57667
+          stepCounter: 96b5760e-9cd5-4b63-a93d-8793a718f776
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: MARITAL_STATUS
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 22ba49ab-e907-41d3-b883-8948a2dc5a44
+          stepCounter: 96b5760e-9cd5-4b63-a93d-8793a718f776
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: CHILDREN_COUNT
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e2b30730-f482-4437-9bf9-c2060b311a06
+          stepCounter: 96b5760e-9cd5-4b63-a93d-8793a718f776
+        config: {}
+        dataType: DATE
+        defaultValue: ""
+        description: ""
+        name: SIGN_UP_DATE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: cf2f85bd-0ab4-4dde-b391-cf15abed3c2f
+          stepCounter: 96b5760e-9cd5-4b63-a93d-8793a718f776
+        config: {}
+        dataType: DATE
+        defaultValue: ""
+        description: ""
+        name: BIRTHDAY_DATE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e09a1bd6-5449-456a-ae96-32cc2c97d3a2
+          stepCounter: 96b5760e-9cd5-4b63-a93d-8793a718f776
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: E_MAIL
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: bbb320d0-3686-4f8a-a747-f0ee22ae68a2
+          stepCounter: 96b5760e-9cd5-4b63-a93d-8793a718f776
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: PHONE_NUMBER
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -219,11 +295,11 @@ operation:
         transform: ""
         uniqueKey: false
     join:
-      joinCondition: FROM {{ ref('TASTY_POS', 'MENU') }}
-  name: MENU
+      joinCondition: FROM {{ ref('TASTY_AWOOD', 'CUSTOMER_LOYALTY') }}
+  name: CUSTOMER_LOYALTY
   schema: ""
   sqlType: Source
-  table: MENU
+  table: CUSTOMER_LOYALTY
   type: sourceInput
   version: 1
 type: Node

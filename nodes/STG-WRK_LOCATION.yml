@@ -1,5 +1,5 @@
 fileVersion: 1
-id: 19d6eefa-065a-400c-91dd-04c46cd24f1c
+id: 92519035-5990-4163-92ec-713274d7014c
 name: WRK_LOCATION
 operation:
   config:
@@ -32,8 +32,8 @@ operation:
     columns:
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 981328d4-123a-4640-915c-18e2fce4cd30
-          stepCounter: 19d6eefa-065a-400c-91dd-04c46cd24f1c
+          columnCounter: 20417bb5-9b75-4073-8896-473c9bd161ca
+          stepCounter: 92519035-5990-4163-92ec-713274d7014c
         config: {}
         dataType: NUMBER(19,0)
         description: ""
@@ -41,13 +41,13 @@ operation:
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 1652305d-4200-4c0e-a0b9-d141a24c366d
-                stepCounter: b5cdbf9c-eaf1-4063-b840-9cfb2d78dd92
+              - columnCounter: e35bbddf-c572-4fce-bd03-6c52add4b4a7
+                stepCounter: b692227b-140e-402a-b27c-f58fef8359f0
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: ed344372-9386-4444-ab69-aa091e275f46
-          stepCounter: 19d6eefa-065a-400c-91dd-04c46cd24f1c
+          columnCounter: 869cd47f-6d4b-4d79-a357-750b720d4eaa
+          stepCounter: 92519035-5990-4163-92ec-713274d7014c
         config: {}
         dataType: VARCHAR(16777216)
         description: ""
@@ -55,13 +55,13 @@ operation:
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: d68c4f14-6cd1-47d1-a026-4544ad6886fc
-                stepCounter: b5cdbf9c-eaf1-4063-b840-9cfb2d78dd92
+              - columnCounter: 2d06c34f-182a-4721-9209-76cd127ef68b
+                stepCounter: b692227b-140e-402a-b27c-f58fef8359f0
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: e5cf6e32-c182-4fe9-8660-7eac4897298b
-          stepCounter: 19d6eefa-065a-400c-91dd-04c46cd24f1c
+          columnCounter: 8ab7a05d-807b-425c-9d03-28ec971a43f3
+          stepCounter: 92519035-5990-4163-92ec-713274d7014c
         config: {}
         dataType: VARCHAR(16777216)
         description: ""
@@ -69,13 +69,13 @@ operation:
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: b6e5a9c0-a991-4dbb-bd52-1dde7aff1f79
-                stepCounter: b5cdbf9c-eaf1-4063-b840-9cfb2d78dd92
+              - columnCounter: 788d44da-3453-4d27-a074-0573aede351e
+                stepCounter: b692227b-140e-402a-b27c-f58fef8359f0
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 137661bc-38ae-4d7c-9980-a3b70d0e3491
-          stepCounter: 19d6eefa-065a-400c-91dd-04c46cd24f1c
+          columnCounter: 6fc50176-130f-49f7-bbb2-1408d1319ba1
+          stepCounter: 92519035-5990-4163-92ec-713274d7014c
         config: {}
         dataType: VARCHAR(16777216)
         description: ""
@@ -83,13 +83,13 @@ operation:
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 4290634f-ac88-44cc-aa53-ccc89a6e0855
-                stepCounter: b5cdbf9c-eaf1-4063-b840-9cfb2d78dd92
+              - columnCounter: fe6dcd74-9ee3-4b9a-96d4-04e304dd8931
+                stepCounter: b692227b-140e-402a-b27c-f58fef8359f0
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 8bce0faa-3c1a-4760-b389-45474fc5436d
-          stepCounter: 19d6eefa-065a-400c-91dd-04c46cd24f1c
+          columnCounter: 113e0e33-ab69-4820-bd87-babb085f8d98
+          stepCounter: 92519035-5990-4163-92ec-713274d7014c
         config: {}
         dataType: VARCHAR(16777216)
         description: ""
@@ -97,13 +97,13 @@ operation:
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: f59ec5a4-82b0-4478-8680-8480a835c6cb
-                stepCounter: b5cdbf9c-eaf1-4063-b840-9cfb2d78dd92
+              - columnCounter: ce61a4b5-6d67-49c6-a6f1-e237d7158624
+                stepCounter: b692227b-140e-402a-b27c-f58fef8359f0
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 0e8ca505-c8d4-42ef-94ce-961caa62315a
-          stepCounter: 19d6eefa-065a-400c-91dd-04c46cd24f1c
+          columnCounter: a7737dc1-153f-4f4c-aa48-c4e0ed828e67
+          stepCounter: 92519035-5990-4163-92ec-713274d7014c
         config: {}
         dataType: VARCHAR(16777216)
         description: ""
@@ -111,13 +111,13 @@ operation:
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: b5250635-dda0-4306-a727-8a63d4b3b9fd
-                stepCounter: b5cdbf9c-eaf1-4063-b840-9cfb2d78dd92
+              - columnCounter: dd8be097-5c25-4f37-b8d8-92126f53d8e7
+                stepCounter: b692227b-140e-402a-b27c-f58fef8359f0
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 401e97cb-7a67-43a3-9318-bea90b802435
-          stepCounter: 19d6eefa-065a-400c-91dd-04c46cd24f1c
+          columnCounter: 22cc4655-5f79-4a66-8e37-9ab43b4e8d5c
+          stepCounter: 92519035-5990-4163-92ec-713274d7014c
         config: {}
         dataType: VARCHAR(16777216)
         description: ""
@@ -125,8 +125,8 @@ operation:
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 8cdd801c-9452-4df7-acc4-6af5ec9e9457
-                stepCounter: b5cdbf9c-eaf1-4063-b840-9cfb2d78dd92
+              - columnCounter: dd7caa3a-e3d6-4a74-ae51-1b837b7177cb
+                stepCounter: b692227b-140e-402a-b27c-f58fef8359f0
             transform: ""
     cteString: ""
     enabledColumnTestIDs: []
@@ -135,14 +135,14 @@ operation:
         customSQL:
           customSQL: ""
         dependencies:
-          - locationName: TASTY_POS
+          - locationName: TASTY_AWOOD
             nodeName: LOCATION
         join:
           joinCondition: |2-
 
 
              
-              FROM  {{ ref('TASTY_POS', 'LOCATION') }} LOCATION
+              FROM  {{ ref('TASTY_AWOOD', 'LOCATION') }} LOCATION
         name: WRK_LOCATION
         noLinkRefs: []
   name: WRK_LOCATION
