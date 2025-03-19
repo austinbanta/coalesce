@@ -3,7 +3,6 @@ id: 96b5760e-9cd5-4b63-a93d-8793a718f776
 name: CUSTOMER_LOYALTY
 operation:
   database: ""
-  dataset: ""
   deployEnabled: true
   description: ""
   locationName: TASTY_AWOOD
@@ -294,12 +293,9 @@ operation:
             transform: ""
         transform: ""
         uniqueKey: false
-    join:
-      joinCondition: FROM {{ ref('TASTY_AWOOD', 'CUSTOMER_LOYALTY') }}
   name: CUSTOMER_LOYALTY
   schema: ""
   sqlType: Source
-  table: CUSTOMER_LOYALTY
   type: sourceInput
   version: 1
 type: Node

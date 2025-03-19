@@ -3,7 +3,6 @@ id: eb41e35c-1842-4cf9-aa9c-adc0f7d1b8f6
 name: TRUCK
 operation:
   database: ""
-  dataset: ""
   deployEnabled: true
   description: ""
   locationName: TASTY_AWOOD
@@ -275,12 +274,9 @@ operation:
             transform: ""
         transform: ""
         uniqueKey: false
-    join:
-      joinCondition: FROM {{ ref('TASTY_AWOOD', 'TRUCK') }}
   name: TRUCK
   schema: ""
   sqlType: Source
-  table: TRUCK
   type: sourceInput
   version: 1
 type: Node

@@ -3,7 +3,6 @@ id: 4509489f-9c5d-4b57-b4aa-3c7e24d7ee92
 name: ORDER_HEADER_14M
 operation:
   database: ""
-  dataset: ""
   deployEnabled: true
   description: ""
   locationName: TASTY_AWOOD
@@ -313,12 +312,9 @@ operation:
             transform: ""
         transform: ""
         uniqueKey: false
-    join:
-      joinCondition: FROM {{ ref('TASTY_AWOOD', 'ORDER_HEADER_14M') }}
   name: ORDER_HEADER_14M
   schema: ""
   sqlType: Source
-  table: ORDER_HEADER_14M
   type: sourceInput
   version: 1
 type: Node

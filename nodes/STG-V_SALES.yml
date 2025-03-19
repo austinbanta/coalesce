@@ -1016,6 +1016,23 @@ operation:
               - columnCounter: 9e4eddbc-3eea-4a1d-906e-778d0532b4cf
                 stepCounter: b4e70d66-0b69-48b2-95c5-3ec198467287
             transform: ""
+      - acceptedValues:
+          strictMatch: false
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 95bcf583-5f71-4148-a88c-fb55e213d656
+          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+        config: {}
+        dataType: STRING
+        description: ""
+        name: Price_Bucket
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1421322e-1918-4024-81a9-597c52ec956c
+                stepCounter: f5a39e3e-2f59-48bf-8bca-35311f27a612
+            transform: ""
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:

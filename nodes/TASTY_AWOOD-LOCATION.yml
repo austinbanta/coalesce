@@ -3,7 +3,6 @@ id: b692227b-140e-402a-b27c-f58fef8359f0
 name: LOCATION
 operation:
   database: ""
-  dataset: ""
   deployEnabled: true
   description: ""
   locationName: TASTY_AWOOD
@@ -142,12 +141,9 @@ operation:
             transform: ""
         transform: ""
         uniqueKey: false
-    join:
-      joinCondition: FROM {{ ref('TASTY_AWOOD', 'LOCATION') }}
   name: LOCATION
   schema: ""
   sqlType: Source
-  table: LOCATION
   type: sourceInput
   version: 1
 type: Node

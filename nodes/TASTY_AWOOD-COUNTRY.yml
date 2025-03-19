@@ -3,7 +3,6 @@ id: dc60adc1-1f9b-4ec6-9174-871a549f8073
 name: COUNTRY
 operation:
   database: ""
-  dataset: ""
   deployEnabled: true
   description: ""
   locationName: TASTY_AWOOD
@@ -142,12 +141,9 @@ operation:
             transform: ""
         transform: ""
         uniqueKey: false
-    join:
-      joinCondition: FROM {{ ref('TASTY_AWOOD', 'COUNTRY') }}
   name: COUNTRY
   schema: ""
   sqlType: Source
-  table: COUNTRY
   type: sourceInput
   version: 1
 type: Node

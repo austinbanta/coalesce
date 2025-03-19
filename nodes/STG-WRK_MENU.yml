@@ -83,7 +83,7 @@ operation:
           - columnReferences:
               - columnCounter: 89febbd4-eb55-4f25-9d45-6a78758d64d9
                 stepCounter: 2f1eca37-69df-45fc-9b1a-979f43b9b22c
-            transform: ""
+            transform: UPPER("MENU"."MENU_TYPE")
       - appliedColumnTests: {}
         columnReference:
           columnCounter: 839afa9e-adfd-4b7e-8b0f-0aeabf05d22a
@@ -101,7 +101,7 @@ operation:
           - columnReferences:
               - columnCounter: a86bbce2-3b87-4719-8528-1743cb046e8c
                 stepCounter: 2f1eca37-69df-45fc-9b1a-979f43b9b22c
-            transform: ""
+            transform: UPPER("MENU"."TRUCK_BRAND_NAME")
       - appliedColumnTests: {}
         columnReference:
           columnCounter: e3b49cfd-283b-4b72-a950-2980e8d4c3f0
@@ -137,7 +137,7 @@ operation:
           - columnReferences:
               - columnCounter: 4d2a3417-109f-483b-926d-abc095760613
                 stepCounter: 2f1eca37-69df-45fc-9b1a-979f43b9b22c
-            transform: ""
+            transform: UPPER("MENU"."MENU_ITEM_NAME")
       - appliedColumnTests: {}
         columnReference:
           columnCounter: e03c2a5a-18e4-4c2a-b01a-9273289972d3
@@ -155,7 +155,7 @@ operation:
           - columnReferences:
               - columnCounter: 88282bbe-62ca-4600-b7d7-66cc35443610
                 stepCounter: 2f1eca37-69df-45fc-9b1a-979f43b9b22c
-            transform: ""
+            transform: UPPER("MENU"."ITEM_CATEGORY")
       - appliedColumnTests: {}
         columnReference:
           columnCounter: 903e25fe-fa6e-4e3e-bdc6-781429b7aad5
@@ -173,7 +173,7 @@ operation:
           - columnReferences:
               - columnCounter: 343e731d-92a0-4d8a-bbd4-68d5c307cab7
                 stepCounter: 2f1eca37-69df-45fc-9b1a-979f43b9b22c
-            transform: ""
+            transform: UPPER("MENU"."ITEM_SUBCATEGORY")
       - appliedColumnTests: {}
         columnReference:
           columnCounter: 0857a906-a67d-4fbc-a69a-d63e1ab0eed0
@@ -354,6 +354,26 @@ operation:
               - columnCounter: 7de8ca54-768d-42bd-938e-198276953f57
                 stepCounter: 2f1eca37-69df-45fc-9b1a-979f43b9b22c
             transform: "\"MENU\".\"MENU_ITEM_HEALTH_METRICS_OBJ\":\"menu_item_id\"::DOUBLE"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5771a63e-7e8a-43e9-86a7-4913f930162c
+          stepCounter: f2319868-6e7e-4eba-88d7-efd265cd5d31
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: Price_Bucket
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: CASE WHEN "MENU"."SALE_PRICE_USD">15 THEN 'high price' WHEN "MENU"."SALE_PRICE_USD">7 THEN 'mid price' ELSE 'low price' END
+        systemColumnType: None
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:

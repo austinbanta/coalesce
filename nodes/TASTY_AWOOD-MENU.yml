@@ -3,7 +3,6 @@ id: 2f1eca37-69df-45fc-9b1a-979f43b9b22c
 name: MENU
 operation:
   database: ""
-  dataset: ""
   deployEnabled: true
   description: ""
   locationName: TASTY_AWOOD
@@ -218,12 +217,9 @@ operation:
             transform: ""
         transform: ""
         uniqueKey: false
-    join:
-      joinCondition: FROM {{ ref('TASTY_AWOOD', 'MENU') }}
   name: MENU
   schema: ""
   sqlType: Source
-  table: MENU
   type: sourceInput
   version: 1
 type: Node
