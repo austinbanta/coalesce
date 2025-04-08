@@ -16,7 +16,7 @@ operation:
     truncateBefore: false
   database: ""
   deployEnabled: true
-  description: ""
+  description: Creates or replaces the FCT_ORDERS table and populates it by merging data from the WRK_ORDERS table. It updates matched records based on ORDER_DETAIL_ID and ORDER_ID, and inserts new records when there is no match.
   isMultisource: false
   locationName: STG
   materializationType: table
@@ -29,7 +29,11 @@ operation:
           stepCounter: fe367fe0-6970-4043-b97a-cadf0a48031d
         config: {}
         dataType: NUMBER(38,0)
-        description: ""
+        description: |
+          - This column represents the unique identifier for a truck used in fulfilling work orders.
+          - It is sourced directly from the `TRUCK_ID` column in the `WRK_ORDERS` table in the STG database.
+          - This identifier can be used to track truck utilization, delivery efficiency, and maintenance schedules.
+          - Downstream, it can be used in reports analyzing delivery times, fuel consumption, and other logistics-related KPIs.
         name: TRUCK_ID
         nullable: true
         sourceColumnReferences:
@@ -43,7 +47,11 @@ operation:
           stepCounter: fe367fe0-6970-4043-b97a-cadf0a48031d
         config: {}
         dataType: FLOAT
-        description: ""
+        description: |
+          - This column represents the unique identifier for a location associated with a work order.
+          - It is sourced directly from the `LOCATION_ID` column in the `WRK_ORDERS` table in the STG database.
+          - This ID is crucial for geographical analysis of operations and can be used to optimize resource allocation.
+          - This identifier can be used in reports to show order distribution across different locations.
         name: LOCATION_ID
         nullable: true
         sourceColumnReferences:
@@ -57,7 +65,11 @@ operation:
           stepCounter: fe367fe0-6970-4043-b97a-cadf0a48031d
         config: {}
         dataType: NUMBER(38,0)
-        description: ""
+        description: |
+          - This column represents the unique identifier for a customer placing a work order.
+          - It is sourced directly from the `CUSTOMER_ID` column in the `WRK_ORDERS` table in the STG database.
+          - This ID is a foreign key relating to the customer master table and is crucial for customer-centric analysis.
+          - It can be used to track customer order patterns, preferences, and overall customer lifetime value.
         name: CUSTOMER_ID
         nullable: true
         sourceColumnReferences:
@@ -71,7 +83,11 @@ operation:
           stepCounter: fe367fe0-6970-4043-b97a-cadf0a48031d
         config: {}
         dataType: NUMBER(38,0)
-        description: ""
+        description: |
+          - This column represents the unique identifier for a shift during which a work order was processed.
+          - It is sourced directly from the `SHIFT_ID` column in the `WRK_ORDERS` table in the STG database.
+          - This ID is useful for analyzing productivity and efficiency across different shifts.
+          - It can be used in reports to understand peak hours, staffing needs, and shift-based performance metrics.
         name: SHIFT_ID
         nullable: true
         sourceColumnReferences:
@@ -85,7 +101,11 @@ operation:
           stepCounter: fe367fe0-6970-4043-b97a-cadf0a48031d
         config: {}
         dataType: TIME(9)
-        description: ""
+        description: |
+          - This column indicates the start time of the shift during which a work order was processed.
+          - It is sourced directly from the `SHIFT_START_TIME` column in the `WRK_ORDERS` table in the STG database.
+          - Along with `SHIFT_END_TIME`, it helps define the duration of a work shift for operational analysis.
+          - It can be used in conjunction with `SHIFT_ID` to analyze shift-specific performance metrics.
         name: SHIFT_START_TIME
         nullable: true
         sourceColumnReferences:
@@ -99,7 +119,11 @@ operation:
           stepCounter: fe367fe0-6970-4043-b97a-cadf0a48031d
         config: {}
         dataType: TIME(9)
-        description: ""
+        description: |
+          - This column indicates the end time of the shift during which a work order was processed.
+          - It is sourced directly from the `SHIFT_END_TIME` column in the `WRK_ORDERS` table in the STG database.
+          - Along with `SHIFT_START_TIME`, it helps define the duration of a work shift for operational analysis.
+          - It can be used in conjunction with `SHIFT_ID` to analyze shift-specific performance metrics.
         name: SHIFT_END_TIME
         nullable: true
         sourceColumnReferences:
@@ -113,7 +137,11 @@ operation:
           stepCounter: fe367fe0-6970-4043-b97a-cadf0a48031d
         config: {}
         dataType: VARCHAR(16777216)
-        description: ""
+        description: |
+          - This column specifies the channel through which a work order was placed (e.g., online, phone, in-store).
+          - It is sourced directly from the `ORDER_CHANNEL` column in the `WRK_ORDERS` table in the STG database.
+          - Understanding the order channel distribution helps in optimizing marketing efforts and resource allocation.
+          - It can be used in reports to analyze sales performance by channel.
         name: ORDER_CHANNEL
         nullable: true
         sourceColumnReferences:
@@ -127,7 +155,11 @@ operation:
           stepCounter: fe367fe0-6970-4043-b97a-cadf0a48031d
         config: {}
         dataType: TIMESTAMP_NTZ(9)
-        description: ""
+        description: |
+          - This column represents the timestamp when a work order was placed.
+          - It is sourced directly from the `ORDER_TS` column in the `WRK_ORDERS` table in the STG database.
+          - It is crucial for time-based analysis of order patterns and trends.
+          - It can be used in reports to track order volume over time, identify peak hours, and measure order processing times.
         name: ORDER_TS
         nullable: true
         sourceColumnReferences:
@@ -141,7 +173,11 @@ operation:
           stepCounter: fe367fe0-6970-4043-b97a-cadf0a48031d
         config: {}
         dataType: VARCHAR(16777216)
-        description: ""
+        description: |
+          - This column represents the timestamp when a work order was served.
+          - It is sourced directly from the `SERVED_TS` column in the `WRK_ORDERS` table in the STG database.
+          - This timestamp enables the calculation of service time, queue length, and resource utilization.
+          - It can be used in reports to track efficiency metrics and identify bottlenecks in the service process.
         name: SERVED_TS
         nullable: true
         sourceColumnReferences:
@@ -155,7 +191,11 @@ operation:
           stepCounter: fe367fe0-6970-4043-b97a-cadf0a48031d
         config: {}
         dataType: VARCHAR(3)
-        description: ""
+        description: |
+          - This column represents the currency in which a work order was placed.
+          - It is sourced directly from the `ORDER_CURRENCY` column in the `WRK_ORDERS` table in the STG database.
+          - This is important for financial reporting and currency conversion purposes.
+          - It can be used in reports to aggregate sales in a standardized currency.
         name: ORDER_CURRENCY
         nullable: true
         sourceColumnReferences:
@@ -169,7 +209,11 @@ operation:
           stepCounter: fe367fe0-6970-4043-b97a-cadf0a48031d
         config: {}
         dataType: NUMBER(38,4)
-        description: ""
+        description: |
+          - This column represents the amount of a work order before taxes and discounts.
+          - It is sourced directly from the `ORDER_AMOUNT` column in the `WRK_ORDERS` table in the STG database.
+          - It is a key input for revenue calculations and profitability analysis.
+          - It can be used in reports to track sales performance, average order value, and revenue trends.
         name: ORDER_AMOUNT
         nullable: true
         sourceColumnReferences:
@@ -183,7 +227,11 @@ operation:
           stepCounter: fe367fe0-6970-4043-b97a-cadf0a48031d
         config: {}
         dataType: VARCHAR(16777216)
-        description: ""
+        description: |
+          - This column represents the tax amount applied to a work order.
+          - It is sourced directly from the `ORDER_TAX_AMOUNT` column in the `WRK_ORDERS` table in the STG database.
+          - This is important for financial reporting and tax compliance.
+          - It can be used in reports to calculate total taxes collected and analyze tax-related metrics.
         name: ORDER_TAX_AMOUNT
         nullable: true
         sourceColumnReferences:
@@ -197,7 +245,11 @@ operation:
           stepCounter: fe367fe0-6970-4043-b97a-cadf0a48031d
         config: {}
         dataType: VARCHAR(16777216)
-        description: ""
+        description: |
+          - This column represents the discount amount applied to a work order.
+          - It is sourced directly from the `ORDER_DISCOUNT_AMOUNT` column in the `WRK_ORDERS` table in the STG database.
+          - This data is important for analyzing the impact of discounts on revenue and profitability.
+          - It can be used in reports to track discount usage, effectiveness, and overall impact on sales.
         name: ORDER_DISCOUNT_AMOUNT
         nullable: true
         sourceColumnReferences:
@@ -211,7 +263,11 @@ operation:
           stepCounter: fe367fe0-6970-4043-b97a-cadf0a48031d
         config: {}
         dataType: NUMBER(38,4)
-        description: ""
+        description: |
+          - This column represents the total amount of a work order, including taxes and discounts.
+          - It is sourced directly from the `ORDER_TOTAL` column in the `WRK_ORDERS` table in the STG database.
+          - This is a key metric for revenue tracking and financial analysis.
+          - It can be used in reports to track total sales, average order value, and overall financial performance.
         name: ORDER_TOTAL
         nullable: true
         sourceColumnReferences:
@@ -225,7 +281,11 @@ operation:
           stepCounter: fe367fe0-6970-4043-b97a-cadf0a48031d
         config: {}
         dataType: NUMBER(38,0)
-        description: ""
+        description: |
+          - This column represents the unique identifier for a specific detail line within a work order.
+          - It is sourced directly from the `ORDER_DETAIL_ID` column in the `WRK_ORDERS` table in the STG database.
+          - This ID is used to identify and track individual items or services within an order.
+          - This column is a business key for order details.
         isBusinessKey: true
         name: ORDER_DETAIL_ID
         nullable: true
@@ -240,7 +300,11 @@ operation:
           stepCounter: fe367fe0-6970-4043-b97a-cadf0a48031d
         config: {}
         dataType: NUMBER(38,0)
-        description: ""
+        description: |
+          - This column represents the unique identifier for a work order.
+          - It is sourced directly from the `ORDER_ID` column in the `WRK_ORDERS` table in the STG database.
+          - This ID is the primary key for the work order and is used to track the order throughout its lifecycle.
+          - This column is a business key for orders.
         isBusinessKey: true
         name: ORDER_ID
         nullable: true
@@ -255,7 +319,11 @@ operation:
           stepCounter: fe367fe0-6970-4043-b97a-cadf0a48031d
         config: {}
         dataType: NUMBER(38,0)
-        description: ""
+        description: |
+          - This column represents the unique identifier for a menu item included in a work order.
+          - It is sourced directly from the `MENU_ITEM_ID` column in the `WRK_ORDERS` table in the STG database.
+          - This ID is a foreign key relating to the menu items table.
+          - It can be used to analyze product performance, identify popular items, and optimize menu offerings.
         name: MENU_ITEM_ID
         nullable: true
         sourceColumnReferences:
@@ -269,7 +337,11 @@ operation:
           stepCounter: fe367fe0-6970-4043-b97a-cadf0a48031d
         config: {}
         dataType: VARCHAR(16777216)
-        description: ""
+        description: |
+          - This column represents the identifier for a discount applied to a work order.
+          - It is sourced directly from the `DISCOUNT_ID` column in the `WRK_ORDERS` table in the STG database.
+          - This ID is a foreign key relating to the discount codes table.
+          - It can be used to track discount usage, effectiveness, and overall impact on sales.
         name: DISCOUNT_ID
         nullable: true
         sourceColumnReferences:
@@ -283,7 +355,11 @@ operation:
           stepCounter: fe367fe0-6970-4043-b97a-cadf0a48031d
         config: {}
         dataType: NUMBER(38,0)
-        description: ""
+        description: |
+          - This column indicates the line number of an item within a work order.
+          - It is sourced directly from the `LINE_NUMBER` column in the `WRK_ORDERS` table in the STG database.
+          - This number helps to maintain the order of items within an order.
+          - It can be used in conjunction with `ORDER_ID` and `ORDER_DETAIL_ID` to uniquely identify each item in an order.
         name: LINE_NUMBER
         nullable: true
         sourceColumnReferences:
@@ -297,7 +373,11 @@ operation:
           stepCounter: fe367fe0-6970-4043-b97a-cadf0a48031d
         config: {}
         dataType: NUMBER(5,0)
-        description: ""
+        description: |
+          - This column represents the quantity of a menu item ordered in a work order.
+          - It is sourced directly from the `QUANTITY` column in the `WRK_ORDERS` table in the STG database.
+          - This data is important for inventory management and sales analysis.
+          - It can be used in reports to track product performance and identify popular items.
         name: QUANTITY
         nullable: true
         sourceColumnReferences:
@@ -311,7 +391,11 @@ operation:
           stepCounter: fe367fe0-6970-4043-b97a-cadf0a48031d
         config: {}
         dataType: NUMBER(38,4)
-        description: ""
+        description: |
+          - This column represents the price of a single unit of a menu item in a work order.
+          - It is sourced directly from the `UNIT_PRICE` column in the `WRK_ORDERS` table in the STG database.
+          - This is a key input for revenue calculations and profitability analysis.
+          - It can be used in reports to track product pricing trends and analyze profit margins.
         name: UNIT_PRICE
         nullable: true
         sourceColumnReferences:
@@ -325,7 +409,11 @@ operation:
           stepCounter: fe367fe0-6970-4043-b97a-cadf0a48031d
         config: {}
         dataType: NUMBER(38,4)
-        description: ""
+        description: |
+          - This column represents the total price of a line item (quantity * unit price) in a work order.
+          - It is sourced directly from the `PRICE` column in the `WRK_ORDERS` table in the STG database.
+          - This is a key input for revenue calculations and profitability analysis at the line item level.
+          - It can be used in reports to track product performance and analyze revenue contribution by item.
         name: PRICE
         nullable: true
         sourceColumnReferences:
@@ -339,7 +427,11 @@ operation:
           stepCounter: fe367fe0-6970-4043-b97a-cadf0a48031d
         config: {}
         dataType: VARCHAR(16777216)
-        description: ""
+        description: |
+          - This column represents the discount amount applied to a specific item in a work order.
+          - It is sourced directly from the `ORDER_ITEM_DISCOUNT_AMOUNT` column in the `WRK_ORDERS` table in the STG database.
+          - This data is important for analyzing the impact of discounts on individual product sales.
+          - It can be used in reports to track discount usage, effectiveness, and overall impact on sales at the item level.
         name: ORDER_ITEM_DISCOUNT_AMOUNT
         nullable: true
         sourceColumnReferences:
