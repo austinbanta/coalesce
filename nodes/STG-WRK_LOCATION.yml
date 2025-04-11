@@ -19,7 +19,7 @@ operation:
     postSQL: ""
     preSQL: ""
     selectDistinct: false
-    testsEnabled: false
+    testsEnabled: true
     truncateBefore: true
   database: ""
   deployEnabled: true
@@ -30,7 +30,8 @@ operation:
   metadata:
     appliedNodeTests: []
     columns:
-      - appliedColumnTests: {}
+      - appliedColumnTests:
+          isDistinct: false
         columnReference:
           columnCounter: 20417bb5-9b75-4073-8896-473c9bd161ca
           stepCounter: 92519035-5990-4163-92ec-713274d7014c
@@ -44,7 +45,8 @@ operation:
               - columnCounter: e35bbddf-c572-4fce-bd03-6c52add4b4a7
                 stepCounter: b692227b-140e-402a-b27c-f58fef8359f0
             transform: ""
-      - appliedColumnTests: {}
+      - appliedColumnTests:
+          isDistinct: false
         columnReference:
           columnCounter: 869cd47f-6d4b-4d79-a357-750b720d4eaa
           stepCounter: 92519035-5990-4163-92ec-713274d7014c
@@ -58,7 +60,8 @@ operation:
               - columnCounter: 2d06c34f-182a-4721-9209-76cd127ef68b
                 stepCounter: b692227b-140e-402a-b27c-f58fef8359f0
             transform: ""
-      - appliedColumnTests: {}
+      - appliedColumnTests:
+          isDistinct: false
         columnReference:
           columnCounter: 8ab7a05d-807b-425c-9d03-28ec971a43f3
           stepCounter: 92519035-5990-4163-92ec-713274d7014c
@@ -72,7 +75,8 @@ operation:
               - columnCounter: 788d44da-3453-4d27-a074-0573aede351e
                 stepCounter: b692227b-140e-402a-b27c-f58fef8359f0
             transform: ""
-      - appliedColumnTests: {}
+      - appliedColumnTests:
+          isDistinct: false
         columnReference:
           columnCounter: 6fc50176-130f-49f7-bbb2-1408d1319ba1
           stepCounter: 92519035-5990-4163-92ec-713274d7014c
@@ -86,7 +90,8 @@ operation:
               - columnCounter: fe6dcd74-9ee3-4b9a-96d4-04e304dd8931
                 stepCounter: b692227b-140e-402a-b27c-f58fef8359f0
             transform: ""
-      - appliedColumnTests: {}
+      - appliedColumnTests:
+          isDistinct: true
         columnReference:
           columnCounter: 113e0e33-ab69-4820-bd87-babb085f8d98
           stepCounter: 92519035-5990-4163-92ec-713274d7014c
@@ -100,7 +105,8 @@ operation:
               - columnCounter: ce61a4b5-6d67-49c6-a6f1-e237d7158624
                 stepCounter: b692227b-140e-402a-b27c-f58fef8359f0
             transform: ""
-      - appliedColumnTests: {}
+      - appliedColumnTests:
+          isDistinct: false
         columnReference:
           columnCounter: a7737dc1-153f-4f4c-aa48-c4e0ed828e67
           stepCounter: 92519035-5990-4163-92ec-713274d7014c
@@ -114,7 +120,8 @@ operation:
               - columnCounter: dd8be097-5c25-4f37-b8d8-92126f53d8e7
                 stepCounter: b692227b-140e-402a-b27c-f58fef8359f0
             transform: ""
-      - appliedColumnTests: {}
+      - appliedColumnTests:
+          isDistinct: false
         columnReference:
           columnCounter: 22cc4655-5f79-4a66-8e37-9ab43b4e8d5c
           stepCounter: 92519035-5990-4163-92ec-713274d7014c
@@ -129,7 +136,8 @@ operation:
                 stepCounter: b692227b-140e-402a-b27c-f58fef8359f0
             transform: ""
     cteString: ""
-    enabledColumnTestIDs: []
+    enabledColumnTestIDs:
+      - isDistinct
     sourceMapping:
       - aliases: {}
         customSQL:
