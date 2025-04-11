@@ -28,7 +28,12 @@ operation:
   locationName: STG
   materializationType: table
   metadata:
-    appliedNodeTests: []
+    appliedNodeTests:
+      - continueOnFailure: true
+        description: ""
+        name: custom test
+        runOrder: After
+        templateString: select * from {{this}} where "CUSTOMER_ID">0
     columns:
       - appliedColumnTests:
           isDistinct: false
