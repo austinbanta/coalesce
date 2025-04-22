@@ -63,7 +63,7 @@ operation:
           columnCounter: 50daa3c6-36ae-4988-a7d0-d9115ca02e04
           stepCounter: 64505aad-f723-402b-a967-c71d32a8efe6
         config: {}
-        dataType: VARCHAR(16777216)
+        dataType: NUMBER
         description: ""
         name: LAST_NAME
         nullable: true
@@ -71,7 +71,7 @@ operation:
           - columnReferences:
               - columnCounter: 5f71bd48-eaeb-496a-a38d-a81caba229ee
                 stepCounter: e950b19f-c644-4ce1-a66e-e4dbc22589a2
-            transform: ""
+            transform: "'lastnameplaceholder'"
       - appliedColumnTests: {}
         columnReference:
           columnCounter: e31a85e5-d271-4811-9f40-1a007b68ef02

@@ -71,6 +71,7 @@ operation:
         config: {}
         dataType: VARCHAR(16777216)
         description: ""
+        isBusinessKey: true
         name: FIRST_NAME
         nullable: true
         sourceColumnReferences:
