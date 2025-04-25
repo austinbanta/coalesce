@@ -146,7 +146,7 @@ operation:
           - columnReferences:
               - columnCounter: "0"
                 stepCounter: "0"
-            transform: "'test record'"
+            transform: ""
         systemColumnType: None
     cteString: ""
     enabledColumnTestIDs: []
