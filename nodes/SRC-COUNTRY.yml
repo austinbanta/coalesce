@@ -1,0 +1,148 @@
+steps:
+  COUNTRY-73b3f17e-8800-42bf-a342-c729fc6fba28:
+    operation:
+      database: ""
+      deployEnabled: true
+      description: ""
+      id: 73b3f17e-8800-42bf-a342-c729fc6fba28
+      locationName: SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 411e1409-133c-4407-83cf-bc4a7f8f071f
+              stepCounter: 73b3f17e-8800-42bf-a342-c729fc6fba28
+            config: {}
+            dataType: NUMBER(18,0)
+            defaultValue: ""
+            description: ""
+            name: COUNTRY_ID
+            nullable: true
+            primaryKey: false
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+            transform: ""
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f5ff3157-968e-4e5c-92bd-bc04249c770e
+              stepCounter: 73b3f17e-8800-42bf-a342-c729fc6fba28
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: COUNTRY
+            nullable: true
+            primaryKey: false
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+            transform: ""
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0adbcc9b-aaf6-46ff-91ab-b635ba4ec21c
+              stepCounter: 73b3f17e-8800-42bf-a342-c729fc6fba28
+            config: {}
+            dataType: VARCHAR(3)
+            defaultValue: ""
+            description: ""
+            name: ISO_CURRENCY
+            nullable: true
+            primaryKey: false
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+            transform: ""
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 34dea8e1-5146-4366-99c1-2e040c076080
+              stepCounter: 73b3f17e-8800-42bf-a342-c729fc6fba28
+            config: {}
+            dataType: VARCHAR(2)
+            defaultValue: ""
+            description: ""
+            name: ISO_COUNTRY
+            nullable: true
+            primaryKey: false
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+            transform: ""
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7c842467-0d8b-4bff-8068-586e62776746
+              stepCounter: 73b3f17e-8800-42bf-a342-c729fc6fba28
+            config: {}
+            dataType: NUMBER(19,0)
+            defaultValue: ""
+            description: ""
+            name: CITY_ID
+            nullable: true
+            primaryKey: false
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+            transform: ""
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 2c8a4ba8-c667-4a2a-b37d-944baf2ada6c
+              stepCounter: 73b3f17e-8800-42bf-a342-c729fc6fba28
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: CITY
+            nullable: true
+            primaryKey: false
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+            transform: ""
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 963bc47b-f1e0-4dfb-b16b-bef8ec044746
+              stepCounter: 73b3f17e-8800-42bf-a342-c729fc6fba28
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: CITY_POPULATION
+            nullable: true
+            primaryKey: false
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+            transform: ""
+            uniqueKey: false
+      name: COUNTRY
+      schema: ""
+      sqlType: Source
+      type: sourceInput
+    stepCounter: 73b3f17e-8800-42bf-a342-c729fc6fba28
