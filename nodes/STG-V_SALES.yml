@@ -1,10 +1,13 @@
 fileVersion: 1
-id: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+id: cddea56c-ade5-4c39-b29e-7b4ca221e913
 name: V_SALES
 operation:
   config:
-    insertStrategy: UNION
-    selectDistinct: false
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
   database: ""
   deployEnabled: true
   description: ""
@@ -23,13 +26,18 @@ operation:
           WHERE "V_SALES"."SALE_PRICE_USD" > 0
     columns:
       - appliedColumnTests:
-          hasNull: false
+          hasNull: true
+          isDistinct: false
         columnReference:
-          columnCounter: 589676c9-7a84-4479-bb90-74326c5308cb
-          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+          columnCounter: a262f946-d471-4fcf-9ebf-1037311178bc
+          stepCounter: cddea56c-ade5-4c39-b29e-7b4ca221e913
         config: {}
         dataType: NUMBER(38,0)
-        description: ""
+        description: |
+          - This column represents the unique identifier for a truck used in fulfilling work orders.
+          - It is sourced directly from the `TRUCK_ID` column in the `WRK_ORDERS` table in the STG database.
+          - This identifier can be used to track truck utilization, delivery efficiency, and maintenance schedules.
+          - Downstream, it can be used in reports analyzing delivery times, fuel consumption, and other logistics-related KPIs.
         name: TRUCK_ID
         nullable: true
         sourceColumnReferences:
@@ -38,13 +46,18 @@ operation:
                 stepCounter: fe367fe0-6970-4043-b97a-cadf0a48031d
             transform: ""
       - appliedColumnTests:
-          hasNull: false
+          hasNull: true
+          isDistinct: false
         columnReference:
-          columnCounter: 77b14611-b596-49c7-822f-0b308437c7fb
-          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+          columnCounter: fdfb1855-a4e4-41e7-afc7-023094e64139
+          stepCounter: cddea56c-ade5-4c39-b29e-7b4ca221e913
         config: {}
         dataType: FLOAT
-        description: ""
+        description: |
+          - This column represents the unique identifier for a location associated with a work order.
+          - It is sourced directly from the `LOCATION_ID` column in the `WRK_ORDERS` table in the STG database.
+          - This ID is crucial for geographical analysis of operations and can be used to optimize resource allocation.
+          - This identifier can be used in reports to show order distribution across different locations.
         name: LOCATION_ID
         nullable: true
         sourceColumnReferences:
@@ -54,12 +67,17 @@ operation:
             transform: ""
       - appliedColumnTests:
           hasNull: false
+          isDistinct: false
         columnReference:
-          columnCounter: 33ab35fb-8e11-4fbb-ab8d-cbe8c1209fb4
-          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+          columnCounter: eb14fda6-e61e-40fd-b1af-f849fb5507fa
+          stepCounter: cddea56c-ade5-4c39-b29e-7b4ca221e913
         config: {}
         dataType: NUMBER(38,0)
-        description: ""
+        description: |
+          - This column represents the unique identifier for a customer placing a work order.
+          - It is sourced directly from the `CUSTOMER_ID` column in the `WRK_ORDERS` table in the STG database.
+          - This ID is a foreign key relating to the customer master table and is crucial for customer-centric analysis.
+          - It can be used to track customer order patterns, preferences, and overall customer lifetime value.
         name: CUSTOMER_ID
         nullable: true
         sourceColumnReferences:
@@ -69,12 +87,17 @@ operation:
             transform: ""
       - appliedColumnTests:
           hasNull: false
+          isDistinct: false
         columnReference:
-          columnCounter: 01af086b-6586-48b0-8860-40235eedef5a
-          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+          columnCounter: c9e50c4a-ce8b-44bb-bb80-d9708c75d6f8
+          stepCounter: cddea56c-ade5-4c39-b29e-7b4ca221e913
         config: {}
         dataType: NUMBER(38,0)
-        description: ""
+        description: |
+          - This column represents the unique identifier for a shift during which a work order was processed.
+          - It is sourced directly from the `SHIFT_ID` column in the `WRK_ORDERS` table in the STG database.
+          - This ID is useful for analyzing productivity and efficiency across different shifts.
+          - It can be used in reports to understand peak hours, staffing needs, and shift-based performance metrics.
         name: SHIFT_ID
         nullable: true
         sourceColumnReferences:
@@ -84,12 +107,17 @@ operation:
             transform: ""
       - appliedColumnTests:
           hasNull: false
+          isDistinct: false
         columnReference:
-          columnCounter: 33ba352e-c9fe-4dc4-ae56-75816c0f3d25
-          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+          columnCounter: 5dcf5152-a2ad-4def-99f0-391c61638802
+          stepCounter: cddea56c-ade5-4c39-b29e-7b4ca221e913
         config: {}
         dataType: TIME(9)
-        description: ""
+        description: |
+          - This column indicates the start time of the shift during which a work order was processed.
+          - It is sourced directly from the `SHIFT_START_TIME` column in the `WRK_ORDERS` table in the STG database.
+          - Along with `SHIFT_END_TIME`, it helps define the duration of a work shift for operational analysis.
+          - It can be used in conjunction with `SHIFT_ID` to analyze shift-specific performance metrics.
         name: SHIFT_START_TIME
         nullable: true
         sourceColumnReferences:
@@ -99,12 +127,17 @@ operation:
             transform: ""
       - appliedColumnTests:
           hasNull: false
+          isDistinct: false
         columnReference:
-          columnCounter: bedb675b-5290-4ccb-a5e6-5cce0f4399a8
-          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+          columnCounter: 67e8ab8e-1f35-4378-a5fb-be4d1c4c5085
+          stepCounter: cddea56c-ade5-4c39-b29e-7b4ca221e913
         config: {}
         dataType: TIME(9)
-        description: ""
+        description: |
+          - This column indicates the end time of the shift during which a work order was processed.
+          - It is sourced directly from the `SHIFT_END_TIME` column in the `WRK_ORDERS` table in the STG database.
+          - Along with `SHIFT_START_TIME`, it helps define the duration of a work shift for operational analysis.
+          - It can be used in conjunction with `SHIFT_ID` to analyze shift-specific performance metrics.
         name: SHIFT_END_TIME
         nullable: true
         sourceColumnReferences:
@@ -114,12 +147,17 @@ operation:
             transform: ""
       - appliedColumnTests:
           hasNull: false
+          isDistinct: false
         columnReference:
-          columnCounter: 01a53433-26c1-4959-a9da-8a16e0d8ebc3
-          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+          columnCounter: e895d26c-ad72-4986-931f-0fed4dcbf3de
+          stepCounter: cddea56c-ade5-4c39-b29e-7b4ca221e913
         config: {}
         dataType: VARCHAR(16777216)
-        description: ""
+        description: |
+          - This column specifies the channel through which a work order was placed (e.g., online, phone, in-store).
+          - It is sourced directly from the `ORDER_CHANNEL` column in the `WRK_ORDERS` table in the STG database.
+          - Understanding the order channel distribution helps in optimizing marketing efforts and resource allocation.
+          - It can be used in reports to analyze sales performance by channel.
         name: ORDER_CHANNEL
         nullable: true
         sourceColumnReferences:
@@ -129,12 +167,17 @@ operation:
             transform: ""
       - appliedColumnTests:
           hasNull: false
+          isDistinct: false
         columnReference:
-          columnCounter: 984ca36a-22c9-4730-a2da-e3e5a76a7cab
-          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+          columnCounter: 78c94ab0-a75d-4dd5-8e49-ef39f6080b55
+          stepCounter: cddea56c-ade5-4c39-b29e-7b4ca221e913
         config: {}
         dataType: TIMESTAMP_NTZ(9)
-        description: ""
+        description: |
+          - This column represents the timestamp when a work order was placed.
+          - It is sourced directly from the `ORDER_TS` column in the `WRK_ORDERS` table in the STG database.
+          - It is crucial for time-based analysis of order patterns and trends.
+          - It can be used in reports to track order volume over time, identify peak hours, and measure order processing times.
         name: ORDER_TS
         nullable: true
         sourceColumnReferences:
@@ -144,12 +187,17 @@ operation:
             transform: ""
       - appliedColumnTests:
           hasNull: false
+          isDistinct: false
         columnReference:
-          columnCounter: d9cfea61-1f3d-4c91-b3bf-b03eed4f4c91
-          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+          columnCounter: b23682b6-aec9-4b2f-acc8-cd65cd15920a
+          stepCounter: cddea56c-ade5-4c39-b29e-7b4ca221e913
         config: {}
         dataType: VARCHAR(16777216)
-        description: ""
+        description: |
+          - This column represents the timestamp when a work order was served.
+          - It is sourced directly from the `SERVED_TS` column in the `WRK_ORDERS` table in the STG database.
+          - This timestamp enables the calculation of service time, queue length, and resource utilization.
+          - It can be used in reports to track efficiency metrics and identify bottlenecks in the service process.
         name: SERVED_TS
         nullable: true
         sourceColumnReferences:
@@ -159,12 +207,17 @@ operation:
             transform: ""
       - appliedColumnTests:
           hasNull: false
+          isDistinct: false
         columnReference:
-          columnCounter: f3cf370a-e2f0-4333-9b60-5d0b019a19c8
-          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+          columnCounter: 11a8d25f-a84f-4775-871c-f459bc7fd39f
+          stepCounter: cddea56c-ade5-4c39-b29e-7b4ca221e913
         config: {}
         dataType: VARCHAR(3)
-        description: ""
+        description: |
+          - This column represents the currency in which a work order was placed.
+          - It is sourced directly from the `ORDER_CURRENCY` column in the `WRK_ORDERS` table in the STG database.
+          - This is important for financial reporting and currency conversion purposes.
+          - It can be used in reports to aggregate sales in a standardized currency.
         name: ORDER_CURRENCY
         nullable: true
         sourceColumnReferences:
@@ -174,12 +227,17 @@ operation:
             transform: ""
       - appliedColumnTests:
           hasNull: false
+          isDistinct: false
         columnReference:
-          columnCounter: e865af83-a0ac-476f-915f-c5148bd03e53
-          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+          columnCounter: 662b4e0f-62a2-43cb-8989-0a228b2064f6
+          stepCounter: cddea56c-ade5-4c39-b29e-7b4ca221e913
         config: {}
         dataType: NUMBER(38,4)
-        description: ""
+        description: |
+          - This column represents the amount of a work order before taxes and discounts.
+          - It is sourced directly from the `ORDER_AMOUNT` column in the `WRK_ORDERS` table in the STG database.
+          - It is a key input for revenue calculations and profitability analysis.
+          - It can be used in reports to track sales performance, average order value, and revenue trends.
         name: ORDER_AMOUNT
         nullable: true
         sourceColumnReferences:
@@ -189,12 +247,17 @@ operation:
             transform: ""
       - appliedColumnTests:
           hasNull: false
+          isDistinct: false
         columnReference:
-          columnCounter: 6442f27a-8e97-4859-9956-48b8d67247c7
-          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+          columnCounter: c01e9e15-6b05-4c3a-ad76-0a3a3f657e31
+          stepCounter: cddea56c-ade5-4c39-b29e-7b4ca221e913
         config: {}
         dataType: VARCHAR(16777216)
-        description: ""
+        description: |
+          - This column represents the tax amount applied to a work order.
+          - It is sourced directly from the `ORDER_TAX_AMOUNT` column in the `WRK_ORDERS` table in the STG database.
+          - This is important for financial reporting and tax compliance.
+          - It can be used in reports to calculate total taxes collected and analyze tax-related metrics.
         name: ORDER_TAX_AMOUNT
         nullable: true
         sourceColumnReferences:
@@ -204,12 +267,17 @@ operation:
             transform: ""
       - appliedColumnTests:
           hasNull: false
+          isDistinct: false
         columnReference:
-          columnCounter: 4100f7a0-2dc5-4fe8-83f6-e6e9574c77e7
-          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+          columnCounter: 9238ec92-528f-4738-848b-b49fa70f8763
+          stepCounter: cddea56c-ade5-4c39-b29e-7b4ca221e913
         config: {}
         dataType: VARCHAR(16777216)
-        description: ""
+        description: |
+          - This column represents the discount amount applied to a work order.
+          - It is sourced directly from the `ORDER_DISCOUNT_AMOUNT` column in the `WRK_ORDERS` table in the STG database.
+          - This data is important for analyzing the impact of discounts on revenue and profitability.
+          - It can be used in reports to track discount usage, effectiveness, and overall impact on sales.
         name: ORDER_DISCOUNT_AMOUNT
         nullable: true
         sourceColumnReferences:
@@ -219,12 +287,17 @@ operation:
             transform: ""
       - appliedColumnTests:
           hasNull: false
+          isDistinct: false
         columnReference:
-          columnCounter: 311ebbc2-eefa-41c7-b080-6402d7f66d5a
-          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+          columnCounter: 2cc7667a-2fa4-4bd1-9346-8d579560cbf4
+          stepCounter: cddea56c-ade5-4c39-b29e-7b4ca221e913
         config: {}
         dataType: NUMBER(38,4)
-        description: ""
+        description: |
+          - This column represents the total amount of a work order, including taxes and discounts.
+          - It is sourced directly from the `ORDER_TOTAL` column in the `WRK_ORDERS` table in the STG database.
+          - This is a key metric for revenue tracking and financial analysis.
+          - It can be used in reports to track total sales, average order value, and overall financial performance.
         name: ORDER_TOTAL
         nullable: true
         sourceColumnReferences:
@@ -234,12 +307,17 @@ operation:
             transform: ""
       - appliedColumnTests:
           hasNull: false
+          isDistinct: false
         columnReference:
-          columnCounter: 4a1c35e2-8c77-49fe-bfeb-13181e9d3576
-          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+          columnCounter: 8e5262fb-bfcf-4bb6-9ee1-8490665f36ed
+          stepCounter: cddea56c-ade5-4c39-b29e-7b4ca221e913
         config: {}
         dataType: NUMBER(38,0)
-        description: ""
+        description: |
+          - This column represents the unique identifier for a specific detail line within a work order.
+          - It is sourced directly from the `ORDER_DETAIL_ID` column in the `WRK_ORDERS` table in the STG database.
+          - This ID is used to identify and track individual items or services within an order.
+          - This column is a business key for order details.
         name: ORDER_DETAIL_ID
         nullable: true
         sourceColumnReferences:
@@ -249,12 +327,17 @@ operation:
             transform: ""
       - appliedColumnTests:
           hasNull: false
+          isDistinct: false
         columnReference:
-          columnCounter: acb56e7e-70a0-4625-8273-139ddb638de6
-          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+          columnCounter: 10b09224-6555-4ad5-9911-698b5792fc0a
+          stepCounter: cddea56c-ade5-4c39-b29e-7b4ca221e913
         config: {}
         dataType: NUMBER(38,0)
-        description: ""
+        description: |
+          - This column represents the unique identifier for a work order.
+          - It is sourced directly from the `ORDER_ID` column in the `WRK_ORDERS` table in the STG database.
+          - This ID is the primary key for the work order and is used to track the order throughout its lifecycle.
+          - This column is a business key for orders.
         name: ORDER_ID
         nullable: true
         sourceColumnReferences:
@@ -264,12 +347,17 @@ operation:
             transform: ""
       - appliedColumnTests:
           hasNull: false
+          isDistinct: false
         columnReference:
-          columnCounter: fec525fd-ceee-44a5-b7c1-a9bde57e5284
-          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+          columnCounter: 6b7be83c-9aed-4a9f-be57-4e25468025ad
+          stepCounter: cddea56c-ade5-4c39-b29e-7b4ca221e913
         config: {}
         dataType: NUMBER(38,0)
-        description: ""
+        description: |
+          - This column represents the unique identifier for a menu item included in a work order.
+          - It is sourced directly from the `MENU_ITEM_ID` column in the `WRK_ORDERS` table in the STG database.
+          - This ID is a foreign key relating to the menu items table.
+          - It can be used to analyze product performance, identify popular items, and optimize menu offerings.
         name: MENU_ITEM_ID
         nullable: true
         sourceColumnReferences:
@@ -279,12 +367,17 @@ operation:
             transform: ""
       - appliedColumnTests:
           hasNull: false
+          isDistinct: false
         columnReference:
-          columnCounter: 16b52da0-6306-4262-895b-fe1e67329bfd
-          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+          columnCounter: 8b70572e-4030-4312-b31a-6ba386c57cf9
+          stepCounter: cddea56c-ade5-4c39-b29e-7b4ca221e913
         config: {}
         dataType: VARCHAR(16777216)
-        description: ""
+        description: |
+          - This column represents the identifier for a discount applied to a work order.
+          - It is sourced directly from the `DISCOUNT_ID` column in the `WRK_ORDERS` table in the STG database.
+          - This ID is a foreign key relating to the discount codes table.
+          - It can be used to track discount usage, effectiveness, and overall impact on sales.
         name: DISCOUNT_ID
         nullable: true
         sourceColumnReferences:
@@ -294,12 +387,17 @@ operation:
             transform: ""
       - appliedColumnTests:
           hasNull: false
+          isDistinct: false
         columnReference:
-          columnCounter: e7b08485-9954-4e22-9a5a-dba3f3a2f88b
-          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+          columnCounter: 3d1a7289-2f48-401c-802a-291605fa66bb
+          stepCounter: cddea56c-ade5-4c39-b29e-7b4ca221e913
         config: {}
         dataType: NUMBER(38,0)
-        description: ""
+        description: |
+          - This column indicates the line number of an item within a work order.
+          - It is sourced directly from the `LINE_NUMBER` column in the `WRK_ORDERS` table in the STG database.
+          - This number helps to maintain the order of items within an order.
+          - It can be used in conjunction with `ORDER_ID` and `ORDER_DETAIL_ID` to uniquely identify each item in an order.
         name: LINE_NUMBER
         nullable: true
         sourceColumnReferences:
@@ -309,12 +407,17 @@ operation:
             transform: ""
       - appliedColumnTests:
           hasNull: false
+          isDistinct: false
         columnReference:
-          columnCounter: 1c0930b1-58fb-422f-9e58-f8eff8b1df73
-          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+          columnCounter: bd8bfa6b-4229-4c86-a55d-7a9d52a2b124
+          stepCounter: cddea56c-ade5-4c39-b29e-7b4ca221e913
         config: {}
         dataType: NUMBER(5,0)
-        description: ""
+        description: |
+          - This column represents the quantity of a menu item ordered in a work order.
+          - It is sourced directly from the `QUANTITY` column in the `WRK_ORDERS` table in the STG database.
+          - This data is important for inventory management and sales analysis.
+          - It can be used in reports to track product performance and identify popular items.
         name: QUANTITY
         nullable: true
         sourceColumnReferences:
@@ -324,12 +427,17 @@ operation:
             transform: ""
       - appliedColumnTests:
           hasNull: false
+          isDistinct: false
         columnReference:
-          columnCounter: 733ff482-3777-44c0-b69a-0d4d18ac622f
-          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+          columnCounter: f0e50016-9e8e-4148-84ea-8fb29ea8d19a
+          stepCounter: cddea56c-ade5-4c39-b29e-7b4ca221e913
         config: {}
         dataType: NUMBER(38,4)
-        description: ""
+        description: |
+          - This column represents the price of a single unit of a menu item in a work order.
+          - It is sourced directly from the `UNIT_PRICE` column in the `WRK_ORDERS` table in the STG database.
+          - This is a key input for revenue calculations and profitability analysis.
+          - It can be used in reports to track product pricing trends and analyze profit margins.
         name: UNIT_PRICE
         nullable: true
         sourceColumnReferences:
@@ -339,12 +447,17 @@ operation:
             transform: ""
       - appliedColumnTests:
           hasNull: false
+          isDistinct: false
         columnReference:
-          columnCounter: a19716ad-97de-44e8-b104-27cf7b729e86
-          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+          columnCounter: a23e6ff0-c827-4ab0-9004-1b19905cb83b
+          stepCounter: cddea56c-ade5-4c39-b29e-7b4ca221e913
         config: {}
         dataType: NUMBER(38,4)
-        description: ""
+        description: |
+          - This column represents the total price of a line item (quantity * unit price) in a work order.
+          - It is sourced directly from the `PRICE` column in the `WRK_ORDERS` table in the STG database.
+          - This is a key input for revenue calculations and profitability analysis at the line item level.
+          - It can be used in reports to track product performance and analyze revenue contribution by item.
         name: PRICE
         nullable: true
         sourceColumnReferences:
@@ -354,12 +467,17 @@ operation:
             transform: ""
       - appliedColumnTests:
           hasNull: false
+          isDistinct: false
         columnReference:
-          columnCounter: f98fb95e-de1c-4c15-a45e-8bbc3bbedec5
-          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+          columnCounter: ff524eec-13d7-41b2-ae68-42ff2a2fb7ab
+          stepCounter: cddea56c-ade5-4c39-b29e-7b4ca221e913
         config: {}
         dataType: VARCHAR(16777216)
-        description: ""
+        description: |
+          - This column represents the discount amount applied to a specific item in a work order.
+          - It is sourced directly from the `ORDER_ITEM_DISCOUNT_AMOUNT` column in the `WRK_ORDERS` table in the STG database.
+          - This data is important for analyzing the impact of discounts on individual product sales.
+          - It can be used in reports to track discount usage, effectiveness, and overall impact on sales at the item level.
         name: ORDER_ITEM_DISCOUNT_AMOUNT
         nullable: true
         sourceColumnReferences:
@@ -369,9 +487,10 @@ operation:
             transform: ""
       - appliedColumnTests:
           hasNull: false
+          isDistinct: false
         columnReference:
-          columnCounter: f7dc2e36-fc57-4fb9-aefe-38ffb8321836
-          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+          columnCounter: 62624c84-346c-44bb-ba61-f43883d7ec73
+          stepCounter: cddea56c-ade5-4c39-b29e-7b4ca221e913
         config: {}
         dataType: NUMBER
         description: ""
@@ -384,9 +503,10 @@ operation:
             transform: ""
       - appliedColumnTests:
           hasNull: false
+          isDistinct: false
         columnReference:
-          columnCounter: 1ae516ad-2e42-4810-b331-7f5997c47130
-          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+          columnCounter: 550ae836-9ada-4d02-8fed-02792ee0f37b
+          stepCounter: cddea56c-ade5-4c39-b29e-7b4ca221e913
         config: {}
         dataType: NUMBER(19,0)
         description: |-
@@ -403,9 +523,10 @@ operation:
             transform: ""
       - appliedColumnTests:
           hasNull: false
+          isDistinct: false
         columnReference:
-          columnCounter: 95c12356-dd0d-458d-90b1-3743c9821fdd
-          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+          columnCounter: 0f1957be-fdee-40ac-b916-92a4fb6190c2
+          stepCounter: cddea56c-ade5-4c39-b29e-7b4ca221e913
         config: {}
         dataType: NUMBER(38,0)
         description: |-
@@ -422,9 +543,10 @@ operation:
             transform: ""
       - appliedColumnTests:
           hasNull: false
+          isDistinct: false
         columnReference:
-          columnCounter: 172fa37e-708c-47c9-bba8-77e1998f16b6
-          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+          columnCounter: bffd3e00-7917-47ad-8a66-c36cedf93a80
+          stepCounter: cddea56c-ade5-4c39-b29e-7b4ca221e913
         config: {}
         dataType: VARCHAR(16777216)
         description: |-
@@ -441,9 +563,10 @@ operation:
             transform: ""
       - appliedColumnTests:
           hasNull: false
+          isDistinct: false
         columnReference:
-          columnCounter: 3293e207-07dd-4445-8cf7-ec5a26583573
-          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+          columnCounter: 5ff9f833-acd9-43b8-9f4c-503793287974
+          stepCounter: cddea56c-ade5-4c39-b29e-7b4ca221e913
         config: {}
         dataType: VARCHAR(16777216)
         description: |-
@@ -460,9 +583,10 @@ operation:
             transform: ""
       - appliedColumnTests:
           hasNull: false
+          isDistinct: false
         columnReference:
-          columnCounter: 499875f5-152d-4c62-9e99-3657ccf694c8
-          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+          columnCounter: b13aafdb-9d3e-4cfa-a5a4-9591b8a8a0d5
+          stepCounter: cddea56c-ade5-4c39-b29e-7b4ca221e913
         config: {}
         dataType: VARCHAR(16777216)
         description: |-
@@ -479,9 +603,10 @@ operation:
             transform: ""
       - appliedColumnTests:
           hasNull: false
+          isDistinct: false
         columnReference:
-          columnCounter: 4b795116-44b8-4a15-b85a-af7f455aba30
-          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+          columnCounter: 595f6c5f-d432-4760-a773-7aa0458d5d8f
+          stepCounter: cddea56c-ade5-4c39-b29e-7b4ca221e913
         config: {}
         dataType: VARCHAR(16777216)
         description: |-
@@ -498,9 +623,10 @@ operation:
             transform: ""
       - appliedColumnTests:
           hasNull: false
+          isDistinct: false
         columnReference:
-          columnCounter: a9e13221-4d4c-4039-99c4-1509f7a954f4
-          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+          columnCounter: 13af4d63-af59-47fd-9acc-5cb839370ec5
+          stepCounter: cddea56c-ade5-4c39-b29e-7b4ca221e913
         config: {}
         dataType: VARCHAR(16777216)
         description: |-
@@ -516,10 +642,11 @@ operation:
                 stepCounter: f5a39e3e-2f59-48bf-8bca-35311f27a612
             transform: ""
       - appliedColumnTests:
-          hasNull: true
+          hasNull: false
+          isDistinct: false
         columnReference:
-          columnCounter: 0d6db01f-3d80-43a4-aeec-b6488ec5c3fd
-          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+          columnCounter: 2d5b5edc-0234-40b5-9a97-42e488fc041e
+          stepCounter: cddea56c-ade5-4c39-b29e-7b4ca221e913
         config: {}
         dataType: NUMBER(38,4)
         description: |-
@@ -535,10 +662,11 @@ operation:
                 stepCounter: f5a39e3e-2f59-48bf-8bca-35311f27a612
             transform: ""
       - appliedColumnTests:
-          hasNull: true
+          hasNull: false
+          isDistinct: false
         columnReference:
-          columnCounter: b6311768-905f-422b-b327-54fb7e1e2ebb
-          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+          columnCounter: b4332b4b-bf50-4cc2-92fc-91873e9212ad
+          stepCounter: cddea56c-ade5-4c39-b29e-7b4ca221e913
         config: {}
         dataType: NUMBER(38,4)
         description: |-
@@ -555,9 +683,10 @@ operation:
             transform: ""
       - appliedColumnTests:
           hasNull: false
+          isDistinct: false
         columnReference:
-          columnCounter: f1008782-e5a7-4e56-8f8d-85be45364fb0
-          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+          columnCounter: 673fe1e5-4733-41a4-bd0e-4ea925145340
+          stepCounter: cddea56c-ade5-4c39-b29e-7b4ca221e913
         config: {}
         dataType: VARIANT
         description: |-
@@ -574,9 +703,10 @@ operation:
             transform: ""
       - appliedColumnTests:
           hasNull: false
+          isDistinct: false
         columnReference:
-          columnCounter: 4f9f180f-c245-4739-9975-e4992d20c08d
-          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+          columnCounter: 12f6a5c6-27ae-43e8-924b-158aa6771c8f
+          stepCounter: cddea56c-ade5-4c39-b29e-7b4ca221e913
         config: {}
         dataType: STRING
         description: |-
@@ -593,9 +723,10 @@ operation:
             transform: ""
       - appliedColumnTests:
           hasNull: false
+          isDistinct: false
         columnReference:
-          columnCounter: bb88d761-d251-43ab-b9e8-2d97c756e08d
-          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+          columnCounter: d978e5e8-ec0b-47b8-b541-b42516cee0ea
+          stepCounter: cddea56c-ade5-4c39-b29e-7b4ca221e913
         config: {}
         dataType: STRING
         description: |-
@@ -612,9 +743,10 @@ operation:
             transform: ""
       - appliedColumnTests:
           hasNull: false
+          isDistinct: false
         columnReference:
-          columnCounter: 095d8c06-73ae-4114-93f2-f1b0e97ba1f5
-          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+          columnCounter: 82d453e0-9cc3-444c-a030-65a5fd7d56a0
+          stepCounter: cddea56c-ade5-4c39-b29e-7b4ca221e913
         config: {}
         dataType: STRING
         description: |-
@@ -631,9 +763,10 @@ operation:
             transform: ""
       - appliedColumnTests:
           hasNull: false
+          isDistinct: false
         columnReference:
-          columnCounter: 8431466b-c3ce-44bc-b257-a9cc16120e86
-          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+          columnCounter: efc8b491-daa1-424c-ac55-d558102f1278
+          stepCounter: cddea56c-ade5-4c39-b29e-7b4ca221e913
         config: {}
         dataType: STRING
         description: |-
@@ -650,9 +783,10 @@ operation:
             transform: ""
       - appliedColumnTests:
           hasNull: false
+          isDistinct: false
         columnReference:
-          columnCounter: 4984e255-b7f6-4682-b8d5-b4387c04b43c
-          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+          columnCounter: 2d3c3d4e-68c4-4587-9792-ecc6a400e59d
+          stepCounter: cddea56c-ade5-4c39-b29e-7b4ca221e913
         config: {}
         dataType: STRING
         description: |-
@@ -669,9 +803,10 @@ operation:
             transform: ""
       - appliedColumnTests:
           hasNull: false
+          isDistinct: false
         columnReference:
-          columnCounter: 73276c36-266d-4afa-b063-30c4734e6edf
-          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+          columnCounter: 983f44d0-8c71-4317-af75-1cca1079875a
+          stepCounter: cddea56c-ade5-4c39-b29e-7b4ca221e913
         config: {}
         dataType: DOUBLE
         description: |-
@@ -688,9 +823,26 @@ operation:
             transform: ""
       - appliedColumnTests:
           hasNull: false
+          isDistinct: false
         columnReference:
-          columnCounter: 891a7010-64f9-4c5d-bd76-c46a7259ab0f
-          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+          columnCounter: 755e50ea-516e-4679-bec2-de88d43996d9
+          stepCounter: cddea56c-ade5-4c39-b29e-7b4ca221e913
+        config: {}
+        dataType: STRING
+        description: ""
+        name: Price_Bucket
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1421322e-1918-4024-81a9-597c52ec956c
+                stepCounter: f5a39e3e-2f59-48bf-8bca-35311f27a612
+            transform: ""
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: false
+        columnReference:
+          columnCounter: 08ea005f-429b-4929-801a-74f0619427b2
+          stepCounter: cddea56c-ade5-4c39-b29e-7b4ca221e913
         config: {}
         dataType: NUMBER
         description: ""
@@ -703,9 +855,10 @@ operation:
             transform: ""
       - appliedColumnTests:
           hasNull: false
+          isDistinct: false
         columnReference:
-          columnCounter: 1d01fd9f-925e-4f83-88c7-2e2cc3393317
-          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+          columnCounter: 94d34212-527a-4860-8c3f-98f542d61cda
+          stepCounter: cddea56c-ade5-4c39-b29e-7b4ca221e913
         config: {}
         dataType: VARCHAR(16777216)
         description: ""
@@ -718,9 +871,10 @@ operation:
             transform: ""
       - appliedColumnTests:
           hasNull: false
+          isDistinct: false
         columnReference:
-          columnCounter: 0e562525-a7cd-469b-9f8c-d0f3505e84ac
-          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+          columnCounter: c3b6a1e4-3639-49db-bd6b-5c9072b7e5aa
+          stepCounter: cddea56c-ade5-4c39-b29e-7b4ca221e913
         config: {}
         dataType: VARCHAR(16777216)
         description: ""
@@ -733,9 +887,10 @@ operation:
             transform: ""
       - appliedColumnTests:
           hasNull: false
+          isDistinct: false
         columnReference:
-          columnCounter: 592b69d6-4070-4108-8e80-2f2ce1167873
-          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+          columnCounter: bbf169b2-eb7b-434e-8d7f-afce4186db34
+          stepCounter: cddea56c-ade5-4c39-b29e-7b4ca221e913
         config: {}
         dataType: VARCHAR(16777216)
         description: ""
@@ -748,9 +903,10 @@ operation:
             transform: ""
       - appliedColumnTests:
           hasNull: false
+          isDistinct: false
         columnReference:
-          columnCounter: e9ee1255-9a38-4cc2-ac8a-fe79946193e5
-          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+          columnCounter: b6e9c0a1-e31b-462c-9b0f-c540cf21348c
+          stepCounter: cddea56c-ade5-4c39-b29e-7b4ca221e913
         config: {}
         dataType: VARCHAR(16777216)
         description: ""
@@ -763,9 +919,10 @@ operation:
             transform: ""
       - appliedColumnTests:
           hasNull: false
+          isDistinct: false
         columnReference:
-          columnCounter: 57a8f180-44fb-4a6f-acd1-d075def40689
-          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+          columnCounter: 6f6540a5-0e12-4ab4-954e-94e9099e7afb
+          stepCounter: cddea56c-ade5-4c39-b29e-7b4ca221e913
         config: {}
         dataType: VARCHAR(16777216)
         description: ""
@@ -778,9 +935,10 @@ operation:
             transform: ""
       - appliedColumnTests:
           hasNull: false
+          isDistinct: false
         columnReference:
-          columnCounter: 194d2330-4d72-42f4-9b91-d8aec5e1fd33
-          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+          columnCounter: 062930c8-541e-4aa9-8875-57753944294c
+          stepCounter: cddea56c-ade5-4c39-b29e-7b4ca221e913
         config: {}
         dataType: NUMBER(38,0)
         description: ""
@@ -793,9 +951,10 @@ operation:
             transform: ""
       - appliedColumnTests:
           hasNull: false
+          isDistinct: false
         columnReference:
-          columnCounter: 0a950f69-171a-4d2d-bcc7-d3f00fe6cbdb
-          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+          columnCounter: 48c9b85f-77cf-4b7d-8572-35723acb1aa3
+          stepCounter: cddea56c-ade5-4c39-b29e-7b4ca221e913
         config: {}
         dataType: NUMBER(38,0)
         description: ""
@@ -808,9 +967,10 @@ operation:
             transform: ""
       - appliedColumnTests:
           hasNull: false
+          isDistinct: false
         columnReference:
-          columnCounter: 6b2329ce-102a-4459-a484-1ae8421c5c4f
-          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+          columnCounter: 9ead134e-e9a5-494b-beb5-51117c1cd681
+          stepCounter: cddea56c-ade5-4c39-b29e-7b4ca221e913
         config: {}
         dataType: VARCHAR(16777216)
         description: ""
@@ -823,9 +983,10 @@ operation:
             transform: ""
       - appliedColumnTests:
           hasNull: false
+          isDistinct: false
         columnReference:
-          columnCounter: 0e5976af-4ecf-40b7-b246-0a6f715dc3eb
-          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+          columnCounter: 079dca4c-ce64-47e3-8e3b-2a9197c9f4ca
+          stepCounter: cddea56c-ade5-4c39-b29e-7b4ca221e913
         config: {}
         dataType: VARCHAR(16777216)
         description: ""
@@ -838,9 +999,10 @@ operation:
             transform: ""
       - appliedColumnTests:
           hasNull: false
+          isDistinct: false
         columnReference:
-          columnCounter: d67806a1-7cdc-41cc-8d68-9a1ab2cceb13
-          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+          columnCounter: 54d0da92-2d0f-4df5-87e5-5ac6fb66eff7
+          stepCounter: cddea56c-ade5-4c39-b29e-7b4ca221e913
         config: {}
         dataType: NUMBER(38,0)
         description: ""
@@ -853,9 +1015,10 @@ operation:
             transform: ""
       - appliedColumnTests:
           hasNull: false
+          isDistinct: false
         columnReference:
-          columnCounter: 67a72b3a-33fc-47ad-990b-12ca2dbc335b
-          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+          columnCounter: 81a9c653-7b72-4075-8f4b-97193c9bdf52
+          stepCounter: cddea56c-ade5-4c39-b29e-7b4ca221e913
         config: {}
         dataType: NUMBER(38,0)
         description: ""
@@ -868,9 +1031,10 @@ operation:
             transform: ""
       - appliedColumnTests:
           hasNull: false
+          isDistinct: false
         columnReference:
-          columnCounter: 5ea4dbb1-4706-4daa-b282-9aaaa9bfb636
-          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+          columnCounter: e7614fd9-02b1-4cc5-a171-9dce81b9c2b6
+          stepCounter: cddea56c-ade5-4c39-b29e-7b4ca221e913
         config: {}
         dataType: DATE
         description: ""
@@ -883,9 +1047,10 @@ operation:
             transform: ""
       - appliedColumnTests:
           hasNull: false
+          isDistinct: false
         columnReference:
-          columnCounter: b01a4195-77f3-447f-81fe-435d20a08875
-          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+          columnCounter: 101e69d0-684e-47b7-9a30-6981dff589a1
+          stepCounter: cddea56c-ade5-4c39-b29e-7b4ca221e913
         config: {}
         dataType: NUMBER
         description: ""
@@ -898,9 +1063,10 @@ operation:
             transform: ""
       - appliedColumnTests:
           hasNull: false
+          isDistinct: false
         columnReference:
-          columnCounter: 27ae2477-f462-42d2-97cd-5afb4acd5c19
-          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+          columnCounter: 284c342e-3a95-4595-9330-8af43983852a
+          stepCounter: cddea56c-ade5-4c39-b29e-7b4ca221e913
         config: {}
         dataType: VARCHAR(16777216)
         description: ""
@@ -913,9 +1079,10 @@ operation:
             transform: ""
       - appliedColumnTests:
           hasNull: false
+          isDistinct: false
         columnReference:
-          columnCounter: b15f56d1-f11b-4209-bf19-9c7d16e3617d
-          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+          columnCounter: 21d3493f-a1d7-4959-b961-7be1c7aea35b
+          stepCounter: cddea56c-ade5-4c39-b29e-7b4ca221e913
         config: {}
         dataType: VARCHAR(16777216)
         description: ""
@@ -928,9 +1095,10 @@ operation:
             transform: ""
       - appliedColumnTests:
           hasNull: false
+          isDistinct: false
         columnReference:
-          columnCounter: cdf55320-cef2-4371-ad0a-35f4671ece81
-          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+          columnCounter: d4775380-96ad-48a5-8a5f-5804409ddd98
+          stepCounter: cddea56c-ade5-4c39-b29e-7b4ca221e913
         config: {}
         dataType: VARCHAR(16777216)
         description: ""
@@ -943,9 +1111,10 @@ operation:
             transform: ""
       - appliedColumnTests:
           hasNull: false
+          isDistinct: false
         columnReference:
-          columnCounter: 463443aa-66c9-48a3-82d3-0c320654e4d3
-          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+          columnCounter: 63a18221-ca08-4d41-bdb7-204f4d3243c4
+          stepCounter: cddea56c-ade5-4c39-b29e-7b4ca221e913
         config: {}
         dataType: VARCHAR(16777216)
         description: ""
@@ -958,9 +1127,10 @@ operation:
             transform: ""
       - appliedColumnTests:
           hasNull: false
+          isDistinct: false
         columnReference:
-          columnCounter: 0a0bd985-86ac-4456-944e-711bb1916886
-          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+          columnCounter: 68e522ff-fe3f-4685-88c0-2eb35fccd491
+          stepCounter: cddea56c-ade5-4c39-b29e-7b4ca221e913
         config: {}
         dataType: VARCHAR(16777216)
         description: ""
@@ -973,9 +1143,10 @@ operation:
             transform: ""
       - appliedColumnTests:
           hasNull: false
+          isDistinct: false
         columnReference:
-          columnCounter: 6b844986-9ef5-4b30-ab8e-0fe95f3eb550
-          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+          columnCounter: 117851d7-bc40-4c38-938f-3edaa05aac25
+          stepCounter: cddea56c-ade5-4c39-b29e-7b4ca221e913
         config: {}
         dataType: VARCHAR(16777216)
         description: ""
@@ -988,9 +1159,10 @@ operation:
             transform: ""
       - appliedColumnTests:
           hasNull: false
+          isDistinct: false
         columnReference:
-          columnCounter: 9563597f-868e-4718-9a19-e4c53ca511ce
-          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+          columnCounter: ddc1ec5f-edc1-44a9-a30f-5cfdd6b43f73
+          stepCounter: cddea56c-ade5-4c39-b29e-7b4ca221e913
         config: {}
         dataType: VARCHAR(16777216)
         description: ""
@@ -1003,9 +1175,10 @@ operation:
             transform: ""
       - appliedColumnTests:
           hasNull: false
+          isDistinct: false
         columnReference:
-          columnCounter: 0d439ed5-fa74-4894-9e50-33c0340186fe
-          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+          columnCounter: 8aac5d0a-4c66-4c65-9b05-79c367987a3a
+          stepCounter: cddea56c-ade5-4c39-b29e-7b4ca221e913
         config: {}
         dataType: VARCHAR(16777216)
         description: ""
@@ -1018,9 +1191,10 @@ operation:
             transform: ""
       - appliedColumnTests:
           hasNull: false
+          isDistinct: false
         columnReference:
-          columnCounter: a2d1461b-23b6-478a-8039-a2fe94048642
-          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+          columnCounter: f0f3a839-ec06-45ec-be23-6005d07b96d5
+          stepCounter: cddea56c-ade5-4c39-b29e-7b4ca221e913
         config: {}
         dataType: VARCHAR(16777216)
         description: ""
@@ -1033,9 +1207,10 @@ operation:
             transform: ""
       - appliedColumnTests:
           hasNull: false
+          isDistinct: false
         columnReference:
-          columnCounter: 27398b50-d4d8-4cef-b7d9-9e082a9fe7b5
-          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+          columnCounter: 24d31ae0-ce8e-46a4-87da-5a82e9a3f270
+          stepCounter: cddea56c-ade5-4c39-b29e-7b4ca221e913
         config: {}
         dataType: DATE
         description: ""
@@ -1048,9 +1223,10 @@ operation:
             transform: ""
       - appliedColumnTests:
           hasNull: false
+          isDistinct: false
         columnReference:
-          columnCounter: f8096e68-3269-4c72-9a84-1e97edebd6f3
-          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+          columnCounter: c8fe2194-451d-4c43-9bbc-fb9ca8625cee
+          stepCounter: cddea56c-ade5-4c39-b29e-7b4ca221e913
         config: {}
         dataType: DATE
         description: ""
@@ -1063,9 +1239,10 @@ operation:
             transform: ""
       - appliedColumnTests:
           hasNull: false
+          isDistinct: false
         columnReference:
-          columnCounter: 8d6ba793-1bcd-4749-9eea-9b2f49081120
-          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+          columnCounter: 65d6560f-92ee-4f43-8477-bab6165176f5
+          stepCounter: cddea56c-ade5-4c39-b29e-7b4ca221e913
         config: {}
         dataType: VARCHAR(16777216)
         description: ""
@@ -1078,9 +1255,10 @@ operation:
             transform: ""
       - appliedColumnTests:
           hasNull: false
+          isDistinct: false
         columnReference:
-          columnCounter: 61ec49ad-4a7b-4eef-8a8e-162629389110
-          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
+          columnCounter: 129b539d-ca23-4a43-ba4b-819810ccff11
+          stepCounter: cddea56c-ade5-4c39-b29e-7b4ca221e913
         config: {}
         dataType: VARCHAR(16777216)
         description: ""
@@ -1091,27 +1269,10 @@ operation:
               - columnCounter: 9e4eddbc-3eea-4a1d-906e-778d0532b4cf
                 stepCounter: b4e70d66-0b69-48b2-95c5-3ec198467287
             transform: ""
-      - acceptedValues:
-          strictMatch: false
-          values: []
-        appliedColumnTests:
-          hasNull: false
-        columnReference:
-          columnCounter: 95bcf583-5f71-4148-a88c-fb55e213d656
-          stepCounter: a6ffceeb-309f-43b7-b1d9-6a46b4171314
-        config: {}
-        dataType: STRING
-        description: ""
-        name: Price_Bucket
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 1421322e-1918-4024-81a9-597c52ec956c
-                stepCounter: f5a39e3e-2f59-48bf-8bca-35311f27a612
-            transform: ""
     cteString: ""
     enabledColumnTestIDs:
       - hasNull
+      - isDistinct
     sourceMapping:
       - aliases:
           DIM_CUSTOMER_LOYALTY: b4e70d66-0b69-48b2-95c5-3ec198467287
@@ -1143,7 +1304,7 @@ operation:
   name: V_SALES
   overrideSQL: false
   schema: ""
-  sqlType: View
+  sqlType: Stage
   type: sql
   version: 1
 type: Node
