@@ -19,7 +19,8 @@ operation:
       items:
         - {}
     postSQL: ""
-    preSQL: ""
+    preSQL: |
+      alter session set ERROR_ON_NONDETERMINISTIC_MERGE = true;
     selectDistinct: false
     testsEnabled: false
     truncateBefore: false
