@@ -18,7 +18,7 @@ operation:
     appliedNodeTests:
       - continueOnFailure: true
         description: ""
-        name: Test
+        name: sales price greater than zero
         runOrder: After
         templateString: |-
           SELECT 1 
