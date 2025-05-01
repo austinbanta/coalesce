@@ -1,6 +1,6 @@
 fileVersion: 1
-id: 012cb6ca-a7ce-4901-9116-d8d1dfa73670
-name: DIM_FRANCHISE
+id: b680af2a-9f87-4c5f-9973-d4c6f9f6ae15
+name: DIM_FRANCHISE2
 operation:
   config:
     customZeroKeyValues:
@@ -37,8 +37,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: f805666e-675f-4cc2-98b5-81e12c0ba322
-          stepCounter: 012cb6ca-a7ce-4901-9116-d8d1dfa73670
+          columnCounter: 329c4eae-4cee-4339-a10a-e51da7bcf338
+          stepCounter: b680af2a-9f87-4c5f-9973-d4c6f9f6ae15
         config: {}
         dataType: NUMBER
         defaultValue: ""
@@ -51,8 +51,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 1905318c-5546-437b-b71c-32e953f7199e
-          stepCounter: 012cb6ca-a7ce-4901-9116-d8d1dfa73670
+          columnCounter: 1028295c-f908-4617-8fee-183ebec62ecf
+          stepCounter: b680af2a-9f87-4c5f-9973-d4c6f9f6ae15
         config: {}
         dataType: NUMBER(38,0)
         description: ""
@@ -66,12 +66,11 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 59af3017-0567-4f27-8dcf-72b37685d87d
-          stepCounter: 012cb6ca-a7ce-4901-9116-d8d1dfa73670
+          columnCounter: 2cc95254-7ef2-4e38-8e78-fc120ec71dd7
+          stepCounter: b680af2a-9f87-4c5f-9973-d4c6f9f6ae15
         config: {}
         dataType: VARCHAR(16777216)
         description: ""
-        isBusinessKey: true
         name: FIRST_NAME
         nullable: true
         sourceColumnReferences:
@@ -81,27 +80,25 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 5636c774-be2c-4ca9-8ea1-96a557a7231d
-          stepCounter: 012cb6ca-a7ce-4901-9116-d8d1dfa73670
+          columnCounter: f6227d04-9e74-4822-9549-11915f6454d3
+          stepCounter: b680af2a-9f87-4c5f-9973-d4c6f9f6ae15
         config: {}
         dataType: STRING
         description: ""
-        isBusinessKey: true
         name: LAST_NAME
         nullable: true
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: 50daa3c6-36ae-4988-a7d0-d9115ca02e04
                 stepCounter: 64505aad-f723-402b-a967-c71d32a8efe6
-            transform: "123"
+            transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 46dcce23-68ce-4ebf-9a65-5ac4ee818d6f
-          stepCounter: 012cb6ca-a7ce-4901-9116-d8d1dfa73670
+          columnCounter: 93a9eab1-9667-4d12-b12b-687cb11861cb
+          stepCounter: b680af2a-9f87-4c5f-9973-d4c6f9f6ae15
         config: {}
         dataType: VARCHAR(16777216)
         description: ""
-        isBusinessKey: true
         name: CITY
         nullable: true
         sourceColumnReferences:
@@ -111,12 +108,11 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: ad44eea6-dad9-4eea-bf9f-fa8b8ac460c8
-          stepCounter: 012cb6ca-a7ce-4901-9116-d8d1dfa73670
+          columnCounter: d4b760fe-3998-470e-8642-8f426faaba41
+          stepCounter: b680af2a-9f87-4c5f-9973-d4c6f9f6ae15
         config: {}
         dataType: VARCHAR(16777216)
         description: ""
-        isBusinessKey: true
         name: COUNTRY
         nullable: true
         sourceColumnReferences:
@@ -126,12 +122,11 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: c9886c3d-5546-4639-846d-d96b55edf164
-          stepCounter: 012cb6ca-a7ce-4901-9116-d8d1dfa73670
+          columnCounter: fdfc0a18-ff57-4aae-9500-7d39ee6df585
+          stepCounter: b680af2a-9f87-4c5f-9973-d4c6f9f6ae15
         config: {}
         dataType: VARCHAR(16777216)
         description: ""
-        isBusinessKey: true
         name: E_MAIL
         nullable: true
         sourceColumnReferences:
@@ -141,12 +136,11 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 719c4177-1dd4-4ee9-83b2-9a99f517a1bd
-          stepCounter: 012cb6ca-a7ce-4901-9116-d8d1dfa73670
+          columnCounter: 7e3876d6-0942-410d-ac77-8042ba2d79cc
+          stepCounter: b680af2a-9f87-4c5f-9973-d4c6f9f6ae15
         config: {}
         dataType: VARCHAR(16777216)
         description: ""
-        isBusinessKey: true
         name: PHONE_NUMBER
         nullable: true
         sourceColumnReferences:
@@ -154,13 +148,27 @@ operation:
               - columnCounter: 5cd3c482-374d-401e-8e4d-7f165c5b720b
                 stepCounter: 64505aad-f723-402b-a967-c71d32a8efe6
             transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0d87ab8f-5d3a-41dc-a14e-b80a20921ce5
+          stepCounter: b680af2a-9f87-4c5f-9973-d4c6f9f6ae15
+        config: {}
+        dataType: NUMBER
+        description: ""
+        name: NEWCOL
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0bd6cd18-672d-40ec-9e37-f0173e27c3b8
+                stepCounter: 64505aad-f723-402b-a967-c71d32a8efe6
+            transform: ""
       - acceptedValues:
           strictMatch: true
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: a323377b-2c54-4082-b49f-e9fad5ec955b
-          stepCounter: 012cb6ca-a7ce-4901-9116-d8d1dfa73670
+          columnCounter: 326d02c4-da40-435c-94fb-b9f8743baaa9
+          stepCounter: b680af2a-9f87-4c5f-9973-d4c6f9f6ae15
         config: {}
         dataType: NUMBER
         defaultValue: ""
@@ -176,8 +184,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 4c9d4230-f984-471d-8948-6fa65b6443ef
-          stepCounter: 012cb6ca-a7ce-4901-9116-d8d1dfa73670
+          columnCounter: 056f62a2-4d74-4775-a853-a3ee10204dd5
+          stepCounter: b680af2a-9f87-4c5f-9973-d4c6f9f6ae15
         config: {}
         dataType: VARCHAR
         defaultValue: ""
@@ -193,8 +201,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 2957b8a4-8292-4bb5-9649-ba696e57d042
-          stepCounter: 012cb6ca-a7ce-4901-9116-d8d1dfa73670
+          columnCounter: 2b5e3a05-5782-4ef0-8415-ac85755dc8c7
+          stepCounter: b680af2a-9f87-4c5f-9973-d4c6f9f6ae15
         config: {}
         dataType: TIMESTAMP
         defaultValue: ""
@@ -210,8 +218,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 6a49f0fe-bc8b-4715-a5f5-73ba9cc2ecdb
-          stepCounter: 012cb6ca-a7ce-4901-9116-d8d1dfa73670
+          columnCounter: 8b2dccfe-c0e5-4916-8389-bb16cea8922a
+          stepCounter: b680af2a-9f87-4c5f-9973-d4c6f9f6ae15
         config: {}
         dataType: TIMESTAMP
         defaultValue: ""
@@ -227,8 +235,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 4470428a-bd81-4e8f-b875-d13cac476c6c
-          stepCounter: 012cb6ca-a7ce-4901-9116-d8d1dfa73670
+          columnCounter: 4688507c-15d9-405f-bf9e-c684e7ba5d7b
+          stepCounter: b680af2a-9f87-4c5f-9973-d4c6f9f6ae15
         config: {}
         dataType: TIMESTAMP
         defaultValue: ""
@@ -244,8 +252,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: f9981fe6-951d-4cc5-b3ad-b463e7f3e1c8
-          stepCounter: 012cb6ca-a7ce-4901-9116-d8d1dfa73670
+          columnCounter: 2bf7a3f7-ee92-44f8-96c0-6f51c5470c70
+          stepCounter: b680af2a-9f87-4c5f-9973-d4c6f9f6ae15
         config: {}
         dataType: TIMESTAMP
         defaultValue: ""
@@ -267,9 +275,9 @@ operation:
             nodeName: WRK_FRANCHISE
         join:
           joinCondition: FROM {{ ref('STG', 'WRK_FRANCHISE') }} "WRK_FRANCHISE"
-        name: DIM_FRANCHISE
+        name: DIM_FRANCHISE2
         noLinkRefs: []
-  name: DIM_FRANCHISE
+  name: DIM_FRANCHISE2
   overrideSQL: false
   schema: ""
   sqlType: base:::194
