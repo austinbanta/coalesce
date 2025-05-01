@@ -19,8 +19,7 @@ operation:
       items:
         - {}
     postSQL: ""
-    preSQL: |
-      alter session set ERROR_ON_NONDETERMINISTIC_MERGE = true;
+    preSQL: ""
     selectDistinct: false
     testsEnabled: false
     truncateBefore: false
@@ -87,6 +86,7 @@ operation:
         config: {}
         dataType: STRING
         description: ""
+        isBusinessKey: true
         name: LAST_NAME
         nullable: true
         sourceColumnReferences:
@@ -101,6 +101,7 @@ operation:
         config: {}
         dataType: VARCHAR(16777216)
         description: ""
+        isBusinessKey: true
         name: CITY
         nullable: true
         sourceColumnReferences:
@@ -115,6 +116,7 @@ operation:
         config: {}
         dataType: VARCHAR(16777216)
         description: ""
+        isBusinessKey: true
         name: COUNTRY
         nullable: true
         sourceColumnReferences:
@@ -129,6 +131,7 @@ operation:
         config: {}
         dataType: VARCHAR(16777216)
         description: ""
+        isBusinessKey: true
         name: E_MAIL
         nullable: true
         sourceColumnReferences:
@@ -143,6 +146,7 @@ operation:
         config: {}
         dataType: VARCHAR(16777216)
         description: ""
+        isBusinessKey: true
         name: PHONE_NUMBER
         nullable: true
         sourceColumnReferences:

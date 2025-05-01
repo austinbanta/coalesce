@@ -19,8 +19,7 @@ operation:
       items:
         - {}
     postSQL: ""
-    preSQL: |
-      alter session set ERROR_ON_NONDETERMINISTIC_MERGE = true;
+    preSQL: ""
     selectDistinct: false
     testsEnabled: false
     truncateBefore: false
@@ -80,6 +79,7 @@ operation:
           - It is sourced from the 'MENU_TYPE_ID' column in the 'MENU' table within the 'TASTY_AWOOD' database.
           - This ID is essential for categorizing menus by type, which can be used in reports and analysis.
           - It serves as a foreign key relating the menu to a specific menu type.
+        isBusinessKey: true
         name: MENU_TYPE_ID
         nullable: true
         sourceColumnReferences:
@@ -98,6 +98,7 @@ operation:
           - It is sourced from the 'MENU_TYPE' column in the 'MENU' table within the 'TASTY_AWOOD' database.
           - This information can be used for filtering and grouping data in reports, dashboards, and KPI calculations related to menu performance.
           - Business users can leverage this to understand the distribution of different menu types.
+        isBusinessKey: true
         name: MENU_TYPE
         nullable: true
         sourceColumnReferences:
@@ -116,6 +117,7 @@ operation:
           - It is sourced from the 'TRUCK_BRAND_NAME' column in the 'MENU' table within the 'TASTY_AWOOD' database.
           - This attribute allows for analysis of menu performance across different truck brands.
           - It is useful for business users to understand which brands are associated with popular menu items.
+        isBusinessKey: true
         name: TRUCK_BRAND_NAME
         nullable: true
         sourceColumnReferences:
@@ -134,6 +136,7 @@ operation:
           - It is sourced from the 'MENU_ITEM_ID' column in the 'MENU' table within the 'TASTY_AWOOD' database.
           - It is a foreign key for linking the menu items to the menu, which is used in reports and analysis.
           - As a primary key, it ensures the uniqueness of each menu item entry.
+        isBusinessKey: true
         name: MENU_ITEM_ID
         nullable: true
         sourceColumnReferences:
@@ -152,6 +155,7 @@ operation:
           - It is sourced from the 'MENU_ITEM_NAME' column in the 'MENU' table within the 'TASTY_AWOOD' database.
           - This information can be used for filtering and grouping data in reports, dashboards, and KPI calculations related to menu item performance.
           - Business users can leverage this to understand which menu items are most popular.
+        isBusinessKey: true
         name: MENU_ITEM_NAME
         nullable: true
         sourceColumnReferences:
@@ -170,6 +174,7 @@ operation:
           - It is sourced from the 'ITEM_CATEGORY' column in the 'MENU' table within the 'TASTY_AWOOD' database.
           - This attribute enables categorization and analysis of menu items for sales analysis and menu planning.
           - Business users can leverage this to understand which categories are most popular.
+        isBusinessKey: true
         name: ITEM_CATEGORY
         nullable: true
         sourceColumnReferences:
@@ -188,6 +193,7 @@ operation:
           - It is sourced from the 'ITEM_SUBCATEGORY' column in the 'MENU' table within the 'TASTY_AWOOD' database.
           - This attribute provides a more detailed breakdown for menu analysis and reporting, improving the granularity of insights.
           - Business users can leverage this to understand which subcategories are most popular.
+        isBusinessKey: true
         name: ITEM_SUBCATEGORY
         nullable: true
         sourceColumnReferences:
@@ -206,6 +212,7 @@ operation:
           - It is sourced from the 'COST_OF_GOODS_USD' column in the 'MENU' table within the 'TASTY_AWOOD' database.
           - This value is used to calculate profit margins and food costs, which is crucial for financial analysis and reporting.
           - It aids in determining the profitability of each menu item.
+        isBusinessKey: true
         name: COST_OF_GOODS_USD
         nullable: true
         sourceColumnReferences:
@@ -224,6 +231,7 @@ operation:
           - It is sourced from the 'SALE_PRICE_USD' column in the 'MENU' table within the 'TASTY_AWOOD' database.
           - This value is used in conjunction with the cost of goods to calculate profit margins and revenue metrics.
           - It helps in understanding revenue generation per item.
+        isBusinessKey: true
         name: SALE_PRICE_USD
         nullable: true
         sourceColumnReferences:
@@ -242,6 +250,7 @@ operation:
           - It is sourced from the 'MENU_ITEM_HEALTH_METRICS_OBJ' column in the 'MENU' table within the 'TASTY_AWOOD' database.
           - This object contains information on ingredients, allergen flags, and health scores, enabling health-conscious menu analysis.
           - Downstream, the JSON object is parsed to extract specific health metrics for reporting.
+        isBusinessKey: true
         name: MENU_ITEM_HEALTH_METRICS_OBJ
         nullable: true
         sourceColumnReferences:
@@ -260,6 +269,7 @@ operation:
           - It is derived from the 'MENU_ITEM_HEALTH_METRICS_OBJ' column in the 'MENU' table within the 'TASTY_AWOOD' database, extracting the 'ingredients' field.
           - The transformation applied is: `"MENU_ITEM_HEALTH_METRICS_OBJ_menu_item_health_metrics_ingredients".value::STRING`.
           - This information is valuable for customers with dietary restrictions or preferences.
+        isBusinessKey: true
         name: menu_item_health_metrics_ingredients
         nullable: true
         sourceColumnReferences:
@@ -278,6 +288,7 @@ operation:
           - It is extracted from the 'MENU_ITEM_HEALTH_METRICS_OBJ' column in the 'MENU' table within the 'TASTY_AWOOD' database, specifically the 'is_dairy_free_flag' field.
           - The transformation applied is: `"MENU_ITEM_HEALTH_METRICS_OBJ_menu_item_health_metrics".value:"is_dairy_free_flag"::STRING`.
           - This flag is useful for filtering and identifying options suitable for dairy-free diets.
+        isBusinessKey: true
         name: menu_item_health_metrics_is_dairy_free_flag
         nullable: true
         sourceColumnReferences:
@@ -296,6 +307,7 @@ operation:
           - It is extracted from the 'MENU_ITEM_HEALTH_METRICS_OBJ' column in the 'MENU' table within the 'TASTY_AWOOD' database, specifically the 'is_gluten_free_flag' field.
           - The transformation applied is: `"MENU_ITEM_HEALTH_METRICS_OBJ_menu_item_health_metrics".value:"is_gluten_free_flag"::STRING`.
           - This flag is valuable for customers with gluten intolerance or celiac disease.
+        isBusinessKey: true
         name: menu_item_health_metrics_is_gluten_free_flag
         nullable: true
         sourceColumnReferences:
@@ -314,6 +326,7 @@ operation:
           - It is sourced from the 'MENU_ITEM_HEALTH_METRICS_OBJ' column in the 'MENU' table within the 'TASTY_AWOOD' database, extracting the 'is_healthy_flag' field.
           - The transformation applied is: `"MENU_ITEM_HEALTH_METRICS_OBJ_menu_item_health_metrics".value:"is_healthy_flag"::STRING`.
           - It allows for filtering and highlighting healthier options on the menu.
+        isBusinessKey: true
         name: menu_item_health_metrics_is_healthy_flag
         nullable: true
         sourceColumnReferences:
@@ -332,6 +345,7 @@ operation:
           - It is extracted from the 'MENU_ITEM_HEALTH_METRICS_OBJ' column in the 'MENU' table within the 'TASTY_AWOOD' database, specifically the 'is_nut_free_flag' field.
           - The transformation applied is: `"MENU_ITEM_HEALTH_METRICS_OBJ_menu_item_health_metrics".value:"is_nut_free_flag"::STRING`.
           - This flag helps customers with nut allergies easily identify safe options.
+        isBusinessKey: true
         name: menu_item_health_metrics_is_nut_free_flag
         nullable: true
         sourceColumnReferences:
@@ -350,6 +364,7 @@ operation:
           - It is derived from the 'MENU_ITEM_HEALTH_METRICS_OBJ' column in the 'MENU' table within the 'TASTY_AWOOD' database, extracting the 'menu_item_id' field.
           - The transformation applied is: `"MENU"."MENU_ITEM_HEALTH_METRICS_OBJ":"menu_item_id"::DOUBLE`.
           - It serves as a link between health metrics and the specific menu item.
+        isBusinessKey: true
         name: menu_item_id
         nullable: true
         sourceColumnReferences:
@@ -469,6 +484,7 @@ operation:
         config: {}
         dataType: STRING
         description: ""
+        isBusinessKey: true
         name: Price_Bucket
         nullable: true
         sourceColumnReferences:
