@@ -12,11 +12,16 @@ locations:
       "2":
         database: AUSTIN_TEST_DB
         schema: DEV_STG
+  TGTNUMBERTWO:
+    mappingDefinitions:
+      "2":
+        database: ""
+        schema: ""
 macros: {}
 stepTypes:
   StepType-1:
     id: "1"
-    isDisabled: false
+    isDisabled: true
     metadata:
       defaultStorageLocation: null
       error: null
@@ -465,7 +470,7 @@ stepTypes:
     id: Dimension
     isDisabled: false
     metadata:
-      defaultStorageLocation: null
+      defaultStorageLocation: TGT
       error: null
       nodeMetadataSpec: |-
         capitalized: Dimension
@@ -928,7 +933,7 @@ stepTypes:
     id: Fact
     isDisabled: false
     metadata:
-      defaultStorageLocation: null
+      defaultStorageLocation: TGT
       error: null
       nodeMetadataSpec: |
         capitalized: Fact
@@ -1665,7 +1670,7 @@ stepTypes:
     id: Stage
     isDisabled: false
     metadata:
-      defaultStorageLocation: null
+      defaultStorageLocation: TGT
       error: null
       nodeMetadataSpec: |
         capitalized: Stage
@@ -1868,9 +1873,9 @@ stepTypes:
     version: 1
   StepType-View:
     id: View
-    isDisabled: true
+    isDisabled: false
     metadata:
-      defaultStorageLocation: null
+      defaultStorageLocation: TGT
       error: null
       nodeMetadataSpec: |
         capitalized: View
@@ -1950,7 +1955,7 @@ stepTypes:
     id: persistentStage
     isDisabled: false
     metadata:
-      defaultStorageLocation: null
+      defaultStorageLocation: TGT
       error: null
       nodeMetadataSpec: |
         capitalized: Persistent Stage
@@ -2416,9 +2421,46 @@ stepTypes:
     name: Persistent Stage
     version: 1
 subgraphs:
-  Subgraph-1:
-    id: "1"
-    name: New Subgraph
+  Subgraph-2:
+    id: "2"
+    name: copilot testing subgraph
     steps:
-      - 52788a63-81f8-41e3-8807-13321e87d9e4
+      - 64fb5d6b-4455-4537-95ae-0d9795821c16
+      - 73b3f17e-8800-42bf-a342-c729fc6fba28
+      - 51d96a5d-1389-439c-b1f9-13eb0f9c5ddc
+      - 410e7cbf-79b2-4973-b3c2-70209efdd46e
+      - 32e38793-8c96-4830-9bc5-2636aaaf07d0
+      - 9537307c-9c82-4a90-873c-37f44dc7b998
+      - ce248a30-ccba-4dce-a318-26e1515871e2
+      - 95771b7a-d33f-4f31-962a-81a5dbad66af
+      - ab361e2c-0b1a-4659-9ddc-1286db1acfd8
+      - 73b3f17e-8800-42bf-a342-c729fc6fba28
+      - 51d96a5d-1389-439c-b1f9-13eb0f9c5ddc
+      - 410e7cbf-79b2-4973-b3c2-70209efdd46e
+      - 32e38793-8c96-4830-9bc5-2636aaaf07d0
+      - 9537307c-9c82-4a90-873c-37f44dc7b998
+      - ce248a30-ccba-4dce-a318-26e1515871e2
+      - 95771b7a-d33f-4f31-962a-81a5dbad66af
+      - 64fb5d6b-4455-4537-95ae-0d9795821c16
+      - 4398ea57-f2a9-460a-9465-19cda3aa7972
+  Subgraph-773f32ed-ece3-48c7-97f5-1168844e7d67:
+    id: 773f32ed-ece3-48c7-97f5-1168844e7d67
+    name: new subgraph
+    steps:
+      - 73b3f17e-8800-42bf-a342-c729fc6fba28
+      - 51d96a5d-1389-439c-b1f9-13eb0f9c5ddc
+      - 410e7cbf-79b2-4973-b3c2-70209efdd46e
+      - 32e38793-8c96-4830-9bc5-2636aaaf07d0
+      - 9537307c-9c82-4a90-873c-37f44dc7b998
+      - ce248a30-ccba-4dce-a318-26e1515871e2
+      - 95771b7a-d33f-4f31-962a-81a5dbad66af
+      - 64fb5d6b-4455-4537-95ae-0d9795821c16
+      - 73b3f17e-8800-42bf-a342-c729fc6fba28
+      - 51d96a5d-1389-439c-b1f9-13eb0f9c5ddc
+      - 410e7cbf-79b2-4973-b3c2-70209efdd46e
+      - 32e38793-8c96-4830-9bc5-2636aaaf07d0
+      - 9537307c-9c82-4a90-873c-37f44dc7b998
+      - ce248a30-ccba-4dce-a318-26e1515871e2
+      - 95771b7a-d33f-4f31-962a-81a5dbad66af
+      - 64fb5d6b-4455-4537-95ae-0d9795821c16
 version: 2
