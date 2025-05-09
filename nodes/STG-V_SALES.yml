@@ -1261,6 +1261,26 @@ operation:
               - columnCounter: 9e4eddbc-3eea-4a1d-906e-778d0532b4cf
                 stepCounter: b4e70d66-0b69-48b2-95c5-3ec198467287
             transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 58602a31-b727-4cba-99f9-7e92be9ca23b
+          stepCounter: cddea56c-ade5-4c39-b29e-7b4ca221e913
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: PRICE_BUCKET
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: ""
+        systemColumnType: None
     cteString: ""
     enabledColumnTestIDs:
       - hasNull
