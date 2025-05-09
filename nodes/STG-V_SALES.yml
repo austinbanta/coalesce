@@ -26,7 +26,7 @@ operation:
           WHERE "V_SALES"."SALE_PRICE_USD" > 0
       - continueOnFailure: true
         description: ""
-        name: price >0
+        name: quantity > 0
         runOrder: After
         templateString: |-
           SELECT 1 
