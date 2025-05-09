@@ -1,5 +1,5 @@
 fileVersion: 1
-id: f2319868-6e7e-4eba-88d7-efd265cd5d31
+id: 0e1c4534-2894-4f3c-98cf-9bfe1b4b0a16
 name: WRK_MENU
 operation:
   config:
@@ -19,7 +19,7 @@ operation:
     postSQL: ""
     preSQL: ""
     selectDistinct: false
-    testsEnabled: false
+    testsEnabled: true
     truncateBefore: true
   database: ""
   deployEnabled: true
@@ -30,365 +30,289 @@ operation:
   metadata:
     appliedNodeTests: []
     columns:
-      - appliedColumnTests: {}
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: true
         columnReference:
-          columnCounter: 424abbf2-83a8-4951-9c18-cc3ec4e41efd
-          stepCounter: f2319868-6e7e-4eba-88d7-efd265cd5d31
+          columnCounter: c07d63cf-f235-4253-b5f9-f656079de03b
+          stepCounter: 0e1c4534-2894-4f3c-98cf-9bfe1b4b0a16
         config: {}
         dataType: NUMBER(19,0)
-        description: |-
-          - This column represents the unique identifier for a menu.
-          - It is sourced from the 'MENU_ID' column in the 'MENU' table within the 'TASTY_AWOOD' database.
-          - This ID is crucial for linking menu items to specific menus, which is used in reports and analysis.
-          - As a primary key, it ensures the uniqueness of each menu entry.
+        description: ""
         name: MENU_ID
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 2ff70dc0-62e9-4ef1-9729-8b8805b284c0
-                stepCounter: 2f1eca37-69df-45fc-9b1a-979f43b9b22c
+              - columnCounter: eced3649-8f05-4bc7-8cfa-b07b2eb904a7
+                stepCounter: f8a8189d-ff7c-47d8-a64a-722fcaf91ad3
             transform: ""
-      - appliedColumnTests: {}
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: false
         columnReference:
-          columnCounter: fd9c2b49-d2f8-4ed6-a035-7af8134f69bb
-          stepCounter: f2319868-6e7e-4eba-88d7-efd265cd5d31
+          columnCounter: f146e4a9-309c-4963-b672-3f934c4b905e
+          stepCounter: 0e1c4534-2894-4f3c-98cf-9bfe1b4b0a16
         config: {}
         dataType: NUMBER(38,0)
-        description: |-
-          - This column represents the unique identifier for a menu type.
-          - It is sourced from the 'MENU_TYPE_ID' column in the 'MENU' table within the 'TASTY_AWOOD' database.
-          - This ID is essential for categorizing menus by type, which can be used in reports and analysis.
-          - It serves as a foreign key relating the menu to a specific menu type.
+        description: ""
         name: MENU_TYPE_ID
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 33c6d4eb-e24a-42e3-bf61-c7f685d036b2
-                stepCounter: 2f1eca37-69df-45fc-9b1a-979f43b9b22c
+              - columnCounter: f53d8bcf-46f1-49a4-affa-cbfc75e8c975
+                stepCounter: f8a8189d-ff7c-47d8-a64a-722fcaf91ad3
             transform: ""
-      - appliedColumnTests: {}
+      - appliedColumnTests:
+          hasNull: true
+          isDistinct: false
         columnReference:
-          columnCounter: de205a6f-6657-4be0-8a9f-d7f3c1454ab5
-          stepCounter: f2319868-6e7e-4eba-88d7-efd265cd5d31
+          columnCounter: b647cd13-784d-4595-b1e8-e34fe69fef56
+          stepCounter: 0e1c4534-2894-4f3c-98cf-9bfe1b4b0a16
         config: {}
         dataType: VARCHAR(16777216)
-        description: |-
-          - This column describes the type of menu, such as 'Breakfast', 'Lunch', or 'Dinner'.
-          - It is sourced from the 'MENU_TYPE' column in the 'MENU' table within the 'TASTY_AWOOD' database.
-          - This information can be used for filtering and grouping data in reports, dashboards, and KPI calculations related to menu performance.
-          - Business users can leverage this to understand the distribution of different menu types.
+        description: ""
         name: MENU_TYPE
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 89febbd4-eb55-4f25-9d45-6a78758d64d9
-                stepCounter: 2f1eca37-69df-45fc-9b1a-979f43b9b22c
+              - columnCounter: bb15f2d3-ba3a-4b1a-99b8-d341f7759327
+                stepCounter: f8a8189d-ff7c-47d8-a64a-722fcaf91ad3
             transform: UPPER("MENU"."MENU_TYPE")
-      - appliedColumnTests: {}
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: false
         columnReference:
-          columnCounter: 839afa9e-adfd-4b7e-8b0f-0aeabf05d22a
-          stepCounter: f2319868-6e7e-4eba-88d7-efd265cd5d31
+          columnCounter: c6f2c588-91a2-4351-815c-007eb63409a4
+          stepCounter: 0e1c4534-2894-4f3c-98cf-9bfe1b4b0a16
         config: {}
         dataType: VARCHAR(16777216)
-        description: |-
-          - This column stores the brand name of the truck offering the menu item.
-          - It is sourced from the 'TRUCK_BRAND_NAME' column in the 'MENU' table within the 'TASTY_AWOOD' database.
-          - This attribute allows for analysis of menu performance across different truck brands.
-          - It is useful for business users to understand which brands are associated with popular menu items.
+        description: ""
         name: TRUCK_BRAND_NAME
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: a86bbce2-3b87-4719-8528-1743cb046e8c
-                stepCounter: 2f1eca37-69df-45fc-9b1a-979f43b9b22c
+              - columnCounter: cf0df20e-c5f4-459a-8f5a-8075ed4d9aea
+                stepCounter: f8a8189d-ff7c-47d8-a64a-722fcaf91ad3
             transform: UPPER("MENU"."TRUCK_BRAND_NAME")
-      - appliedColumnTests: {}
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: false
         columnReference:
-          columnCounter: e3b49cfd-283b-4b72-a950-2980e8d4c3f0
-          stepCounter: f2319868-6e7e-4eba-88d7-efd265cd5d31
+          columnCounter: df678ee2-f3bd-4d0c-89b0-c43adb3633f2
+          stepCounter: 0e1c4534-2894-4f3c-98cf-9bfe1b4b0a16
         config: {}
         dataType: NUMBER(38,0)
-        description: |-
-          - This column represents the unique identifier for a menu item.
-          - It is sourced from the 'MENU_ITEM_ID' column in the 'MENU' table within the 'TASTY_AWOOD' database.
-          - It is a foreign key for linking the menu items to the menu, which is used in reports and analysis.
-          - As a primary key, it ensures the uniqueness of each menu item entry.
+        description: ""
         name: MENU_ITEM_ID
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 662c53d3-464a-4184-aded-c6edd6ded2cc
-                stepCounter: 2f1eca37-69df-45fc-9b1a-979f43b9b22c
+              - columnCounter: d4c0b7ec-99f4-4213-8b8c-0dac5fb6626b
+                stepCounter: f8a8189d-ff7c-47d8-a64a-722fcaf91ad3
             transform: ""
-      - appliedColumnTests: {}
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: false
         columnReference:
-          columnCounter: 83f73e93-36d4-4a5d-b3bd-d8c1e891a869
-          stepCounter: f2319868-6e7e-4eba-88d7-efd265cd5d31
+          columnCounter: c470bbf0-9a97-46d1-bb70-74800132e413
+          stepCounter: 0e1c4534-2894-4f3c-98cf-9bfe1b4b0a16
         config: {}
         dataType: VARCHAR(16777216)
-        description: |-
-          - This column provides the name of the menu item, such as 'Burger', 'Salad', or 'Pizza'.
-          - It is sourced from the 'MENU_ITEM_NAME' column in the 'MENU' table within the 'TASTY_AWOOD' database.
-          - This information can be used for filtering and grouping data in reports, dashboards, and KPI calculations related to menu item performance.
-          - Business users can leverage this to understand which menu items are most popular.
+        description: ""
         name: MENU_ITEM_NAME
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 4d2a3417-109f-483b-926d-abc095760613
-                stepCounter: 2f1eca37-69df-45fc-9b1a-979f43b9b22c
+              - columnCounter: 81166cf0-ea0c-4477-84d1-99b592e14acc
+                stepCounter: f8a8189d-ff7c-47d8-a64a-722fcaf91ad3
             transform: UPPER("MENU"."MENU_ITEM_NAME")
-      - appliedColumnTests: {}
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: false
         columnReference:
-          columnCounter: e03c2a5a-18e4-4c2a-b01a-9273289972d3
-          stepCounter: f2319868-6e7e-4eba-88d7-efd265cd5d31
+          columnCounter: 4cde2f14-5a25-4810-bf42-f5f7edb4ef20
+          stepCounter: 0e1c4534-2894-4f3c-98cf-9bfe1b4b0a16
         config: {}
         dataType: VARCHAR(16777216)
-        description: |-
-          - This column categorizes the menu item, such as 'Main Course', 'Appetizer', or 'Dessert'.
-          - It is sourced from the 'ITEM_CATEGORY' column in the 'MENU' table within the 'TASTY_AWOOD' database.
-          - This attribute enables categorization and analysis of menu items for sales analysis and menu planning.
-          - Business users can leverage this to understand which categories are most popular.
+        description: ""
         name: ITEM_CATEGORY
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 88282bbe-62ca-4600-b7d7-66cc35443610
-                stepCounter: 2f1eca37-69df-45fc-9b1a-979f43b9b22c
+              - columnCounter: 52f42f60-a4ce-49b7-b6d1-35314c75a347
+                stepCounter: f8a8189d-ff7c-47d8-a64a-722fcaf91ad3
             transform: UPPER("MENU"."ITEM_CATEGORY")
-      - appliedColumnTests: {}
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: false
         columnReference:
-          columnCounter: 903e25fe-fa6e-4e3e-bdc6-781429b7aad5
-          stepCounter: f2319868-6e7e-4eba-88d7-efd265cd5d31
+          columnCounter: 1e7aeb61-8ebf-4304-b0b2-e57c434629a4
+          stepCounter: 0e1c4534-2894-4f3c-98cf-9bfe1b4b0a16
         config: {}
         dataType: VARCHAR(16777216)
-        description: |-
-          - This column provides a more granular categorization of the menu item, such as 'Beef Burger' or 'Chicken Salad'.
-          - It is sourced from the 'ITEM_SUBCATEGORY' column in the 'MENU' table within the 'TASTY_AWOOD' database.
-          - This attribute provides a more detailed breakdown for menu analysis and reporting, improving the granularity of insights.
-          - Business users can leverage this to understand which subcategories are most popular.
+        description: ""
         name: ITEM_SUBCATEGORY
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 343e731d-92a0-4d8a-bbd4-68d5c307cab7
-                stepCounter: 2f1eca37-69df-45fc-9b1a-979f43b9b22c
+              - columnCounter: 6fcb71f3-293f-48e4-979f-4c1bc5bf4bdd
+                stepCounter: f8a8189d-ff7c-47d8-a64a-722fcaf91ad3
             transform: UPPER("MENU"."ITEM_SUBCATEGORY")
-      - appliedColumnTests: {}
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: false
         columnReference:
-          columnCounter: 0857a906-a67d-4fbc-a69a-d63e1ab0eed0
-          stepCounter: f2319868-6e7e-4eba-88d7-efd265cd5d31
+          columnCounter: e17fdbfc-cdb9-480e-bcf3-3d8e15328955
+          stepCounter: 0e1c4534-2894-4f3c-98cf-9bfe1b4b0a16
         config: {}
         dataType: NUMBER(38,4)
-        description: |-
-          - This column represents the cost of the ingredients required to make the menu item, expressed in US dollars.
-          - It is sourced from the 'COST_OF_GOODS_USD' column in the 'MENU' table within the 'TASTY_AWOOD' database.
-          - This value is used to calculate profit margins and food costs, which is crucial for financial analysis and reporting.
-          - It aids in determining the profitability of each menu item.
+        description: ""
         name: COST_OF_GOODS_USD
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: b5adb2e0-7525-4953-892d-624ceb31c751
-                stepCounter: 2f1eca37-69df-45fc-9b1a-979f43b9b22c
+              - columnCounter: d1e42967-e3cd-4ef3-ab24-68cf684484d3
+                stepCounter: f8a8189d-ff7c-47d8-a64a-722fcaf91ad3
             transform: ""
-      - appliedColumnTests: {}
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: false
         columnReference:
-          columnCounter: 12303b64-b7c5-4909-a586-72de1152049c
-          stepCounter: f2319868-6e7e-4eba-88d7-efd265cd5d31
+          columnCounter: 725a6a45-6714-4ee9-af00-bd4c95c88031
+          stepCounter: 0e1c4534-2894-4f3c-98cf-9bfe1b4b0a16
         config: {}
         dataType: NUMBER(38,4)
-        description: |-
-          - This column indicates the price at which the menu item is sold to customers, expressed in US dollars.
-          - It is sourced from the 'SALE_PRICE_USD' column in the 'MENU' table within the 'TASTY_AWOOD' database.
-          - This value is used in conjunction with the cost of goods to calculate profit margins and revenue metrics.
-          - It helps in understanding revenue generation per item.
+        description: ""
         name: SALE_PRICE_USD
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 1e368626-5985-4562-a749-f6a2a0dfe5b1
-                stepCounter: 2f1eca37-69df-45fc-9b1a-979f43b9b22c
+              - columnCounter: d73ffdff-dcee-40ce-b0eb-0fc311649b00
+                stepCounter: f8a8189d-ff7c-47d8-a64a-722fcaf91ad3
             transform: ""
-      - appliedColumnTests: {}
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: false
         columnReference:
-          columnCounter: 1f26b67a-2298-490a-bcea-4d37e75c983d
-          stepCounter: f2319868-6e7e-4eba-88d7-efd265cd5d31
+          columnCounter: 6e88e678-aada-406b-b402-3f4204d78c66
+          stepCounter: 0e1c4534-2894-4f3c-98cf-9bfe1b4b0a16
         config: {}
         dataType: VARIANT
-        description: |-
-          - This column stores a JSON object containing health-related metrics for each menu item.
-          - It is sourced from the 'MENU_ITEM_HEALTH_METRICS_OBJ' column in the 'MENU' table within the 'TASTY_AWOOD' database.
-          - This object contains information on ingredients, allergen flags, and health scores, enabling health-conscious menu analysis.
-          - Downstream, the JSON object is parsed to extract specific health metrics for reporting.
+        description: ""
         name: MENU_ITEM_HEALTH_METRICS_OBJ
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 7de8ca54-768d-42bd-938e-198276953f57
-                stepCounter: 2f1eca37-69df-45fc-9b1a-979f43b9b22c
+              - columnCounter: e8dff2f1-c0c4-4a28-a991-a3c6cc1a3037
+                stepCounter: f8a8189d-ff7c-47d8-a64a-722fcaf91ad3
             transform: ""
       - acceptedValues:
           strictMatch: true
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 5dfab7ec-6c33-4527-84bc-1c582b795d64
-          stepCounter: f2319868-6e7e-4eba-88d7-efd265cd5d31
+          columnCounter: 052f8884-17b5-4f43-bfa3-3261704d977a
+          stepCounter: 0e1c4534-2894-4f3c-98cf-9bfe1b4b0a16
         config: {}
         dataType: STRING
-        description: |-
-          - This column represents a list of ingredients used in the menu item.
-          - It is derived from the 'MENU_ITEM_HEALTH_METRICS_OBJ' column in the 'MENU' table within the 'TASTY_AWOOD' database, extracting the 'ingredients' field.
-          - The transformation applied is: `"MENU_ITEM_HEALTH_METRICS_OBJ_menu_item_health_metrics_ingredients".value::STRING`.
-          - This information is valuable for customers with dietary restrictions or preferences.
+        description: ""
         name: menu_item_health_metrics_ingredients
         nullable: true
         sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 7de8ca54-768d-42bd-938e-198276953f57
-                stepCounter: 2f1eca37-69df-45fc-9b1a-979f43b9b22c
+          - columnReferences: []
             transform: "\"MENU_ITEM_HEALTH_METRICS_OBJ_menu_item_health_metrics_ingredients\".value::STRING"
       - acceptedValues:
           strictMatch: true
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: b2ce15ef-3ab9-461f-bfe6-2a490aa4f654
-          stepCounter: f2319868-6e7e-4eba-88d7-efd265cd5d31
+          columnCounter: 631d4e6d-d36b-4246-91cd-cd7488b3b21a
+          stepCounter: 0e1c4534-2894-4f3c-98cf-9bfe1b4b0a16
         config: {}
         dataType: STRING
-        description: |-
-          - This column indicates whether the menu item is dairy-free.
-          - It is extracted from the 'MENU_ITEM_HEALTH_METRICS_OBJ' column in the 'MENU' table within the 'TASTY_AWOOD' database, specifically the 'is_dairy_free_flag' field.
-          - The transformation applied is: `"MENU_ITEM_HEALTH_METRICS_OBJ_menu_item_health_metrics".value:"is_dairy_free_flag"::STRING`.
-          - This flag is useful for filtering and identifying options suitable for dairy-free diets.
+        description: ""
         name: menu_item_health_metrics_is_dairy_free_flag
         nullable: true
         sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 7de8ca54-768d-42bd-938e-198276953f57
-                stepCounter: 2f1eca37-69df-45fc-9b1a-979f43b9b22c
+          - columnReferences: []
             transform: "\"MENU_ITEM_HEALTH_METRICS_OBJ_menu_item_health_metrics\".value:\"is_dairy_free_flag\"::STRING"
       - acceptedValues:
           strictMatch: true
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 44327a72-d6eb-494a-8270-11dbb1ffb07f
-          stepCounter: f2319868-6e7e-4eba-88d7-efd265cd5d31
+          columnCounter: 53e57919-e997-432e-9f74-8a32fe9b20bf
+          stepCounter: 0e1c4534-2894-4f3c-98cf-9bfe1b4b0a16
         config: {}
         dataType: STRING
-        description: |-
-          - This column indicates whether the menu item is gluten-free.
-          - It is extracted from the 'MENU_ITEM_HEALTH_METRICS_OBJ' column in the 'MENU' table within the 'TASTY_AWOOD' database, specifically the 'is_gluten_free_flag' field.
-          - The transformation applied is: `"MENU_ITEM_HEALTH_METRICS_OBJ_menu_item_health_metrics".value:"is_gluten_free_flag"::STRING`.
-          - This flag is valuable for customers with gluten intolerance or celiac disease.
+        description: ""
         name: menu_item_health_metrics_is_gluten_free_flag
         nullable: true
         sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 7de8ca54-768d-42bd-938e-198276953f57
-                stepCounter: 2f1eca37-69df-45fc-9b1a-979f43b9b22c
+          - columnReferences: []
             transform: "\"MENU_ITEM_HEALTH_METRICS_OBJ_menu_item_health_metrics\".value:\"is_gluten_free_flag\"::STRING"
       - acceptedValues:
           strictMatch: true
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 3917aa0d-e303-4eeb-b043-c7f3fcad129b
-          stepCounter: f2319868-6e7e-4eba-88d7-efd265cd5d31
+          columnCounter: 53e9e862-e53e-44e2-b71c-7a819077a9c1
+          stepCounter: 0e1c4534-2894-4f3c-98cf-9bfe1b4b0a16
         config: {}
         dataType: STRING
-        description: |-
-          - This column indicates whether the menu item is considered healthy based on predefined criteria.
-          - It is sourced from the 'MENU_ITEM_HEALTH_METRICS_OBJ' column in the 'MENU' table within the 'TASTY_AWOOD' database, extracting the 'is_healthy_flag' field.
-          - The transformation applied is: `"MENU_ITEM_HEALTH_METRICS_OBJ_menu_item_health_metrics".value:"is_healthy_flag"::STRING`.
-          - It allows for filtering and highlighting healthier options on the menu.
+        description: ""
         name: menu_item_health_metrics_is_healthy_flag
         nullable: true
         sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 7de8ca54-768d-42bd-938e-198276953f57
-                stepCounter: 2f1eca37-69df-45fc-9b1a-979f43b9b22c
+          - columnReferences: []
             transform: "\"MENU_ITEM_HEALTH_METRICS_OBJ_menu_item_health_metrics\".value:\"is_healthy_flag\"::STRING"
       - acceptedValues:
           strictMatch: true
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 3bca4fdd-0ecf-4032-8911-6522b62a235e
-          stepCounter: f2319868-6e7e-4eba-88d7-efd265cd5d31
+          columnCounter: 817cfc82-b3da-47e4-b16f-cdf640dda51e
+          stepCounter: 0e1c4534-2894-4f3c-98cf-9bfe1b4b0a16
         config: {}
         dataType: STRING
-        description: |-
-          - This column indicates whether the menu item is nut-free.
-          - It is extracted from the 'MENU_ITEM_HEALTH_METRICS_OBJ' column in the 'MENU' table within the 'TASTY_AWOOD' database, specifically the 'is_nut_free_flag' field.
-          - The transformation applied is: `"MENU_ITEM_HEALTH_METRICS_OBJ_menu_item_health_metrics".value:"is_nut_free_flag"::STRING`.
-          - This flag helps customers with nut allergies easily identify safe options.
+        description: ""
         name: menu_item_health_metrics_is_nut_free_flag
         nullable: true
         sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 7de8ca54-768d-42bd-938e-198276953f57
-                stepCounter: 2f1eca37-69df-45fc-9b1a-979f43b9b22c
+          - columnReferences: []
             transform: "\"MENU_ITEM_HEALTH_METRICS_OBJ_menu_item_health_metrics\".value:\"is_nut_free_flag\"::STRING"
       - acceptedValues:
           strictMatch: true
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: c2d9ff66-417f-4634-a5dd-c1d35b1b2edf
-          stepCounter: f2319868-6e7e-4eba-88d7-efd265cd5d31
+          columnCounter: 3cc19fbe-3226-453f-bfcd-aa1596495f3c
+          stepCounter: 0e1c4534-2894-4f3c-98cf-9bfe1b4b0a16
         config: {}
         dataType: DOUBLE
-        description: |-
-          - This column represents the unique identifier for a menu item within the health metrics object.
-          - It is derived from the 'MENU_ITEM_HEALTH_METRICS_OBJ' column in the 'MENU' table within the 'TASTY_AWOOD' database, extracting the 'menu_item_id' field.
-          - The transformation applied is: `"MENU"."MENU_ITEM_HEALTH_METRICS_OBJ":"menu_item_id"::DOUBLE`.
-          - It serves as a link between health metrics and the specific menu item.
+        description: ""
         name: menu_item_id
         nullable: true
         sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 7de8ca54-768d-42bd-938e-198276953f57
-                stepCounter: 2f1eca37-69df-45fc-9b1a-979f43b9b22c
+          - columnReferences: []
             transform: "\"MENU\".\"MENU_ITEM_HEALTH_METRICS_OBJ\":\"menu_item_id\"::DOUBLE"
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: 5771a63e-7e8a-43e9-86a7-4913f930162c
-          stepCounter: f2319868-6e7e-4eba-88d7-efd265cd5d31
-        config: {}
-        dataType: STRING
-        defaultValue: ""
-        description: ""
-        keyColumnType: None
-        name: Price_Bucket
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: "0"
-                stepCounter: "0"
-            transform: CASE WHEN "MENU"."SALE_PRICE_USD">15 THEN 'high price' WHEN "MENU"."SALE_PRICE_USD">7 THEN 'mid price' ELSE 'low price' END
-        systemColumnType: None
     cteString: ""
-    enabledColumnTestIDs: []
+    enabledColumnTestIDs:
+      - hasNull
+      - isDistinct
     sourceMapping:
       - aliases: {}
         customSQL:
           customSQL: ""
         dependencies:
-          - locationName: TASTY_AWOOD
+          - locationName: TASTY_POS
             nodeName: MENU
         join:
           joinCondition: |2-
 
 
              
-              FROM  {{ ref('TASTY_AWOOD', 'MENU') }} MENU, 
+              FROM  {{ ref('TASTY_POS', 'MENU') }} MENU, 
             lateral flatten(input => "MENU_ITEM_HEALTH_METRICS_OBJ":"menu_item_health_metrics", OUTER => TRUE) "MENU_ITEM_HEALTH_METRICS_OBJ_menu_item_health_metrics", 
             lateral flatten(input => "MENU_ITEM_HEALTH_METRICS_OBJ_menu_item_health_metrics".value:"ingredients", OUTER => TRUE) "MENU_ITEM_HEALTH_METRICS_OBJ_menu_item_health_metrics_ingredients"
         name: WRK_MENU
