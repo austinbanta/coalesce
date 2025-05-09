@@ -26,12 +26,12 @@ operation:
           WHERE "V_SALES"."SALE_PRICE_USD" > 0
       - continueOnFailure: true
         description: ""
-        name: Test
+        name: price >0
         runOrder: After
         templateString: |-
           SELECT 1 
           FROM {{this}}
-          WHERE "V_SALES"."SALE_PRICE_USD" > 0
+          WHERE "V_SALES"."QUANTITY" > 0
     columns:
       - appliedColumnTests:
           hasNull: true
