@@ -1,6 +1,6 @@
 excludeSelector: ""
 fileVersion: 1
 id: "36"
-includeSelector: "{ location: TASTY_AWOOD name: COUNTRY }+ OR { location: TASTY_AWOOD name: CUSTOMER_LOYALTY }+ OR { location: TASTY_AWOOD name: FRANCHISE }+ OR { location: TASTY_AWOOD name: LOCATION }+ OR { location: TASTY_AWOOD name: MENU }+ OR { location: TASTY_AWOOD name: ORDER_DETAIL_38M }+ OR { location: TASTY_AWOOD name: ORDER_HEADER_14M }+ OR { location: TASTY_AWOOD name: TRUCK }+"
+includeSelector: "+{ location: STG name: V_SALES }"
 name: whole dag
 type: Job
