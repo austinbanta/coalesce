@@ -1316,7 +1316,7 @@ operation:
   name: V_SALES
   overrideSQL: false
   schema: ""
-  sqlType: Stage
+  sqlType: base-1-3-4:::204
   type: sql
   version: 1
 type: Node

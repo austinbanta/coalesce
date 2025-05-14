@@ -280,7 +280,7 @@ operation:
   name: DIM_FRANCHISE2
   overrideSQL: false
   schema: ""
-  sqlType: base:::194
+  sqlType: base-1-3-4:::194
   type: sql
   version: 1
 type: Node

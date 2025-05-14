@@ -168,7 +168,7 @@ operation:
   name: WRK_FRANCHISE
   overrideSQL: false
   schema: ""
-  sqlType: base:::204
+  sqlType: base-1-3-4:::204
   type: sql
   version: 1
 type: Node
