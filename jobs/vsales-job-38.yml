@@ -1,0 +1,6 @@
+excludeSelector: ""
+fileVersion: 1
+id: "38"
+includeSelector: "{ location: STG name: V_SALES }"
+name: vsales-job
+type: Job
