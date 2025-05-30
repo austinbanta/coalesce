@@ -1,11 +1,11 @@
 fileVersion: 1
-id: 4b21eb26-a7d6-4a11-a838-45336a33ca14
-name: COUNTRY
+id: 9b870be1-30bb-40a5-be0b-7c690d243204
+name: SUPPLIER
 operation:
   database: ""
   deployEnabled: true
-  description: ""
-  locationName: TASTY_AWOOD
+  description: Supplier data as defined by TPC-H
+  locationName: TPCH
   metadata:
     columns:
       - acceptedValues:
@@ -13,14 +13,14 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: ae1a40c2-fc06-4ed3-b95c-6581deda1a2e
-          stepCounter: 4b21eb26-a7d6-4a11-a838-45336a33ca14
+          columnCounter: 600e7527-324e-4c5c-95da-0e5d11d2fc96
+          stepCounter: 9b870be1-30bb-40a5-be0b-7c690d243204
         config: {}
-        dataType: NUMBER(18,0)
+        dataType: NUMBER(38,0)
         defaultValue: ""
         description: ""
-        name: COUNTRY_ID
-        nullable: true
+        name: S_SUPPKEY
+        nullable: false
         primaryKey: false
         sourceColumnReferences:
           - columnReferences: []
@@ -32,14 +32,14 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 9e6e7011-70e6-4ad9-b812-b71ba89a5651
-          stepCounter: 4b21eb26-a7d6-4a11-a838-45336a33ca14
+          columnCounter: d6f96ef7-e49e-4498-b778-3783416b165a
+          stepCounter: 9b870be1-30bb-40a5-be0b-7c690d243204
         config: {}
-        dataType: VARCHAR(16777216)
+        dataType: VARCHAR(25)
         defaultValue: ""
         description: ""
-        name: COUNTRY
-        nullable: true
+        name: S_NAME
+        nullable: false
         primaryKey: false
         sourceColumnReferences:
           - columnReferences: []
@@ -51,14 +51,14 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 6dd08c0b-f4db-4f17-9936-c2dd2d4e1ed0
-          stepCounter: 4b21eb26-a7d6-4a11-a838-45336a33ca14
+          columnCounter: f97ed29b-5320-474d-956e-44fb7baacc07
+          stepCounter: 9b870be1-30bb-40a5-be0b-7c690d243204
         config: {}
-        dataType: VARCHAR(3)
+        dataType: VARCHAR(40)
         defaultValue: ""
         description: ""
-        name: ISO_CURRENCY
-        nullable: true
+        name: S_ADDRESS
+        nullable: false
         primaryKey: false
         sourceColumnReferences:
           - columnReferences: []
@@ -70,14 +70,14 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 50c8e12f-d3de-492a-9463-4bb164adbaa1
-          stepCounter: 4b21eb26-a7d6-4a11-a838-45336a33ca14
+          columnCounter: 17d01fab-1f8b-4cf7-9fd6-df0163523a08
+          stepCounter: 9b870be1-30bb-40a5-be0b-7c690d243204
         config: {}
-        dataType: VARCHAR(2)
+        dataType: NUMBER(38,0)
         defaultValue: ""
         description: ""
-        name: ISO_COUNTRY
-        nullable: true
+        name: S_NATIONKEY
+        nullable: false
         primaryKey: false
         sourceColumnReferences:
           - columnReferences: []
@@ -89,14 +89,14 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 60502fe6-d3ea-40a8-b6a4-1230f2e4ad05
-          stepCounter: 4b21eb26-a7d6-4a11-a838-45336a33ca14
+          columnCounter: 8c644b17-c29d-4e10-936c-b87791057fb1
+          stepCounter: 9b870be1-30bb-40a5-be0b-7c690d243204
         config: {}
-        dataType: NUMBER(19,0)
+        dataType: VARCHAR(15)
         defaultValue: ""
         description: ""
-        name: CITY_ID
-        nullable: true
+        name: S_PHONE
+        nullable: false
         primaryKey: false
         sourceColumnReferences:
           - columnReferences: []
@@ -108,14 +108,14 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 47102522-8c61-483b-a72d-ff9e2ba55755
-          stepCounter: 4b21eb26-a7d6-4a11-a838-45336a33ca14
+          columnCounter: 91673f33-1e87-4d22-b132-1199435d5be4
+          stepCounter: 9b870be1-30bb-40a5-be0b-7c690d243204
         config: {}
-        dataType: VARCHAR(16777216)
+        dataType: NUMBER(12,2)
         defaultValue: ""
         description: ""
-        name: CITY
-        nullable: true
+        name: S_ACCTBAL
+        nullable: false
         primaryKey: false
         sourceColumnReferences:
           - columnReferences: []
@@ -127,13 +127,13 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 375ee04f-572f-4fc0-ace5-1d625108e102
-          stepCounter: 4b21eb26-a7d6-4a11-a838-45336a33ca14
+          columnCounter: 01d6b3fc-8cff-4628-820a-e55e6d0c3484
+          stepCounter: 9b870be1-30bb-40a5-be0b-7c690d243204
         config: {}
-        dataType: VARCHAR(16777216)
+        dataType: VARCHAR(101)
         defaultValue: ""
         description: ""
-        name: CITY_POPULATION
+        name: S_COMMENT
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -141,7 +141,7 @@ operation:
             transform: ""
         transform: ""
         uniqueKey: false
-  name: COUNTRY
+  name: SUPPLIER
   schema: ""
   sqlType: Source
   type: sourceInput

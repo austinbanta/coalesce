@@ -1,6 +1,6 @@
 fileVersion: 1
-id: d252ca13-34c5-4ed7-9ff2-12b0035f5789
-name: ORDER_DETAIL_38M
+id: 7f3093d8-8045-44d2-83d5-ae8a4cf0940f
+name: MENU
 operation:
   database: ""
   deployEnabled: true
@@ -13,13 +13,13 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: fb50be1e-8602-4b42-9679-39527034c273
-          stepCounter: d252ca13-34c5-4ed7-9ff2-12b0035f5789
+          columnCounter: 45868e3b-fb31-4f6e-bfb0-ae0a720e4817
+          stepCounter: 7f3093d8-8045-44d2-83d5-ae8a4cf0940f
         config: {}
-        dataType: NUMBER(38,0)
+        dataType: NUMBER(19,0)
         defaultValue: ""
         description: ""
-        name: ORDER_DETAIL_ID
+        name: MENU_ID
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -32,13 +32,13 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 8317abd7-97fe-4192-a5d0-22397ee9a04e
-          stepCounter: d252ca13-34c5-4ed7-9ff2-12b0035f5789
+          columnCounter: d4a7f309-75a5-4ac8-b139-64510a7b714c
+          stepCounter: 7f3093d8-8045-44d2-83d5-ae8a4cf0940f
         config: {}
         dataType: NUMBER(38,0)
         defaultValue: ""
         description: ""
-        name: ORDER_ID
+        name: MENU_TYPE_ID
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -51,8 +51,46 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 8886a35d-ed9c-479f-b5ca-c3bbb79197ee
-          stepCounter: d252ca13-34c5-4ed7-9ff2-12b0035f5789
+          columnCounter: 238cfdfa-b0f9-4977-b5b8-c62270efd51a
+          stepCounter: 7f3093d8-8045-44d2-83d5-ae8a4cf0940f
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: MENU_TYPE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7ba114e4-482a-41e5-ab7f-7ce771b3adde
+          stepCounter: 7f3093d8-8045-44d2-83d5-ae8a4cf0940f
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: TRUCK_BRAND_NAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 00c08e40-b279-4800-8d59-0ac1459518ce
+          stepCounter: 7f3093d8-8045-44d2-83d5-ae8a4cf0940f
         config: {}
         dataType: NUMBER(38,0)
         defaultValue: ""
@@ -70,13 +108,13 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: f0f506f2-f507-4d91-b13f-b7e62acc1cf2
-          stepCounter: d252ca13-34c5-4ed7-9ff2-12b0035f5789
+          columnCounter: bdfff4e1-7321-471b-8748-49e59f34fa45
+          stepCounter: 7f3093d8-8045-44d2-83d5-ae8a4cf0940f
         config: {}
         dataType: VARCHAR(16777216)
         defaultValue: ""
         description: ""
-        name: DISCOUNT_ID
+        name: MENU_ITEM_NAME
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -89,89 +127,13 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 5bcf6545-4df9-4c55-9721-9f17aadbfe2c
-          stepCounter: d252ca13-34c5-4ed7-9ff2-12b0035f5789
-        config: {}
-        dataType: NUMBER(38,0)
-        defaultValue: ""
-        description: ""
-        name: LINE_NUMBER
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: 02e0e7ed-a887-4eb2-82d9-2cc0955db924
-          stepCounter: d252ca13-34c5-4ed7-9ff2-12b0035f5789
-        config: {}
-        dataType: NUMBER(5,0)
-        defaultValue: ""
-        description: ""
-        name: QUANTITY
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: b3a921c5-5262-45c3-bdd7-a279b01906d0
-          stepCounter: d252ca13-34c5-4ed7-9ff2-12b0035f5789
-        config: {}
-        dataType: NUMBER(38,4)
-        defaultValue: ""
-        description: ""
-        name: UNIT_PRICE
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: 5c377c27-478d-4474-b76b-2793fea59381
-          stepCounter: d252ca13-34c5-4ed7-9ff2-12b0035f5789
-        config: {}
-        dataType: NUMBER(38,4)
-        defaultValue: ""
-        description: ""
-        name: PRICE
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: 6bb32bf9-185c-40c5-80f3-68a696a39262
-          stepCounter: d252ca13-34c5-4ed7-9ff2-12b0035f5789
+          columnCounter: cf340c40-5599-405f-ad5f-84ea0ae3c57a
+          stepCounter: 7f3093d8-8045-44d2-83d5-ae8a4cf0940f
         config: {}
         dataType: VARCHAR(16777216)
         defaultValue: ""
         description: ""
-        name: ORDER_ITEM_DISCOUNT_AMOUNT
+        name: ITEM_CATEGORY
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -179,7 +141,83 @@ operation:
             transform: ""
         transform: ""
         uniqueKey: false
-  name: ORDER_DETAIL_38M
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4e22d288-94d5-4d7c-88e1-d50096e40974
+          stepCounter: 7f3093d8-8045-44d2-83d5-ae8a4cf0940f
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: ITEM_SUBCATEGORY
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8b90adc7-7f6c-44e5-bbb6-5cf2646a894f
+          stepCounter: 7f3093d8-8045-44d2-83d5-ae8a4cf0940f
+        config: {}
+        dataType: NUMBER(38,4)
+        defaultValue: ""
+        description: ""
+        name: COST_OF_GOODS_USD
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a2f17753-1451-4a58-b92c-0c2b76de3508
+          stepCounter: 7f3093d8-8045-44d2-83d5-ae8a4cf0940f
+        config: {}
+        dataType: NUMBER(38,4)
+        defaultValue: ""
+        description: ""
+        name: SALE_PRICE_USD
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0fdc5f0a-d918-400f-b721-d42bcdcbda67
+          stepCounter: 7f3093d8-8045-44d2-83d5-ae8a4cf0940f
+        config: {}
+        dataType: VARIANT
+        defaultValue: ""
+        description: ""
+        name: MENU_ITEM_HEALTH_METRICS_OBJ
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: MENU
   schema: ""
   sqlType: Source
   type: sourceInput

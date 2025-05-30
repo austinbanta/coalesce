@@ -1,11 +1,11 @@
 fileVersion: 1
-id: 4b21eb26-a7d6-4a11-a838-45336a33ca14
-name: COUNTRY
+id: a59d68ad-c050-4bd2-aeea-71b04b5c6eb2
+name: CUSTOMER
 operation:
   database: ""
   deployEnabled: true
-  description: ""
-  locationName: TASTY_AWOOD
+  description: Customer data as defined by TPC-H
+  locationName: TPCH
   metadata:
     columns:
       - acceptedValues:
@@ -13,13 +13,127 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: ae1a40c2-fc06-4ed3-b95c-6581deda1a2e
-          stepCounter: 4b21eb26-a7d6-4a11-a838-45336a33ca14
+          columnCounter: a60c9888-1626-492e-a32e-34f16fcd349b
+          stepCounter: a59d68ad-c050-4bd2-aeea-71b04b5c6eb2
         config: {}
-        dataType: NUMBER(18,0)
+        dataType: NUMBER(38,0)
         defaultValue: ""
         description: ""
-        name: COUNTRY_ID
+        name: C_CUSTKEY
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ff567bc5-50d9-4fad-8c1b-393a1113fa86
+          stepCounter: a59d68ad-c050-4bd2-aeea-71b04b5c6eb2
+        config: {}
+        dataType: VARCHAR(25)
+        defaultValue: ""
+        description: ""
+        name: C_NAME
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5a9ade62-0417-4346-aa17-b7b55feafe30
+          stepCounter: a59d68ad-c050-4bd2-aeea-71b04b5c6eb2
+        config: {}
+        dataType: VARCHAR(40)
+        defaultValue: ""
+        description: ""
+        name: C_ADDRESS
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 835b7b9d-9895-4151-9daf-92937297ba77
+          stepCounter: a59d68ad-c050-4bd2-aeea-71b04b5c6eb2
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: C_NATIONKEY
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f2a1bf93-61db-4ce4-8f4f-45bee328479e
+          stepCounter: a59d68ad-c050-4bd2-aeea-71b04b5c6eb2
+        config: {}
+        dataType: VARCHAR(15)
+        defaultValue: ""
+        description: ""
+        name: C_PHONE
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 81a0d6af-cb45-4bd9-84ab-72abb3f71f06
+          stepCounter: a59d68ad-c050-4bd2-aeea-71b04b5c6eb2
+        config: {}
+        dataType: NUMBER(12,2)
+        defaultValue: ""
+        description: ""
+        name: C_ACCTBAL
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0f4fc707-a723-40de-8fe8-52f520f4fedf
+          stepCounter: a59d68ad-c050-4bd2-aeea-71b04b5c6eb2
+        config: {}
+        dataType: VARCHAR(10)
+        defaultValue: ""
+        description: ""
+        name: C_MKTSEGMENT
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -32,13 +146,13 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 9e6e7011-70e6-4ad9-b812-b71ba89a5651
-          stepCounter: 4b21eb26-a7d6-4a11-a838-45336a33ca14
+          columnCounter: b3eb8bbb-0a0b-4b64-ba21-893da648e2d9
+          stepCounter: a59d68ad-c050-4bd2-aeea-71b04b5c6eb2
         config: {}
-        dataType: VARCHAR(16777216)
+        dataType: VARCHAR(117)
         defaultValue: ""
         description: ""
-        name: COUNTRY
+        name: C_COMMENT
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -46,102 +160,7 @@ operation:
             transform: ""
         transform: ""
         uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: 6dd08c0b-f4db-4f17-9936-c2dd2d4e1ed0
-          stepCounter: 4b21eb26-a7d6-4a11-a838-45336a33ca14
-        config: {}
-        dataType: VARCHAR(3)
-        defaultValue: ""
-        description: ""
-        name: ISO_CURRENCY
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: 50c8e12f-d3de-492a-9463-4bb164adbaa1
-          stepCounter: 4b21eb26-a7d6-4a11-a838-45336a33ca14
-        config: {}
-        dataType: VARCHAR(2)
-        defaultValue: ""
-        description: ""
-        name: ISO_COUNTRY
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: 60502fe6-d3ea-40a8-b6a4-1230f2e4ad05
-          stepCounter: 4b21eb26-a7d6-4a11-a838-45336a33ca14
-        config: {}
-        dataType: NUMBER(19,0)
-        defaultValue: ""
-        description: ""
-        name: CITY_ID
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: 47102522-8c61-483b-a72d-ff9e2ba55755
-          stepCounter: 4b21eb26-a7d6-4a11-a838-45336a33ca14
-        config: {}
-        dataType: VARCHAR(16777216)
-        defaultValue: ""
-        description: ""
-        name: CITY
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: 375ee04f-572f-4fc0-ace5-1d625108e102
-          stepCounter: 4b21eb26-a7d6-4a11-a838-45336a33ca14
-        config: {}
-        dataType: VARCHAR(16777216)
-        defaultValue: ""
-        description: ""
-        name: CITY_POPULATION
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-  name: COUNTRY
+  name: CUSTOMER
   schema: ""
   sqlType: Source
   type: sourceInput

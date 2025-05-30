@@ -1,11 +1,11 @@
 fileVersion: 1
-id: 4b21eb26-a7d6-4a11-a838-45336a33ca14
-name: COUNTRY
+id: 51a847a7-e8a9-436e-9dbe-5b399da9e3ac
+name: PART
 operation:
   database: ""
   deployEnabled: true
-  description: ""
-  locationName: TASTY_AWOOD
+  description: Part data as defined by TPC-H
+  locationName: TPCH
   metadata:
     columns:
       - acceptedValues:
@@ -13,14 +13,14 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: ae1a40c2-fc06-4ed3-b95c-6581deda1a2e
-          stepCounter: 4b21eb26-a7d6-4a11-a838-45336a33ca14
+          columnCounter: b6493fb0-ad9e-4a32-99c4-0118c59d108a
+          stepCounter: 51a847a7-e8a9-436e-9dbe-5b399da9e3ac
         config: {}
-        dataType: NUMBER(18,0)
+        dataType: NUMBER(38,0)
         defaultValue: ""
         description: ""
-        name: COUNTRY_ID
-        nullable: true
+        name: P_PARTKEY
+        nullable: false
         primaryKey: false
         sourceColumnReferences:
           - columnReferences: []
@@ -32,14 +32,14 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 9e6e7011-70e6-4ad9-b812-b71ba89a5651
-          stepCounter: 4b21eb26-a7d6-4a11-a838-45336a33ca14
+          columnCounter: 5af6626e-d0d1-4258-81b7-9d302c714a41
+          stepCounter: 51a847a7-e8a9-436e-9dbe-5b399da9e3ac
         config: {}
-        dataType: VARCHAR(16777216)
+        dataType: VARCHAR(55)
         defaultValue: ""
         description: ""
-        name: COUNTRY
-        nullable: true
+        name: P_NAME
+        nullable: false
         primaryKey: false
         sourceColumnReferences:
           - columnReferences: []
@@ -51,14 +51,14 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 6dd08c0b-f4db-4f17-9936-c2dd2d4e1ed0
-          stepCounter: 4b21eb26-a7d6-4a11-a838-45336a33ca14
+          columnCounter: 2282e001-2711-4773-9ec9-99694cb2b1cd
+          stepCounter: 51a847a7-e8a9-436e-9dbe-5b399da9e3ac
         config: {}
-        dataType: VARCHAR(3)
+        dataType: VARCHAR(25)
         defaultValue: ""
         description: ""
-        name: ISO_CURRENCY
-        nullable: true
+        name: P_MFGR
+        nullable: false
         primaryKey: false
         sourceColumnReferences:
           - columnReferences: []
@@ -70,14 +70,14 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 50c8e12f-d3de-492a-9463-4bb164adbaa1
-          stepCounter: 4b21eb26-a7d6-4a11-a838-45336a33ca14
+          columnCounter: e30f8a9a-607b-476f-9839-a0eb23b3fa58
+          stepCounter: 51a847a7-e8a9-436e-9dbe-5b399da9e3ac
         config: {}
-        dataType: VARCHAR(2)
+        dataType: VARCHAR(10)
         defaultValue: ""
         description: ""
-        name: ISO_COUNTRY
-        nullable: true
+        name: P_BRAND
+        nullable: false
         primaryKey: false
         sourceColumnReferences:
           - columnReferences: []
@@ -89,14 +89,14 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 60502fe6-d3ea-40a8-b6a4-1230f2e4ad05
-          stepCounter: 4b21eb26-a7d6-4a11-a838-45336a33ca14
+          columnCounter: c5925a88-5dc7-48ab-8201-2ecdb5d45271
+          stepCounter: 51a847a7-e8a9-436e-9dbe-5b399da9e3ac
         config: {}
-        dataType: NUMBER(19,0)
+        dataType: VARCHAR(25)
         defaultValue: ""
         description: ""
-        name: CITY_ID
-        nullable: true
+        name: P_TYPE
+        nullable: false
         primaryKey: false
         sourceColumnReferences:
           - columnReferences: []
@@ -108,14 +108,14 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 47102522-8c61-483b-a72d-ff9e2ba55755
-          stepCounter: 4b21eb26-a7d6-4a11-a838-45336a33ca14
+          columnCounter: 10261e02-299e-4ef3-a8a0-4be8c1b43b8b
+          stepCounter: 51a847a7-e8a9-436e-9dbe-5b399da9e3ac
         config: {}
-        dataType: VARCHAR(16777216)
+        dataType: NUMBER(38,0)
         defaultValue: ""
         description: ""
-        name: CITY
-        nullable: true
+        name: P_SIZE
+        nullable: false
         primaryKey: false
         sourceColumnReferences:
           - columnReferences: []
@@ -127,13 +127,51 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 375ee04f-572f-4fc0-ace5-1d625108e102
-          stepCounter: 4b21eb26-a7d6-4a11-a838-45336a33ca14
+          columnCounter: 560f6122-9be3-40cc-810f-1f5f80b6a3df
+          stepCounter: 51a847a7-e8a9-436e-9dbe-5b399da9e3ac
         config: {}
-        dataType: VARCHAR(16777216)
+        dataType: VARCHAR(10)
         defaultValue: ""
         description: ""
-        name: CITY_POPULATION
+        name: P_CONTAINER
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e26cd16b-14c7-4f9c-b7b4-d22f44b5717d
+          stepCounter: 51a847a7-e8a9-436e-9dbe-5b399da9e3ac
+        config: {}
+        dataType: NUMBER(12,2)
+        defaultValue: ""
+        description: ""
+        name: P_RETAILPRICE
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 28d07dc3-9c22-4ed0-99c6-38cdf3803041
+          stepCounter: 51a847a7-e8a9-436e-9dbe-5b399da9e3ac
+        config: {}
+        dataType: VARCHAR(23)
+        defaultValue: ""
+        description: ""
+        name: P_COMMENT
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -141,7 +179,7 @@ operation:
             transform: ""
         transform: ""
         uniqueKey: false
-  name: COUNTRY
+  name: PART
   schema: ""
   sqlType: Source
   type: sourceInput
