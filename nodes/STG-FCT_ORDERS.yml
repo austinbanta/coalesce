@@ -16,7 +16,7 @@ operation:
     truncateBefore: false
   database: ""
   deployEnabled: true
-  description: Creates or replaces the FCT_ORDERS table and populates it by merging data from the WRK_ORDERS table. It updates matched records based on ORDER_DETAIL_ID and ORDER_ID, and inserts new records when there is no match.
+  description: this table is used to table to track average revenue per customer
   isMultisource: false
   locationName: STG
   materializationType: table

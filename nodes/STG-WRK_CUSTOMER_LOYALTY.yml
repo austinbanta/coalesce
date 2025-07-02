@@ -23,7 +23,7 @@ operation:
     truncateBefore: true
   database: ""
   deployEnabled: true
-  description: ""
+  description: "🎯 PURPOSE\n\nThe table WRK_CUSTOMER_LOYALTY is designed to store and manage customer loyalty\ndata, including demographic information, preferences, and key dates such as\nsign-up and birth dates. It is likely used for customer segmentation, loyalty\nprogram analysis, and related reporting purposes.\n\n\n🙋‍♀️ AUDIENCE\n\nThis table is intended for data analysts, marketing teams, and business\nstakeholders who need to analyze customer loyalty trends and behaviors.\n\n\n📄 CONTENT\n\n\nKEY FIELDS\n\nThe table contains the following key fields:\n\n * CUSTOMER_ID: Unique identifier for each customer.\n * FIRST_NAME and LAST_NAME: Customer's name details.\n * SIGN_UP_DATE: Date when the customer signed up for the loyalty program.\n * BIRTHDAY_DATE: Customer's date of birth.\n * FAVOURITE_BRAND: Indicates the customer's preferred brand.\n * PREFERRED_LANGUAGE: Language preference of the customer.\n * MARITAL_STATUS and CHILDREN_COUNT: Demographic details.\n\n\n⚠️ GOOD TO KNOW\n\nNo specific calculations, filters, or exceptions are mentioned for this table.\nHowever, it is important to note that the table does not contain any personally\nidentifiable information (PII) flagged fields.\n\n\n🛢 SOURCE\n\nThe data is sourced from the AWOODCOCK_DEV.TASTY_BYTES.CUSTOMER_LOYALTY table in\nSnowflake.\n\n\n📆 DATA UPDATE FREQUENCY\n\nThe update frequency of the data is not explicitly mentioned."
   isMultisource: false
   locationName: STG
   materializationType: table

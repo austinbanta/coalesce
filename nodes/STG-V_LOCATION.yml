@@ -7,7 +7,7 @@ operation:
     selectDistinct: false
   database: ""
   deployEnabled: true
-  description: ""
+  description: "OVERVIEW OF V_LOCATION\n\nThe V_LOCATION table is a VIEW located in the EDW_PROD schema of the\nAUSTIN_TEST_DB_PROD database. It is sourced from Snowflake Demo and utilizes\nSNOWFLAKE as its source technology. This view is derived from the parent table\naustin_test_db_prod.edw_prod.dim_location.\n\n\nCOLUMNS\n\nThe table consists of the following columns:\n\n * SYSTEM_CREATE_DATE (TIMESTAMP): The timestamp when the system record was\n   created.\n * PLACEKEY (STRING): A unique key representing the location.\n * LOCATION (STRING): The name or description of the location.\n * SYSTEM_END_DATE (TIMESTAMP): The timestamp when the system record became\n   inactive.\n * SYSTEM_UPDATE_DATE (TIMESTAMP): The timestamp when the system record was last\n   updated.\n * COUNTRY (STRING): The name of the country where the location is situated.\n * SYSTEM_START_DATE (TIMESTAMP): The timestamp when the system record became\n   active.\n * CITY (STRING): The city where the location is situated.\n * ISO_COUNTRY_CODE (STRING): The ISO-standardized code for the country of the\n   location.\n * SYSTEM_VERSION (INTEGER): The version number of the system record.\n * SYSTEM_CURRENT_FLAG (STRING): Indicates whether the record is the current\n   active record in the system.\n * LOCATION_ID (INTEGER): The identifier for the specific location.\n * REGION (STRING): The region or state where the location is situated.\n * DIM_LOCATION_KEY (INTEGER): A unique identifier for the location dimension\n   record.\n\n\nSOURCE QUERY\n\nThe view is created using the following query:\n\nCREATE OR REPLACE VIEW \"AUSTIN_TEST_DB_PROD\".\"EDW_PROD\".\"V_LOCATION\"\n(\n    \"DIM_LOCATION_KEY\", \n    \"LOCATION_ID\", \n    \"PLACEKEY\", \n    \"LOCATION\", \n    \"CITY\", \n    \"REGION\", \n    \"ISO_COUNTRY_CODE\", \n    \"COUNTRY\", \n    \"SYSTEM_VERSION\", \n    \"SYSTEM_CURRENT_FLAG\", \n    \"SYSTEM_START_DATE\", \n    \"SYSTEM_END_DATE\", \n    \"SYSTEM_CREATE_DATE\", \n    \"SYSTEM_UPDATE_DATE\"\n)\nAS\nSELECT \n    \"DIM_LOCATION\".\"DIM_LOCATION_KEY\" AS \"DIM_LOCATION_KEY\", \n    \"DIM_LOCATION\".\"LOCATION_ID\" AS \"LOCATION_ID\", \n    \"DIM_LOCATION\".\"PLACEKEY\" AS \"PLACEKEY\", \n    \"DIM_LOCATION\".\"LOCATION\" AS \"LOCATION\", \n    \"DIM_LOCATION\".\"CITY\" AS \"CITY\", \n    \"DIM_LOCATION\".\"REGION\" AS \"REGION\", \n    \"DIM_LOCATION\".\"ISO_COUNTRY_CODE\" AS \"ISO_COUNTRY_CODE\", \n    \"DIM_LOCATION\".\"COUNTRY\" AS \"COUNTRY\", \n    \"DIM_LOCATION\".\"SYSTEM_VERSION\" AS \"SYSTEM_VERSION\", \n    \"DIM_LOCATION\".\"SYSTEM_CURRENT_FLAG\" AS \"SYSTEM_CURRENT_FLAG\", \n    \"DIM_LOCATION\".\"SYSTEM_START_DATE\" AS \"SYSTEM_START_DATE\", \n    \"DIM_LOCATION\".\"SYSTEM_END_DATE\" AS \"SYSTEM_END_DATE\", \n    \"DIM_LOCATION\".\"SYSTEM_CREATE_DATE\" AS \"SYSTEM_CREATE_DATE\", \n    \"DIM_LOCATION\".\"SYSTEM_UPDATE_DATE\" AS \"SYSTEM_UPDATE_DATE\"\nFROM \"AUSTIN_TEST_DB_PROD\".\"EDW_PROD\".\"DIM_LOCATION\" \"DIM_LOCATION\"\n\n\n\nFREQUENT USERS\n\nThe table is frequently accessed by the following user:\n\n * ABANTA (Email: austin.banta@coalesce.io)"
   isMultisource: false
   locationName: STG
   materializationType: view
@@ -20,7 +20,7 @@ operation:
           stepCounter: a660aee3-3bb7-4991-a97a-d71bfd984b59
         config: {}
         dataType: NUMBER
-        description: ""
+        description: "A unique identifier for the location dimension record."
         name: DIM_LOCATION_KEY
         nullable: true
         sourceColumnReferences:
@@ -34,7 +34,7 @@ operation:
           stepCounter: a660aee3-3bb7-4991-a97a-d71bfd984b59
         config: {}
         dataType: NUMBER(19,0)
-        description: ""
+        description: "The identifier for the specific location."
         name: LOCATION_ID
         nullable: true
         sourceColumnReferences:
@@ -48,7 +48,7 @@ operation:
           stepCounter: a660aee3-3bb7-4991-a97a-d71bfd984b59
         config: {}
         dataType: VARCHAR(16777216)
-        description: ""
+        description: "A unique key representing the location."
         name: PLACEKEY
         nullable: true
         sourceColumnReferences:
@@ -62,7 +62,7 @@ operation:
           stepCounter: a660aee3-3bb7-4991-a97a-d71bfd984b59
         config: {}
         dataType: VARCHAR(16777216)
-        description: ""
+        description: "The name or description of the location."
         name: LOCATION
         nullable: true
         sourceColumnReferences:
@@ -76,7 +76,7 @@ operation:
           stepCounter: a660aee3-3bb7-4991-a97a-d71bfd984b59
         config: {}
         dataType: VARCHAR(16777216)
-        description: ""
+        description: "The city where the location is situated."
         name: CITY
         nullable: true
         sourceColumnReferences:
@@ -90,7 +90,7 @@ operation:
           stepCounter: a660aee3-3bb7-4991-a97a-d71bfd984b59
         config: {}
         dataType: VARCHAR(16777216)
-        description: ""
+        description: "The region or state where the location is situated."
         name: REGION
         nullable: true
         sourceColumnReferences:
@@ -104,7 +104,7 @@ operation:
           stepCounter: a660aee3-3bb7-4991-a97a-d71bfd984b59
         config: {}
         dataType: VARCHAR(16777216)
-        description: ""
+        description: "The ISO-standardized code for the country of the location."
         name: ISO_COUNTRY_CODE
         nullable: true
         sourceColumnReferences:
@@ -118,7 +118,7 @@ operation:
           stepCounter: a660aee3-3bb7-4991-a97a-d71bfd984b59
         config: {}
         dataType: VARCHAR(16777216)
-        description: ""
+        description: "The name of the country where the location is situated."
         name: COUNTRY
         nullable: true
         sourceColumnReferences:
@@ -132,7 +132,7 @@ operation:
           stepCounter: a660aee3-3bb7-4991-a97a-d71bfd984b59
         config: {}
         dataType: NUMBER
-        description: ""
+        description: "The version number of the system record."
         name: SYSTEM_VERSION
         nullable: true
         sourceColumnReferences:
@@ -146,7 +146,7 @@ operation:
           stepCounter: a660aee3-3bb7-4991-a97a-d71bfd984b59
         config: {}
         dataType: VARCHAR
-        description: ""
+        description: "Indicates whether the record is the current active record in the system."
         name: SYSTEM_CURRENT_FLAG
         nullable: true
         sourceColumnReferences:
@@ -160,7 +160,7 @@ operation:
           stepCounter: a660aee3-3bb7-4991-a97a-d71bfd984b59
         config: {}
         dataType: TIMESTAMP
-        description: ""
+        description: "The timestamp when the system record became active."
         name: SYSTEM_START_DATE
         nullable: true
         sourceColumnReferences:
@@ -174,7 +174,7 @@ operation:
           stepCounter: a660aee3-3bb7-4991-a97a-d71bfd984b59
         config: {}
         dataType: TIMESTAMP
-        description: ""
+        description: "The timestamp when the system record became inactive."
         name: SYSTEM_END_DATE
         nullable: true
         sourceColumnReferences:
@@ -188,7 +188,7 @@ operation:
           stepCounter: a660aee3-3bb7-4991-a97a-d71bfd984b59
         config: {}
         dataType: TIMESTAMP
-        description: ""
+        description: "The timestamp when the system record was created."
         name: SYSTEM_CREATE_DATE
         nullable: true
         sourceColumnReferences:
@@ -202,7 +202,7 @@ operation:
           stepCounter: a660aee3-3bb7-4991-a97a-d71bfd984b59
         config: {}
         dataType: TIMESTAMP
-        description: ""
+        description: "The timestamp when the system record was last updated."
         name: SYSTEM_UPDATE_DATE
         nullable: true
         sourceColumnReferences:

@@ -25,7 +25,7 @@ operation:
     truncateBefore: false
   database: ""
   deployEnabled: true
-  description: ""
+  description: "🎯 PURPOSE\n\nThe DIM_TRUCK table serves as a dimension table in the data warehouse, providing\ndetailed information about trucks, including their attributes such as make,\nmodel, year, and geographical details. It is primarily used for analytical\npurposes, enabling users to analyze truck-related data in conjunction with other\nfact tables, such as FCT_ORDERS.\n\n\n🙋‍♀️ AUDIENCE\n\nThis table is intended for data analysts, business intelligence teams, and\noperations teams who need to analyze truck-related data for reporting,\ndecision-making, and operational insights.\n\n\n📄 CONTENT\n\n\nKEY FIELDS\n\nKey fields in this table include:\n\n * DIM_TRUCK_KEY: A unique identifier for the truck dimension record.\n * TRUCK_ID: A unique identifier for the truck.\n * MAKE: Specifies the manufacturer or brand of the truck.\n * MODEL: Specifies the model or version of the truck.\n * YEAR: Indicates the manufacturing year of the truck.\n * REGION and ISO_REGION: Represent geographical region details.\n * COUNTRY and ISO_COUNTRY_CODE: Indicate the country associated with the truck.\n * TRUCK_OPENING_DATE: The date when the truck became operational.\n * EV_FLAG: Flags whether the truck is electric or not.\n * FRANCHISE_FLAG: Flags whether the truck is associated with a franchise or\n   not.\n\n\n⚠️ GOOD TO KNOW\n\nThe table includes system-related fields such as SYSTEM_VERSION,\nSYSTEM_CURRENT_FLAG, SYSTEM_CREATE_DATE, SYSTEM_UPDATE_DATE, SYSTEM_START_DATE,\nand SYSTEM_END_DATE, which are useful for tracking the lifecycle and versioning\nof records. Additionally, the table is frequently joined with the FCT_ORDERS\ntable on the TRUCK_ID field.\n\n\n🛢 SOURCE\n\nThe data in this table is sourced from the WRK_TRUCK table in the\nAUSTIN_TEST_DB_PROD.EDW_PROD schema, as part of a Snowflake data pipeline.\n\n\n📆 DATA UPDATE FREQUENCY\n\nThe data in this table is updated through a MERGE operation, ensuring that new\nrecords are inserted and existing records are updated as needed. The exact\nfrequency of updates depends on the data pipeline schedule."
   isMultisource: false
   locationName: STG
   materializationType: table
@@ -42,7 +42,7 @@ operation:
         config: {}
         dataType: NUMBER
         defaultValue: ""
-        description: ""
+        description: "A unique identifier for the truck dimension record."
         isSurrogateKey: true
         name: DIM_TRUCK_KEY
         nullable: true
@@ -55,7 +55,7 @@ operation:
           stepCounter: 2ed29715-7fad-4dd5-940a-bbac10f9c9d2
         config: {}
         dataType: NUMBER(38,0)
-        description: ""
+        description: "A unique identifier for the truck."
         isBusinessKey: true
         name: TRUCK_ID
         nullable: true
@@ -70,7 +70,7 @@ operation:
           stepCounter: 2ed29715-7fad-4dd5-940a-bbac10f9c9d2
         config: {}
         dataType: NUMBER(38,0)
-        description: ""
+        description: "Identifies the type of menu associated with the truck."
         name: MENU_TYPE_ID
         nullable: true
         sourceColumnReferences:
@@ -84,7 +84,7 @@ operation:
           stepCounter: 2ed29715-7fad-4dd5-940a-bbac10f9c9d2
         config: {}
         dataType: VARCHAR(16777216)
-        description: ""
+        description: "Specifies the primary city where the truck operates."
         name: PRIMARY_CITY
         nullable: true
         sourceColumnReferences:
@@ -98,7 +98,7 @@ operation:
           stepCounter: 2ed29715-7fad-4dd5-940a-bbac10f9c9d2
         config: {}
         dataType: VARCHAR(16777216)
-        description: ""
+        description: "Indicates the geographical region associated with the truck."
         name: REGION
         nullable: true
         sourceColumnReferences:
@@ -112,7 +112,7 @@ operation:
           stepCounter: 2ed29715-7fad-4dd5-940a-bbac10f9c9d2
         config: {}
         dataType: VARCHAR(16777216)
-        description: ""
+        description: "Represents the ISO standard region code related to the truck."
         name: ISO_REGION
         nullable: true
         sourceColumnReferences:
@@ -126,7 +126,7 @@ operation:
           stepCounter: 2ed29715-7fad-4dd5-940a-bbac10f9c9d2
         config: {}
         dataType: VARCHAR(16777216)
-        description: ""
+        description: "Indicates the country associated with the truck."
         name: COUNTRY
         nullable: true
         sourceColumnReferences:
@@ -140,7 +140,7 @@ operation:
           stepCounter: 2ed29715-7fad-4dd5-940a-bbac10f9c9d2
         config: {}
         dataType: VARCHAR(16777216)
-        description: ""
+        description: "Represents the ISO standard country code related to the truck."
         name: ISO_COUNTRY_CODE
         nullable: true
         sourceColumnReferences:
@@ -154,7 +154,7 @@ operation:
           stepCounter: 2ed29715-7fad-4dd5-940a-bbac10f9c9d2
         config: {}
         dataType: NUMBER(38,0)
-        description: ""
+        description: "Flags whether the truck is associated with a franchise or not."
         name: FRANCHISE_FLAG
         nullable: true
         sourceColumnReferences:
@@ -168,7 +168,7 @@ operation:
           stepCounter: 2ed29715-7fad-4dd5-940a-bbac10f9c9d2
         config: {}
         dataType: NUMBER(38,0)
-        description: ""
+        description: "Indicates the manufacturing year of the truck."
         name: YEAR
         nullable: true
         sourceColumnReferences:
@@ -182,7 +182,7 @@ operation:
           stepCounter: 2ed29715-7fad-4dd5-940a-bbac10f9c9d2
         config: {}
         dataType: VARCHAR(16777216)
-        description: ""
+        description: "Specifies the manufacturer or brand of the truck."
         name: MAKE
         nullable: true
         sourceColumnReferences:
@@ -196,7 +196,7 @@ operation:
           stepCounter: 2ed29715-7fad-4dd5-940a-bbac10f9c9d2
         config: {}
         dataType: VARCHAR(16777216)
-        description: ""
+        description: "Specifies the model or version of the truck."
         name: MODEL
         nullable: true
         sourceColumnReferences:
@@ -210,7 +210,7 @@ operation:
           stepCounter: 2ed29715-7fad-4dd5-940a-bbac10f9c9d2
         config: {}
         dataType: NUMBER(38,0)
-        description: ""
+        description: "Flags whether the truck is electric or not."
         name: EV_FLAG
         nullable: true
         sourceColumnReferences:
@@ -224,7 +224,7 @@ operation:
           stepCounter: 2ed29715-7fad-4dd5-940a-bbac10f9c9d2
         config: {}
         dataType: NUMBER(38,0)
-        description: ""
+        description: "Identifies the franchise associated with the truck."
         name: FRANCHISE_ID
         nullable: true
         sourceColumnReferences:
@@ -238,7 +238,7 @@ operation:
           stepCounter: 2ed29715-7fad-4dd5-940a-bbac10f9c9d2
         config: {}
         dataType: DATE
-        description: ""
+        description: "The date when the truck became operational."
         name: TRUCK_OPENING_DATE
         nullable: true
         sourceColumnReferences:
@@ -256,7 +256,7 @@ operation:
         config: {}
         dataType: NUMBER
         defaultValue: ""
-        description: ""
+        description: "Indicates the version of the system in which the record exists."
         isSystemVersion: true
         name: SYSTEM_VERSION
         nullable: true
@@ -273,7 +273,7 @@ operation:
         config: {}
         dataType: VARCHAR
         defaultValue: ""
-        description: ""
+        description: "Flags whether the record is the current active record in the system."
         isSystemCurrentFlag: true
         name: SYSTEM_CURRENT_FLAG
         nullable: true
@@ -290,7 +290,7 @@ operation:
         config: {}
         dataType: TIMESTAMP
         defaultValue: ""
-        description: ""
+        description: "The date and time when the record became active in the system."
         isSystemStartDate: true
         name: SYSTEM_START_DATE
         nullable: true
@@ -307,7 +307,7 @@ operation:
         config: {}
         dataType: TIMESTAMP
         defaultValue: ""
-        description: ""
+        description: "The date and time when the record was marked as inactive in the system."
         isSystemEndDate: true
         name: SYSTEM_END_DATE
         nullable: true
@@ -324,7 +324,7 @@ operation:
         config: {}
         dataType: TIMESTAMP
         defaultValue: ""
-        description: ""
+        description: "The date and time when the record was created in the system."
         isSystemCreateDate: true
         name: SYSTEM_CREATE_DATE
         nullable: true
@@ -341,7 +341,7 @@ operation:
         config: {}
         dataType: TIMESTAMP
         defaultValue: ""
-        description: ""
+        description: "The date and time when the record was last updated in the system."
         isSystemUpdateDate: true
         name: SYSTEM_UPDATE_DATE
         nullable: true
