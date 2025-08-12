@@ -5,16 +5,16 @@ config:
         defaultStorageLocation: null
         isDisabled: false
       "188":
-        defaultStorageLocation: null
+        defaultStorageLocation: GOLD
         isDisabled: false
       "194":
-        defaultStorageLocation: null
+        defaultStorageLocation: SILVER
         isDisabled: false
       "204":
-        defaultStorageLocation: null
+        defaultStorageLocation: BRONZE
         isDisabled: false
       "205":
-        defaultStorageLocation: null
+        defaultStorageLocation: SILVER
         isDisabled: false
       "248":
         defaultStorageLocation: null

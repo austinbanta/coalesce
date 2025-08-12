@@ -1,8 +1,12 @@
 defaultStorageMapping: STG
 fileVersion: 1
 locations:
+  - BRONZE
   - COVID
   - DEV
+  - GOLD
+  - SILVER
+  - SOURCE
   - STG
   - TASTY_AWOOD
   - TASTY_CUST

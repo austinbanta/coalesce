@@ -27,7 +27,7 @@ operation:
   deployEnabled: true
   description: ""
   isMultisource: false
-  locationName: STG
+  locationName: SILVER
   materializationType: table
   metadata:
     appliedNodeTests: []
@@ -365,14 +365,15 @@ operation:
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
-      - aliases: {}
+      - aliases:
+          WRK_CUSTOMER_LOYALTY: 0cd20d9a-26e6-4f54-9037-8752903dfd27
         customSQL:
           customSQL: ""
         dependencies:
-          - locationName: STG
+          - locationName: BRONZE
             nodeName: WRK_CUSTOMER_LOYALTY
         join:
-          joinCondition: FROM {{ ref('STG', 'WRK_CUSTOMER_LOYALTY') }} "WRK_CUSTOMER_LOYALTY"
+          joinCondition: FROM {{ ref('BRONZE', 'WRK_CUSTOMER_LOYALTY') }} "WRK_CUSTOMER_LOYALTY"
         name: DIM_CUSTOMER_LOYALTY
         noLinkRefs: []
   name: DIM_CUSTOMER_LOYALTY

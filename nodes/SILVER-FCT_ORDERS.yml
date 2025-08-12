@@ -18,7 +18,7 @@ operation:
   deployEnabled: true
   description: Creates or replaces the FCT_ORDERS table and populates it by merging data from the WRK_ORDERS table. It updates matched records based on ORDER_DETAIL_ID and ORDER_ID, and inserts new records when there is no match.
   isMultisource: false
-  locationName: STG
+  locationName: SILVER
   materializationType: table
   metadata:
     appliedNodeTests: []
@@ -476,14 +476,15 @@ operation:
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
-      - aliases: {}
+      - aliases:
+          WRK_ORDERS: ae9142fe-f738-4479-bd74-143f89c78802
         customSQL:
           customSQL: ""
         dependencies:
-          - locationName: STG
+          - locationName: BRONZE
             nodeName: WRK_ORDERS
         join:
-          joinCondition: FROM {{ ref('STG', 'WRK_ORDERS') }} "WRK_ORDERS"
+          joinCondition: FROM {{ ref('BRONZE', 'WRK_ORDERS') }} "WRK_ORDERS"
         name: FCT_ORDERS
         noLinkRefs: []
   name: FCT_ORDERS

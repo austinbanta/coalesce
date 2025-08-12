@@ -3,16 +3,19 @@ id: cddea56c-ade5-4c39-b29e-7b4ca221e913
 name: V_SALES
 operation:
   config:
+    asofJoinMain: false
+    groupByAll: false
     insertStrategy: INSERT
     postSQL: ""
     preSQL: ""
+    selectDistinct: false
     testsEnabled: true
     truncateBefore: true
   database: ""
   deployEnabled: true
   description: ""
   isMultisource: false
-  locationName: STG
+  locationName: GOLD
   materializationType: view
   metadata:
     appliedNodeTests:
@@ -1288,28 +1291,27 @@ operation:
     sourceMapping:
       - aliases:
           DIM_CUSTOMER_LOYALTY: b4e70d66-0b69-48b2-95c5-3ec198467287
-          DIM_MENU: f5a39e3e-2f59-48bf-8bca-35311f27a612
-          DIM_TRUCK: 2ed29715-7fad-4dd5-940a-bbac10f9c9d2
+          DIM_MENU: a152c657-eb94-4876-854d-35f04462ff62
           FCT_ORDERS: fe367fe0-6970-4043-b97a-cadf0a48031d
         customSQL:
           customSQL: ""
         dependencies:
-          - locationName: STG
+          - locationName: SILVER
             nodeName: DIM_CUSTOMER_LOYALTY
-          - locationName: STG
+          - locationName: SILVER
             nodeName: DIM_MENU
-          - locationName: STG
+          - locationName: SILVER
             nodeName: DIM_TRUCK
-          - locationName: STG
+          - locationName: SILVER
             nodeName: FCT_ORDERS
         join:
           joinCondition: |-
-            FROM {{ ref('STG', 'FCT_ORDERS') }} "FCT_ORDERS"
-            INNER JOIN {{ ref('STG', 'DIM_MENU') }} "DIM_MENU"
+            FROM {{ ref('SILVER', 'FCT_ORDERS') }} "FCT_ORDERS"
+            INNER JOIN {{ ref('SILVER', 'DIM_MENU') }} "DIM_MENU"
             ON "FCT_ORDERS"."MENU_ITEM_ID" = "DIM_MENU"."MENU_ITEM_ID"
-            INNER JOIN {{ ref('STG', 'DIM_TRUCK') }} "DIM_TRUCK"
+            INNER JOIN {{ ref('SILVER', 'DIM_TRUCK') }} "DIM_TRUCK"
             ON "FCT_ORDERS"."TRUCK_ID" = "DIM_TRUCK"."TRUCK_ID"
-            INNER JOIN {{ ref('STG', 'DIM_CUSTOMER_LOYALTY') }} "DIM_CUSTOMER_LOYALTY"
+            INNER JOIN {{ ref('SILVER', 'DIM_CUSTOMER_LOYALTY') }} "DIM_CUSTOMER_LOYALTY"
             ON "FCT_ORDERS"."CUSTOMER_ID" = "DIM_CUSTOMER_LOYALTY"."CUSTOMER_ID"
         name: V_SALES
         noLinkRefs: []

@@ -27,7 +27,7 @@ operation:
   deployEnabled: true
   description: ""
   isMultisource: false
-  locationName: STG
+  locationName: SILVER
   materializationType: table
   metadata:
     appliedNodeTests: []
@@ -351,14 +351,15 @@ operation:
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
-      - aliases: {}
+      - aliases:
+          WRK_TRUCK: 5795d35f-f159-400b-b70b-575ed065827d
         customSQL:
           customSQL: ""
         dependencies:
-          - locationName: STG
+          - locationName: BRONZE
             nodeName: WRK_TRUCK
         join:
-          joinCondition: FROM {{ ref('STG', 'WRK_TRUCK') }} "WRK_TRUCK"
+          joinCondition: FROM {{ ref('BRONZE', 'WRK_TRUCK') }} "WRK_TRUCK"
         name: DIM_TRUCK
         noLinkRefs: []
   name: DIM_TRUCK

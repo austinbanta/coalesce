@@ -9,7 +9,7 @@ operation:
   deployEnabled: true
   description: ""
   isMultisource: false
-  locationName: STG
+  locationName: GOLD
   materializationType: view
   metadata:
     appliedNodeTests: []
@@ -367,14 +367,15 @@ operation:
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
-      - aliases: {}
+      - aliases:
+          FCT_ORDERS: fe367fe0-6970-4043-b97a-cadf0a48031d
         customSQL:
           customSQL: ""
         dependencies:
-          - locationName: STG
+          - locationName: SILVER
             nodeName: FCT_ORDERS
         join:
-          joinCondition: FROM {{ ref('STG', 'FCT_ORDERS') }} "FCT_ORDERS"
+          joinCondition: FROM {{ ref('SILVER', 'FCT_ORDERS') }} "FCT_ORDERS"
         name: V_ORDERS
         noLinkRefs: []
   name: V_ORDERS

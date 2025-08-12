@@ -9,7 +9,7 @@ operation:
   deployEnabled: true
   description: ""
   isMultisource: false
-  locationName: STG
+  locationName: SILVER
   materializationType: view
   metadata:
     appliedNodeTests: []
@@ -325,14 +325,15 @@ operation:
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
-      - aliases: {}
+      - aliases:
+          DIM_CUSTOMER_LOYALTY: b4e70d66-0b69-48b2-95c5-3ec198467287
         customSQL:
           customSQL: ""
         dependencies:
-          - locationName: STG
+          - locationName: SILVER
             nodeName: DIM_CUSTOMER_LOYALTY
         join:
-          joinCondition: FROM {{ ref('STG', 'DIM_CUSTOMER_LOYALTY') }} "DIM_CUSTOMER_LOYALTY"
+          joinCondition: FROM {{ ref('SILVER', 'DIM_CUSTOMER_LOYALTY') }} "DIM_CUSTOMER_LOYALTY"
         name: V_CUSTOMER
         noLinkRefs: []
   name: V_CUSTOMER

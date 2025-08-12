@@ -1,12 +1,24 @@
 fileVersion: 1
 id: "3"
 mappingDefinitions:
+  BRONZE:
+    database: ""
+    schema: ""
   COVID:
     database: COVID19
     schema: PUBLIC
   DEV:
     database: COALESCE_SAMPLE_DATABASE
     schema: TPCH_SF001
+  GOLD:
+    database: ""
+    schema: ""
+  SILVER:
+    database: ""
+    schema: ""
+  SOURCE:
+    database: ""
+    schema: ""
   STG:
     database: AUSTIN_TEST_DB_PROD
     schema: EDW_PROD

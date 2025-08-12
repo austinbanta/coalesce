@@ -9,7 +9,7 @@ operation:
   deployEnabled: true
   description: ""
   isMultisource: false
-  locationName: STG
+  locationName: GOLD
   materializationType: view
   metadata:
     appliedNodeTests: []
@@ -213,14 +213,15 @@ operation:
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
-      - aliases: {}
+      - aliases:
+          DIM_COUNTRY: de171b89-dcd8-411e-bcf6-7493e56d8723
         customSQL:
           customSQL: ""
         dependencies:
-          - locationName: STG
+          - locationName: SILVER
             nodeName: DIM_COUNTRY
         join:
-          joinCondition: FROM {{ ref('STG', 'DIM_COUNTRY') }} "DIM_COUNTRY"
+          joinCondition: FROM {{ ref('SILVER', 'DIM_COUNTRY') }} "DIM_COUNTRY"
         name: V_COUNTRY
         noLinkRefs: []
   name: V_COUNTRY

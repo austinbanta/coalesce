@@ -28,7 +28,7 @@ operation:
   deployEnabled: true
   description: ""
   isMultisource: false
-  locationName: STG
+  locationName: SILVER
   materializationType: table
   metadata:
     appliedNodeTests: []
@@ -395,14 +395,15 @@ operation:
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
-      - aliases: {}
+      - aliases:
+          WRK_MENU: 0e1c4534-2894-4f3c-98cf-9bfe1b4b0a16
         customSQL:
           customSQL: ""
         dependencies:
-          - locationName: STG
+          - locationName: BRONZE
             nodeName: WRK_MENU
         join:
-          joinCondition: FROM {{ ref('STG', 'WRK_MENU') }} "WRK_MENU"
+          joinCondition: FROM {{ ref('BRONZE', 'WRK_MENU') }} "WRK_MENU"
         name: DIM_MENU
         noLinkRefs: []
   name: DIM_MENU
