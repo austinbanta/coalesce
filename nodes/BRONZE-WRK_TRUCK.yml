@@ -89,7 +89,7 @@ operation:
           - columnReferences:
               - columnCounter: 937aed1f-cd48-46a6-90f9-e32986049890
                 stepCounter: eb41e35c-1842-4cf9-aa9c-adc0f7d1b8f6
-            transform: ""
+            transform: UPPER("TRUCK"."REGION")
       - appliedColumnTests:
           hasNull: false
         columnReference:
@@ -244,7 +244,8 @@ operation:
     enabledColumnTestIDs:
       - hasNull
     sourceMapping:
-      - aliases: {}
+      - aliases:
+          TRUCK: eb41e35c-1842-4cf9-aa9c-adc0f7d1b8f6
         customSQL:
           customSQL: ""
         dependencies:
@@ -256,6 +257,8 @@ operation:
 
              
               FROM  {{ ref('TASTY_AWOOD', 'TRUCK') }} TRUCK
+
+              where "EV_FLAG"=1
         name: WRK_TRUCK
         noLinkRefs: []
   name: WRK_TRUCK

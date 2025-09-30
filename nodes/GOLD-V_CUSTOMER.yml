@@ -9,7 +9,7 @@ operation:
   deployEnabled: true
   description: ""
   isMultisource: false
-  locationName: SILVER
+  locationName: GOLD
   materializationType: view
   metadata:
     appliedNodeTests: []
@@ -328,7 +328,34 @@ operation:
       - aliases:
           DIM_CUSTOMER_LOYALTY: b4e70d66-0b69-48b2-95c5-3ec198467287
         customSQL:
-          customSQL: ""
+          customSQL: |-
+            {{ stage('Override Create SQL') }}
+            	CREATE OR REPLACE VIEW {{ ref('SILVER', 'V_CUSTOMER')}} AS (
+            		SELECT 
+             "DIM_CUSTOMER_LOYALTY_KEY" AS "DIM_CUSTOMER_LOYALTY_KEY",
+             "CUSTOMER_ID" AS "CUSTOMER_ID",
+             "FIRST_NAME" AS "FIRST_NAME",
+             "LAST_NAME" AS "LAST_NAME",
+             "CITY" AS "CITY",
+             "COUNTRY" AS "COUNTRY",
+             "POSTAL_CODE" AS "POSTAL_CODE",
+             "PREFERRED_LANGUAGE" AS "PREFERRED_LANGUAGE",
+             "GENDER" AS "GENDER",
+             "FAVOURITE_BRAND" AS "FAVOURITE_BRAND",
+             "MARITAL_STATUS" AS "MARITAL_STATUS",
+             "CHILDREN_COUNT" AS "CHILDREN_COUNT",
+             "SIGN_UP_DATE" AS "SIGN_UP_DATE",
+             "BIRTHDAY_DATE" AS "BIRTHDAY_DATE",
+             "E_MAIL" AS "E_MAIL",
+             "PHONE_NUMBER" AS "PHONE_NUMBER",
+             "SYSTEM_VERSION" AS "SYSTEM_VERSION",
+             "SYSTEM_CURRENT_FLAG" AS "SYSTEM_CURRENT_FLAG",
+             "SYSTEM_START_DATE" AS "SYSTEM_START_DATE",
+             "SYSTEM_END_DATE" AS "SYSTEM_END_DATE",
+             "SYSTEM_CREATE_DATE" AS "SYSTEM_CREATE_DATE",
+             "SYSTEM_UPDATE_DATE" AS "SYSTEM_UPDATE_DATE"
+             FROM {{ ref('SILVER', 'DIM_CUSTOMER_LOYALTY') }}
+            	)
         dependencies:
           - locationName: SILVER
             nodeName: DIM_CUSTOMER_LOYALTY
@@ -337,7 +364,7 @@ operation:
         name: V_CUSTOMER
         noLinkRefs: []
   name: V_CUSTOMER
-  overrideSQL: false
+  overrideSQL: true
   schema: ""
   sqlType: View
   type: sql

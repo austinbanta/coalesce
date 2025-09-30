@@ -1,6 +1,6 @@
 excludeSelector: ""
 fileVersion: 1
 id: "35"
-includeSelector: "+{ location: STG name: DIM_CUSTOMER_LOYALTY }"
+includeSelector: "+{ location: SILVER name: DIM_FRANCHISE }"
 name: customer refresh
 type: Job

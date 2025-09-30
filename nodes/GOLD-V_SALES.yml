@@ -97,7 +97,7 @@ operation:
                 stepCounter: fe367fe0-6970-4043-b97a-cadf0a48031d
             transform: ""
       - appliedColumnTests:
-          hasNull: false
+          hasNull: true
           isDistinct: false
         columnReference:
           columnCounter: c9e50c4a-ce8b-44bb-bb80-d9708c75d6f8
@@ -435,6 +435,20 @@ operation:
           - columnReferences:
               - columnCounter: f506bad9-6ab7-41b0-a1eb-ab287c78250c
                 stepCounter: fe367fe0-6970-4043-b97a-cadf0a48031d
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2c561c37-eb16-4a67-9b06-0ddbc4407ac8
+          stepCounter: cddea56c-ade5-4c39-b29e-7b4ca221e913
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: FRANCHISE_FULL_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 012c7814-4f18-4a4f-bfb8-9f992cd2b0a5
+                stepCounter: e2e5441e-f162-4765-b817-a6efee415155
             transform: ""
       - appliedColumnTests:
           hasNull: false
@@ -1292,7 +1306,6 @@ operation:
       - aliases:
           DIM_CUSTOMER_LOYALTY: b4e70d66-0b69-48b2-95c5-3ec198467287
           DIM_MENU: a152c657-eb94-4876-854d-35f04462ff62
-          FCT_ORDERS: fe367fe0-6970-4043-b97a-cadf0a48031d
         customSQL:
           customSQL: ""
         dependencies:
@@ -1301,18 +1314,28 @@ operation:
           - locationName: SILVER
             nodeName: DIM_MENU
           - locationName: SILVER
+            nodeName: DIM_STG_FRANCHISE
+          - locationName: SILVER
             nodeName: DIM_TRUCK
           - locationName: SILVER
             nodeName: FCT_ORDERS
         join:
-          joinCondition: |-
-            FROM {{ ref('SILVER', 'FCT_ORDERS') }} "FCT_ORDERS"
-            INNER JOIN {{ ref('SILVER', 'DIM_MENU') }} "DIM_MENU"
-            ON "FCT_ORDERS"."MENU_ITEM_ID" = "DIM_MENU"."MENU_ITEM_ID"
-            INNER JOIN {{ ref('SILVER', 'DIM_TRUCK') }} "DIM_TRUCK"
-            ON "FCT_ORDERS"."TRUCK_ID" = "DIM_TRUCK"."TRUCK_ID"
-            INNER JOIN {{ ref('SILVER', 'DIM_CUSTOMER_LOYALTY') }} "DIM_CUSTOMER_LOYALTY"
-            ON "FCT_ORDERS"."CUSTOMER_ID" = "DIM_CUSTOMER_LOYALTY"."CUSTOMER_ID"
+          joinCondition: |2
+
+
+             
+              FROM  {{ ref('SILVER', 'DIM_CUSTOMER_LOYALTY') }} DIM_CUSTOMER_LOYALTY
+              LEFT JOIN  {{ ref('SILVER', 'DIM_MENU') }} DIM_MENU 
+              ON DIM_MENU./*COLUMN*/ = DIM_CUSTOMER_LOYALTY./*COLUMN*/ 
+             
+              LEFT JOIN  {{ ref('SILVER', 'DIM_TRUCK') }} DIM_TRUCK 
+              ON DIM_TRUCK./*COLUMN*/ = DIM_MENU./*COLUMN*/ 
+             
+              LEFT JOIN  {{ ref('SILVER', 'FCT_ORDERS') }} FCT_ORDERS 
+              ON FCT_ORDERS./*COLUMN*/ = DIM_TRUCK./*COLUMN*/ 
+             
+              LEFT JOIN  {{ ref('SILVER', 'DIM_STG_FRANCHISE') }} DIM_STG_FRANCHISE 
+              ON DIM_STG_FRANCHISE./*COLUMN*/ = FCT_ORDERS./*COLUMN*/ 
         name: V_SALES
         noLinkRefs: []
   name: V_SALES

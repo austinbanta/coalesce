@@ -365,7 +365,7 @@ operation:
   name: DIM_TRUCK
   overrideSQL: false
   schema: ""
-  sqlType: base-1-3-4:::194
+  sqlType: dt:::350
   type: sql
   version: 1
 type: Node

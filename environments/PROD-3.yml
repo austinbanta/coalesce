@@ -10,6 +10,9 @@ mappingDefinitions:
   DEV:
     database: COALESCE_SAMPLE_DATABASE
     schema: TPCH_SF001
+  EAT:
+    database: ""
+    schema: ""
   GOLD:
     database: ""
     schema: ""
