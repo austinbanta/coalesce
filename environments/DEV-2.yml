@@ -1,0 +1,14 @@
+fileVersion: 1
+id: "2"
+mappingDefinitions:
+  SRC:
+    database: SNOWFLAKE_SAMPLE_DATA
+    schema: TPCH_SF1
+  TGT:
+    database: AUSTIN_TEST_DB
+    schema: DEV_STG
+  TGTNUMBERTWO:
+    database: ""
+    schema: ""
+name: DEV
+type: Environment
