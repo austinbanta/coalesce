@@ -24,7 +24,7 @@ operation:
     appliedNodeTests:
       - continueOnFailure: true
         description: ""
-        name: Test
+        name: Includes Today's Data
         runOrder: After
         templateString: |-
           SELECT 1
