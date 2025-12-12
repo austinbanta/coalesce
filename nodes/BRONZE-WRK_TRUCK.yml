@@ -252,13 +252,11 @@ operation:
           - locationName: TASTY_AWOOD
             nodeName: TRUCK
         join:
-          joinCondition: |2-
+          joinCondition: |2
 
 
              
               FROM  {{ ref('TASTY_AWOOD', 'TRUCK') }} TRUCK
-
-              where "EV_FLAG"=1
         name: WRK_TRUCK
         noLinkRefs: []
   name: WRK_TRUCK

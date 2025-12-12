@@ -1,8 +1,0 @@
-fileVersion: 1
-id: "26"
-name: orders
-steps:
-  - 4509489f-9c5d-4b57-b4aa-3c7e24d7ee92
-  - 6d9a4235-9f3a-4b66-be72-28fc38c402db
-  - ae9142fe-f738-4479-bd74-143f89c78802
-type: Subgraph

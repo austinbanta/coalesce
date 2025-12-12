@@ -1,11 +1,11 @@
 fileVersion: 1
-id: "103"
+id: "104"
 isDisabled: false
 metadata:
   defaultStorageLocation: BRONZE
   error: null
   nodeMetadataSpec: |
-    capitalized: Copy of Stage
+    capitalized: Stage Distinct
     short: STG
     plural: Stages
     tagColor: '#2EB67D'
@@ -42,6 +42,11 @@ metadata:
         type: toggleButton
         default: true
 
+      - displayName: Distinct
+        attributeName: distinct
+        type: toggleButton
+        default: true
+
       - displayName: Enable Tests
         attributeName: testsEnabled
         type: toggleButton
@@ -58,5 +63,5 @@ metadata:
         type: textBox
         syntax: sql
         isRequired: false
-name: Copy of Stage
+name: Stage with Distinct
 type: NodeType

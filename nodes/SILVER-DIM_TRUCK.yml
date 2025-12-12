@@ -6,7 +6,9 @@ operation:
     customZeroKeyValues:
       items:
         - {}
+    downstreamOption: false
     groupByAll: false
+    initialize: ""
     insertStrategy: UNION ALL
     insertZeroKey: false
     insertZeroKeyAdvanced: false
@@ -20,9 +22,11 @@ operation:
         - {}
     postSQL: ""
     preSQL: ""
+    refresh_mode: ""
     selectDistinct: false
     testsEnabled: false
     truncateBefore: false
+    warehouseName: ""
   database: ""
   deployEnabled: true
   description: ""

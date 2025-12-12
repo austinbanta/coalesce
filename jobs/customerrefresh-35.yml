@@ -1,6 +1,6 @@
 excludeSelector: ""
 fileVersion: 1
 id: "35"
-includeSelector: "+{ location: SILVER name: DIM_FRANCHISE }"
+includeSelector: "+{ location: SILVER name: DIM_* } OR { subgraph: \"reinit testing\" } OR { subgraph: \"orders\" }"
 name: customer refresh
 type: Job

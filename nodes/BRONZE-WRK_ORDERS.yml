@@ -156,7 +156,7 @@ operation:
           - columnReferences:
               - columnCounter: 91495775-da3f-4987-9f1e-eb2296c5586d
                 stepCounter: 4509489f-9c5d-4b57-b4aa-3c7e24d7ee92
-            transform: ""
+            transform: NVL("ORDER_HEADER_14M"."ORDER_CURRENCY", 'help')
       - appliedColumnTests: {}
         columnReference:
           columnCounter: 100f95e9-dfee-43b3-8b40-2edd4b400120

@@ -370,7 +370,37 @@ operation:
       - aliases:
           FCT_ORDERS: fe367fe0-6970-4043-b97a-cadf0a48031d
         customSQL:
-          customSQL: ""
+          customSQL: |-
+            {{ stage('Override Create SQL') }}
+            	CREATE OR REPLACE VIEW {{ ref('GOLD', 'V_ORDERS')}} AS (
+            		SELECT 
+             "TRUCK_ID" AS "TRUCK_ID",
+             "LOCATION_ID" AS "LOCATION_ID",
+             "CUSTOMER_ID" AS "CUSTOMER_ID",
+             "SHIFT_ID" AS "SHIFT_ID",
+             "SHIFT_START_TIME" AS "SHIFT_START_TIME",
+             "SHIFT_END_TIME" AS "SHIFT_END_TIME",
+             "ORDER_CHANNEL" AS "ORDER_CHANNEL",
+             "ORDER_TS" AS "ORDER_TS",
+             "SERVED_TS" AS "SERVED_TS",
+             "ORDER_CURRENCY" AS "ORDER_CURRENCY",
+             "ORDER_AMOUNT" AS "ORDER_AMOUNT",
+             "ORDER_TAX_AMOUNT" AS "ORDER_TAX_AMOUNT",
+             "ORDER_DISCOUNT_AMOUNT" AS "ORDER_DISCOUNT_AMOUNT",
+             "ORDER_TOTAL" AS "ORDER_TOTAL",
+             "ORDER_DETAIL_ID" AS "ORDER_DETAIL_ID",
+             "ORDER_ID" AS "ORDER_ID",
+             "MENU_ITEM_ID" AS "MENU_ITEM_ID",
+             "DISCOUNT_ID" AS "DISCOUNT_ID",
+             "LINE_NUMBER" AS "LINE_NUMBER",
+             "QUANTITY" AS "QUANTITY",
+             "UNIT_PRICE" AS "UNIT_PRICE",
+             "PRICE" AS "PRICE",
+             "ORDER_ITEM_DISCOUNT_AMOUNT" AS "ORDER_ITEM_DISCOUNT_AMOUNT",
+             "SYSTEM_CREATE_DATE" AS "SYSTEM_CREATE_DATE",
+             "SYSTEM_UPDATE_DATE" AS "SYSTEM_UPDATE_DATE"
+             FROM {{ ref('SILVER', 'FCT_ORDERS') }}
+            	)
         dependencies:
           - locationName: SILVER
             nodeName: FCT_ORDERS
@@ -379,7 +409,7 @@ operation:
         name: V_ORDERS
         noLinkRefs: []
   name: V_ORDERS
-  overrideSQL: false
+  overrideSQL: true
   schema: ""
   sqlType: View
   type: sql

@@ -23,7 +23,7 @@ operation:
     truncateBefore: true
   database: ""
   deployEnabled: true
-  description: ""
+  description: ethos desc
   isMultisource: false
   locationName: BRONZE
   materializationType: table
@@ -38,7 +38,7 @@ operation:
           stepCounter: 0cd20d9a-26e6-4f54-9037-8752903dfd27
         config: {}
         dataType: NUMBER(38,0)
-        description: ""
+        description: Unique identifier for each customer. Primary key for the Customers table. Sourced directly from the source system without transformations. Used for customer relationship management (CRM) reporting and customer segmentation analysis. Enables joining customer information with orders, payments, and other related data. Ensures accurate tracking of customer activity and history. Essential for personalized marketing campaigns and customer service initiatives.
         name: CUSTOMER_ID
         nullable: true
         sourceColumnReferences:
@@ -54,7 +54,7 @@ operation:
           stepCounter: 0cd20d9a-26e6-4f54-9037-8752903dfd27
         config: {}
         dataType: VARCHAR(16777216)
-        description: ""
+        description: Customer's first name. Sourced directly from the source system. Used in personalized communications and customer service interactions. Appears in customer profiles and reports. No transformations applied. Supports name-based searches and identification. Contributes to a comprehensive view of the customer. Aids in demographic analysis and marketing segmentation. Validated against standard naming conventions. Part of the customer's core identifying information.
         name: FIRST_NAME
         nullable: true
         sourceColumnReferences:
@@ -70,7 +70,7 @@ operation:
           stepCounter: 0cd20d9a-26e6-4f54-9037-8752903dfd27
         config: {}
         dataType: VARCHAR(16777216)
-        description: ""
+        description: Customer's last name. Sourced directly from the source system. Used in customer identification and communication. Appears in customer profiles and reports. No transformations applied. Supports name-based searches and record matching. Contributes to a comprehensive view of the customer. Aids in demographic analysis and marketing segmentation. Validated against standard naming conventions. Part of the customer's core identifying information.
         name: LAST_NAME
         nullable: true
         sourceColumnReferences:
@@ -86,7 +86,7 @@ operation:
           stepCounter: 0cd20d9a-26e6-4f54-9037-8752903dfd27
         config: {}
         dataType: VARCHAR(16777216)
-        description: ""
+        description: City where the customer is located. Sourced directly from the source system. Used in geographic analysis and regional marketing campaigns. Appears in customer address information. No transformations applied. Supports location-based services and targeted advertising. Contributes to understanding customer distribution. Aids in logistics and supply chain planning. Validated against standard city lists. Part of the customer's address details.
         name: CITY
         nullable: true
         sourceColumnReferences:
@@ -102,7 +102,7 @@ operation:
           stepCounter: 0cd20d9a-26e6-4f54-9037-8752903dfd27
         config: {}
         dataType: VARCHAR(16777216)
-        description: ""
+        description: Country where the customer is located. Sourced directly from the source system. Used in international sales analysis and global marketing strategies. Appears in customer address information. No transformations applied. Supports compliance with international regulations. Contributes to understanding customer distribution worldwide. Aids in logistics and supply chain planning. Validated against standard country codes. Part of the customer's address details.
         name: COUNTRY
         nullable: true
         sourceColumnReferences:
@@ -118,7 +118,7 @@ operation:
           stepCounter: 0cd20d9a-26e6-4f54-9037-8752903dfd27
         config: {}
         dataType: VARCHAR(16777216)
-        description: ""
+        description: Postal code of the customer's address. Sourced directly from the source system. Used in localized marketing campaigns and delivery optimization. Appears in customer address information. No transformations applied. Supports geographic targeting and proximity analysis. Contributes to understanding customer distribution within specific regions. Aids in logistics and supply chain planning. Validated against standard postal code formats. Part of the customer's address details.
         name: POSTAL_CODE
         nullable: true
         sourceColumnReferences:
@@ -134,7 +134,7 @@ operation:
           stepCounter: 0cd20d9a-26e6-4f54-9037-8752903dfd27
         config: {}
         dataType: VARCHAR(16777216)
-        description: ""
+        description: Customer's preferred language for communication. Sourced directly from the source system. Used in personalized marketing and customer service. No transformations applied. Supports multilingual campaigns and global customer support. Aids in tailoring content and offers to individual preferences. Enhances customer satisfaction and engagement. Used for language-specific reporting and analysis. Part of the customer's communication preferences.
         name: PREFERRED_LANGUAGE
         nullable: true
         sourceColumnReferences:
@@ -150,7 +150,7 @@ operation:
           stepCounter: 0cd20d9a-26e6-4f54-9037-8752903dfd27
         config: {}
         dataType: VARCHAR(16777216)
-        description: ""
+        description: Customer's gender. Sourced directly from the source system. Used in demographic analysis and marketing segmentation. No transformations applied. Supports gender-specific campaigns and product targeting. Aids in understanding customer diversity. Used for reporting on gender distribution. Part of the customer's demographic profile. Helps in identifying trends and patterns in customer behavior. Important for inclusive marketing strategies.
         name: GENDER
         nullable: true
         sourceColumnReferences:
@@ -166,7 +166,7 @@ operation:
           stepCounter: 0cd20d9a-26e6-4f54-9037-8752903dfd27
         config: {}
         dataType: VARCHAR(16777216)
-        description: ""
+        description: Customer's favorite brand. Sourced directly from the source system. Used in personalized marketing and brand affinity analysis. No transformations applied. Supports targeted promotions and brand loyalty programs. Aids in understanding customer preferences. Used for reporting on brand popularity. Part of the customer's preference profile. Helps in identifying brand advocates and influencers. Important for brand-specific marketing strategies.
         name: FAVOURITE_BRAND
         nullable: true
         sourceColumnReferences:
@@ -182,7 +182,7 @@ operation:
           stepCounter: 0cd20d9a-26e6-4f54-9037-8752903dfd27
         config: {}
         dataType: VARCHAR(16777216)
-        description: ""
+        description: Customer's marital status. Sourced directly from the source system. Used in demographic analysis and marketing segmentation. No transformations applied. Supports targeted campaigns and product recommendations. Aids in understanding customer life stages. Used for reporting on marital status distribution. Part of the customer's demographic profile. Helps in identifying trends and patterns in customer behavior. Important for family-oriented marketing strategies.
         name: MARITAL_STATUS
         nullable: true
         sourceColumnReferences:
@@ -198,7 +198,7 @@ operation:
           stepCounter: 0cd20d9a-26e6-4f54-9037-8752903dfd27
         config: {}
         dataType: VARCHAR(16777216)
-        description: ""
+        description: Number of children the customer has. Sourced directly from the source system. Used in demographic analysis and family-oriented marketing. No transformations applied. Supports targeted campaigns and product recommendations. Aids in understanding customer needs and priorities. Used for reporting on family size distribution. Part of the customer's demographic profile. Helps in identifying trends and patterns in customer behavior. Important for family-oriented marketing strategies.
         name: CHILDREN_COUNT
         nullable: true
         sourceColumnReferences:
@@ -214,7 +214,7 @@ operation:
           stepCounter: 0cd20d9a-26e6-4f54-9037-8752903dfd27
         config: {}
         dataType: DATE
-        description: ""
+        description: Date when the customer signed up. Sourced directly from the source system. Used in customer lifetime value (CLTV) calculations and cohort analysis. No transformations applied. Supports tracking customer acquisition and retention. Aids in understanding customer lifecycle stages. Used for reporting on customer growth trends. Part of the customer's registration information. Helps in identifying long-term customers and loyal segments. Important for retention strategies.
         name: SIGN_UP_DATE
         nullable: true
         sourceColumnReferences:
@@ -230,7 +230,7 @@ operation:
           stepCounter: 0cd20d9a-26e6-4f54-9037-8752903dfd27
         config: {}
         dataType: DATE
-        description: ""
+        description: Date of birth for customer accounts. Used in demographic analysis and targeted marketing campaigns. Sourced directly from the CUSTOMERS table. No transformations applied. Aids in calculating customer age and identifying age-related trends in purchasing behavior. Can be used to send birthday promotions. Null values indicate missing or unknown birth dates. Not a primary or foreign key.
         name: BIRTHDAY_DATE
         nullable: true
         sourceColumnReferences:
@@ -246,7 +246,7 @@ operation:
           stepCounter: 0cd20d9a-26e6-4f54-9037-8752903dfd27
         config: {}
         dataType: VARCHAR(16777216)
-        description: ""
+        description: Email address for customer accounts. Used for marketing communications, order confirmations, and customer service inquiries. Pulled directly from the CUSTOMERS table. Serves as a unique identifier for customer accounts. Essential for digital engagement strategies and tracking online activity. Enables personalized messaging and targeted advertising. Not a primary or foreign key. Must adhere to standard email format.
         name: E_MAIL
         nullable: true
         sourceColumnReferences:
@@ -262,7 +262,7 @@ operation:
           stepCounter: 0cd20d9a-26e6-4f54-9037-8752903dfd27
         config: {}
         dataType: VARCHAR(16777216)
-        description: ""
+        description: Phone number for customer accounts. Used for direct communication, account verification, and emergency contact purposes. Sourced directly from the CUSTOMERS table. Supports multi-factor authentication and customer outreach programs. Facilitates quick resolution of urgent issues. Not a primary or foreign key. Format should adhere to standard telephone number conventions. Used in customer service and support analytics.
         name: PHONE_NUMBER
         nullable: true
         sourceColumnReferences:

@@ -1,0 +1,13 @@
+fileVersion: 1
+id: f83f1de3-72dd-40f1-bed7-54305a573fd0
+name: Copilot
+steps:
+  - 4509489f-9c5d-4b57-b4aa-3c7e24d7ee92
+  - 6309b6e2-f997-4fad-a316-9885bfe2e507
+  - 6d9a4235-9f3a-4b66-be72-28fc38c402db
+  - 96b5760e-9cd5-4b63-a93d-8793a718f776
+  - b692227b-140e-402a-b27c-f58fef8359f0
+  - dc60adc1-1f9b-4ec6-9174-871a549f8073
+  - eb41e35c-1842-4cf9-aa9c-adc0f7d1b8f6
+  - f8a8189d-ff7c-47d8-a64a-722fcaf91ad3
+type: Subgraph
