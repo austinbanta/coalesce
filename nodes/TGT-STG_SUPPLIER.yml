@@ -1,0 +1,140 @@
+fileVersion: 1
+id: f182f895-5da9-48b8-9ea1-0b0f61706c9f
+name: STG_SUPPLIER
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: Supplier data as defined by TPC-H
+  isMultisource: false
+  locationName: TGT
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: S_SUPPKEY
+          stepCounter: f182f895-5da9-48b8-9ea1-0b0f61706c9f
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: S_SUPPKEY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "\"S_SUPPKEY\""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: S_NAME
+          stepCounter: f182f895-5da9-48b8-9ea1-0b0f61706c9f
+        config: {}
+        dataType: VARCHAR(25)
+        defaultValue: ""
+        description: ""
+        name: S_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "\"S_NAME\""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: S_ADDRESS
+          stepCounter: f182f895-5da9-48b8-9ea1-0b0f61706c9f
+        config: {}
+        dataType: VARCHAR(40)
+        defaultValue: ""
+        description: ""
+        name: S_ADDRESS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "\"S_ADDRESS\""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: S_NATIONKEY
+          stepCounter: f182f895-5da9-48b8-9ea1-0b0f61706c9f
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: S_NATIONKEY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "\"S_NATIONKEY\""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: S_PHONE
+          stepCounter: f182f895-5da9-48b8-9ea1-0b0f61706c9f
+        config: {}
+        dataType: VARCHAR(15)
+        defaultValue: ""
+        description: ""
+        name: S_PHONE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "\"S_PHONE\""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: S_ACCTBAL
+          stepCounter: f182f895-5da9-48b8-9ea1-0b0f61706c9f
+        config: {}
+        dataType: NUMBER(12,2)
+        defaultValue: ""
+        description: ""
+        name: S_ACCTBAL
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "\"S_ACCTBAL\""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: S_COMMENT
+          stepCounter: f182f895-5da9-48b8-9ea1-0b0f61706c9f
+        config: {}
+        dataType: VARCHAR(101)
+        defaultValue: ""
+        description: ""
+        name: S_COMMENT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "\"S_COMMENT\""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          SUPPLIER: 89abc09a-054d-43e1-98ba-2733ef221c77
+        customSQL:
+          customSQL: |-
+            SELECT
+                 "S_SUPPKEY" AS "S_SUPPKEY",
+                 "S_NAME" AS "S_NAME",
+                 "S_ADDRESS" AS "S_ADDRESS",
+                 "S_NATIONKEY" AS "S_NATIONKEY",
+                 "S_PHONE" AS "S_PHONE",
+                 "S_ACCTBAL" AS "S_ACCTBAL",
+                 "S_COMMENT" AS "S_COMMENT"
+            FROM {{ ref('TPCH', 'SUPPLIER') }} "SUPPLIER"
+        dependencies:
+          - locationName: TPCH
+            nodeName: SUPPLIER
+        join:
+          joinCondition: FROM {{ ref('TPCH', 'SUPPLIER') }} "SUPPLIER"
+        name: STG_SUPPLIER
+        noLinkRefs: []
+  name: STG_SUPPLIER
+  overrideSQL: false
+  schema: ""
+  sqlType: 23f7f808-bec4-44d3-927a-753248730aad
+  type: sql
+  version: 1
+type: Node

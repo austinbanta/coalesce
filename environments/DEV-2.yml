@@ -7,7 +7,7 @@ mappingDefinitions:
   TGT:
     database: AUSTIN_TEST_DB
     schema: DEV_STG
-  TGTNUMBERTWO:
+  TPCH:
     database: ""
     schema: ""
 name: DEV

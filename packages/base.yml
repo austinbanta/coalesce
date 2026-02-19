@@ -3,26 +3,26 @@ config:
     nodeTypes:
       "173":
         defaultStorageLocation: null
-        isDisabled: false
+        isDisabled: true
       "188":
         defaultStorageLocation: null
-        isDisabled: false
+        isDisabled: true
       "194":
         defaultStorageLocation: null
-        isDisabled: false
+        isDisabled: true
       "204":
         defaultStorageLocation: null
-        isDisabled: false
+        isDisabled: true
       "205":
         defaultStorageLocation: null
-        isDisabled: false
+        isDisabled: true
       "248":
         defaultStorageLocation: null
-        isDisabled: false
+        isDisabled: true
   packageVariables: ""
 fileVersion: 1
-id: "@coalesce/base-node-types"
+id: "@coalesce/snowflake/devcopied-base-node-types"
 name: base
-packageID: "@coalesce/base-node-types"
-releaseID: 2c74ce43-5678-4743-aa5e-c996a0008965
+packageID: "@coalesce/snowflake/devcopied-base-node-types"
+releaseID: 68214743-6774-4ff6-8070-bb04b5e20361
 type: Package

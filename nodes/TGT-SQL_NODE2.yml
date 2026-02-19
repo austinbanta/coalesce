@@ -1,0 +1,213 @@
+fileVersion: 1
+id: 31b99286-21e9-4413-8bf4-a099a3603be4
+name: SQL_NODE2
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: TGT
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: CUSTOMER_KEY
+          stepCounter: 31b99286-21e9-4413-8bf4-a099a3603be4
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: CUSTOMER_KEY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "\"SQL_NODE\".\"CUSTOMER_KEY\""
+        systemColumnType: None
+        transform: "\"SQL_NODE\".\"CUSTOMER_KEY\""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: NAME
+          stepCounter: 31b99286-21e9-4413-8bf4-a099a3603be4
+        config: {}
+        dataType: VARCHAR(25)
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "\"SQL_NODE\".\"NAME\""
+        systemColumnType: None
+        transform: "\"SQL_NODE\".\"NAME\""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ADDRESS
+          stepCounter: 31b99286-21e9-4413-8bf4-a099a3603be4
+        config: {}
+        dataType: VARCHAR(40)
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: ADDRESS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "\"SQL_NODE\".\"ADDRESS\""
+        systemColumnType: None
+        transform: "\"SQL_NODE\".\"ADDRESS\""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: NATION
+          stepCounter: 31b99286-21e9-4413-8bf4-a099a3603be4
+        config: {}
+        dataType: VARCHAR(25)
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: NATION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "\"SQL_NODE\".\"NATION\""
+        systemColumnType: None
+        transform: "\"SQL_NODE\".\"NATION\""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: PHONE
+          stepCounter: 31b99286-21e9-4413-8bf4-a099a3603be4
+        config: {}
+        dataType: VARCHAR(15)
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: PHONE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "\"SQL_NODE\".\"PHONE\""
+        systemColumnType: None
+        transform: "\"SQL_NODE\".\"PHONE\""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ACCTBAL
+          stepCounter: 31b99286-21e9-4413-8bf4-a099a3603be4
+        config: {}
+        dataType: NUMBER(12,2)
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: ACCTBAL
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "\"SQL_NODE\".\"ACCTBAL\""
+        systemColumnType: None
+        transform: "\"SQL_NODE\".\"ACCTBAL\""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: MKTSEGMENT
+          stepCounter: 31b99286-21e9-4413-8bf4-a099a3603be4
+        config: {}
+        dataType: VARCHAR(10)
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: MKTSEGMENT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "\"SQL_NODE\".\"MKTSEGMENT\""
+        systemColumnType: None
+        transform: "\"SQL_NODE\".\"MKTSEGMENT\""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: COMMENT
+          stepCounter: 31b99286-21e9-4413-8bf4-a099a3603be4
+        config: {}
+        dataType: VARCHAR(117)
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: COMMENT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "\"SQL_NODE\".\"COMMENT\""
+        systemColumnType: None
+        transform: "\"SQL_NODE\".\"COMMENT\""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: PRIORITY
+          stepCounter: 31b99286-21e9-4413-8bf4-a099a3603be4
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: PRIORITY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "\"SQL_NODE\".\"PRIORITY\""
+        systemColumnType: None
+        transform: "\"SQL_NODE\".\"PRIORITY\""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: |-
+            SELECT *
+            FROM {{ ref('TGT', 'SQL_NODE') }} "SQL_NODE"
+        dependencies:
+          - locationName: TGT
+            nodeName: SQL_NODE
+        join:
+          joinCondition: |
+            FROM {{ ref('TGT', 'SQL_NODE') }} "SQL_NODE"
+        name: SQL_NODE2
+        noLinkRefs: []
+  name: SQL_NODE2
+  overrideSQL: false
+  schema: ""
+  sqlType: 23f7f808-bec4-44d3-927a-753248730aad
+  type: sql
+  version: 1
+type: Node

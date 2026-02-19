@@ -1,11 +1,11 @@
 fileVersion: 1
-id: b89562f0-b00a-44e3-b349-9a05242c8fe4
-name: FRANCHISE
+id: 89abc09a-054d-43e1-98ba-2733ef221c77
+name: SUPPLIER
 operation:
   database: ""
   deployEnabled: true
-  description: ""
-  locationName: SRC
+  description: Supplier data as defined by TPC-H
+  locationName: TPCH
   metadata:
     columns:
       - acceptedValues:
@@ -13,14 +13,14 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: e1ecc2c6-6b77-44f1-92e6-e91a0e93f130
-          stepCounter: b89562f0-b00a-44e3-b349-9a05242c8fe4
+          columnCounter: 286c2c7b-950c-4cd5-ac39-725b2fd9db72
+          stepCounter: 89abc09a-054d-43e1-98ba-2733ef221c77
         config: {}
         dataType: NUMBER(38,0)
         defaultValue: ""
         description: ""
-        name: FRANCHISE_ID
-        nullable: true
+        name: S_SUPPKEY
+        nullable: false
         sourceColumnReferences:
           - columnReferences: []
             transform: ""
@@ -30,14 +30,14 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 5af15f2c-5cf5-4ac4-90ef-3b7ff8c62c1f
-          stepCounter: b89562f0-b00a-44e3-b349-9a05242c8fe4
+          columnCounter: 4f0867ec-ef7e-482f-a089-d3716795cedc
+          stepCounter: 89abc09a-054d-43e1-98ba-2733ef221c77
         config: {}
-        dataType: VARCHAR(16777216)
+        dataType: VARCHAR(25)
         defaultValue: ""
         description: ""
-        name: FIRST_NAME
-        nullable: true
+        name: S_NAME
+        nullable: false
         sourceColumnReferences:
           - columnReferences: []
             transform: ""
@@ -47,14 +47,14 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 70671292-f704-4acf-bc72-b04645d54b05
-          stepCounter: b89562f0-b00a-44e3-b349-9a05242c8fe4
+          columnCounter: fdc1b600-85ed-4e59-9228-e8b6f351c895
+          stepCounter: 89abc09a-054d-43e1-98ba-2733ef221c77
         config: {}
-        dataType: VARCHAR(16777216)
+        dataType: VARCHAR(40)
         defaultValue: ""
         description: ""
-        name: LAST_NAME
-        nullable: true
+        name: S_ADDRESS
+        nullable: false
         sourceColumnReferences:
           - columnReferences: []
             transform: ""
@@ -64,14 +64,14 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 14aeb3bb-0ccd-4901-849b-61b4ef649706
-          stepCounter: b89562f0-b00a-44e3-b349-9a05242c8fe4
+          columnCounter: a1119bd8-68a7-441f-8c50-ada1e5548716
+          stepCounter: 89abc09a-054d-43e1-98ba-2733ef221c77
         config: {}
-        dataType: VARCHAR(16777216)
+        dataType: NUMBER(38,0)
         defaultValue: ""
         description: ""
-        name: CITY
-        nullable: true
+        name: S_NATIONKEY
+        nullable: false
         sourceColumnReferences:
           - columnReferences: []
             transform: ""
@@ -81,14 +81,14 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: db39b31b-8362-43a5-96f4-4e9862850ee1
-          stepCounter: b89562f0-b00a-44e3-b349-9a05242c8fe4
+          columnCounter: 49f2da21-b9d8-4fc0-b8db-61f2c8fbc1b9
+          stepCounter: 89abc09a-054d-43e1-98ba-2733ef221c77
         config: {}
-        dataType: VARCHAR(16777216)
+        dataType: VARCHAR(15)
         defaultValue: ""
         description: ""
-        name: COUNTRY
-        nullable: true
+        name: S_PHONE
+        nullable: false
         sourceColumnReferences:
           - columnReferences: []
             transform: ""
@@ -98,14 +98,14 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 70e3678f-cfec-43b9-b4b9-5a48b0e93d38
-          stepCounter: b89562f0-b00a-44e3-b349-9a05242c8fe4
+          columnCounter: 0b4be30e-bad9-48ff-a1c0-933bff82f0d1
+          stepCounter: 89abc09a-054d-43e1-98ba-2733ef221c77
         config: {}
-        dataType: VARCHAR(16777216)
+        dataType: NUMBER(12,2)
         defaultValue: ""
         description: ""
-        name: E_MAIL
-        nullable: true
+        name: S_ACCTBAL
+        nullable: false
         sourceColumnReferences:
           - columnReferences: []
             transform: ""
@@ -115,19 +115,19 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 9f436ce7-1aab-4db1-9cb8-46a88769d736
-          stepCounter: b89562f0-b00a-44e3-b349-9a05242c8fe4
+          columnCounter: 6ffdfe8a-0791-4557-94ad-ec43072a7ed1
+          stepCounter: 89abc09a-054d-43e1-98ba-2733ef221c77
         config: {}
-        dataType: VARCHAR(16777216)
+        dataType: VARCHAR(101)
         defaultValue: ""
         description: ""
-        name: PHONE_NUMBER
+        name: S_COMMENT
         nullable: true
         sourceColumnReferences:
           - columnReferences: []
             transform: ""
         transform: ""
-  name: FRANCHISE
+  name: SUPPLIER
   schema: ""
   sqlType: Source
   type: sourceInput

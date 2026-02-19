@@ -1,6 +1,0 @@
-excludeSelector: ""
-fileVersion: 1
-id: "37"
-includeSelector: "{ location: STG name: WRK_LOCATION }"
-name: location refresh
-type: Job

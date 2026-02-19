@@ -1,11 +1,11 @@
 fileVersion: 1
-id: 362e3c71-b688-4ea7-afb1-3e024de66a2a
-name: ORDER_DETAIL_38M
+id: dc4a29e5-ef3e-4481-86ad-00d932204a4a
+name: ORDERS
 operation:
   database: ""
   deployEnabled: true
-  description: ""
-  locationName: SRC
+  description: Orders data as defined by TPC-H
+  locationName: TPCH
   metadata:
     columns:
       - acceptedValues:
@@ -13,14 +13,14 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: baf2e1a1-958b-4e8a-be6b-18764fdf0fc9
-          stepCounter: 362e3c71-b688-4ea7-afb1-3e024de66a2a
+          columnCounter: 5c1e0ddc-f45f-4467-81b3-320ba19a53d7
+          stepCounter: dc4a29e5-ef3e-4481-86ad-00d932204a4a
         config: {}
         dataType: NUMBER(38,0)
         defaultValue: ""
         description: ""
-        name: ORDER_DETAIL_ID
-        nullable: true
+        name: O_ORDERKEY
+        nullable: false
         sourceColumnReferences:
           - columnReferences: []
             transform: ""
@@ -30,14 +30,14 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: a1c8c022-ee70-4c6f-9e8e-7533a7a4ca3a
-          stepCounter: 362e3c71-b688-4ea7-afb1-3e024de66a2a
+          columnCounter: 08ded59f-5f8e-42ca-b52c-648d2e83ee85
+          stepCounter: dc4a29e5-ef3e-4481-86ad-00d932204a4a
         config: {}
         dataType: NUMBER(38,0)
         defaultValue: ""
         description: ""
-        name: ORDER_ID
-        nullable: true
+        name: O_CUSTKEY
+        nullable: false
         sourceColumnReferences:
           - columnReferences: []
             transform: ""
@@ -47,14 +47,99 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: b4d84985-406b-4903-b719-d7f9692482d2
-          stepCounter: 362e3c71-b688-4ea7-afb1-3e024de66a2a
+          columnCounter: 48d78979-d821-4f68-9fdc-0ad2c3daa29f
+          stepCounter: dc4a29e5-ef3e-4481-86ad-00d932204a4a
+        config: {}
+        dataType: VARCHAR(1)
+        defaultValue: ""
+        description: ""
+        name: O_ORDERSTATUS
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 44bfa0f5-26de-4be3-aba1-04c0e610e61e
+          stepCounter: dc4a29e5-ef3e-4481-86ad-00d932204a4a
+        config: {}
+        dataType: NUMBER(12,2)
+        defaultValue: ""
+        description: ""
+        name: O_TOTALPRICE
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3cb15210-2e50-458e-9a75-1679531dc33f
+          stepCounter: dc4a29e5-ef3e-4481-86ad-00d932204a4a
+        config: {}
+        dataType: DATE
+        defaultValue: ""
+        description: ""
+        name: O_ORDERDATE
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d4021948-3865-4cba-83fa-fd69f687a67d
+          stepCounter: dc4a29e5-ef3e-4481-86ad-00d932204a4a
+        config: {}
+        dataType: VARCHAR(15)
+        defaultValue: ""
+        description: ""
+        name: O_ORDERPRIORITY
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f7d41db5-de8c-4e35-b968-5a852724ea5d
+          stepCounter: dc4a29e5-ef3e-4481-86ad-00d932204a4a
+        config: {}
+        dataType: VARCHAR(15)
+        defaultValue: ""
+        description: ""
+        name: O_CLERK
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4e01ce95-ff33-4a0b-8789-8454c915d0d2
+          stepCounter: dc4a29e5-ef3e-4481-86ad-00d932204a4a
         config: {}
         dataType: NUMBER(38,0)
         defaultValue: ""
         description: ""
-        name: MENU_ITEM_ID
-        nullable: true
+        name: O_SHIPPRIORITY
+        nullable: false
         sourceColumnReferences:
           - columnReferences: []
             transform: ""
@@ -64,104 +149,19 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: f738b3ce-41c7-4eed-9871-1d4c7cc18562
-          stepCounter: 362e3c71-b688-4ea7-afb1-3e024de66a2a
+          columnCounter: ff790c0d-3e73-45b9-9a38-385ca04676a0
+          stepCounter: dc4a29e5-ef3e-4481-86ad-00d932204a4a
         config: {}
-        dataType: VARCHAR(16777216)
+        dataType: VARCHAR(79)
         defaultValue: ""
         description: ""
-        name: DISCOUNT_ID
-        nullable: true
+        name: O_COMMENT
+        nullable: false
         sourceColumnReferences:
           - columnReferences: []
             transform: ""
         transform: ""
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: b6a0076e-2a05-41c7-b67c-071c194414d1
-          stepCounter: 362e3c71-b688-4ea7-afb1-3e024de66a2a
-        config: {}
-        dataType: NUMBER(38,0)
-        defaultValue: ""
-        description: ""
-        name: LINE_NUMBER
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: 609b4d8f-02ad-4f11-8813-ebf543feebdf
-          stepCounter: 362e3c71-b688-4ea7-afb1-3e024de66a2a
-        config: {}
-        dataType: NUMBER(5,0)
-        defaultValue: ""
-        description: ""
-        name: QUANTITY
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: 7d09055c-6ca7-4bc4-bb18-46989af69115
-          stepCounter: 362e3c71-b688-4ea7-afb1-3e024de66a2a
-        config: {}
-        dataType: NUMBER(38,4)
-        defaultValue: ""
-        description: ""
-        name: UNIT_PRICE
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: 2d3c76fc-13ef-401f-88c3-ebfde89ae561
-          stepCounter: 362e3c71-b688-4ea7-afb1-3e024de66a2a
-        config: {}
-        dataType: NUMBER(38,4)
-        defaultValue: ""
-        description: ""
-        name: PRICE
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: 99eb3a9f-bd92-4c9b-b855-063dd57c7a04
-          stepCounter: 362e3c71-b688-4ea7-afb1-3e024de66a2a
-        config: {}
-        dataType: VARCHAR(16777216)
-        defaultValue: ""
-        description: ""
-        name: ORDER_ITEM_DISCOUNT_AMOUNT
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-  name: ORDER_DETAIL_38M
+  name: ORDERS
   schema: ""
   sqlType: Source
   type: sourceInput

@@ -1,0 +1,10 @@
+fileVersion: 1
+id: 4cd8ede0-599b-4d09-bea4-5e2cfbf57182
+name: tpch
+steps:
+  - 0e005c35-7bef-4c53-94f4-8d8a5792d545
+  - 1f73d871-342d-4857-9547-b5ae5c08f874
+  - 89abc09a-054d-43e1-98ba-2733ef221c77
+  - dc4a29e5-ef3e-4481-86ad-00d932204a4a
+  - e0ed913b-921f-4e3f-b99d-d6e3e94cb1d8
+type: Subgraph

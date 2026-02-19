@@ -1,5 +1,5 @@
 fileVersion: 1
-id: 32e38793-8c96-4830-9bc5-2636aaaf07d0
+id: dda9ff76-a1d7-403f-9b5a-e0d9fdf39175
 name: LOCATION
 operation:
   database: ""
@@ -13,134 +13,120 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 448dcff9-3641-4dba-92ca-2e41fbb5e6b3
-          stepCounter: 32e38793-8c96-4830-9bc5-2636aaaf07d0
+          columnCounter: ecffe596-bd78-44f2-9c85-4d0cf5151351
+          stepCounter: dda9ff76-a1d7-403f-9b5a-e0d9fdf39175
         config: {}
         dataType: NUMBER(19,0)
         defaultValue: ""
         description: ""
         name: LOCATION_ID
         nullable: true
-        primaryKey: false
         sourceColumnReferences:
           - columnReferences: []
             transform: ""
         transform: ""
-        uniqueKey: false
       - acceptedValues:
           strictMatch: true
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 52e11c1f-cc1b-4325-a714-f856212899d8
-          stepCounter: 32e38793-8c96-4830-9bc5-2636aaaf07d0
+          columnCounter: 5d40f649-b66d-4b8d-aa23-13341f113f86
+          stepCounter: dda9ff76-a1d7-403f-9b5a-e0d9fdf39175
         config: {}
         dataType: VARCHAR(16777216)
         defaultValue: ""
         description: ""
         name: PLACEKEY
         nullable: true
-        primaryKey: false
         sourceColumnReferences:
           - columnReferences: []
             transform: ""
         transform: ""
-        uniqueKey: false
       - acceptedValues:
           strictMatch: true
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 74d232b3-69e1-4517-b89f-3560a4537243
-          stepCounter: 32e38793-8c96-4830-9bc5-2636aaaf07d0
+          columnCounter: a8e4b76d-aa39-438e-84e1-a28180eefbe1
+          stepCounter: dda9ff76-a1d7-403f-9b5a-e0d9fdf39175
         config: {}
         dataType: VARCHAR(16777216)
         defaultValue: ""
         description: ""
         name: LOCATION
         nullable: true
-        primaryKey: false
         sourceColumnReferences:
           - columnReferences: []
             transform: ""
         transform: ""
-        uniqueKey: false
       - acceptedValues:
           strictMatch: true
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 7f36d7fa-51ff-4bb5-b83e-428c74ae6b7a
-          stepCounter: 32e38793-8c96-4830-9bc5-2636aaaf07d0
+          columnCounter: 3a40df33-0e72-4bd0-90fc-a90b200c10d9
+          stepCounter: dda9ff76-a1d7-403f-9b5a-e0d9fdf39175
         config: {}
         dataType: VARCHAR(16777216)
         defaultValue: ""
         description: ""
         name: CITY
         nullable: true
-        primaryKey: false
         sourceColumnReferences:
           - columnReferences: []
             transform: ""
         transform: ""
-        uniqueKey: false
       - acceptedValues:
           strictMatch: true
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 7f901fe6-9e51-4a60-8bfa-46ed8fddcc44
-          stepCounter: 32e38793-8c96-4830-9bc5-2636aaaf07d0
+          columnCounter: f645e89c-847b-4289-9755-8b124c63a690
+          stepCounter: dda9ff76-a1d7-403f-9b5a-e0d9fdf39175
         config: {}
         dataType: VARCHAR(16777216)
         defaultValue: ""
         description: ""
         name: REGION
         nullable: true
-        primaryKey: false
         sourceColumnReferences:
           - columnReferences: []
             transform: ""
         transform: ""
-        uniqueKey: false
       - acceptedValues:
           strictMatch: true
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 7430f40c-da1a-4b93-aa78-564529f0120b
-          stepCounter: 32e38793-8c96-4830-9bc5-2636aaaf07d0
+          columnCounter: 6dc4c10f-1f4b-4b35-aa67-cf5984b7ac35
+          stepCounter: dda9ff76-a1d7-403f-9b5a-e0d9fdf39175
         config: {}
         dataType: VARCHAR(16777216)
         defaultValue: ""
         description: ""
         name: ISO_COUNTRY_CODE
         nullable: true
-        primaryKey: false
         sourceColumnReferences:
           - columnReferences: []
             transform: ""
         transform: ""
-        uniqueKey: false
       - acceptedValues:
           strictMatch: true
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 776dabcc-f2f6-4be6-8fcc-c3a337760845
-          stepCounter: 32e38793-8c96-4830-9bc5-2636aaaf07d0
+          columnCounter: 99d08b7d-4f45-468e-a96b-9a6ded41f12b
+          stepCounter: dda9ff76-a1d7-403f-9b5a-e0d9fdf39175
         config: {}
         dataType: VARCHAR(16777216)
         defaultValue: ""
         description: ""
         name: COUNTRY
         nullable: true
-        primaryKey: false
         sourceColumnReferences:
           - columnReferences: []
             transform: ""
         transform: ""
-        uniqueKey: false
   name: LOCATION
   schema: ""
   sqlType: Source
