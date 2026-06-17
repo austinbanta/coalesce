@@ -1,0 +1,135 @@
+fileVersion: 1
+id: 20912086-fb3b-40c1-bd04-43eaed966cf7
+name: V_FRANCHISE1
+operation:
+  config:
+    insertStrategy: UNION
+    selectDistinct: false
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: STG
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9de26052-e0d6-4ab1-8915-7c36c221e968
+          stepCounter: 20912086-fb3b-40c1-bd04-43eaed966cf7
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: FRANCHISE_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b2e55492-5edc-4d4e-917a-60f6a07f12ea
+                stepCounter: 92fb5ad1-c5a5-49d6-abbe-fcef04fd5583
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 94f6f19e-f1b8-4c39-b94a-cd333575ab01
+          stepCounter: 20912086-fb3b-40c1-bd04-43eaed966cf7
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: FIRST_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2873bb37-5477-4af6-a93c-a480d4e28a77
+                stepCounter: 92fb5ad1-c5a5-49d6-abbe-fcef04fd5583
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a414e73a-1548-4121-8209-e7e3e6cda17d
+          stepCounter: 20912086-fb3b-40c1-bd04-43eaed966cf7
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: LAST_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 75c7c316-cc4a-425d-95e4-0fea67e7f7ec
+                stepCounter: 92fb5ad1-c5a5-49d6-abbe-fcef04fd5583
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e052d69b-7b10-4229-b84a-847e85c15c63
+          stepCounter: 20912086-fb3b-40c1-bd04-43eaed966cf7
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: CITY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 47132fa7-46d5-4efe-b341-5a423c5ff4e4
+                stepCounter: 92fb5ad1-c5a5-49d6-abbe-fcef04fd5583
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 18895ea2-9762-4bd9-a1ef-7c16a7d8d21e
+          stepCounter: 20912086-fb3b-40c1-bd04-43eaed966cf7
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: COUNTRY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 036753c9-cabe-46f2-b00d-246dc75eeec6
+                stepCounter: 92fb5ad1-c5a5-49d6-abbe-fcef04fd5583
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ca75c26d-bab4-4a00-ab04-76168ba049ce
+          stepCounter: 20912086-fb3b-40c1-bd04-43eaed966cf7
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: E_MAIL
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a5e8831d-47dc-4b0e-baaa-92594dd883af
+                stepCounter: 92fb5ad1-c5a5-49d6-abbe-fcef04fd5583
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 237556ea-86b0-4570-b50a-60a530a2fb0f
+          stepCounter: 20912086-fb3b-40c1-bd04-43eaed966cf7
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: PHONE_NUMBER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: badc01a1-8467-4bcc-b97b-8bba3f06032d
+                stepCounter: 92fb5ad1-c5a5-49d6-abbe-fcef04fd5583
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          V_FRANCHISE: 92fb5ad1-c5a5-49d6-abbe-fcef04fd5583
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: STG
+            nodeName: V_FRANCHISE
+        join:
+          joinCondition: FROM {{ ref('STG', 'V_FRANCHISE') }} "V_FRANCHISE"
+        name: V_FRANCHISE1
+        noLinkRefs: []
+  name: V_FRANCHISE1
+  overrideSQL: false
+  schema: ""
+  sqlType: View
+  type: sql
+  version: 1
+type: Node

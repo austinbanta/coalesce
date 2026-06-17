@@ -1,0 +1,6 @@
+excludeSelector: ""
+fileVersion: 1
+id: "42"
+includeSelector: "{ location: \"STG\" name: \"V_FRANCHISE\" } OR { location: \"STG\" name: \"V_FRANCHISE1\" } OR { location: \"STG\" name: \"V_FRANCHISE2\" } OR { location: \"TASTY_AWOOD\" name: \"FRANCHISE\" } OR { location: \"STG\" name: \"STG_FRANCHISE2\" }"
+name: view-only-job
+type: Job

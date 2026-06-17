@@ -1,0 +1,312 @@
+fileVersion: 1
+id: f3309527-477d-4bab-97af-968b167d017e
+name: WRK_ORDER_DETAIL
+operation:
+  config:
+    asofColumn:
+      items:
+        - {}
+    asofJoin: true
+    asofJoinMain: false
+    asofJoinON: false
+    asofJoinUSING: false
+    groupByAll: false
+    insertStrategy: INSERT
+    orderby: false
+    orderbycolumn:
+      items:
+        - {}
+    postSQL: ""
+    preSQL: ""
+    selectDistinct: false
+    testsEnabled: false
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: Work table joining order header and order detail data
+  isMultisource: false
+  locationName: STG
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019c53b3-192d-7302-b29e-9eeac72cd226
+          stepCounter: f3309527-477d-4bab-97af-968b167d017e
+        config: {}
+        dataType: NUMBER
+        description: ""
+        name: ORDER_DETAIL_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: OD.ORDER_DETAIL_ID
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019c53b3-192d-7302-b29e-a330ed3e86b4
+          stepCounter: f3309527-477d-4bab-97af-968b167d017e
+        config: {}
+        dataType: NUMBER
+        description: ""
+        name: ORDER_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: OD.ORDER_ID
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019c53b3-192d-7302-b29e-a78e580b797d
+          stepCounter: f3309527-477d-4bab-97af-968b167d017e
+        config: {}
+        dataType: NUMBER
+        description: ""
+        name: MENU_ITEM_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: OD.MENU_ITEM_ID
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019c53b3-192d-7302-b29e-ab260898658a
+          stepCounter: f3309527-477d-4bab-97af-968b167d017e
+        config: {}
+        dataType: NUMBER
+        description: ""
+        name: LINE_NUMBER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: OD.LINE_NUMBER
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019c53b3-192d-7302-b29e-ae4d5e0f05c9
+          stepCounter: f3309527-477d-4bab-97af-968b167d017e
+        config: {}
+        dataType: NUMBER
+        description: ""
+        name: QUANTITY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: OD.QUANTITY
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019c53b3-192d-7302-b29e-b145b1ec3c4c
+          stepCounter: f3309527-477d-4bab-97af-968b167d017e
+        config: {}
+        dataType: NUMBER
+        description: ""
+        name: UNIT_PRICE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: OD.UNIT_PRICE
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019c53b3-192d-7302-b29e-b7726f4c3d84
+          stepCounter: f3309527-477d-4bab-97af-968b167d017e
+        config: {}
+        dataType: NUMBER
+        description: ""
+        name: PRICE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: OD.PRICE
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019c53b3-192d-7302-b29e-ba99fbdf70ca
+          stepCounter: f3309527-477d-4bab-97af-968b167d017e
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: ORDER_ITEM_DISCOUNT_AMOUNT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: OD.ORDER_ITEM_DISCOUNT_AMOUNT
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019c53b3-192d-7302-b29e-bc1dbc669fee
+          stepCounter: f3309527-477d-4bab-97af-968b167d017e
+        config: {}
+        dataType: NUMBER
+        description: ""
+        name: TRUCK_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: OH.TRUCK_ID
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019c53b3-192d-7302-b29e-c2d5da321a5d
+          stepCounter: f3309527-477d-4bab-97af-968b167d017e
+        config: {}
+        dataType: NUMBER
+        description: ""
+        name: LOCATION_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: OH.LOCATION_ID
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019c53b3-192d-7302-b29e-c590913e610c
+          stepCounter: f3309527-477d-4bab-97af-968b167d017e
+        config: {}
+        dataType: NUMBER
+        description: ""
+        name: CUSTOMER_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: OH.CUSTOMER_ID
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019c53b3-192d-7302-b29e-c991860c9935
+          stepCounter: f3309527-477d-4bab-97af-968b167d017e
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: DISCOUNT_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: OH.DISCOUNT_ID
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019c53b3-192d-7302-b29e-cfdca3fc8bdb
+          stepCounter: f3309527-477d-4bab-97af-968b167d017e
+        config: {}
+        dataType: NUMBER
+        description: ""
+        name: SHIFT_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: OH.SHIFT_ID
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019c53b3-192d-7302-b29e-d397cb9357ad
+          stepCounter: f3309527-477d-4bab-97af-968b167d017e
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: ORDER_CHANNEL
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: OH.ORDER_CHANNEL
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019c53b3-192d-7302-b29e-d410973cfa4d
+          stepCounter: f3309527-477d-4bab-97af-968b167d017e
+        config: {}
+        dataType: TIMESTAMP
+        description: ""
+        name: ORDER_TS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: OH.ORDER_TS
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019c53b3-192e-72fa-bd7c-d3465d666865
+          stepCounter: f3309527-477d-4bab-97af-968b167d017e
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: SERVED_TS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: OH.SERVED_TS
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019c53b3-192e-72fa-bd7c-d6bfe1969655
+          stepCounter: f3309527-477d-4bab-97af-968b167d017e
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: ORDER_CURRENCY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: OH.ORDER_CURRENCY
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019c53b3-192e-72fa-bd7c-d86663352f13
+          stepCounter: f3309527-477d-4bab-97af-968b167d017e
+        config: {}
+        dataType: NUMBER
+        description: ""
+        name: ORDER_AMOUNT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: OH.ORDER_AMOUNT
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019c53b3-192e-72fa-bd7c-df42826d09aa
+          stepCounter: f3309527-477d-4bab-97af-968b167d017e
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: ORDER_TAX_AMOUNT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: OH.ORDER_TAX_AMOUNT
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019c53b3-192e-72fa-bd7c-e08e3b47e155
+          stepCounter: f3309527-477d-4bab-97af-968b167d017e
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: ORDER_DISCOUNT_AMOUNT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: OH.ORDER_DISCOUNT_AMOUNT
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019c53b3-192e-72fa-bd7c-e7347c3c23d3
+          stepCounter: f3309527-477d-4bab-97af-968b167d017e
+        config: {}
+        dataType: NUMBER
+        description: ""
+        name: ORDER_TOTAL
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: OH.ORDER_TOTAL
+    cteString: ""
+    description: ""
+    destinationName: ""
+    enabledColumnTestIDs: []
+    materializationOption: ""
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: TASTY_AWOOD
+            nodeName: ORDER_DETAIL_38M
+          - locationName: TASTY_AWOOD
+            nodeName: ORDER_HEADER_14M
+        join:
+          joinCondition: |-
+            FROM {{ ref('TASTY_AWOOD', 'ORDER_DETAIL_38M') }} OD
+            LEFT JOIN {{ ref('TASTY_AWOOD', 'ORDER_HEADER_14M') }} OH
+                ON OD.ORDER_ID = OH.ORDER_ID
+        name: WRK_ORDER_DETAIL
+        noLinkRefs: []
+  name: WRK_ORDER_DETAIL
+  overrideSQL: false
+  schema: ""
+  sqlType: base-1-3-4:::204
+  type: sql
+  version: 1
+type: Node
